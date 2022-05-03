@@ -1,0 +1,169 @@
+<mjml>
+  <mj-head>
+    <mj-font name="HelveticaNeueLTStd-Roman" href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900"></mj-font>
+    <mj-attributes>
+      <mj-text font-family="HelveticaNeueLTStd-Roman, Arial, sans-serif" letter-spacing="0.5px" padding="0" color="#231f20" />
+      <mj-all font-family="HelveticaNeueLTStd-Roman, Arial, sans-serif" />
+      <mj-all color="#231f20" />
+      <mj-all padding-left="0" />
+      <mj-all padding-right="0" />
+      <mj-class name="footer" letter-spacing="0.5px" line-height="10px" font-size="7.5px" />
+      <mj-class name="sale-item-header" font-size="10px" />
+      <mj-class name="sale-item-body" font-size="12px" />
+      <mj-all background-color="white" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image alt="logo" border="0" height="106px" src="https://storage.googleapis.com/receipts-image-aus/wallace_bishop/logo.png" width="276px" />
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="15px" letter-spacing="0.8px">TAX INVOICE</mj-text>
+        <mj-spacer height="8px" />
+        <mj-text>ABN 87080534827</mj-text>
+        <mj-spacer></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-bottom="8px">
+      <mj-column width="18%">
+        <mj-text mj-class="sale-item-header">CUSTOMER</mj-text>
+        <mj-text padding-top="6px" mj-class="sale-item-header">{% if receipt.customer %}{{receipt.customer.mailing_name}}{% endif %}</mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text mj-class="sale-item-header">SALE</mj-text>
+        <mj-text padding-top="6px" mj-class="sale-item-header">{{ receipt.tenders()[0].type }}</mj-text>
+      </mj-column>
+      <mj-column width="26%">
+        <mj-text mj-class="sale-item-header">BOUTIQUE</mj-text>
+        <mj-text padding-top="6px" mj-class="sale-item-header">{{receipt.device.business_location.store_name}}</mj-text>
+      </mj-column>
+      <mj-column width="18%">
+        <mj-text mj-class="sale-item-header">SERVED BY</mj-text>
+        <mj-text padding-top="6px" mj-class="sale-item-header"> {{receipt.associate_name.split(' ')[0]}}</mj-text>
+      </mj-column>
+      <mj-column width="18%">
+        <mj-text mj-class="sale-item-header">DATE</mj-text>
+        <mj-text padding-top="6px" mj-class="sale-item-header">{{receipt.get_local_time().strftime('%-d.%-m.%Y')}}</mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text align="right" mj-class="sale-item-header">TIME</mj-text>
+        <mj-text padding-top="6px" align="right" mj-class="sale-item-header">{{receipt.get_local_time().strftime('%H:%M')}}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-spacer height="8px" />
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column padding="0" width="40%">
+        <mj-text padding="0" mj-class="sale-item-header" align="left">PRODUCT </mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text mj-class="sale-item-header" align="left">QTY</mj-text>
+      </mj-column>
+      <mj-column width="17%">
+        <mj-text mj-class="sale-item-header" align="left">ITEM PRICE</mj-text>
+      </mj-column>
+      <mj-column width="16%">
+        <mj-text mj-class="sale-item-header" align="center">GST</mj-text>
+      </mj-column>
+      <mj-column width="17%">
+        <mj-text mj-class="sale-item-header" align="right">TOTAL</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-bottom="5px" padding-top="5px">
+      <mj-column>
+        <mj-divider padding="0" border-width="1px" border-color="lightgrey" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column>
+        <mj-table mj-class="sale-item-body" padding="0">
+          <!-- {% for item in receipt.sale_items() %} -->
+          <tr valign="top">
+            <td align="left" width="40%">
+              {{ item.text }}
+            </td>
+            <td align="left" width="10%">
+              {{ item.quantity }}
+            </td>
+            <td align="left" width="17%">
+              {{ "{:.2f}".format(item.total) }}
+            </td>
+            <td align="center" width="16%">
+              -
+            </td>
+            <td align="right" width="17%">
+              {{ "{:.2f}".format(item.total) }}
+            </td>
+          </tr>
+          <!-- {% endfor %} -->
+          <tr>
+            <td colspan="5" align="left" height="6" style="font-size:0px;line-height:0px;border-bottom:1px solid #e9e8e8;" valign="top">
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" width="40%"> </td>
+            <td align="left" width="10%"> </td>
+            <td align="left" width="17%"> </td>
+            <td align="center" width="17%">
+              ({{ "{:.2f}".format(receipt.taxes[0].amount) }})
+            </td>
+            <td align="right" width="17%">
+              {{ "{:.2f}".format(receipt.total) }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-top="10px" padding-bottom="10px">
+      <!-- Transaction Number and Barcode -->
+      <mj-column>
+        <mj-image align="left" alt="{{receipt.barcode_transaction_number}}" height="20px" src="{{barcode_url}}" width="150px"></mj-image>
+        <mj-text mj-class="footer">TRANSACTION NUMBER: {{receipt.transaction_number}}</mj-text>
+        <mj-divider padding-top="5px" padding-bottom="5px" border-width="1px" border-color="lightgrey" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding-top="0" padding-bottom="5px">
+      <mj-column width="30%">
+        <mj-text font-size="10px">TAX INVOICE</mj-text>
+        <mj-spacer></mj-spacer>
+        <mj-text font-size="8px">This docket forms part of your guarantee</mj-text>
+      </mj-column>
+      <mj-column width="45%">
+        <mj-text font-size="8.5px" letter-spacing="0.5px" line-height="10px" padding="0">Our products come with guarantees that cannot be excluded under Australian Consumer Law. You are entitled to a replacement or refund for a major failure and for compensation for any other reasonably forseeable loss or damage. You are entitled
+          to have the goods repaired if the goods fail to be of acceptable quality and the failure doesnot amount to a major failure. Visit hardybrothers.com.au/ returns for further information concerning returns.</mj-text>
+      </mj-column>
+      <mj-column padding-left="10px" width="25%">
+        <mj-text mj-class="footer">HARDYBROTHERS.COM.AU</mj-text>
+        <mj-text mj-class="footer">1300 231 393</mj-text>
+        <mj-text mj-class="footer">BRISBANE</mj-text>
+        <mj-text mj-class="footer">GOLD COAST</mj-text>
+        <mj-text mj-class="footer">SYDNEY</mj-text>
+        <mj-text mj-class="footer">MELBOURNE</mj-text>
+        <mj-text mj-class="footer">PERTH</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider padding="0" border-width="1px" border-color="lightgrey" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding-top="10px">
+      <mj-column>
+        <mj-text font-size="6.5px">HARDY BROTHERS JEWELLERS PTY LTD 87 080534827
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-social padding-top="0px" align="right" icon-size="22px" mode="horizontal">
+          <mj-social-element src="https://storage.googleapis.com/receipts-image-aus/wallace_bishop/hb.jpg" href="https://www.hardybrothers.com.au/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/receipts-image-aus/wallace_bishop/f.jpg" href="https://www.facebook.com/hardybrothers/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/receipts-image-aus/wallace_bishop/insta.jpg" href="https://www.instagram.com/hardybrothers/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/receipts-image-aus/wallace_bishop/linked.jpg" href="https://www.linkedin.com/company/hardy-brothers-jewellers-pty-ltd"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,1174 @@
+<!-- 
+    
+    {% set translations = {
+    "fr_FR": {
+        "banner": "https://media.picwictoys.com/emerch/NL/FACTURE_210122/MERCI.png",
+        "thank_you": "Merci pour votre achat",
+        "toys": {
+            "text": "Jouets",
+            "src": "https://media.picwictoys.com/emerch/NL/FACTURE_210122/BTN_1.png",
+            "url": "https://www.picwictoys.com/u/jouets-2?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_FID"
+        },
+        "creatif": {
+            "text": "Creetif",
+            "src": "https://media.picwictoys.com/emerch/NL/FACTURE_210122/BTN_2.png",
+            "url": "https://www.picwictoys.com/u/loisirs-creatifs-220/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_FID"
+        },
+        "puericulture": {
+            "text": "Puericulture",
+            "src": "https://media.picwictoys.com/emerch/NL/FACTURE_210122/BTN_3.png",
+            "url": "https://www.picwictoys.com/u/puericulture-340/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_FID"
+        },
+        "hello": "Bonjour",
+        "thank_visit": "Nous vous remercions pour votre achat dans votre magasin ",
+        "receipt_intro": "Retrouvez votre facture en cliquant sur le bouton suivant :",
+
+        "receipt_number": "N° de ticket",
+            "date_of_purchase": "Date d\u2019achat\u00a0:",
+            "transaction_number": "Num\u00e9ro de transaction\u00a0:",
+            "salesperson": "Vendeur\u00a0: ",
+            "store": "Store\u00a0: ",
+            "till": "Caisse\u00a0: ",
+            "item_id": "ID article",
+            "description": "Description",
+            "quantity": "Quantité",
+            "price": "Prix total",
+            "subtotal": "Sous-total\u00a0:",
+            "discount": "Remise",
+            "discount_amount": "Montant",
+            "tax_rate": "TVA",
+            "taxable_amount": "Montant HT",
+            "tax_paid": "TVA pay\u00e9e",
+            "total": "Total TTC",
+            "tender_type": "M\u00e9thode de paiement",
+            "tender_amount": "Montant",
+            "loyalty": {
+                "text": "Votre compte fidélité",
+                "point": "1,000",
+                "old": "Ancien solde : ",
+                "ticket": "Points du tickets : ",
+                "new": "Nouveau solde : "
+            },
+            "coupon": {
+                "scan_to_use_in_store": "scannez pour utiliser en magasin :"
+            },
+            "shop_now": "Achetez maintenant",
+            "follow_us": "Plus d'idées d'activités et de jeux sur",
+            "footer" : "Le client dispose d'un délai de 14 jours francs pour exercer son droit de rétractation à compter de la date d’achat ou de réception de la marchandise.
+LUDERIX INTERNATIONAL, Société par Actions Simplifiée au Capital social de 20 525 715 €, sis Rue du Château d'Isenghien 59160 LOMME, immatriculée au RCS LILLE METROPOLE sous le numéro B 310 635 347 exploitant l’enseigne PICWICTOYS. N° TVA FR87 310 635 347
+Conformément à la loi Informatique & Libertés du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données, vous disposez d'un droit d’information, d'accès, d’opposition, de rectification et de suppression de vos données, d’un droit à la limitation des traitements, à la portabilité sur les informations vous concernant et d'un droit de définir des directives relatives au sort de vos données à caractère personnel après votre décès. Vous pouvez exercer ces droits en vous adressant au Délégué à la Protection des Données à l’adresse mail suivante : dpo@picwictoys.fr ou par courrier à l'adresse suivante : LUDERI INTERNATIONAL - PICWICTOYS - DPO - Rue du château d'Isenghien - 59 160 Lomme. Vous bénéficiez également d’un droit d’introduire une réclamation auprès de la CNIL."
+    }
+} %}
+
+{% set language = translations[locale if locale in translations else "fr_FR"] %}
+
+-->
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <title>
+    </title>
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        p {
+            display: block;
+            margin: 13px 0;
+        }
+    </style>
+    <!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+    <!--[if lte mso 11]>
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+    </style>
+    <!--<![endif]-->
+    <style type="text/css">
+        @media only screen and (min-width:480px) {
+            .mj-column-per-100 {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            .mj-column-per-50 {
+                width: 50% !important;
+                max-width: 50%;
+            }
+        }
+    </style>
+    <style media="screen and (min-width:480px)">
+        .moz-text-html .mj-column-per-100 {
+            width: 100% !important;
+            max-width: 100%;
+        }
+
+        .moz-text-html .mj-column-per-50 {
+            width: 50% !important;
+            max-width: 50%;
+        }
+    </style>
+    <style type="text/css">
+        @media only screen and (max-width:480px) {
+            table.mj-full-width-mobile {
+                width: 100% !important;
+            }
+
+            td.mj-full-width-mobile {
+                width: auto !important;
+            }
+        }
+
+        noinput.mj-menu-checkbox {
+            display: block !important;
+            max-height: none !important;
+            visibility: visible !important;
+        }
+
+        @media only screen and (max-width:480px) {
+            .mj-menu-checkbox[type="checkbox"]~.mj-inline-links {
+                display: none !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]:checked~.mj-inline-links,
+            .mj-menu-checkbox[type="checkbox"]~.mj-menu-trigger {
+                display: block !important;
+                max-width: none !important;
+                max-height: none !important;
+                font-size: inherit !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]~.mj-inline-links>a {
+                display: block !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-close {
+                display: block !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-open {
+                display: none !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        p {
+            margin: inherit !important;
+            line-height: 20px !important;
+        }
+
+        .section>table>tbody>tr>td {
+            padding: 0 !important
+        }
+
+        .mj-column-per-100>table>tbody>tr>td {
+            padding: 4px 25px !important
+        }
+
+        .mj-column-per-100>table>tbody>tr>td.nav {
+            padding: inherit !important
+        }
+
+        .nav a {
+            padding: 8px 10px 4px !important
+        }
+
+        .red {
+            color: rgb(231, 26, 12) !important
+        }
+
+        .white {
+            color: #fff !important
+        }
+
+        .mj-column-per-100>table>tbody>tr>td.welcomemsg {
+            padding: 8px 25px !important
+        }
+
+        * {
+            font-family: 'Montserrat', Lato, Ubuntu, Helvetica, Arial, sans-serif !important;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body style="word-spacing:normal;">
+    <div style="">
+        <!-- HEADER/NAV -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;word-break:break-word;padding:0!important;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="width:200px;">
+                                                                <a href="https://www.picwictoys.com/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=commande_cc_pret"
+                                                                    target="_blank">
+                                                                    <img height="auto"
+                                                                        src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/LOGO.gif"
+                                                                        style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;word-break:break-word;">
+                                                <div class="mj-inline-links" style="width: 100%;">
+                                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td style="" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['toys']['url'] }}"
+                                                        target="_blank"
+                                                        style="width: 32%;padding: 0 1rem;box-sizing:border-box;display:inline-block;color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;">
+                                                        <img src="{{ language['toys']['src'] }}" alt=""
+                                                            style="width:100%"></a>
+                                                    <!--[if mso | IE]></td><td style="" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['creatif']['url'] }}"
+                                                        target="_blank"
+                                                        style="width: 32%;padding: 0 1rem;box-sizing:border-box;display:inline-block;color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;">
+                                                        <img src="{{ language['creatif']['src'] }}" alt=""
+                                                            style="width:100%"></a>
+                                                    <!--[if mso | IE]></td><td style="" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['puericulture']['url'] }}"
+                                                        target="_blank"
+                                                        style="width: 32%;padding: 0 1rem;box-sizing:border-box;display:inline-block;color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;">
+                                                        <img src="{{ language['puericulture']['src'] }}" alt=""
+                                                            style="width:100%"></a>
+                                                    <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="width:550px;">
+                                                                <a href="https://www.picwictoys.com/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_GUEST"
+                                                                    target="_blank">
+                                                                    <img height="auto"
+                                                                        src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/MERCI.png"
+                                                                        style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                                        width="550" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+
+                                                <table class="mobile" align="center" cellpadding="0" cellspacing="0"
+                                                    border="0" style="max-width:550px;">
+                                                    <!------------ TEXTE  -------------->
+
+
+                                                    <tr>
+                                                        <td valign="top" width="100%"
+                                                            style="padding:20px 10px; text-align: center; font-family: didot, palatino, serif; font-size:20px; color:#000000; line-height: 25px; text-transform: uppercase">
+                                                            {{ language['hello'] }}{% if receipt['customer'] ['name']['first'] %}
+                                                            {{ receipt['customer']['name']['first'] }}{% endif %},</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top" width="100%"
+                                                            style="padding:0 10px; text-align: center; font-family: helvetica, aria, sans-serif; font-size:15px; color:#000000; line-height: 25px;">
+                                                            {{ language['thank_visit'] }}{{ receipt['store']['name'] }}.
+                                                        </td>
+                                                    </tr>
+                                                    <!-- <tr>
+                                                        <td valign="top" width="100%"
+                                                            style="padding:20px 10px; text-align: center; font-family: helvetica, aria, sans-serif; font-size:15px; color:#000000; line-height: 25px;">
+                                                            {{ language['receipt_intro'] }}</td>
+                                                    </tr> -->
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <td>
+                                                <a href="https://www.picwictoys.com/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=commande_cc_pret"
+                                                    target="_blank">
+                                                    <img height="auto"
+                                                        src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/BTN_4.png"
+                                                        style="border:0;display:block;outline:none;text-decoration:none;height:auto;width: 30%;
+                                                        margin: 0 auto;font-size:13px;" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="100%"
+                                                style="padding:20px 10px; text-align: center; font-family: helvetica, aria, sans-serif; font-size:15px; color:#000000; line-height: 25px;">
+                                                Récapitulatif de votre achat :</td>
+                                        </tr> -->
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 4px #000000;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 4px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                <div
+                                                    style="font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">
+                                                    {{ language['date_of_purchase'] }}
+                                                    {{ receipt.transaction_datetime.strftime("%d/%m/%y") }}</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                <div
+                                                    style="font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">
+                                                    {{ language['transaction_number'] }}
+                                                    {{ data['receipt']['transaction_number']['text'] }}</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                <div
+                                                    style="font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">
+                                                    {{ language['store'] }}{{ data['store']['name'] }}</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END HEADER/NAV -->
+        <!-- SALE ITEMS -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top; width: 20%;">
+                                                            {{ language['item_id'] }}</th>
+                                                        <th style="text-align: left; vertical-align: top; width: 35%;">
+                                                            {{ language['description'] }}</th>
+                                                        <th
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ language['quantity'] }}</th>
+                                                        <th style="text-align: right; vertical-align: top; width: 20%;">
+                                                            {{ language['price'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+                                                    <tr style="border-top: 2px solid #000000">
+                                                        <td style="text-align: left; vertical-align: top; width: 20%;">
+                                                            {{ sale_item['pos_item_id'] }}</td>
+                                                        <td
+                                                            style="line-height:1rem; text-align: left; vertical-align: top; width: 35%;">
+                                                            {{ sale_item['text'] }}
+                                                            <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+                                                            <br>Discount: {{ discount['reduction_percent']['value'] }}
+                                                            <br>Reason: {{ discount['text'] }}
+                                                            <br>Amount:
+                                                            {{ format_currency(discount['amount']['value']) }}
+                                                            <mj-raw>{% endfor %}</mj-raw>
+                                                        </td>
+                                                        <td
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ sale_item['quantity']['value'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top; width: 20%;">
+                                                            {{ receipt.format_currency(sale_item['total']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END SALE ITEMS -->
+        <!-- SUBTOTAL -->{% if receipt['receipt']['subtotal']['amount']['value'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+      </td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <td align="left"><b>{{ language['subtotal'] }}</b></td>
+                                                        <td align="right">
+                                                            {{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+      </td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END SUBTOTAL -->
+        <!-- DISCOUNTS -->{% if receipt['discount'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top;">
+                                                            {{ language['discount'] }}</th>
+                                                        <th style="text-align: right; vertical-align: top;">
+                                                            {{ language['discount_amount'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+                                                    <tr style="border-top: 2px solid #000000">
+                                                        <td style="text-align: left; vertical-align: top;">
+                                                            {{ discount['text'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top;">
+                                                            {{ receipt.format_currency(discount['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END DISCOUNTS -->
+        <!-- TAXES -->{% if receipt['tax'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top; width: 25%;">
+                                                        </th>
+                                                        <th
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ language['tax_rate'] }}</th>
+                                                        <th
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ language['taxable_amount'] }}</th>
+                                                        <th style="text-align: right; vertical-align: top; width: 25%;">
+                                                            {{ language['tax_paid'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+                                                    <tr style="border-top: 2px solid #000000">
+                                                        <td style="text-align: left; vertical-align: top; width: 25%;">
+                                                            {{ tax['text'] }}</td>
+                                                        <td
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ tax['rate']['text'] }}</td>
+                                                        <td
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ receipt.format_currency(tax['taxable_amount']['value']) }}
+                                                        </td>
+                                                        <td style="text-align: right; vertical-align: top; width: 25%;">
+                                                            {{ receipt.format_currency(tax['amount']['value']) }}</td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END TAXES -->
+        <!-- TOTAL -->{% if receipt['receipt']['total']['amount']['value'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+      </td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <td align="left"><b>{{ language['total'] }}</b></td>
+                                                        <td align="right">
+                                                            {{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+      </td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END TOTAL -->
+        <!-- TENDER -->{% if receipt['tender'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#000000;font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top;">
+                                                            {{ language['tender_type'] }}
+                                                        </th>
+                                                        <th style="text-align: right; vertical-align: top;">
+                                                            {{ language['tender_amount'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+                                                    <tr style="border-top: 2px solid #000000">
+                                                        <td style="text-align: left; vertical-align: top;">
+                                                            {{ tender['text'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top;">
+                                                            {{ receipt.format_currency(tender['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END TENDER -->
+        <!-- SECOND RECEIPT TEXT
+          <mj-section>
+            <mj-column>
+              <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+            </mj-column>
+          </mj-section>
+         END SECOND RECEIPT TEXT -->
+        <!-- BARCODE -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="width:300px;">
+                                                                <img height="auto" src="{{ barcode_url }}"
+                                                                    style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                                    width="300" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding-top:10px;word-break:break-word;">
+                                                <div
+                                                    style="font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
+                                                    {{ receipt.barcode_transaction_number }}</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END BARCODE -->
+        <!-- LOYALTY -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+
+                    <tr>
+                        <td align="center" style="font-size:0px;padding:10px 0;word-break:break-word;">
+
+                            <table class="mobile" align="center" cellpadding="0" cellspacing="0" border="0"
+                                style="max-width:550px;">
+                                <tr>
+                                    <td valign="top" width="100%"
+                                        style="padding:0 10px; text-align: center; font-family: helvetica, aria, sans-serif; font-size:15px; color:#000000; line-height: 25px;">
+                                        {{ language['loyalty']['text'] }}<br />
+                                        {{ language['loyalty']['old'] }} {{ language['loyalty']['point'] }}
+                                        point(s)<br />
+                                        {{ language['loyalty']['ticket'] }} {{ language['loyalty']['point'] }}
+                                        point(s)<br />
+                                        {{ language['loyalty']['new'] }} {{ language['loyalty']['point'] }}
+                                        point(s)<br />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END LOYALTY -->
+
+        <!-- COUPON -->
+        {% if data["coupons"] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td valign="top" width="100%"
+                            style="padding-top:2rem; text-align: center; font-family: helvetica, aria, sans-serif; font-size:15px; color:#000000; line-height: 25px;">
+                            Vos Avantages<br />
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding:4px 0;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:300px;" ><![endif]-->
+
+                            {% for coupon in data["coupons"] %}
+                            <div class="mj-column-per-50 mj-outlook-group-fix"
+                                style="padding: 1rem; box-sizing: border-box; width:100%;display:inline-block;">
+                                <div
+                                    style="font-size:0px;text-align:left;direction:ltr;vertical-align:middle;padding: 1rem; border:4px solid #05afe7; height: 400px;border-radius: 16px; ">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        style="vertical-align:middle;padding:1rem 0; height:100%; width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center"
+                                                    style="font-size:0px;padding:1.5rem 1rem;word-break:break-word;">
+                                                    <div
+                                                        style="font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:1rem;line-height:1;text-align:center;">
+
+                                                        {% if coupon["code"] in coupon["text"] %}
+                                                        {{ coupon["text"].replace(
+                                                            coupon["code"],
+                                                            '<br /><br /> <img src="{}?path=/coupons/{}/code" /> <br /><br />{}<br />'
+                                                            .format( barcode_url, loop.index - 1, coupon["code"])
+                                                            )
+                                                        }}
+                                                        {% else %}
+
+                                                        {{ coupon["text"] }}<br /><br />
+                                                        {{ ' <img src="{}?path=/coupons/{}/code" /> <br /><br />{}<br />'
+                                                            .format( barcode_url, loop.index - 1, coupon["code"]) }}
+                                                        {{ coupon["code"] }}
+
+                                                        {% endif %}
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        {% endif %}
+        <!-- END COUPON -->
+        <!-- CTA1 -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;text-align:right;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:300px;" ><![endif]-->
+                            <div class="mj-column-per-50 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:middle;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="right"
+                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="right"
+                                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                                <div
+                                                                    style="font-family:'Montserrat', Lato, Ubuntu,  Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
+                                                                    <b>A bientôt chez PicWicToys !
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:250px;">
+                                                                <a
+                                                                    href="https://www.picwictoys.com/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=TICKET_GUEST">
+                                                                    <img height="auto"
+                                                                        src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/MASCOTTES.png"
+                                                                        style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                                        width="250" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END CTA1 -->
+        <!-- SOCIAL MEDIA -->
+        <div style="margin:0px auto;max-width:600px;">
+            <table width="100%" bgcolor="#05afe7" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                    <td width="100%"
+                        style="padding-top:1rem; text-align: center; font-weight:bold; font-family:helvetica, arial, sans-serif; font-size:13px; color:#fff; line-height: 19px; text-transform:uppercase;">
+                        {{ language['follow_us'] }}
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center" style="font-size:0;">
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                        <div style="margin:0px auto;max-width:600px;">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td style="direction:ltr;font-size:0px;text-align:center;">
+                                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="vertical-align:top;" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center"
+                                                                style="font-size:0px;padding:10px 0;word-break:break-word;">
+                                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation"
+                                                                    style="float:none;display:inline-table;">
+                                                                    <tr>
+                                                                        <td style="padding:4px;vertical-align:middle;">
+                                                                            <table border="0" cellpadding="0"
+                                                                                cellspacing="0" role="presentation"
+                                                                                style="border-radius:3px;width:30px;">
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                                                        <a href="https://www.facebook.com/PicWicToys/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=TICKET_FID"
+                                                                                            target="_blank">
+                                                                                            <img height="30"
+                                                                                                src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/PICTO_FB.png"
+                                                                                                style="border-radius:3px;display:block;"
+                                                                                                width="30" />
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!--[if mso | IE]></td><td><![endif]-->
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation"
+                                                                    style="float:none;display:inline-table;">
+                                                                    <tr>
+                                                                        <td style="padding:4px;vertical-align:middle;">
+                                                                            <table border="0" cellpadding="0"
+                                                                                cellspacing="0" role="presentation"
+                                                                                style="border-radius:3px;width:30px;">
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                                                        <a href="https://www.tiktok.com/@picwictoys?lang=fr&utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_FID"
+                                                                                            target="_blank">
+                                                                                            <img height="30"
+                                                                                                src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/PICTO_TT.png"
+                                                                                                style="border-radius:3px;display:block;"
+                                                                                                width="30" />
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!--[if mso | IE]></td><td><![endif]-->
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation"
+                                                                    style="float:none;display:inline-table;">
+                                                                    <tr>
+                                                                        <td style="padding:4px;vertical-align:middle;">
+                                                                            <table border="0" cellpadding="0"
+                                                                                cellspacing="0" role="presentation"
+                                                                                style="border-radius:3px;width:30px;">
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+
+                                                                                        <a href="https://www.tiktok.com/@picwictoys?lang=fr&utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_FID"
+                                                                                            target="_blank">
+
+                                                                                            <a href="https://www.instagram.com/picwictoys/?utm_source=mail_transactionnel&utm_medium=email&utm_campaign=PWT_TICKET_FID"
+                                                                                                target="_blank">
+                                                                                                <img height="30"
+                                                                                                    src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/PICTO_INSTA.png"
+                                                                                                    style="border-radius:3px;display:block;"
+                                                                                                    width="30" />
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                        <!-- END SOCIAL MEDIA -->
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center" style="font-size:0;">
+
+                        <!-- SERVICE CLIENT-->
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                        <div style="margin:0px auto;max-width:600px;">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td style="direction:ltr;font-size:0px;text-align:center;">
+                                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="vertical-align:top;" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center"
+                                                                style="font-size:0px; padding:1rem 2rem; word-break:break-word;">
+                                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation"
+                                                                    style="float:none;display:inline-table;">
+                                                                    <tr>
+                                                                        <td style="padding:4px;vertical-align:middle;">
+                                                                            <table border="0" cellpadding="0"
+                                                                                cellspacing="0" role="presentation"
+                                                                                style="border-radius:3px;width:30px;">
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                                                        <a href="#" target="_blank">
+                                                                                            <img height="30"
+                                                                                                src="https://media.picwictoys.com/emerch/NL/FACTURE_210122/PICTO_PHONE.png"
+                                                                                                style="border-radius:3px;display:block;"
+                                                                                                width="30" />
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td
+                                                                            style="padding-left:1rem; text-align: center; font-weight:bold; font-family:helvetica, arial, sans-serif; font-size:13px; color:#fff; line-height: 19px; text-transform:uppercase;">
+
+                                                                            Service client : 09 69 39
+                                                                            94 94
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                        <!-- END SOCIAL MEDIA -->
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                    </tr>
+                </table>
+                <![endif]-->
+        </div>
+        <div style="margin:0px auto;max-width:600px;">
+            <table width="100%" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" align="center">
+
+                <tr>
+                    <td width="100%"
+                        style="padding:15px 20px 40px 20px; text-align: center; font-family:helvetica, arial, sans-serif; font-size:10px; color:#626363; line-height: 16px;">
+                        {{ language['footer'] }} 
+                        <a href="https://www.picwictoys.com/c/protection-de-vos-donnees-personnelles" style="font-family:helvetica, arial, sans-serif; font-size:10px; color:#626363; line-height: 16px;text-decoration:none;">En savoir plus sur notre politique de protection des données personnelles. </a>
+                        <a href="https://www.picwictoys.com/c/conditions-generales-de-vente" style="font-family:helvetica, arial, sans-serif; font-size:10px; color:#626363; line-height: 16px;text-decoration:none;">Les Conditions Générales de Vente du site sont consultables sur picwictoys.com .</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

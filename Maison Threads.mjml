@@ -1,0 +1,195 @@
+<mjml>
+    <mj-head>
+      <mj-style>
+        p {margin:inherit!important; line-height:20px!important;}
+        .section > table > tbody > tr > td {padding:0!important}
+        .mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+        .mj-column-per-100 > table > tbody > tr > td.nav {padding:inherit!important}
+        .nav a {padding:8px 10px 4px!important}
+        .red {color:rgb(231,26,12)!important}
+        .white {color:#fff!important}
+        .mj-column-per-100 > table > tbody > tr > td.welcomemsg {padding:8px 25px!important}
+      </mj-style>
+    </mj-head>
+    <mj-body>
+  
+      <!-- HEADER/NAV -->
+      <mj-section>
+        <mj-column>
+          <mj-image width="100px" src="https://cdn.shopify.com/s/files/1/0570/2267/7147/files/Maison_Threads_Logo_300x100_ff443fef-6caf-44d9-b316-341b70b0969e_160x54.jpg?v=1637762218"></mj-image>
+          <mj-navbar>
+            <mj-navbar-link href="https://maisonthreads.com/collections/mens">MENS</mj-navbar-link>
+            <mj-navbar-link href="https://maisonthreads.com/collections/kids">BOYS</mj-navbar-link>
+            <mj-navbar-link href="https://maisonthreads.com/collections/girls-1">GIRLS</mj-navbar-link>
+            <mj-navbar-link href="https://maisonthreads.com/collections/baby">BABY</mj-navbar-link>
+          </mj-navbar>
+          <mj-divider></mj-divider>
+          <mj-image src="https://storage.googleapis.com/yreceipts-prod-public-assets/maison%20threads/Maison%20Threads%20Banner%20Digital%20Reciept.jpg"></mj-image>
+          <mj-divider></mj-divider>
+          <mj-text align="center" line-height="20px">We are thrilled that you chose to shop with us
+  today.<br>Please find your digital receipt attached
+  We really hope you enjoy your purchase and
+  that we will see you again very soon
+  Do not hesitate to contact us if we can help with
+  anything further<br>
+  With Kind Regards, Maison Threads</mj-text>
+          <mj-divider></mj-divider>
+          <mj-text font-size="12px" align="left">Date of Purchase: {{ data['receipt']['datetime']['text'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Transaction Number: {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Salesperson: {{ data['receipt']['associate']['name'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Store: {{ data['store']['name'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Till: {{ data['device']['external_id'] }}</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- END HEADER/NAV -->
+  
+      <!-- SALE ITEMS -->
+      <mj-section>
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top; width: 20%;">Item ID</th>
+              <th style="text-align: left; vertical-align: top; width: 35%;">Description</th>
+              <th style="text-align: center; vertical-align: top; width: 25%;">Quantity</th>
+              <th style="text-align: right; vertical-align: top; width: 20%;">Price</th>
+            </tr>
+            <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+              <td style="text-align: left; vertical-align: top; width: 35%;">
+                {{ sale_item['text'] }}
+                <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+                <br>Discount: {{ discount['reduction_percent']['value'] }}
+                <br>Reason: {{ discount['text'] }}
+                <br>Amount: {{ format_currency(discount['amount']['value']) }}
+                <mj-raw>{% endfor %}</mj-raw>
+              </td>
+              <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+              <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <!-- END SALE ITEMS -->
+  
+      <!-- DISCOUNTS -->
+      <mj-raw>{% if receipt['discount'] %}</mj-raw>
+      <mj-section>
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top;">Discount</th>
+              <th style="text-align: right; vertical-align: top;">Amount</th>
+            </tr>
+            <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+              <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END DISCOUNTS -->
+  
+  
+      <!-- TOTAL -->
+      <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+      <mj-section>
+        <mj-column>
+          <mj-divider border-width="1px"></mj-divider>
+          <mj-table>
+            <tr>
+              <td align="left"><b>Total</b></td>
+              <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+            </tr>
+          </mj-table>
+          <mj-divider border-width="1px"></mj-divider>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END TOTAL -->
+  
+      <!-- TENDER -->
+      <mj-raw>{% if receipt['tender'] %}</mj-raw>
+      <mj-section>
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top;">Tender Type</th>
+              <th style="text-align: right; vertical-align: top;">Amount</th>
+            </tr>
+            <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+              <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END TENDER -->
+  
+         <!-- SECOND RECEIPT TEXT
+      <mj-section>
+        <mj-column>
+          <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+        </mj-column>
+      </mj-section>
+     END SECOND RECEIPT TEXT -->
+  
+      <!-- BARCODE -->
+      <mj-section>
+        <mj-column>
+          <mj-image width="300px" src="{{ barcode_url }}" />
+          <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- END BARCODE -->
+  
+      <!-- CTA1 -->
+      <mj-section>
+        <mj-column width="50%" vertical-align="middle">
+          <mj-image src="https://storage.googleapis.com/yreceipts-prod-public-assets/maison%20threads/BOSS_5_FW21.jpg" />
+        </mj-column>
+        <mj-column width="50%" vertical-align="middle">
+          <mj-text align="center">In order to provide you with the best service possible, we'd love to hear about your most
+  recent shopping experience. Please take a moment to give us a review on Trustpilot.
+  </mj-text>
+          <mj-button href="https://uk.trustpilot.com/evaluate/threadsmenswear.com">Review Us</mj-button>
+        </mj-column>
+      </mj-section>
+      <!-- END CTA1 -->
+  
+      <!-- CTA2 -->
+      <mj-section>
+        <mj-column>
+          <mj-image width="500px" src="https://storage.googleapis.com/yreceipts-prod-public-assets/maison%20threads/Maison%20Threads%20Banner%20Digital%20Reciept2.jpg"></mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-button href="https://maisonthreads.com/collections/mens" background-color="#414141">SHOP MENS</mj-button>
+        </mj-column>
+        <mj-column>
+          <mj-button href="https://maisonthreads.com/collections/kids" background-color="#414141">SHOP BOYS</mj-button>
+        </mj-column>
+      </mj-section>
+      <!-- END CTA2 -->
+  
+      <!-- SOCIAL MEDIA -->
+      <mj-section>
+        <mj-column>
+          <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+            <mj-social-element name="facebook" src="https://storage.googleapis.com/yreceipts-prod-public-assets/maison%20threads/Facebook%20Icon%20Maison%20Threads.png" href="https://maisonthreads.com/collections/mens"></mj-social-element>
+            <mj-social-element name="twitter" src="https://storage.googleapis.com/yreceipts-prod-public-assets/maison%20threads/Twitter%20Icon%20Maison%20Threads.png" href="https://twitter.com/MaisonThreads"></mj-social-element>
+            <mj-social-element name="instagram" src="https://storage.googleapis.com/yreceipts-prod-public-assets/maison%20threads/Instagram%20Icon%20Maison%20Threads.png" href="https://www.instagram.com/maison_threads/?hl=en"></mj-social-element>
+          </mj-social>
+        </mj-column>
+      </mj-section>
+      <!-- END SOCIAL MEDIA -->
+    </mj-body>
+  </mjml>

@@ -1,0 +1,227 @@
+<mjml>
+  <mj-head>
+    <mj-breakpoint width="0px" />
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="100px" src="https://gallery.mailchimp.com/7b41965b8a58d6cf22aa9fa2a/images/42b3806d-d66e-4b38-83d4-d3b8fc6f195b.png"></mj-image>
+        <mj-navbar>
+          <mj-navbar-link href="https://www.yreceipts.com">MENS</mj-navbar-link>
+          <mj-navbar-link href="https://www.yreceipts.com">WOMENS</mj-navbar-link>
+          <mj-navbar-link href="https://www.yreceipts.com">ACCESSORIES</mj-navbar-link>
+          <mj-navbar-link href="https://www.yreceipts.com">PERFUMES</mj-navbar-link>
+        </mj-navbar>
+        <mj-divider></mj-divider>
+        <mj-image src="https://gallery.mailchimp.com/7b41965b8a58d6cf22aa9fa2a/images/f6a753d9-0598-4f0f-8401-1654aeb6eeea.png"></mj-image>
+        <mj-divider></mj-divider>
+        <mj-text font-size="20px" align="center">Thank you for shopping at {{ receipt['store']['name'] }}</mj-text>
+        <mj-divider></mj-divider>
+        <mj-text font-size="12px" align="left">Date of Purchase: {{ data['receipt']['datetime']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Transaction Number: {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Salesperson: {{ data['receipt']['associate']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Store: {{ data['store']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Till: {{ data['device']['external_id'] }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+    <!-- SALE ITEMS -->
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 20%;">Item ID</th>
+            <th style="text-align: left; vertical-align: top; width: 35%;">Description</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Quantity</th>
+            <th style="text-align: right; vertical-align: top; width: 20%;">Price</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+            <td style="text-align: left; vertical-align: top; width: 35%;">
+              {{ sale_item['text'] }}
+              <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+              <br>Discount: {{ discount['reduction_percent']['value'] }}
+              <br>Reason: {{ discount['text'] }}
+              <br>Amount: {{ format_currency(discount['amount']['value']) }}
+              <mj-raw>{% endfor %}</mj-raw>
+            </td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+            <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+    <!-- SUBTOTAL -->
+    <mj-raw>{% if receipt['receipt']['subtotal']['amount']['value'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>Subtotal</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END SUBTOTAL -->
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Discount</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+
+    <!-- TAXES -->
+    <mj-raw>{% if receipt['tax'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Rate</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Taxable Amount</th>
+            <th style="text-align: right; vertical-align: top; width: 25%;">Tax Paid</th>
+          </tr>
+          <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 25%;">{{ tax['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+            <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TAXES -->
+
+    <!-- TOTAL -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>Total</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TOTAL -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Tender Type</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+       <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+
+    <!-- CTA1 -->
+    <mj-section>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-image src="http://www.online-image-editor.com//styles/2014/images/example_image.png" />
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="center">Want a kitten? Of course you do! Who doesn't want a fluffy little buddy to keep you company? Go on click the button, you know you want to.</mj-text>
+        <mj-button href="https://www.yreceipts.com">Get a Kitten</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA1 -->
+
+    <!-- CTA2 -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="500px" src="https://gallery.mailchimp.com/7b41965b8a58d6cf22aa9fa2a/images/42b3806d-d66e-4b38-83d4-d3b8fc6f195b.png"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-button href="https://www.yreceipts.com" background-color="#414141">Call To Action</mj-button>
+      </mj-column>
+      <mj-column>
+        <mj-button href="https://www.yreceipts.com" background-color="#414141">Call To Action</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA2 -->
+
+    <!-- CTA3 -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://gallery.mailchimp.com/7b41965b8a58d6cf22aa9fa2a/images/6d7c00bb-097e-4461-97ce-ce36b9ce3f5f.png"></mj-image>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA3 -->
+
+    <!-- SOCIAL MEDIA -->
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+          <mj-social-element name="facebook" href="https://www.yreceipts.com"></mj-social-element>
+          <mj-social-element name="google" href="https://www.yreceipts.com"></mj-social-element>
+          <mj-social-element name="twitter" href="https://www.yreceipts.com"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+  </mj-body>
+</mjml>

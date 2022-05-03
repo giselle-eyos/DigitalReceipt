@@ -1,0 +1,161 @@
+<mjml>
+  <mj-head>
+    <mj-breakpoint width="0px" />
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="http://email-content.newlook.com/custloads/760264384/md_617925.jpg" href="https://www.newlook.com/uk/"></mj-image>
+        <mj-divider border-color="#283583" border-width="2px"></mj-divider>
+        <mj-image src="http://email-content.newlook.com/custloads/760264384/md_617926.jpg"></mj-image>
+        <mj-divider border-color="#283583" border-width="2px"></mj-divider>
+        <mj-text font-size="24px" align="center" color="#283583"><b>Thank you for shopping at {{ receipt['store']['name'] }}</b></mj-text>
+        <mj-divider border-color="#283583" border-width="2px"></mj-divider>
+        <mj-text font-size="18px" align="left" color="#283583"><b>Date of Purchase</b>: {{ data['receipt']['datetime']['text'] }}</mj-text>
+        <mj-text font-size="18px" align="left" color="#283583"><b>Transaction Number</b>: {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+        <mj-text font-size="18px" align="left" color="#283583"><b>Salesperson</b>: {{ data['receipt']['associate']['name'] }}</mj-text>
+        <mj-text font-size="18px" align="left" color="#283583"><b>Store</b>: {{ data['store']['name'] }}</mj-text>
+        <mj-text font-size="18px" align="left" color="#283583"><b>Till</b>: {{ data['device']['external_id'] }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+    <!-- SALE ITEMS -->
+    <mj-section>
+      <mj-column>
+        <mj-table color="#283583">
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 25%;">Item ID</th>
+            <th style="text-align: left; vertical-align: top; width: 55%;">Description</th>
+            <th style="text-align: right; vertical-align: top; width: 20%;">Price</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 2px solid #283583">
+            <td style="text-align: left; vertical-align: top; width: 25%;">{{ sale_item['pos_item_id'] }}</td>
+            <td style="text-align: left; vertical-align: top; width: 55%;">
+              {{ sale_item['text'] }}
+              <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+              <br>Discount: {{ discount['reduction_percent']['value'] }}
+              <br>Reason: {{ discount['text'] }}
+              <br>Amount: {{ format_currency(discount['amount']['value']) }}
+              <mj-raw>{% endfor %}</mj-raw>
+            </td>
+            <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table color="#283583">
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Discount</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 2px solid #283583">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+    <!-- TOTAL -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#283583"></mj-divider>
+        <mj-table color="#283583">
+          <tr>
+            <td align="left"><b>Total</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px" border-color="#283583"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TOTAL -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table color="#283583">
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Tender Type</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #283583">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }} {% if tender['card']['partial_number'] %} {{ receipt['receipt']['footer']['info'] }} {% endif %}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+    <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+        <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+        <mj-raw>{% if tender['authorization']['provider']['external_id'] == "Klarna" %}</mj-raw>
+        <mj-text align="center" color="#283583" font-size="16px"><b>Your Klarna Agreement Information</b></mj-text>
+        <mj-raw> {% if loop.index0 == 0 %}</mj-raw>
+        <mj-image width="300px" src="{{ barcode_url }}?path=$.tender[0].authorization.approval_code&type=qr" />
+        <mj-raw> {% else %}</mj-raw>
+        <mj-image width="300px" src="{{ barcode_url }}?path=$.tender[{{ loop.index0 }}].authorization.approval_code&type=qr" />
+           <mj-raw> {% endif %}</mj-raw>
+         <mj-text align="center" color="#283583" font-size="10px"><b>{{ receipt['tender'][loop.index0]['authorization']['approval_code'] }}</b></mj-text>
+          <mj-raw> {% endif %}</mj-raw>
+          <mj-raw>{% endfor %}</mj-raw>
+        <mj-divider border-color="#283583" border-width="2px"></mj-divider>
+         <mj-image src="https://email-content.newlook.com/custloads/760264384/md_685903.png" href="https://critizr.com/p/N1zS42/?cz_open=store_locator&cz_user=<{{receipt['customer']['email_address']}}>||&cz_answer=&cz_extuid={{receipt.get_local_time().strftime('%Y/%m/%d')}}&cz_lang=en"/>
+        <mj-text color="#283583" align="center"><a href="https://help-uk.newlook.com/hc/en-gb/articles/4408132803473-What-is-New-Look-Listens-">*T&C’s Apply</a></mj-text>
+        <mj-text color="#283583"><b>How we use your information:</b><br /><br />You have given us your e-mail address as you have chosen to receive an e-mail receipt , we will store this securely on our system so that if you ask we can send you e-mail receipts for any future purchases you make. This saves time, reduces the scope for error, and is more convenient for you the customer. In addition to your e-mail address we also store a security ‘token’ that recognises your payment card so that your e-mail address is immediately available. This token is issued by the card companies, is secure and does not allow us, or anyone else, to work out your full card number. Storage of your data (which may be for up to 1 year after the last transaction) is on the basis of our legitimate interest of making shopping for our customers more convenient and our business more efficient. If you do not want us to store this information please let us know by forwarding this e-mail to privacy@newlook.com stating your objection. In addition, unless you objected at the time it was collected, your e-mail address may also be used to send you e-mails with details of the latest trends, new arrivals and exclusive offers. If you no longer wish to receive these e-mails you can unsubscribe <a href="https://www.newlook.com/uk/guest/contact-preferences/request"><b>here</b></a><br /><br />The data controller is New Look Retailers Limited, Mercery Road, Weymouth, DT3 5HJ. Your data is shared with yReceipts Limited who operate our e-receipt system; they do not use it or share it for any other purposes. You have the right to ask us for a copy of your data, to erase or rectify it, or object to, or restrict our use of it. If you are unhappy about how we use your data please contact our Data Protection Officer (e-mail privacy@newlook.com). You may also complain to the Information Commissioner’s Office (www.ico.org.uk). For more information about how we use your information, and your rights, see the Privacy Policy on our website www.newlook.com</mj-text>
+        <mj-text color="#283583"><b>Returns Policy</b><br /><br />We hope you love what you've purchased, but if you're not 100% satisfied with any item our returns are simple. You can return any item, to any New Look store within 28 days, including sale items or items purchased with promotional discounts. (Your 28 days start from the date on your receipt).Simply keep hold of your receipt/e-receipt and return your item in its original condition within 28 days to get a full refund. Sale items are exchange only.<br /><br />Refunds will be issued to the original payment method only. For purchases made by Multi-Retail vouchers (i.e. Love2Shop, One4All, High Street/ Shopping Centre vouchers) refunds issued will be applied to a New Look gift card.<br /><br />If you have lost your receipt, but the item has its tags, and is in new/unworn condition, a New Look store may be able to offer an exchange or a refund at the current/last selling price to a store credit note. This is at the Store Manager's discretion.<br /><br />For hygiene reasons, this policy does not apply to pierced jewellery cosmetics or face coverings. We cannot offer refunds on swimwear/underwear briefs if the original packaging and/or hygiene seal has been removed. This policy does not apply to fragrances where the original packaging has been removed. Personalised items are also excluded from this policy unless they are faulty. This does not affect your statutory rights (contact the Citizen’s Advice Bureau or your local Trading Standards Office for advice on your statutory rights).</mj-text>
+        <mj-text color="#283583" align="center">For more help visit www.newlook.com/help<br /><br /><b>PLEASE NOTE SALE ITEMS - EXCHANGE ONLY</b><br />
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+
+    <!-- CTA1 
+   
+    <mj-section>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-image src="http://email-content.newlook.com/custloads/760264384/md_618086.jpg" />
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="center" color="#283583"><b>Win a £50 New Look voucher.</b><br/><br/>Simply share your in-store experience with us to be in with the chance of winning. Visit newlooklistens-gbr.co.uk</mj-text>
+        <mj-button href="https://www.mynewlooklistens.com/gbr" background-color="#FFFFFF" color="#283583" border="1px solid #283583">TAKE SURVEY</mj-button>
+      </mj-column>
+    </mj-section>
+       END CTA1 -->
+
+    <!-- END SOCIAL MEDIA -->
+  </mj-body>
+</mjml>

@@ -1,0 +1,225 @@
+{% set store_imgs = {
+  "002": "https://www.caseluggage.com/media/yreceipts/Case_x_YReciepts-Piccadilly.jpg",
+  "084": "https://www.caseluggage.com/media/yreceipts/Case_x_YReciepts-GatwickNorth.jpg",
+  "102": "https://www.caseluggage.com/media/yreceipts/Case_x_YReciepts-HeathrowT2A.jpg",
+  "103": "https://www.caseluggage.com/media/yreceipts/Case_x_YReciepts-HeathrowT3A.jpg",
+  "105": "https://www.caseluggage.com/media/yreceipts/Case_x_YReciepts-HeathrowT5A.jpg",
+  "106": "https://www.caseluggage.com/media/yreceipts/Case_x_YReciepts-HeathrowT5L.jpg"
+} %}
+{% set store_img = store_imgs.get(receipt["store"]["external_id"]) %}
+
+<mjml>
+  <mj-head>
+    <mj-style>
+      p {margin:inherit!important; line-height:20px!important;}
+      .section > table > tbody > tr > td {padding:0!important}
+      .mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+      .mj-column-per-100 > table > tbody > tr > td.nav {padding:inherit!important}
+      .nav a {padding:8px 10px 4px!important}
+      .red {color:rgb(231,26,12)!important}
+      .white {color:#fff!important}
+      .mj-column-per-100 > table > tbody > tr > td.welcomemsg {padding:8px 25px!important}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section css-class="section header">
+      <mj-column>
+        <mj-image width="150px" src="https://www.caseluggage.com/skin/frontend/casenew/default/images/logo.jpg" href="https://www.caseluggage.com" css-class="image"></mj-image>
+        <mj-navbar css-class="nav">
+          <mj-navbar-link href="https://www.caseluggage.com/luggage.html">Luggage</mj-navbar-link>
+          <mj-navbar-link href="https://www.caseluggage.com/bags.html">Bags</mj-navbar-link>
+          <mj-navbar-link href="https://www.caseluggage.com/accessories.html">Accessories</mj-navbar-link>
+        </mj-navbar>
+
+
+        <!-- START STORE IMAGE  -->
+        <mj-image src="{{ store_img }}" href="https://www.caseluggage.com"></mj-image>
+        <!-- END STORE IMAGE  -->
+
+        <mj-text css-class="welcomemsg" font-size="20px" align="center">Thank you for shopping at Case</mj-text>
+        <mj-divider></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="section order-detail">
+      <mj-column>
+        <mj-text font-size="12px" align="left">Date of Purchase: {{ data['receipt']['datetime']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Transaction Number: {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Salesperson: {{ data['receipt']['associate']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Store: {{ data['store']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Till: {{ data['device']['external_id'] }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+    <!-- SALE ITEMS -->
+    <mj-section css-class="section item-detail">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 20%;">Item ID</th>
+            <th style="text-align: left; vertical-align: top; width: 35%;">Description</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Quantity</th>
+            <th style="text-align: right; vertical-align: top; width: 20%;">Price</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+            <td style="text-align: left; vertical-align: top; width: 35%;">
+              {{ sale_item['text'] }}
+
+            </td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+            <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+    <!-- SUBTOTAL -->
+    <mj-raw>{% if receipt['receipt']['subtotal']['amount']['value'] %}</mj-raw>
+    <mj-section css-class="section total">
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>Subtotal</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END SUBTOTAL -->
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section css-class="section discount">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Discount</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+
+    <!-- TAXES -->
+    <mj-raw>{% if receipt['tax'] %}</mj-raw>
+    <mj-section css-class="section">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Rate</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Taxable Amount</th>
+            <th style="text-align: right; vertical-align: top; width: 25%;">Tax Paid</th>
+          </tr>
+          <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 25%;">{{ tax['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+            <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TAXES -->
+
+    <!-- TOTAL -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section css-class="section total">
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>Total</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TOTAL -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section css-class="section tender-type">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Tender Type</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+    <!-- SECOND RECEIPT TEXT
+  <mj-section>
+    <mj-column>
+      <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+    </mj-column>
+  </mj-section>
+ END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+
+
+    <!-- CTA1 -->
+    <mj-section>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-image src="https://www.caseluggage.com/media/yreceipts/Case_x_yReceipts-CTAOption1-ImageBlock-250_x_250.jpg" />
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="center">Sign up to our newsletter to hear about our latest launches, re-stocks, sales, and much more... plus, you'll receive 10% OFF your first purchase on our website!* (*Excludes Sale/Reduced Items)</mj-text>
+        <mj-button padding-top="20px" href="https://www.caseluggage.com/">SIGN UP</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA1 -->
+    <!-- SOCIAL MEDIA -->
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="15px" icon-size="24px" mode="horizontal">
+          <mj-social-element src="https://www.caseluggage.com/media/yreceipts/Facebook-SocialIcon.jpg" href="https://www.facebook.com/caseluggage"></mj-social-element>
+          <mj-social-element src="https://www.caseluggage.com/media/yreceipts/Twitter-SocialIcon.jpg" href="https://twitter.com/caseluggage"></mj-social-element>
+          <mj-social-element src="https://www.caseluggage.com/media/yreceipts/Insta-SocialIcon.jpg" href="https://www.instagram.com/caseluggage/"></mj-social-element>
+          <mj-social-element src="https://www.caseluggage.com/media/yreceipts/TikTok-SocialIcon.jpg" href="https://www.tiktok.com/@caseluggage"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+  </mj-body>
+</mjml>

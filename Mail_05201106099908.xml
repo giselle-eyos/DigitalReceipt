@@ -1,0 +1,177 @@
+<Receipt xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Currency="EUR" Transaction="true" test="true">
+  <Recipient>
+    <PersonName>
+      <FirstName></FirstName>
+      <LastName></LastName>
+    <Salutation></Salutation>
+    </PersonName>
+    <Address>
+      <Street1></Street1>
+      <Street2></Street2>
+      <City></City>
+      <PostalCode></PostalCode>
+    <Country></Country>
+    </Address>
+    <Email>lmercier@cegid.com</Email>
+      <SignUp>true</SignUp>
+    <PartyID></PartyID>
+  </Recipient>
+  <CustomerLoyaltyAccount>
+    <CustomerAccountID></CustomerAccountID>
+    <CumulativePoints>0</CumulativePoints>
+  </CustomerLoyaltyAccount>
+  <Issuer>
+    <OrganizationName>PICWICTOYS</OrganizationName>
+    <Address>
+      <Street1>à définir</Street1>
+      <Street2></Street2>
+      <City>à définir</City>
+      <PostalCode>à définir</PostalCode>
+    <Country></Country>
+    </Address>
+    <Telephone></Telephone>
+    <Email>à définir</Email>
+    <TimeZone>Europe/Paris</TimeZone>
+    <TaxID></TaxID>
+  </Issuer>
+  <Location>
+    <OrganizationName> TOYS PAU</OrganizationName>
+    <Address>
+      <Street1>Zone Commerciale de Lescar</Street1>
+      <Street2></Street2>
+      <City>64230 PAU</City>
+      <PostalCode></PostalCode>
+    <Country></Country>
+    </Address>
+    <Telephone>0559813565</Telephone>
+    <Email></Email>
+    <Locale>fr_FR</Locale>
+    <TimeZone>Europe/Paris</TimeZone>
+  </Location>
+  <Device>
+    <TransactionID>05201106099908</TransactionID>
+    <DeviceID>Cylande_023_023FRA_908_05</DeviceID>
+  </Device>
+  <HeaderInfo>
+   
+  Zone Commerciale de Lescar
+   64230 PAU
+  Tél : 0559813565
+   
+  Le 26/01/2022 11:47
+   
+  </HeaderInfo>
+  <RawReceiptText>
+   
+  Zone Commerciale de Lescar
+   64230 PAU
+  Tél : 0559813565
+   
+  Le 26/01/2022 11:47
+   
+  100668 *COIFFEUR          563854
+                           =    106.56 €
+  --------------------------------------
+  Total      106.56 €
+   
+  Especes                 :     106.56 €
+   
+  Taux TVA    Montant H.T.      T.V.A.
+      20%         88.80 €     17.76 €
+   
+  Devenez client fidèle PicWicToys
+  Vous auriez pu gagner :  107 points
+   
+  Ticket 052011060
+  MatCaisse 99
+  Merci de votre visite et à très
+  bientôt
+   
+  Conservez votre ticket, il vous sera
+  demandé pour tout échange
+   
+  </RawReceiptText>
+  <Footer>
+    <Text>
+   
+  Devenez client fidèle PicWicToys
+  Vous auriez pu gagner :  107 points
+   
+  Ticket 052011060
+  MatCaisse 99
+  Merci de votre visite et à très
+  bientôt
+   
+  Conservez votre ticket, il vous sera
+  demandé pour tout échange
+   
+    </Text>
+  </Footer>
+  <SecondReceiptText>
+  </SecondReceiptText>
+  <TransactionDetail>
+    <Operator>
+      <AssociateID>99</AssociateID>
+      <AssociateName>Administrateur Administrateur</AssociateName>
+    </Operator>
+	<Coupon>
+		<Text>
+		  C.cial Reg Mondeville 2
+		   14124 CAEN
+		  Tél : 0231820810
+		   
+		  Bonjour NANCY L****
+		   
+		  Le 04/11/2021 16:12
+		  Coupon 10€ Smoby
+		  Valable du 05/11/2021 au 03/01/2022 
+		   
+		  N°Coupon : 110565805084444445 
+		   
+		   
+		  Montant du coupon : 
+		   
+		  10.00 EUR
+		   
+		   Valable chez PicWicToys hors
+		  livre,console,jeux vidéo,couche.
+		</Text>
+		<Code>110565805084444445</Code></Coupon>
+	<Coupon>
+		<Text>
+		  Bon d'achat d'un montant
+		  de 5.00
+		  A utiliser en 1 fois lors de votre
+		  prochain achat chez PicWicToys
+		  Valable du 05/11/2021 au 05/01/2022
+		  Hors carte cadeaux, consoles
+		  et jeux vidéo, livres
+		  et services.
+
+		</Text>
+		<Code></Code></Coupon>
+	<Coupon>
+		<Text>
+		  C.cial Reg Mondeville 2
+		   14124 CAEN
+		  Tél : 0231820810
+		   
+		  Bonjour MANUELA MORISSET
+		   
+		  Le 25/10/2021 12:14
+		  SUPER OFFRE DE NOEL
+		  Valable du 01/11/2021 au 14/11/2021 
+		   
+		  N°Coupon : 110437805014444495 
+		   
+		   
+		  Montant du coupon : 10.00€
+		  Valable dès 50€ d'achats en magasin
+		  et sur le site.
+		  Réservé au porteur de la carte.
+
+		</Text>
+		<Code>110437805014444495</Code></Coupon>		
+  </TransactionDetail>
+  <DateTime>26/01/2022 11:47</DateTime>
+</Receipt>

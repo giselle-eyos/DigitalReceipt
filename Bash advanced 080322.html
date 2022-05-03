@@ -1,0 +1,1307 @@
+
+{% set translations = {
+    "en_US": {
+        "store" : {
+            "show" : True,
+            "name" : "Bash",
+            "href" : "https://ba-sh.com/uk",
+            "logo" : {
+                "href" : "https://ba-sh.com/uk",
+                "src" : "http://media.ba-sh.com/ticket1/Logo%20Image.png",
+            },
+            "banner" : "'http://media.ba-sh.com/ticket1/Banner.jpg'",
+            "detail" : "Store Details",
+            "address" : "Address:",
+            "telephone" : "Telephone:",
+            "phone_number" : "",
+        },
+        "gnb" : [
+            {   
+                "href" : "https://ba-sh.com/uk/ready-to-wear/new-collection/",
+                "text" : "Shop New Arrivals",
+        
+            }, 
+            {   
+                "href" : "https://ba-sh.com/uk/collection/",
+                "text" : "Clothing",
+        
+            }, 
+            {   
+                "href" : "https://ba-sh.com/uk/accessories/",
+                "text" : "Accessories",
+        
+            }, 
+            {   
+                "href" : "https://ba-sh.com/uk",
+                "text" : "Bash World",
+        
+            }
+        ],
+        "headline" : {
+            "href" : "#",
+            "text": "Discover the new ba&sh collection!",
+            "button" : "SHOP NOW"
+        },
+        "greeting" : {
+            "dear" : "Dear ",
+            "thankyou" : "Merci beaucoup for shopping at ",
+            "body" : "Please find your receipt details below.",
+            "href" : "https://ba-sh.com/uk",
+            "button" : "Explore more",
+        },
+        "receipt" : {
+            "intro" : "Here Is Your eReceipt For Your Recent Purchase",
+            "discount" : "Discount",
+            "subtotal" : "Subtotal",
+            "tax" : "Tax",
+            "total" : "Total",
+            "payment_method" : "Payment_method",
+            "till" : "Till:",
+            "salesperson" : "Salesperson:",
+            "transaction_id" : "Transaction ID:",
+            "time" : "Date and Time:",
+            "" : "",
+            "" : "",
+        },
+        "refund" : {
+            "title" : " Return Policy:",
+            "body" : "Thank you for visiting ba&sh. Returns for store credit or exchange are accepted within 15 days. 
+            All sale items are final sale.
+            All returns for store credit or exchanges must be made in the country of original purchase. 
+            Please bring the items in their original condition, with tags intact, and your receipt.",
+        },
+        "cta" : {
+            "cta1_1" : {
+                "title" : "Host your next personal bash at ba&sh!",
+                "body" : "Whether a charity fundraiser, birthday, baby shower, or girls night out: we’ll provide champagne, bites & a special discount – you just bring the ladies ready to have a good time! Email us for more information.",
+                "href" : "https://ba-sh.com/uk/the-ampersand.html?utm_source=retail&utm_campaign=ampersand&utm_medium=digital+receipt",
+                "button" : "Email Us",
+                "src" : "http://media.ba-sh.com/ticket1/Lower%20CTA.jpg",
+            },
+            "cta1_2" : {
+                "title" : "Discover The Ampersand",
+                "body" : "Discover the world of ba&sh through our official blog.",
+                "href" : "mailto:events@ba-sh.com",
+                "button" : "The Ampersand",
+                "src" : "https://i.ibb.co/W2gFjsX/211025-BA-SH-S22-LOOK14-0170.jpg",
+            },
+        },
+        "social" : [
+            {
+                "href": "https://www.facebook.com/bash-100786032453375/?brand_redir=1959506111001405",
+                "src": "http://media.ba-sh.com/ticket1/Facebook.png",
+                "alt" : "facebook"
+            },
+            {
+                "href": "https://www.instagram.com/bashparis/?igshid=1pjc3ciffu4cq",
+                "src": "http://media.ba-sh.com/ticket1/Instagram.png",
+                "alt" : "instagram"
+            }
+        ],
+        "lnb" : [
+            {   
+                "href" : "mailto:Helpusa@ba-sh.com",
+                "text" : "CONTACT US",
+        
+            }
+        ],
+    }
+
+} 
+%}
+
+{% set language = translations[locale if locale in translations else "en_US"] %}
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <title></title>
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=”x-apple-disable-message-reformatting”>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+    </style>
+    <!--<![endif]-->
+    <!--[if mso]>
+              <noscript>
+              <xml>
+              <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+              </o:OfficeDocumentSettings>
+              </xml>
+              </noscript>
+              <![endif]-->
+    <!--[if lte mso 11]>
+              <style type="text/css">
+                .w100p { width:100% !important; }
+        body.layout {
+            -webkit-text-size-adjust: 100vw;
+            -ms-text-size-adjust: 100vw;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            min-width: 320px;
+            width: 100vw;
+            min-width: 100vw;
+            table-layout: fixed;
+            margin: 0 auto;
+            border-spacing: 0;
+        }
+                table {
+            max-width:500px;
+            box-sizing: border-box;
+            overflow: hidden;
+            table-layout: fixed;
+        }
+              </style>
+              <![endif]-->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            font-family: gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+            text-align: left;
+
+        }
+
+        #outlook a {
+            padding: 0;
+            color: inherit !important;
+        }
+
+        body.layout {
+            -webkit-text-size-adjust: 100vw;
+            -ms-text-size-adjust: 100vw;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            min-width: 320px;
+            width: 100vw;
+            min-width: 100vw;
+            table-layout: fixed;
+            margin: 0 auto;
+            border-spacing: 0;
+        }
+
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+
+        table {
+            max-width: 500px;
+            width:100%; 
+            box-sizing: border-box;
+            overflow: hidden;
+            table-layout: fixed;
+        }
+
+        td {
+            word-break: break-word;
+            mso-line-height-rule: exactly;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            width: 100%;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a {
+            outline: none;
+            color: inherit!important;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none !important;
+        }
+
+        .text-decoration-hover a {
+            text-decoration: none;
+        }
+
+        .text-decoration-hover a:hover {
+            text-decoration: underline !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        a[href^="tel"]:hover {
+            text-decoration: none !important;
+        }
+
+        .active a:hover,
+        .active:hover {
+            opacity: 0.8;
+        }
+
+        .active a,
+        .active {
+            transition: all 0.3s ease;
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        th {
+            padding: 0;
+        }
+
+        .pt10 {
+            padding-top: 1em !important;
+        }
+
+        .pt15 {
+            padding-top: 1.5em !important;
+        }
+
+        .pt20 {
+            padding-top: 2em !important;
+        }
+
+        .pb0 {
+            padding-bottom: 0;
+        }
+
+        .pb5 {
+            padding-bottom: 0.5em !important;
+        }
+
+        .pb10 {
+            padding-bottom: 1em !important;
+        }
+
+        .pb20 {
+            padding-bottom: 2em !important;
+        }
+
+        .pl10 {
+            padding-left: 1em !important;
+        }
+
+        .pr10 {
+            padding-right: 1em !important;
+        }
+
+        .py5 {
+            padding-top: 0.5em !important;
+            padding-bottom: 0.5em !important;
+        }
+
+        .py10 {
+            padding-top: 1em !important;
+            padding-bottom: 1em !important;
+        }
+
+        .py15 {
+            padding-top: 1.5em !important;
+            padding-bottom: 1.5em !important;
+        }
+
+        .py20 {
+            padding-top: 2em !important;
+            padding-bottom: 2em !important;
+        }
+
+
+        .px10 {
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+
+        .m0 {
+            margin: 0;
+        }
+
+        .alignCenter {
+            text-align: center !important;
+        }
+
+        .w50p {
+            width: 50% !important;
+        }
+
+        .w100p {
+            width: 100% !important;
+        }
+
+        .w500 {
+            width: 500px !important;
+            margin: 0 auto;
+        }
+
+        .btn01,
+        .btn02 {
+
+            background: #000000;
+        }
+
+        .btn01 a {
+            display: block;
+            color: #fff!important;
+            text-decoration: none;
+            padding: 0.8em 0.6em;
+            mso-padding-alt: 0.8em 0.6em;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .btn02 a {
+            display: block;
+            color: #fff!important;
+            text-decoration: none;
+            padding: 0.5em 0;
+            mso-padding-alt: 0.5em 0;
+            font-size: 0.8em;
+            text-align: right;
+        }
+
+        .logo img {
+            width: 27%;
+            height: auto;
+            display: block;
+            outline: none;
+            border: 0;
+            margin: 0 auto;
+        }
+
+        .gnb a {
+            font-size: 0.8em;
+            font-weight: bold;
+            display: inline-block;
+            line-height: 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .headline {
+            background: #000000;
+            padding: 0 0.9em;
+        }
+
+        .headlineText {
+            width: 80%;
+            padding:0.5em 0;
+            font-size: 0.8em;
+            color: #fff;
+            letter-spacing: -0.15;
+        }
+
+        .headlineButton {
+            width: 20%;
+
+        }
+
+        .headlineButton span {
+            display: inline-block;
+        }
+
+        .headlineButton span img {
+            width: 5px;
+            display: block;
+            vertical-align: top;
+        }
+
+        .banner {
+            background:url({{ language['store']['banner'] }}) 0 0/cover no-repeat;
+            width: 100%;
+            height: 200px;
+        }
+
+        .greeting {
+            width: 56%;
+            text-align: left;
+            vertical-align: top;
+            padding-right: 1em;
+        }
+
+        .greetingButton {
+            width: 100%;
+        }
+
+        .storeDetail {
+            text-align: left;
+            background: #f5f5f5;
+            vertical-align: top;
+            padding: 1em;
+        }
+
+        .storeDetail>table {
+            table-layout: fixed;
+            font-size: 0.9em;
+            padding: 1em 1.5em;
+            word-break: break-word;
+        }
+
+        .storeDetailTitle {
+            padding-bottom: 0.5em;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+        .storeDetailDescription {
+            padding-bottom: 1em;
+            font-weight: bold;
+        }
+
+        .receiptIntro {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 2em 0 1em;
+        }
+
+        .receiptSection {
+            padding: 0.5em 0;
+            border-top: 1px solid #dededf;
+            width:100%;
+            text-align:left;
+        }
+
+        .receiptSection th {
+            vertical-align: top;
+        }
+
+        .receiptSection>table>tr>td {
+            word-break: break-word;
+            vertical-align: top;
+            text-align: left;
+            width:100%;
+        }
+
+        .number {
+            text-align:left;
+            font-size: 0.8em;
+            padding-top: 1em;
+        }
+
+        .title {
+            font-size: 1em;
+            text-align:left;
+            font-weight: bold;
+            letter-spacing: -0.03em;
+        }
+
+        .description {
+            text-align:left;
+            font-size: 0.9em;
+        }
+
+        .description2 {
+            font-size: 0.8em;
+            font-weight: bold;
+            padding: 0.2em 0 1em;
+        }
+
+        .price {
+            text-align: right;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        .transaction {
+            width: 60%;
+            vertical-align: top;
+            padding-right: 1em;
+        }
+
+        .barcode img {
+            max-width: 250px;
+            margin: 0 auto;
+
+        }
+        .cta .title {
+            font-size: 1.3em;
+        }
+
+        .cta .description {
+            padding: 2em 0;
+            font-weight: normal;
+        }
+
+        .ctaText {
+            width: 60%;
+            padding-right: 1em;
+        }
+
+        .ctaImage {
+            text-align: right;
+            background-position: center !important;
+        }
+
+        .coupon {
+            padding:0.5em 0 2em;
+        }
+
+        .couponContainer {
+            width: 40%;
+            box-sizing: border-box;
+            padding: 0.5em 1em;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .couponCard {
+            font-size: 0.8em;
+            border: 4px solid #000000;
+            border-radius: 8px;
+            padding: 1em;
+            text-align: center;
+        }
+
+
+        .social {
+            padding: 1em 0;
+            border-top: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+        }
+
+        .social a {
+            padding: 0 0.2em;
+        }
+
+        .social img {
+            width: 32px;
+        }
+
+        .lnb {
+            padding: 1em 0 2em;
+        }
+
+        .lnb table {
+            width: auto;
+        }
+
+        .lnb a {
+            padding: 0 0.5em;
+        }
+
+        .footer {
+            color: #9c9d9e;
+            font-size: 0.8em;
+        }
+
+        @media only screen and (max-width:617px) {
+            .hm {
+                display: none !important;
+                width: 0 !important;
+                height: 0 !important;
+                padding: 0 !important;
+                font-size: 0 !important;
+                line-height: 0 !important;
+            }
+
+            .tflex {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .tflex.btn02 a {
+                text-align: center;
+            }
+
+            .tfoot {
+                display: table-footer-group !important;
+                width: 100% !important;
+            }
+
+            .trow {
+                display: table-row !important;
+                width: 100% !important;
+            }
+
+            .thead {
+                display: table-caption !important;
+                width: 100% !important;
+            }
+
+            .floatNone {
+                float: none !important;
+                margin: 0 auto !important;
+            }
+
+            .mw55p {
+                max-width: 55% !important;
+            }
+
+            .banner {
+
+                background:url({{ language['store']['banner'] }}) 0 0/cover no-repeat !important;
+            }
+
+            .ctaText {
+                text-align: center;
+            }
+
+            .ctaImage {
+                background-position: center !important;
+            }
+
+        }
+
+        @media (prefers-dark-interface) {
+            body {
+                -apple-color-filter: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="layout">
+
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+    <table width="500" cellspacing="0" cellpadding="0">
+        <!-- START HEADER -->
+        <tr>
+            <td class="header pt10">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <!-- START LOGO -->
+                    <tr>
+                        <td>
+                            <a class="logo" href="{{ language['store']['logo']['href'] }}">
+                                <img src="{{ language['store']['logo']['src'] }}" />
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- END LOGO -->
+                    <!-- START GLOBAL NAVIGATION BAR -->
+                    <tr>
+                        <td class="text-decoration-hover py15">
+                            <div class="gnb alignCenter">
+                                {% for menu in  language['gnb']  %}
+                                <a class="active px10" href="{{ menu['href'] }}" target="_blank">
+                                    {{ menu['text'] }}
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- END GLOBAL NAVIGATION BAR -->
+                    <!-- START HEADLINE -->
+                    <tr>
+                        <td class="headline">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th align="left" class="headlineText tflex">
+                                        {{ language['headline']['text'] }}
+                                    </th>
+                                    <th align="right" class="headlineButton active text-decoration-hover btn02 tflex">
+                                        <a href="{{ language['headline']['href'] }}">
+                                            {{ language['headline']['button'] }}
+                                            <span>
+                                                <img src="https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-arrow-wh.png"
+                                                    alt="{{ language['headline']['button'] }}" /></span>
+                                        </a>
+                                    </th>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END HEADLINE -->
+                    <!-- START BANNER -->
+                    <tr>
+                        <td class="py10 alignCenter">
+                            <a target="_blank" href="{{ language['store']['href'] }}">
+                                <div class="banner">
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- END BANNER -->
+                    <!-- START STORE INFORMATION -->
+                    <tr>
+                        <td class="storeInfo">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr class="thold">
+                                    <!-- START GREETING -->
+                                    <th class="greeting tfoot">
+                                        <table class="floatNone" width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="py10">
+                                                    {{ language['greeting']['dear'] }}{{data['customer']['name']['first']}},<br /><br />
+                                                    {{ language['greeting']['thankyou'] }}{{ data['store']['name'] }}.<br /><br />
+                                                    {{ language['greeting']['body'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" class="greetingButton floatNone btn01 active">
+
+                                                    <a class="alignCenter"
+                                                        href="{{ language['greeting']['href'] }}">{{ language['greeting']['button'] }}</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <!-- END GREETING -->
+
+                                    <!-- START STORE DETAIL -->
+                                    <th class="storeDetail thead">
+
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="storeDetailDescription">
+                                                    {{ language['store']['detail'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailTitle">
+                                                    {{ language['store']['address'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailDescription">
+                                                    {{receipt.business_location.address_line_one}},
+                                                    {{receipt.business_location.address_line_two}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailTitle">
+                                                    {{ language['store']['telephone'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailDescription" style="padding-bottom:0!important">
+                                                    <a href="tel: {{ lanuage['store']['phone_number'] }}">{{receipt.business_location.phone_number}}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </th>
+                                    <!-- END STORE DETAIL -->
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END STORE INFORMATION -->
+                </table>
+            </td>
+        </tr>
+        <!-- END HEADER -->
+        <!-- START RECEIPT -->
+        <tr>
+            <td class="receiptContainer">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <!-- START RECEIPT HEADER -->
+                    <tr>
+                        <td class="receiptIntro">
+                            {{ language['receipt']['intro'] }}
+                        </td>
+                    </tr>
+                    <!-- END RECEIPT HEADER -->
+                    <!-- START SALE ITEM -->
+                    {% for sale_item in data['sale_item'] %}
+                    <tr>
+                        <td class="receiptSection">
+                            <table class="saleItem" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="number">
+                                        {{ sale_item['pos_item_id'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="title">
+                                        {{ sale_item['text'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="description">
+                                        {{ receipt.format_currency(sale_item['unit_price']['value']) }}
+                                        x
+                                        {% if sale_item['quantity']['number'] != None %}
+                                        {{ sale_item['quantity']['value'] }}
+                                        {% else %}
+                                        1
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% for discount in sale_item['discount'] %}
+                                <tr>
+                                    <td class="description">
+                                        {{ format_currency(discount['amount']['value']) }}
+                                        ( {{ discount['text'] }} )
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td class="price" valign="top">
+
+                                        {{ receipt.format_currency(sale_item['total']['value']) }}
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <!-- END SALE ITEM -->
+
+                    <!-- START DISCOUNTS -->
+                    {% if data['discount'] %}
+                    <tr>
+                        <td class="receiptSection discount">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="2" class="title">
+                                        {{ language['receipt']['discount'] }}
+                                    </td>
+                                </tr>
+                                {% for discount in receipt['discount'] %}
+                                <tr>
+                                    <td class="description">
+                                        {{ discount['text'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(discount['amount']['value']) }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <!-- END DISCOUNTS -->
+
+                    <!-- START SUBTOTAL -->
+                    {% if data['receipt']['subtotal']['amount']['value'] %}
+                    <tr>
+                        <td class="receiptSection subtotal">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['subtotal'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <!-- END SUBTOTAL -->
+
+                    <!-- START TAX -->
+                    {% if data['tax'] %}
+                    {% for tax in data['tax'] %}
+                    <tr>
+                        <td class="receiptSection tax">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['tax'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(tax['amount']['value']) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                    <!-- END TAX -->
+
+                    <!-- START TOTAL -->
+                    <tr>
+                        <td class="receiptSection total">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['total'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END TOTAL -->
+
+                    <!-- START TENDER -->
+                    {% if data['tender'] %}
+                    <tr>
+                        <td class="receiptSection tender">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['payment_method'] }}
+                                    </td>
+                                </tr>
+                                {% for tender in data['tender'] %}
+                                {% if tender['amount']['value'] %}
+                                <tr>
+                                    <td class="description">
+                                        {{ tender['text'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(tender['amount']['value']) }}
+                                    </td>
+                                </tr>
+                                {% endif %}
+                                {% endfor %}
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <!-- END TENDER -->
+
+                    <!-- START TRANSACTION -->
+                    <tr>
+                        <td class="receiptSection">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="transaction tflex">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="w50p" valign="top">
+                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['till'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{ data['device']['external_id'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['salesperson'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{ data['receipt']['associate']['name'] }}
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class="w50p" valign="top">
+                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['transaction_id'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{ data['receipt']['transaction_number']['text'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['time'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{receipt.get_local_time().strftime('%d/%m/%y %H:%M')}}
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="barcode tflex">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="alignCenter">
+                                                    <img class="w100p"
+                                                        src="{{ barcode_url }}"
+                                                        alt="{{ receipt.barcode_transaction_number }}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <div class="description2 alignCenter pb0">
+                                                        {{ receipt.barcode_transaction_number }}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END TRANSACTION -->
+                </table>
+            </td>
+        </tr>
+        <!-- END RECEIPT -->
+        <!-- START REFUND POLICY -->
+        <tr>
+            <td class="refund py5">
+                <table width="100%" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td class="description">
+                            {{ language['refund']['title'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="description">
+                            {{ language['refund']['body'] }}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END REFUND POLICY -->
+        
+        <!-- START CTA1_1 -->
+        <tr>
+            <td class="cta py20 tflex">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr class="thold">
+                        <th class="ctaText tfoot">
+                            <table class=" floatNone" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title tflex">
+                                        {{ language['cta']['cta1_1']['title'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="description tflex">
+                                        {{ language['cta']['cta1_1']['body'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table class="w50p floatNone m0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="center" class="btn01 active">
+                                                    <a class="alignCenter"
+                                                        href=" {{ language['cta']['cta1_1']['href'] }}">
+                                                        {{ language['cta']['cta1_1']['button'] }}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th class="ctaImage thead">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <a target="_blank" href=" {{ language['cta']['cta1_1']['href'] }}">
+                                            <img src=" {{ language['cta']['cta1_1']['src'] }}"
+                                                alt=" {{ language['store']['name'] }}">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END CTA1_1 -->
+        <!-- START CTA1_2 -->
+        <tr>
+            <td class="cta py20 tflex">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr class="thold">
+                        <th class="ctaText tfoot" style="vertical-align: top;">
+                            <table class=" floatNone" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title tflex">
+                                        {{ language['cta']['cta1_2']['title'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="description tflex">
+                                        {{ language['cta']['cta1_2']['body'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table class="w50p floatNone m0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="center" class="btn01 active">
+                                                    <a class="alignCenter"
+                                                        href=" {{ language['cta']['cta1_2']['href'] }}">
+                                                        {{ language['cta']['cta1_2']['button'] }}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th class="ctaImage thead">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <a target="_blank" href=" {{ language['cta']['cta1_2']['href'] }}">
+                                            <img src=" {{ language['cta']['cta1_2']['src'] }}"
+                                                alt=" {{ language['store']['name'] }}">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END CTA1_2 -->
+
+        <!-- START LOYALTY -->
+        {% if data['loyalty']['external_id'] %}
+        <tr>
+            <td class="loyalty py5">
+                <table align="center" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="description">
+                            {% if "Nouveau solde" in data['receipt']['footer']['text'] %}
+                            {{ nl2br (data['receipt']['footer']['text']) }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {% endif %}
+        <!-- END LOYALTY -->
+
+        <!-- START COUPON -->
+        {% if data["coupons"] %}
+        <tr>
+            <td class="coupon">
+                <table align="center" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center" class="title alignCenter py10">
+                            Coupons
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-decoration-hover alignCenter">
+                            {% for coupon in data["coupons"] %}
+                            <div class="couponContainer tflex">
+                                <div class="couponCard">
+                                    {% if coupon["code"] in coupon["text"] %}
+                                    {{ nl2br (
+                                        coupon["text"].replace(
+                                            coupon["code"],
+                                            ('<br /><br /> <img src="{}?path=/coupons/{}/code" /> <br /><br />{}<br />'
+                                            .format( barcode_url, loop.index - 1, coupon["code"]))
+                                            )
+                                        )
+                                    }}
+                                    {% else %}
+                                    {{  nl2br (coupon["text"]) }}<br /><br />
+                                    {{ ('<img src="{}?path=/coupons/{}/code" /> <br /><br />{}<br />'
+                                        .format( barcode_url, loop.index - 1, coupon["code"])) }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {% endif %}
+        <!-- END COUPON -->
+        <!-- START SOCIAL -->
+        <tr>
+            <td class="social">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="text-decoration-hover">
+                            <div class="alignCenter">
+                                {% for link in  language['social']  %}
+                                <a target="_blank" href="{{ link['href'] }}">
+                                    <img src="{{ link['src'] }}" alt="{{ link['alt'] }}" />
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END SOCIAL -->
+        <!-- START LOCAL NAVIGATION BAR -->
+        <tr>
+            <td class="text-decoration-hover description">
+                <div class="lnb alignCenter">
+                    {% for menu in  language['lnb']  %}
+                    <a class="active px10 alignCenter" href="{{ menu['href'] }}" target="_blank">
+                        {{ menu['text'] }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </td>
+        </tr>
+        <!-- END LOCAL NAVIGATION BAR -->
+        <!-- START FOOTER -->
+        <!-- START TERMS AND CONDITIONS -->
+        <tr>
+            <td class="footer">
+                {{ language['tnc']['body'] }}
+                <a target="_blank" href="{{ language['tnc']['href'] }}">
+                    {{ language['tnc']['link'] }}</a>
+                {{ language['tnc']['body_2'] }}
+                {{ language['tnc']['rights'] }}
+            </td>
+        </tr>
+        <!-- END TERMS AND CONDITIONS -->
+        <!-- END FOOTER -->
+    </table>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+</body>
+
+</html>

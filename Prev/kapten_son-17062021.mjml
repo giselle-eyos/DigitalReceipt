@@ -1,0 +1,213 @@
+<mjml>
+  <mj-head>
+    <mj-breakpoint width="0px" />
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/ba2ba82c-af93-4dfe-98ec-dd3bba6d5708.png"></mj-image>
+        <mj-navbar>
+          <mj-navbar-link href="https://kapten-son.com/de/rucks%C3%A4cke">RUCKSÄCKE</mj-navbar-link>
+          <mj-navbar-link href="https://kapten-son.com/de/sonnenbrillen">SONNENBRILLEN</mj-navbar-link>
+          <mj-navbar-link href="https://kapten-son.com/de/uhren">UHREN</mj-navbar-link>
+          <mj-navbar-link href="https://kapten-son.com/de/korrekturbrillen">BRILLEN</mj-navbar-link>
+        </mj-navbar>
+        <mj-divider></mj-divider>
+        <mj-image src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/8ccb03de-f9c9-4a0f-90ba-6dd23ac77442.jpg"></mj-image>
+        <mj-divider></mj-divider>
+        <mj-text font-size="20px" align="center">Vielen Dank für Deinen Einkauf bei KAPTEN & SON! Hier findest Du den Rechnungsbeleg für Deinen Einkauf.</mj-text>
+        <mj-divider></mj-divider>
+        <mj-text font-size="12px" align="left">Datum: {{ data['receipt']['datetime']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Beleg: {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Kassierer: {{ data['receipt']['associate']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Store: {{ data['store']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Kasse: {{ data['device']['external_id'] }}</mj-text>
+           <mj-text font-size="12px" align="left">Steuernummer: {{ data['store']['tax_number'] }}
+</mj-text>
+        Steuernummer
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+    <!-- SALE ITEMS -->
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 55%;">Artikel</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Anzahl</th>
+            <th style="text-align: right; vertical-align: top; width: 20%;">Preis</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 55%;">
+              {{ sale_item['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+            <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+   
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Rabatt</th>
+            <th style="text-align: right; vertical-align: top;">Summe</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+
+    <!-- TAXES -->
+    <mj-raw>{% if receipt['tax'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">USt</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Steuerpflichtiger Betrag</th>
+            <th style="text-align: right; vertical-align: top; width: 25%;">Steuer</th>
+          </tr>
+          <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 25%;">{{ tax['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+            <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TAXES -->
+
+    <!-- TOTAL -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>Gesamtsumme</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TOTAL -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Zahlart</th>
+            <th style="text-align: right; vertical-align: top;">Summe</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+       <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-text>{{ nl2br(data['receipt']['footer']['info']) }}</mj-text>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+
+    <!-- CTA1 -->
+    <mj-section>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-image src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/e92f79bf-ccb8-4c27-9022-61ac49b83f6c.jpg" />
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="center">Hat es dir bei uns gefallen?<br/>
+Deine Meinung hilft uns und anderen! Wir freuen uns, wenn du uns eine Bewertung da lässt!</mj-text>
+          <mj-raw>{% if receipt['store']['external_id'] == '1' %}</mj-raw>
+        <mj-button href="https://www.google.com/maps/place/Kapten+%26+Son+Flagship+Store+Cologne/@50.938396,6.9395937,17z/data=!4m7!3m6!1s0x47bf257490b9eae7:0xce0043edecb10116!8m2!3d50.9383926!4d6.9417824!9m1!1b1">Teile deine Meinung</mj-button>
+          <mj-raw>{% elif receipt['store']['external_id'] == '2' %}</mj-raw>
+         <mj-button href="https://www.google.com/maps/place/Kapten+%26+Son+Store+Stuttgart/@48.7756296,9.1710541,17z/data=!3m1!5s0x4799db49b8351a27:0x8893653793d237d3!4m7!3m6!1s0x4799db4f7da2bf99:0xd891e3b386ea8376!8m2!3d48.7756261!4d9.1732428!9m1!1b1">Teile deine Meinung</mj-button>
+        <mj-raw>{% elif receipt['store']['external_id'] == '3' %}</mj-raw>
+         <mj-button href="https://www.google.com/maps/place/Kapten+%26+Son+Store+Munich/@48.149125,11.5753225,17z/data=!4m7!3m6!1s0x479e75cc0dc6260d:0xc4153714f8e2e171!8m2!3d48.1491206!4d11.577514!9m1!1b1">Teile deine Meinung</mj-button>
+        <mj-raw>{% elif receipt['store']['external_id'] == '4' %}</mj-raw>
+         <mj-button href="https://www.google.com/maps/place/Kapten+%26+Son+Store+Hamburg/@53.5604316,9.9608815,17z/data=!4m7!3m6!1s0x47b18fc10b25ead3:0xb5d231a1d36c56fe!8m2!3d53.5604284!4d9.9630702!9m1!1b1">Teile deine Meinung</mj-button>
+         <mj-raw>{% elif receipt['store']['external_id'] == '5' %}</mj-raw>
+                 <mj-button href="https://www.google.com/maps/place/Kapten+%26+Son+Store+Berlin/@52.5245192,13.4009861,17z/data=!4m7!3m6!1s0x47a8517307e6c8f7:0xf583aec6d3f194cf!8m2!3d52.5245109!4d13.4031645!9m1!1b1">Teile deine Meinung</mj-button>
+          <mj-raw>{% else %}</mj-raw>
+        <mj-button href="https://www.google.com/maps/place/Kapten+%26+Son+Store+Vienna/@48.1993199,16.347612,17z/data=!4m7!3m6!1s0x476d078108300a1f:0x30e268edef902a28!8m2!3d48.1993163!4d16.3498007!9m1!1b1">Teile deine Meinung</mj-button>
+       <mj-raw>{% endif %}</mj-raw>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA1 -->
+          
+    <!-- CTA2 -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="500px" src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/8948adb9-fe9b-4e22-a5b9-3ab517b75ef4.jpg"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-button href="https://www.instagram.com/kaptenandson?utm_source=store-receipt&utm_medium=email&utm_keyword=lower-cta" background-color="#414141">Folge uns bei Instagram</mj-button>
+      </mj-column>
+      <mj-column>
+        <mj-button href="https://news.kapten-son.com/signup_de?utm_source=store-receipt&utm_medium=email&utm_keyword=lower-cta" background-color="#414141">Melde dich zum Newsletter an</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA2 -->
+    <!-- SOCIAL MEDIA -->
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+          <mj-social-element img src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/738f930d-f631-48b2-956e-fa70c5a326f1.png" href="https://www.instagram.com/kaptenandson.store?utm_source=store-receipt&utm_medium=email&utm_keyword=socialmedia"></mj-social-element>
+          <mj-social-element img src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/e191f663-4481-48be-a4ae-d541e375c41d.png" href="https://www.facebook.com/kaptenandsonde?utm_source=store-receipt&utm_medium=email&utm_keyword=socialmedia"></mj-social-element>
+          <mj-social-element img src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/b4fdff4e-7ce5-4cd1-85b8-330f716a620e.png" href="https://www.pinterest.de/kaptenandson/_shop?utm_source=store-receipt&utm_medium=email&utm_keyword=socialmedia"></mj-social-element>
+            <mj-social-element img src="https://mcusercontent.com/7ab5d9101c69352fe72d9f76e/images/2b2ac931-d1d2-401e-88b9-eeece5842f09.png" href="https://www.youtube.com/user/kaptenandson?utm_source=store-receipt&utm_medium=email&utm_keyword=socialmedia"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+  </mj-body>
+</mjml>

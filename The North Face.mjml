@@ -1,0 +1,350 @@
+<mjml>
+    <mj-head>
+      <mj-style>
+        p {margin:inherit!important; line-height:20px!important;}
+        .section > table > tbody > tr > td {padding:0!important}
+        .mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+        .mj-column-per-100 > table > tbody > tr > td.nav {padding:inherit!important}
+        .nav a {padding:8px 10px 4px!important}
+        .red {color:rgb(231,26,12)!important}
+        .white {color:#fff!important}
+        .mj-column-per-100 > table > tbody > tr > td.welcomemsg {padding:8px 25px!important}
+      </mj-style>
+    </mj-head>
+    <mj-body>
+  
+      <!-- HEADER/NAV -->
+      <mj-section css-class="section header">
+        <mj-column>
+          <mj-image width="150px" src="http://image.newsletter.thenorthface.com/lib/fe9313727264047e7c/m/4/abd528e4-3393-41f8-888d-86db9420d238.png" href="https://www.thenorthface.co.uk"></mj-image>
+          <mj-navbar css-class="nav">
+            <mj-navbar-link href="https://www.thenorthface.co.uk/mens.html">Men</mj-navbar-link>
+            <mj-navbar-link href="https://www.thenorthface.co.uk/womens.html">Women</mj-navbar-link>
+            <mj-navbar-link href="https://www.thenorthface.co.uk/kids.html">Kids</mj-navbar-link>
+            <mj-navbar-link href="https://www.thenorthface.co.uk/footwear.html">Footwear</mj-navbar-link>
+            <mj-navbar-link href="https://www.thenorthface.co.uk/bags-and-backpacks.html">Backpack</mj-navbar-link>
+          </mj-navbar>
+  
+  
+          <!-- START STORE IMAGE  -->
+          <mj-image src="https://s7d2.scene7.com/is/image/TheNorthFaceEU/2021_w31_hp_m_main2_holiday_bis2?$SCALE-ORIGINAL$" href="https://www.thenorthface.co.uk"></mj-image>
+          <!-- END STORE IMAGE  -->
+  
+          <mj-text css-class="welcomemsg" font-size="20px" align="center">Thank you for shopping at The North Face</mj-text>
+          <mj-divider></mj-divider>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="section order-detail">
+        <mj-column>
+          <mj-text font-size="12px" align="left">Date of Purchase: {{ data['receipt']['datetime']['text'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Transaction Number: {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Salesperson: {{ data['receipt']['associate']['name'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Store: {{ data['store']['name'] }}</mj-text>
+          <mj-text font-size="12px" align="left">Till: {{ data['device']['external_id'] }}</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- END HEADER/NAV -->
+  
+      <!-- SALE ITEMS -->
+      <mj-section css-class="section item-detail">
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top; width: 20%;">Item ID</th>
+              <th style="text-align: left; vertical-align: top; width: 35%;">Description</th>
+              <th style="text-align: center; vertical-align: top; width: 25%;">Quantity</th>
+              <th style="text-align: right; vertical-align: top; width: 20%;">Price</th>
+            </tr>
+            <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+              <td style="text-align: left; vertical-align: top; width: 35%;">
+                {{ sale_item['text'] }}
+  
+              </td>
+              <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+              <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <!-- END SALE ITEMS -->
+  
+      <!-- SUBTOTAL -->
+      <mj-raw>{% if receipt['receipt']['subtotal']['amount']['value'] %}</mj-raw>
+      <mj-section css-class="section total">
+        <mj-column>
+          <mj-divider border-width="1px"></mj-divider>
+          <mj-table>
+            <tr>
+              <td align="left"><b>Subtotal</b></td>
+              <td align="right">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+            </tr>
+          </mj-table>
+          <mj-divider border-width="1px"></mj-divider>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END SUBTOTAL -->
+  
+      <!-- DISCOUNTS -->
+      <mj-raw>{% if receipt['discount'] %}</mj-raw>
+      <mj-section css-class="section discount">
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top;">Discount</th>
+              <th style="text-align: right; vertical-align: top;">Amount</th>
+            </tr>
+            <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+              <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END DISCOUNTS -->
+  
+      <!-- TAXES -->
+      <mj-raw>{% if receipt['tax'] %}</mj-raw>
+      <mj-section css-class="section">
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+              <th style="text-align: center; vertical-align: top; width: 25%;">Rate</th>
+              <th style="text-align: center; vertical-align: top; width: 25%;">Taxable Amount</th>
+              <th style="text-align: right; vertical-align: top; width: 25%;">Tax Paid</th>
+            </tr>
+            <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top; width: 25%;">{{ tax['text'] }}</td>
+              <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['text'] }}</td>
+              <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+              <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END TAXES -->
+  
+      <!-- TOTAL -->
+      <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+      <mj-section css-class="section total">
+        <mj-column>
+          <mj-divider border-width="1px"></mj-divider>
+          <mj-table>
+            <tr>
+              <td align="left"><b>Total</b></td>
+              <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+            </tr>
+          </mj-table>
+          <mj-divider border-width="1px"></mj-divider>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END TOTAL -->
+  
+      <!-- TENDER -->
+      <mj-raw>{% if receipt['tender'] %}</mj-raw>
+      <mj-section css-class="section tender-type">
+        <mj-column>
+          <mj-table>
+            <tr>
+              <th style="text-align: left; vertical-align: top;">Tender Type</th>
+              <th style="text-align: right; vertical-align: top;">Amount</th>
+            </tr>
+            <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+            <tr style="border-top: 2px solid #000000">
+              <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+              <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+            </tr>
+            <mj-raw>{% endfor %}</mj-raw>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <mj-raw>{% endif %}</mj-raw>
+      <!-- END TENDER -->
+  
+      <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+  
+      <!-- BARCODE -->
+      <mj-section>
+        <mj-column>
+          <mj-image width="300px" src="{{ barcode_url }}" />
+          <mj-text align="center">{{ receipt['barcode']['value'] }}</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- END BARCODE -->
+  
+  
+      <!-- START FOOTER -->
+      <mj-section background-color="black">
+        <mj-column>
+      <mj-raw>{% if data['receipt']['location']['country'] == "NL"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+           Als u niet helemaal tevreden bent met uw producten, kunt u de artikelen in de oorspronkelijke toestand en met het originele aankoopbewijs binnen de 30 dagen na aankoop retourneren. <br/><br/>
+  We zullen de prijs die u voor de artikelen hebt betaald volledig terugbetalen in de vorm van een omruiling, tegoedbon of geldteruggave. <br/><br/>
+  Retours worden alleen verwerkt in de winkel van aankoop. Tegoedbonnen zijn geldig drie (3) jaar na het einde van het jaar van aankoop. <br/><br/>
+  Als u geen origineel aankoopbewijs/originele pakbon kunt voorleggen, beslist de winkelmanager over aanvaarding van uw retour, enkel in de vorm van een omruiling of tegoedbon tegen de huidige verkoopprijs. We aanvaarden uitsluitend herverkoopbare, ongedragen artikelen van het huidige seizoen. <br/><br/>
+  Afgeprijsde artikelen mogen uitsluitend worden geretourneerd binnen de 14 dagen na aankoop. <br/><br/>
+  Ons retourbeleid verleent u specifieke wettelijke rechten in overeenstemming met de voorwaarden ervan. Deze hebben geen invloed op uw wettelijke rechten als consument mbt garantie voor defecte producten - met name de rechten mbt de verplichte consumentengarantie op de verkoop van consumptiegoederen, indien van toepassing.
+  </mj-text>
+          
+      <mj-raw>{% elif data['receipt']['location']['country'] == "SE"  %}</mj-raw>
+           <mj-text color="white" font-size="13px">
+             Om du inte är helt nöjd med din produkt/dina produkter kan du inom 30 dagar från inköpsdatumet returnera varan/varorna i ursprungligt skick tillsammans med det ursprungliga köpbeviset. <br/><br/>
+  Vi kommer att ersätta varans totala belopp i form av en ersättningsvara, ett presentkort eller en full återbetalning. <br/><br/>
+  Returer kan endast behandlas i den butik där köpet ursprungligen gjordes. Presentkort måste användas inom 3 år från köpårets utgång. <br/><br/>
+  Om kunden inte kan visa upp det ursprungliga köp- eller leveransbeviset beslutar butikschefen om ersättning ska ges i form av en ersättningsvara eller ett presentkort till aktuellt försäljningspris. Vi godkänner endast aktuella säsongsvaror som inte har använts och som kan säljas på nytt. <br/><br/>
+  Varor som har köpts på (säsongs)rea kan endast returneras inom 14 dagar från inköpsdatumet. <br/><br/>
+  Du har eventuellt specifika lagliga rättigheter enligt villkoren i vår returpolicy. Det påverkar inte dina garanterade lagliga rättigheter som kund med hänsyn till defekta produkter, i synnerhet de rättigheter gällande bindande kundgaranti vid försäljning av konsumtionsvaror, om tillämpligt.
+  </mj-text>
+          
+      <mj-raw>{% elif data['receipt']['location']['country'] == "DK"  %}</mj-raw>
+           <mj-text color="white" font-size="13px">
+             Hvis du ikke er fuldt ud tilfreds med dit eller dine produkter, kan du inden for 30 dage fra købsdatoen returnere varen/varerne i butikken i den originale emballage og med den originale kvittering. <br/><br/>
+  Vi refunderer hele beløbet, som du har betalt for varen, i form af en ombytning, et tilgodebevis eller oprindelig betalingsform. <br/><br/>
+  Varer tages kun retur i den butik, hvorfra købet fandt sted. Tilgodebeviser skal bruges inden for 3 år med start fra udgangen af det år, hvor købet blev foretaget. <br/><br/>
+  I tilfælde hvor den oprindelige kvittering/følgeseddel ikke kan fremvises, returneres varen efter butikschefens eget skøn, i form af en ombytning eller et tilgodebevis på den aktuelle udsalgspris. Vi tager kun imod aktuelle sæsonvarer, der er ubrugte og kan sælges igen. <br/><br/>
+  Udsalgsvarer kan kun returneres inden for 14 dage efter købsdatoen. <br/><br/>
+  Vores returpolitik giver dig særlige juridiske rettigheder i henhold til politikkens betingelser. Den påvirker ikke dine lovfæstede garantirettigheder som forbruger med hensyn til defekte produkter, særligt i forbindelse med obligatorisk forbrugergaranti på salg af forbrugsvarer, hvor det er relevant.
+  </mj-text>
+          
+      <mj-raw>{% elif data['receipt']['location']['country'] == "CZ"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Pokud s naším výrobkem (výrobky) nejste zcela spokojeni, můžete danou položku (položky) do 30 dnů od data nákupu vyměnit za jiné zboží. Produkt (y) musí být v původním stavu, s originálem dokladu o nákupu. <br/><br/>
+  Zajistíme plnou refundaci pořizovací ceny ve formě výměny zboží, poskytnutí dárkové karty nebo navrácení původní platby. <br/><br/>
+  Vrátit zboží lze pouze v obchodě, kde došlo k jeho zakoupení. Dárková karta se musí využít do 3 let, počínaje koncem toho roku, kdy bylo zboží zakoupeno. <br/><br/>
+  V jakémkoli případě, kdy nelze předložit originální účtenku / výpis z bankovního účtu, bude rozhodování o navrácení zboží v plné kompetenci manažera dané prodejny, přičemž on určí, zda bude zboží vyměněno nebo bude poskytnuta dárková karta na nákup jiného zboží za aktuální prodejní cenu. Přijmeme pouze takové zboží, které bude opět prodejné, neobnošené, s originálními etiketami a bude z aktuální sezóny. <br/><br/>
+  Položky zakoupené na konci sezóny nebo při výprodeji se mohou vyměnit pouze do 14 dnů od data nákupu. <br/><br/>
+  Naše politika výměny zboží Vám poskytuje specifická zákonná práva a nemá vliv na Vaše statutární práva, která máte jako kupující. Nejsou tím dotčena Vaše práva na záruku na zboží, v případě, že je zboží vadné, přičemž se to týká zvláště povinné záruky na prodej spotřebního zboží.
+  </mj-text>
+          
+      <mj-raw>{% elif data['receipt']['location']['country'] == "PL"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+             Jeżeli nie jesteś całkowicie zadowolony/a z produktu(ów), w ciągu 30 dni od daty zakupu możesz zwrócić nam zakupiony towar w oryginalnym stanie wraz z oryginalnym dowodem zakupu. <br/><br/>
+  Zwrócimy pełną cenę zapłaconą za towar, w formie wymiany, kuponu kredytowego lub w formie w jakiej dokonano oryginalnej płatności. <br/><br/>
+  Zwrotów można dokonywać we wszystkich sklepach należących do VF Polska Distribution Sp. z o.o. Kupon kredytowy można wykorzystać w ciągu 3 lat licząc od końca roku w którym dokonano zakupu. <br/><br/>
+  Jeżeli niemożliwe jest okazanie oryginalnego rachunku/specyfikacji wysyłkowej, zwrot zostanie dokonany według uznania kierownika sklepu w formie wymiany lub kuponu kredytowego zgodnie z aktualną ceną sprzedaży. Akceptujemy wyłącznie towary z aktualnej kolekcji w stanie nienaruszonym, nadające się się do odsprzedaży. <br/><br/>
+  Towary przecenione (nieużywane)można zwrócić wyłącznie w ciągu 3 dni od daty zakupu na podstawie oryginału paragonu. <br/><br/>
+  Nasza polityka zwrotów nadaje klientom określone prawa z zastrzeżeniem jej warunków. Nie ma wpływu na ustawowe prawa konsumenta wynikające z gwarancji z tytułu wad produktu, w szczególności prawa dotyczące obowiązkowej rękojmi dla konsumenta w przypadku sprzedaży towarów konsumenckich w odpowiednich przypadkach.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "DE"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Sollten Sie mit Ihrem/Ihren Produkt(en) nicht völlig zufrieden sein, können Sie uns, innerhalb von 30 Tagen ab Kaufdatum, den/die Artikel im Originalzustand mit Originalkaufbeleg zurückgeben. <br/><br/>
+  Wir erstatten Ihnen den Preis, den Sie dafür gezahlt haben, in Form von Austausch, Gutschrift im Geschäft oder Erstattung der Originalzahlung. <br/><br/>
+  Die Rückgabe von Artikeln kann nur in dem Geschäft erfolgen, in dem der Kauf erfolgte. Gutschriften müssen innerhalb von 3 Jahren ab Ende des Jahres, in dem der Kauf erfolgte, in Anspruch genommen werden. <br/><br/>
+  In Fällen, in denen keine Originalquittung/kein Packzettel vorgelegt werden kann, erfolgt eine Gutschrift nach dem Ermessen des Geschäftsführers in Form eines Umtauschs oder einer Gutschrift des aktuellen Verkaufspreises. Wir akzeptieren nur wiederverkaufbare, nicht verschlissene aktuelle Saisonware. <br/><br/>
+  Artikel, die im Rahmen von Schluss-/Räumungsverkäufen gekauft wurden, können innerhalb von maximal 14 Tagen ab Kaufdatum zurückgegeben werden. <br/><br/>
+  Unsere Rückgabepolitik räumt Ihnen bestimmte Rechte ein, die ihren Bedingungen unterliegen. Sie hat keinerlei Einfluss auf Ihre Garantieansprüche als Verbraucher in Bezug auf mangelhafte Produkte, insbesondere Ansprüche, die sich auf die obligatorische Verbrauchergarantie beim Verkauf von Konsumgütern beziehen, sofern zutreffend.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "FR"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Si vous n’êtes pas totalement satisfait du ou des articles que vous avez achetés, il vous est possible de nous les rapporter, dans les 30 jours suivant la date de l’achat, dans leur état d’origine avec le justificatif d’achat original. <br/><br/>
+  Nous vous rembourserons intégralement le prix que vous avez payé pour l’article, sous la forme d’un échange, d’un crédit de magasin ou du paiement original. <br/><br/>
+  Les retours ne peuvent être effectués que dans le magasin où l’achat original a été fait. Les crédits de magasin doivent être utilisés dans les 3 ans suivant la fin de l’année d’achat. <br/><br/>
+  Dans le cas où le reçu original ou le bordereau de marchandise ne peuvent pas être présentés, le retour ne sera possible qu’à la seule discrétion du directeur du magasin et sous la seule forme d’un échange ou d’un crédit de magasin au prix de vente en cours. Nous n’accepterons que les marchandises revendables, qui n’ont pas été portées et qui font partie de la gamme en cours. <br/><br/>
+  Les articles achetés lors des soldes de fin de saison ou de liquidation ne peuvent être rapportés que dans les 14 jours suivant la date d’achat. <br/><br/>
+  Notre politique de retour n’affecte pas les droits légaux qui vous sont garantis par les dispositions du Code de la Consommation en ce qui concerne la conformité et les vices cachés. De plus amples informations sont disponibles en magasin.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "IT"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Se non si è interamente soddisfatti dei prodotti, è possibile, entro 30 giorni dalla data di acquisto, restituirci gli articoli nel loro stato originale con la prova di acquisto originale. <br/><br/>
+  Emetteremo un rimborso per l'intero prezzo pagato per l'articolo, sotto forma di sostituzione, credito per acquisti o pagamento originale. <br/><br/>
+  I resi devono essere gestiti solo nel negozio dove è stato effettuato l'acquisto originale. I crediti per acquisti devono essere utilizzati entro 3 anni a partire dalla fine dell'anno di acquisto. <br/><br/>
+  Nei casi in cui non venga presentata la ricevuta/bolla di accompagnamento originale, il rimborso sarà a discrezione del direttore del negozio, sotto forma di sostituzione o credito per acquisti al prezzo di vendita corrente. Si accetterà solo merce rivendibile, non indossata, della stagione corrente. <br/><br/>
+  Gli articoli acquistati durante la fine della stagione o i saldi possono essere restituiti solo entro 14 giorni dalla data di acquisto. <br/><br/>
+  La nostra politica sui resi dà al cliente specifici diritti legali in base alle condizioni stabilite. Non influisce sui diritti di garanzia previsti dalla legge per i consumatori in caso di prodotto difettoso, in particolare quelli riguardanti la garanzia obbligatoria per il consumatore sulle vendite di beni di consumo, dove applicabili.
+  </mj-text>
+          <mj-raw>{% elif data['receipt']['location']['country'] == "ES"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Si no está plenamente satisfecho con su/s producto/s, en el plazo de 30 días desde la fecha de compra, podrá devolvernos el/los artículo/s en su estado original con la prueba de compra original. <br/><br/>
+  Le reembolsaremos la totalidad del precio que abonó por el artículo, en forma de cambio, cupón de crédito en el establecimiento o pago original. <br/><br/>
+  Las devoluciones se procesarán únicamente en el establecimiento en el que se realizó la compra original. Los cupones de crédito en el establecimiento deben utilizarse en un plazo de 3 años desde el fin del año de compra. <br/><br/>
+  En los casos en los que no pueda presentarse el recibo/la lista de embalaje original, la devolución se efectuará según el criterio del encargado del establecimiento, en forma de cambio o cupón de crédito en el establecimiento por el valor del precio de venta actual. Solo se aceptarán artículos que puedan ser vendidos nuevamente, no usados y de la temporada actual. <br/><br/>
+  Los artículos adquiridos a final de temporada/en período de rebajas, solo podrán ser devueltos en un plazo de 14 días desde la fecha de compra. <br/><br/>
+  Según nuestra política de devoluciones, se le confieren unos derechos legales específicos sujetos a condiciones. Esta política no afectará a los derechos de garantía del consumidor establecidos por ley en relación con los productos defectuosos, en concreto los relativos a la garantía obligatoria del consumidor sobre las ventas de artículos de consumo, en su caso.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "AT"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Sollten Sie mit Ihrem/Ihren Produkt(en) nicht völlig zufrieden sein, können Sie uns, innerhalb von 30 Tagen ab Kaufdatum, den/die Artikel im Originalzustand mit Originalkaufbeleg zurückgeben. <br/><br/>
+  Wir erstatten Ihnen den Preis, den Sie dafür gezahlt haben, in Form von Austausch, Gutschrift im Geschäft oder Erstattung der Originalzahlung. <br/><br/>
+  Die Rückgabe von Artikeln kann nur in dem Geschäft erfolgen, in dem der Kauf erfolgte. Gutschriften müssen innerhalb von 3 Jahren ab Ende des Jahres, in dem der Kauf erfolgte, in Anspruch genommen werden. <br/><br/>
+  In Fällen, in denen keine Originalquittung/kein Packzettel vorgelegt werden kann, erfolgt eine Gutschrift nach dem Ermessen des Geschäftsführers in Form eines Umtauschs oder einer Gutschrift des aktuellen Verkaufspreises. Wir akzeptieren nur wiederverkaufbare, nicht verschlissene aktuelle Saisonware. <br/><br/>
+  Artikel, die im Rahmen von Schluss-/Räumungsverkäufen gekauft wurden, können innerhalb von maximal 14 Tagen ab Kaufdatum zurückgegeben werden. <br/><br/>
+  Unsere Rückgabepolitik räumt Ihnen bestimmte Rechte ein, die ihren Bedingungen unterliegen. Sie hat keinerlei Einfluss auf Ihre Garantieansprüche als Verbraucher in Bezug auf mangelhafte Produkte, insbesondere Ansprüche, die sich auf die obligatorische Verbrauchergarantie beim Verkauf von Konsumgütern beziehen, sofern zutreffend.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "IE"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            If you are not entirely happy with your product(s), you can, within 30 days of the date of purchase, return the item(s) to us in its original condition with original proof of purchase. <br/><br/>
+  We will issue a full refund for the price you paid for the item, in the form of exchange, store credit or original payment. <br/><br/>
+  Returns must be processed only in the store where the original purchase was made. Store credits must be used within 3 years commencing at the end of the year of purchase. <br/><br/>
+  In any instance where no original receipt/packing slip can be presented,  a return will be at the store manager’s discretion in the form of an exchange or store credit at the current selling price. We will only accept any re-saleable, unworn, current season merchandise. <br/><br/>
+  Items purchased during end of season/clearance sale may only be returned within 14 days of the date of purchase. <br/><br/>
+  Our return policy gives you specific legal rights subject to its conditions. It does not affect your consumer’s Guarantee Statutory Rights with respect to defective product, in particular those relating to the mandatory consumer warranty on the sales of consumer goods, where applicable.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "CH"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Se non si è interamente soddisfatti dei prodotti, è possibile, entro 30 giorni dalla data di acquisto, restituirci gli articoli nel loro stato originale con la prova di acquisto originale. <br/><br/>
+  Emetteremo un rimborso per l'intero prezzo pagato per l'articolo, sotto forma di sostituzione, credito per acquisti o pagamento originale. <br/><br/>
+  I resi devono essere gestiti solo nel negozio dove è stato effettuato l'acquisto originale. I crediti per acquisti devono essere utilizzati entro 3 anni a partire dalla fine dell'anno di acquisto. <br/><br/>
+  Nei casi in cui non venga presentata la ricevuta/bolla di accompagnamento originale, il rimborso sarà a discrezione del direttore del negozio, sotto forma di sostituzione o credito per acquisti al prezzo di vendita corrente. Si accetterà solo merce rivendibile, non indossata, della stagione corrente. <br/><br/>
+  Gli articoli acquistati durante la fine della stagione o i saldi possono essere restituiti solo entro 14 giorni dalla data di acquisto. <br/><br/>
+  La nostra politica sui resi dà al cliente specifici diritti legali in base alle condizioni stabilite. Non influisce sui diritti di garanzia previsti dalla legge per i consumatori in caso di prodotto difettoso, in particolare quelli riguardanti la garanzia obbligatoria per il consumatore sulle vendite di beni di consumo, dove applicabili.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "NO"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Dersom du ikke er helt fornøyd med produktene våre, kan du returnere varene til oss innen 30 dager fra kjøpsdatoen. Produktene må returneres i sin orginaltilstand og vedlagt originalt kjøpsbevis. <br/><br/>
+  Vi vil gi en full refusjon for det du betalte for varen, i form av et bytte av vare, tilgodelapp eller utbetaling av den opprinnelige summen. <br/><br/>
+  Returen kan kun behandles i den butikken der det opprinnelige kjøpet ble gjennomført. Tilgodelapper må benyttes innen 3 år, regnet fra utgangen av det året kjøpet ble foretatt. <br/><br/>
+  Hvis originalkvitteringen eller pakkseddelen ikke kan framlegges, vil en retur skje etter butikksjefens beslutning i form av et varebytte eller en tilgodelapp for tilsvarende aktuelle utsalgspris. Vi aksepterer bare produkter som fremdeles er i gjensalgbar stand, ubrukt og som er en vare som hører til gjeldende salgssesong. <br/><br/>
+  Varer som er kjøpt på slutten av en salgssesong eller et restsalg, kan bare returneres innen 14 dager etter kjøpsdatoen. <br/><br/>
+  Våre retningslinjer for retur gir deg spesifikke juridiske rettigheter i henhold til våre betingelser. De påvirker ikke dine rettigheter etter Forbrukerkjøpsloven med hensyn til defekte produkter, særlig det som er knyttet til forbrukerens lovbestemte garanti som gjelder ved salg av forbruksvarer.
+  </mj-text>
+      <mj-raw>{% elif data['receipt']['location']['country'] == "BE"  %}</mj-raw>
+           <mj-text color="white" font-size="13px" >
+            Als u niet helemaal tevreden bent met uw producten, kunt u de artikelen in de oorspronkelijke toestand en met het originele aankoopbewijs binnen de 30 dagen na aankoop retourneren. <br/><br/>
+  We zullen de prijs die u voor de artikelen hebt betaald volledig terugbetalen in de vorm van een omruiling, tegoedbon of geldteruggave. <br/><br/>
+  Retours worden alleen verwerkt in de winkel van aankoop. Tegoedbonnen zijn geldig drie (3) jaar na het einde van het jaar van aankoop. <br/><br/>
+  Als u geen origineel aankoopbewijs/originele pakbon kunt voorleggen, beslist de winkelmanager over aanvaarding van uw retour, enkel in de vorm van een omruiling of tegoedbon tegen de huidige verkoopprijs. We aanvaarden uitsluitend herverkoopbare, ongedragen artikelen van het huidige seizoen. <br/><br/>
+  Afgeprijsde artikelen mogen uitsluitend worden geretourneerd binnen de 14 dagen na aankoop. <br/><br/>
+  Ons retourbeleid verleent u specifieke wettelijke rechten in overeenstemming met de voorwaarden ervan. Deze hebben geen invloed op uw wettelijke rechten als consument mbt garantie voor defecte producten - met name de rechten mbt de verplichte consumentengarantie op de verkoop van consumptiegoederen, indien van toepassing.
+  </mj-text>
+  <mj-raw> {% else %}</mj-raw>
+  <mj-text color="white" font-size="13px" >
+    If you are not entirely happy with your product(s), you can, within 30 days of the date of purchase, return the item(s) to us in its original condition with original proof of purchase. <br/><br/>
+We will issue a full refund for the price you paid for the item, in the form of exchange, store credit or original payment. <br/><br/>
+Returns must be processed only in the store where the original purchase was made. Store credits must be used within 3 years commencing at the end of the year of purchase. <br/><br/>
+In any instance where no original receipt/packing slip can be presented,  a return will be at the store manager’s discretion in the form of an exchange or store credit at the current selling price. We will only accept any re-saleable, unworn, current season merchandise. <br/><br/>
+Items purchased during end of season/clearance sale may only be returned within 14 days of the date of purchase. <br/><br/>
+Our return policy gives you specific legal rights subject to its conditions. It does not affect your consumer’s Guarantee Statutory Rights with respect to defective product, in particular those relating to the mandatory consumer warranty on the sales of consumer goods, where applicable.
+</mj-text>
+          <mj-raw>{% endif %}</mj-raw>
+          
+          
+      <!-- SOCIAL MEDIA -->
+          
+          <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+            <mj-social-element name="facebook" href="https://www.facebook.com/thenorthface.europe"></mj-social-element>
+            <mj-social-element name="twitter" href="https://twitter.com/TheNorthFaceEU"></mj-social-element>
+          </mj-social>
+          
+      <!-- END SOCIAL MEDIA -->
+        </mj-column>
+      </mj-section>
+      <!-- END FOOTER -->
+    </mj-body>
+  </mjml>

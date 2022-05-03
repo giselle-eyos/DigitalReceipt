@@ -1,0 +1,1419 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+{% set translations = {
+        "en_GB": {
+            "store" : {
+                "show" : True,
+                "name" : "Eyos",
+                "href" : "#",
+                "logo" : {
+                    "href" : "",
+                    "src" : "https://eyos.one/wp-content/uploads/2020/12/eyos-retail.png",
+                },
+                "banner" : "'https://www.yreceipts.com/img/shutterstock_546883993.jpg'",
+                "detail" : "Store Details",
+                "address" : "Address:",
+                "telephone" : "Telephone:",
+                "phone_number" : "",
+            },
+            "gnb" : [
+                {   
+                    "href" : "#",
+                    "text" : "MENS",
+            
+                }, 
+                {   
+                    "href" : "#",
+                    "text" : "WOMENS",
+            
+                }, 
+                {   
+                    "href" : "#",
+                    "text" : "ACCESSORIES",
+            
+                }, 
+                {   
+                    "href" : "#",
+                    "text" : "PERFUMES",
+            
+                }
+            ],
+            "headline" : {
+                "href" : "#",
+                "text": "Don't go empty handed! Grab yourself an amazing deal!",
+                "button" : "SHOP NOW"
+            },
+            "greeting" : {
+                "dear" : "Dear ",
+                "thankyou" : "Thank you for shopping at ",
+                "body" : "We hope you enjoyed your time with us!",
+                "href" : "",
+                "button" : "Explore more",
+            },
+            "receipt" : {
+                "intro" : "Here Is Your eReceipt For Your Recent Purchase",
+                "discount" : "Discount",
+                "subtotal" : "Subtotal",
+                "tax" : "Tax (20%)",
+                "total" : "Total",
+                "payment_method" : "Payment_method",
+                "till" : "Till:",
+                "salesperson" : "Salesperson:",
+                "transaction_id" : "Transaction ID:",
+                "time" : "Date and Time:",
+                "" : "",
+                "" : "",
+            },
+            "refund" : {
+                "title" : " Refund Policy:",
+                "body" : "Thank you for your purchase. We hope you are happy with your purchase. However,
+                        if you are not completely satisfied with your purchase for any reason, you may
+                        return it to us for [a full refund/store credit /an exchange/a full refund or
+                        store credit/for a full refund or an exchange/for store credit or an
+                        exchange/for a full refund, store credit, or an exchange only].",
+            },
+            "cta" : {
+                "cta1" : {
+                    "title" : "EYOS ADVANTAGE CARD",
+                    "body" : "Sign up today & collect 4 points for every £1 spent",
+                    "href" : "#",
+                    "button" : "SIGN UP",
+                    "src" : "https://www.yreceipts.com/img/receipts/mac.png",
+                },
+                "cta2" : {
+                    "src" : "https://www.yreceipts.com/img/receipts/mac.png",
+                    "button1" : {
+                        "href" : "#",
+                        "text" : "NEW MENS",
+                    },
+                    "button2" : {
+                        "href" : "#",
+                        "text" : "NEW WOMENS",
+                    }
+                },
+                "cta3" : {
+                    "href" : "#",
+                    "src" : "https://www.yreceipts.com/img/receipts/mac.png",
+                }
+            },
+            "social" : [
+                {
+                    "href": "https://www.youtube.com/channel/UCtqQaQZmVWR3HmGhAG67y3w",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-youtube-bk.png",
+                    "alt" : "youtube"
+                },
+                {
+                    "href": "https://www.facebook.com/eyosOne",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-facebook-bk.png",
+                    "alt" : "facebook"
+                },
+                {
+                    "href": "https://uk.linkedin.com/company/eyosretailgrowth?",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-linkedin-bk.png",
+                    "alt" : "linkedin"
+                },
+            ],
+            "lnb" : [
+                {   
+                    "href" : "mailto:contact@eyos.one",
+                    "text" : "CONTACT US",
+            
+                }, 
+                {   
+                    "href" : "https://www.google.com/maps/place/eyos+UK+(formerly+yReceipts)/@51.5046676,-0.090755,17z/data=!3m1!4b1!4m5!3m4!1s0x487604a91d5006e1:0x1fc6f7a29821c3a4!8m2!3d51.5046676!4d-0.0885663",
+                    "text" : "STORE FINDER",
+            
+                }
+            ],
+            "tnc" : {
+                "href" : "#",
+                "link" : "please click here",
+                "body" : "We respect your privacy. If you would rather not receive emails
+                    alerting you of eyos retail special offers, product announcements
+                    and other news, ",
+                "body_2" : ".<br /><br />
+                            For further details on how we manage your data, see our Privacy
+                            Policy.<br /><br />",
+                "rights" : "&copy; 2021 eyos retail. All rights reserved | eyos, 20 St Thomas
+                            Street, London SE1 9RS, UK. Company registered in England and Wales
+                            under company number 271888.",
+            }
+        }
+    
+    } 
+    %}
+
+{% set language = translations[locale if locale in translations else "en_GB"] %}
+
+<head>
+    <title></title>
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=”x-apple-disable-message-reformatting”>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+    </style>
+    <!--<![endif]-->
+    <!--[if mso]>
+              <noscript>
+              <xml>
+              <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+              </o:OfficeDocumentSettings>
+              </xml>
+              </noscript>
+              <![endif]-->
+    <!--[if lte mso 11]>
+              <style type="text/css">
+                .w100p { width:100% !important; }
+        body.layout {
+            -webkit-text-size-adjust: 100vw;
+            -ms-text-size-adjust: 100vw;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            min-width: 320px;
+            width: 100vw;
+            min-width: 100vw;
+            table-layout: fixed;
+            margin: 0 auto;
+            border-spacing: 0;
+        }
+                table {
+            max-width:500px;
+            box-sizing: border-box;
+            overflow: hidden;
+            table-layout: fixed;
+        }
+              </style>
+              <![endif]-->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            font-family: gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+            text-align: left;
+
+        }
+
+        #outlook a {
+            padding: 0;
+            color: inherit !important;
+        }
+
+        body.layout {
+            -webkit-text-size-adjust: 100vw;
+            -ms-text-size-adjust: 100vw;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            min-width: 320px;
+            width: 100vw;
+            min-width: 100vw;
+            table-layout: fixed;
+            margin: 0 auto;
+            border-spacing: 0;
+        }
+
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+
+        table {
+            max-width: 500px;
+            width:100%; 
+            box-sizing: border-box;
+            overflow: hidden;
+            table-layout: fixed;
+        }
+
+        td {
+            word-break: break-word;
+            mso-line-height-rule: exactly;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            width: 100%;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a {
+            outline: none;
+            color: inherit!important;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none !important;
+        }
+
+        .text-decoration-hover a {
+            text-decoration: none;
+        }
+
+        .text-decoration-hover a:hover {
+            text-decoration: underline !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        a[href^="tel"]:hover {
+            text-decoration: none !important;
+        }
+
+        .active a:hover,
+        .active:hover {
+            opacity: 0.8;
+        }
+
+        .active a,
+        .active {
+            transition: all 0.3s ease;
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        th {
+            padding: 0;
+        }
+
+        .pt10 {
+            padding-top: 1em !important;
+        }
+
+        .pt15 {
+            padding-top: 1.5em !important;
+        }
+
+        .pt20 {
+            padding-top: 2em !important;
+        }
+
+        .pb0 {
+            padding-bottom: 0;
+        }
+
+        .pb5 {
+            padding-bottom: 0.5em !important;
+        }
+
+        .pb10 {
+            padding-bottom: 1em !important;
+        }
+
+        .pb20 {
+            padding-bottom: 2em !important;
+        }
+
+        .pl10 {
+            padding-left: 1em !important;
+        }
+
+        .pr10 {
+            padding-right: 1em !important;
+        }
+
+        .py5 {
+            padding-top: 0.5em !important;
+            padding-bottom: 0.5em !important;
+        }
+
+        .py10 {
+            padding-top: 1em !important;
+            padding-bottom: 1em !important;
+        }
+
+        .py15 {
+            padding-top: 1.5em !important;
+            padding-bottom: 1.5em !important;
+        }
+
+        .py20 {
+            padding-top: 2em !important;
+            padding-bottom: 2em !important;
+        }
+
+
+        .px10 {
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+
+        .m0 {
+            margin: 0;
+        }
+
+        .alignCenter {
+            text-align: center !important;
+        }
+
+        .w50p {
+            width: 50% !important;
+        }
+
+        .w100p {
+            width: 100% !important;
+        }
+
+        .w500 {
+            width: 500px !important;
+            margin: 0 auto;
+        }
+
+        .btn01,
+        .btn02 {
+
+            background: #000930;
+        }
+
+        .btn01 a {
+            display: block;
+            color: #fff!important;
+            text-decoration: none;
+            padding: 0.8em 0.6em;
+            mso-padding-alt: 0.8em 0.6em;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .btn02 a {
+            display: block;
+            color: #fff!important;
+            text-decoration: none;
+            padding: 0.5em 0;
+            mso-padding-alt: 0.5em 0;
+            font-size: 0.8em;
+            text-align: right;
+        }
+
+        .logo img {
+            width: 30%;
+            height: auto;
+            display: block;
+            outline: none;
+            border: 0;
+            margin: 0 auto;
+        }
+
+        .gnb a {
+            font-size: 1em;
+            font-weight: bold;
+            display: inline-block;
+            line-height: 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .headline {
+            background: #000930;
+            padding: 0 0.9em;
+        }
+
+        .headlineText {
+            width: 80%;
+            padding:0.5em 0;
+            font-size: 0.8em;
+            color: #fff;
+            letter-spacing: -0.15;
+        }
+
+        .headlineButton {
+            width: 20%;
+
+        }
+
+        .headlineButton span {
+            display: inline-block;
+        }
+
+        .headlineButton span img {
+            width: 5px;
+            display: block;
+            vertical-align: top;
+        }
+
+        .banner {
+            background:url({{ language['store']['banner'] }}) 0 0/cover no-repeat;
+            width: 100%;
+            height: 200px;
+        }
+
+        .greeting {
+            width: 56%;
+            text-align: left;
+            vertical-align: top;
+            padding-right: 1em;
+        }
+
+        .greetingButton {
+            width: 100%;
+        }
+
+        .storeDetail {
+            text-align: left;
+            background: #f5f5f5;
+            vertical-align: top;
+            padding: 1em;
+        }
+
+        .storeDetail>table {
+            table-layout: fixed;
+            font-size: 0.9em;
+            padding: 1em 1.5em;
+            word-break: break-word;
+        }
+
+        .storeDetailTitle {
+            padding-bottom: 0.5em;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+        .storeDetailDescription {
+            padding-bottom: 1em;
+            font-weight: bold;
+        }
+
+        .receiptIntro {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 2em 0 1em;
+        }
+
+        .receiptSection {
+            padding: 0.5em 0;
+            border-top: 1px solid #dededf;
+            width:100%;
+            text-align:left;
+        }
+
+        .receiptSection th {
+            vertical-align: top;
+        }
+
+        .receiptSection>table>tr>td {
+            word-break: break-word;
+            vertical-align: top;
+            text-align: left;
+            width:100%;
+        }
+
+        .number {
+            text-align:left;
+            font-size: 0.8em;
+            padding-top: 1em;
+        }
+
+        .title {
+            font-size: 1em;
+            text-align:left;
+            font-weight: bold;
+            letter-spacing: -0.03em;
+        }
+
+        .description {
+            text-align:left;
+            font-size: 0.9em;
+        }
+
+        .description2 {
+            font-size: 0.8em;
+            font-weight: bold;
+            padding: 0.2em 0 1em;
+        }
+
+        .price {
+            text-align: right;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        .transaction {
+            width: 60%;
+            vertical-align: top;
+            padding-right: 1em;
+        }
+
+        .barcode img {
+            max-width: 250px;
+            margin: 0 auto;
+
+        }
+        .cta .title {
+            font-size: 1.3em;
+        }
+
+        .cta .description {
+            padding: 2em 0;
+            font-weight: normal;
+        }
+
+        .ctaText {
+            width: 60%;
+            padding-right: 1em;
+        }
+
+        .ctaImage {
+            text-align: right;
+            background-position: center !important;
+        }
+
+        .coupon {
+            padding:0.5em 0 2em;
+        }
+
+        .couponContainer {
+            width: 40%;
+            box-sizing: border-box;
+            padding: 0.5em 1em;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .couponCard {
+            font-size: 0.8em;
+            border: 4px solid #000930;
+            border-radius: 8px;
+            padding: 1em;
+            text-align: center;
+        }
+
+
+        .social {
+            padding: 1em 0;
+            border-top: 2px solid #000930;
+            border-bottom: 2px solid #000930;
+        }
+
+        .social a {
+            padding: 0 0.2em;
+        }
+
+        .social img {
+            width: 32px;
+        }
+
+        .lnb {
+            padding: 1em 0 2em;
+        }
+
+        .lnb table {
+            width: auto;
+        }
+
+        .lnb a {
+            padding: 0 0.5em;
+        }
+
+        .footer {
+            color: #9c9d9e;
+            font-size: 0.8em;
+        }
+
+        @media only screen and (max-width:617px) {
+            .hm {
+                display: none !important;
+                width: 0 !important;
+                height: 0 !important;
+                padding: 0 !important;
+                font-size: 0 !important;
+                line-height: 0 !important;
+            }
+
+            .tflex {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .tflex.btn02 a {
+                text-align: center;
+            }
+
+            .tfoot {
+                display: table-footer-group !important;
+                width: 100% !important;
+            }
+
+            .trow {
+                display: table-row !important;
+                width: 100% !important;
+            }
+
+            .thead {
+                display: table-caption !important;
+                width: 100% !important;
+            }
+
+            .floatNone {
+                float: none !important;
+                margin: 0 auto !important;
+            }
+
+            .mw55p {
+                max-width: 55% !important;
+            }
+
+            .banner {
+
+                background:url({{ language['store']['banner'] }}) 0 0/cover no-repeat !important;
+            }
+
+            .ctaText {
+                text-align: center;
+            }
+
+            .ctaImage {
+                background-position: center !important;
+            }
+
+        }
+
+        @media (prefers-dark-interface) {
+            body {
+                -apple-color-filter: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="layout">
+
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+    <table width="500" cellspacing="0" cellpadding="0">
+        <!-- START HEADER -->
+        <tr>
+            <td class="header pt10">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <!-- START LOGO -->
+                    <tr>
+                        <td>
+                            <a class="logo" href="{{ language['store']['logo']['href'] }}">
+                                <img src="{{ language['store']['logo']['src'] }}" />
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- END LOGO -->
+                    <!-- START GLOBAL NAVIGATION BAR -->
+                    <tr>
+                        <td class="text-decoration-hover py15">
+                            <div class="gnb alignCenter">
+                                {% for menu in  language['gnb']  %}
+                                <a class="active px10" href="{{ menu['href'] }}" target="_blank">
+                                    {{ menu['text'] }}
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- END GLOBAL NAVIGATION BAR -->
+                    <!-- START HEADLINE -->
+                    <tr>
+                        <td class="headline">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th align="left" class="headlineText tflex">
+                                        {{ language['headline']['text'] }}
+                                    </th>
+                                    <th align="right" class="headlineButton active text-decoration-hover btn02 tflex">
+                                        <a href="{{ language['headline']['href'] }}">
+                                            {{ language['headline']['button'] }}
+                                            <span>
+                                                <img src="https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-arrow-wh.png"
+                                                    alt="{{ language['headline']['button'] }}" /></span>
+                                        </a>
+                                    </th>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END HEADLINE -->
+                    <!-- START BANNER -->
+                    <tr>
+                        <td class="py10 alignCenter">
+                            <a target="_blank" href="{{ language['store']['href'] }}">
+                                <div class="banner">
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- END BANNER -->
+                    <!-- START STORE INFORMATION -->
+                    <tr>
+                        <td class="storeInfo">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr class="thold">
+                                    <!-- START GREETING -->
+                                    <th class="greeting tfoot">
+                                        <table class="floatNone" width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="py10">
+                                                    {{ language['greeting']['dear'] }}{{data['customer']['name']['first']}},<br /><br />
+                                                    {{ language['greeting']['thankyou'] }}{{ data['store']['name'] }}.<br /><br />
+                                                    {{ language['greeting']['body'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" class="greetingButton floatNone btn01 active">
+
+                                                    <a class="alignCenter"
+                                                        href="{{ language['greeting']['href'] }}">{{ language['greeting']['button'] }}</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <!-- END GREETING -->
+
+                                    <!-- START STORE DETAIL -->
+                                    <th class="storeDetail thead">
+
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="storeDetailDescription">
+                                                    {{ language['store']['detail'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailTitle">
+                                                    {{ language['store']['address'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailDescription">
+                                                    {{receipt.business_location.address_line_one}},
+                                                    {{receipt.business_location.address_line_two}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailTitle">
+                                                    {{ language['store']['telephone'] }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailDescription">
+                                                    <a href="tel: {{ lanuage['store']['phone_number'] }}">{{receipt.business_location.phone_number}}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </th>
+                                    <!-- END STORE DETAIL -->
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END STORE INFORMATION -->
+                </table>
+            </td>
+        </tr>
+        <!-- END HEADER -->
+        <!-- START RECEIPT -->
+        <tr>
+            <td class="receiptContainer">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <!-- START RECEIPT HEADER -->
+                    <tr>
+                        <td class="receiptIntro">
+                            {{ language['receipt']['intro'] }}
+                        </td>
+                    </tr>
+                    <!-- END RECEIPT HEADER -->
+                    <!-- START SALE ITEM -->
+                    {% for sale_item in data['sale_item'] %}
+                    <tr>
+                        <td class="receiptSection">
+                            <table class="saleItem" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="number">
+                                        {{ sale_item['pos_item_id'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="title">
+                                        {{ sale_item['text'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="description">
+                                        {{ receipt.format_currency(sale_item['unit_price']['value']) }}
+                                        x
+                                        {% if sale_item['quantity']['number'] != None %}
+                                        {{ sale_item['quantity']['value'] }}
+                                        {% else %}
+                                        1
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% for discount in sale_item['discount'] %}
+                                <tr>
+                                    <td class="description">
+                                        {{ format_currency(discount['amount']['value']) }}
+                                        ( {{ discount['text'] }} )
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td class="price" valign="top">
+
+                                        {{ receipt.format_currency(sale_item['total']['value']) }}
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <!-- END SALE ITEM -->
+
+                    <!-- START DISCOUNTS -->
+                    {% if data['discount'] %}
+                    <tr>
+                        <td class="receiptSection discount">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="2" class="title">
+                                        {{ language['receipt']['discount'] }}
+                                    </td>
+                                </tr>
+                                {% for discount in receipt['discount'] %}
+                                <tr>
+                                    <td class="description">
+                                        {{ discount['text'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(discount['amount']['value']) }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <!-- END DISCOUNTS -->
+
+                    <!-- START SUBTOTAL -->
+                    {% if data['receipt']['subtotal']['amount']['value'] %}
+                    <tr>
+                        <td class="receiptSection subtotal">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['subtotal'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <!-- END SUBTOTAL -->
+
+                    <!-- START TAX -->
+                    {% if data['tax'] %}
+                    {% for tax in data['tax'] %}
+                    <tr>
+                        <td class="receiptSection tax">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['tax'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(tax['amount']['value']) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                    <!-- END TAX -->
+
+                    <!-- START TOTAL -->
+                    <tr>
+                        <td class="receiptSection total">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['total'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END TOTAL -->
+
+                    <!-- START TENDER -->
+                    {% if data['tender'] %}
+                    <tr>
+                        <td class="receiptSection tender">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title">
+                                        {{ language['receipt']['payment_method'] }}
+                                    </td>
+                                </tr>
+                                {% for tender in data['tender'] %}
+                                <tr>
+                                    <td class="description">
+                                        {{ tender['text'] }}
+                                    </td>
+                                    <td class="price">
+                                        {{ receipt.format_currency(tender['amount']['value']) }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <!-- END TENDER -->
+
+                    <!-- START TRANSACTION -->
+                    <tr>
+                        <td class="receiptSection">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="transaction tflex">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="w50p" valign="top">
+                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['till'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{ data['device']['external_id'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['salesperson'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{ data['receipt']['associate']['name'] }}
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class="w50p" valign="top">
+                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['transaction_id'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{ data['receipt']['transaction_number']['text'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description">
+                                                                {{ language['receipt']['time'] }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="description2">
+                                                                {{receipt.get_local_time().strftime('%d/%m/%y %H:%M')}}
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="barcode tflex">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="alignCenter">
+                                                    <img class="w100p"
+                                                        src="{{ barcode_url }}"
+                                                        alt="{{ receipt.barcode_transaction_number }}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <div class="description2 alignCenter pb0">
+                                                        {{ receipt.barcode_transaction_number }}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END TRANSACTION -->
+                </table>
+            </td>
+        </tr>
+        <!-- END RECEIPT -->
+        <!-- START REFUND POLICY -->
+        <tr>
+            <td class="refund py5">
+                <table width="100%" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td class="description">
+                            {{ language['refund']['title'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="description">
+                            {{ language['refund']['body'] }}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END REFUND POLICY -->
+        
+        <!-- START CTA1 -->
+        <tr>
+            <td class="cta py20 tflex">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr class="thold">
+                        <th class="ctaText tfoot">
+                            <table class=" floatNone" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title tflex">
+                                        {{ language['cta']['cta1']['title'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="description tflex">
+                                        {{ language['cta']['cta1']['body'] }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table class="w50p floatNone m0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="center" class="btn01 active">
+                                                    <a class="alignCenter"
+                                                        href=" {{ language['cta']['cta1']['href'] }}">
+                                                        {{ language['cta']['cta1']['button'] }}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th class="ctaImage thead">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <a target="_blank" href=" {{ language['cta']['cta1']['href'] }}">
+                                            <img src=" {{ language['cta']['cta1']['src'] }}"
+                                                alt=" {{ language['store']['name'] }}">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END CTA1 -->
+        <!-- START CTA2 -->
+        <tr>
+            <td class="cta">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr class="thold">
+                        <td class="ctaImage">
+                            <a target="_blank" href="{{ language['store']['href'] }}">
+                                <img src=" {{ language['cta']['cta2']['src'] }}" alt=" {{ language['store']['name'] }}">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py10">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" class="px10">
+                                        <div class="btn01 active">
+                                        <a class="alignCenter" href=" {{ language['cta']['cta2']['button1']['href'] }}">
+                                            {{ language['cta']['cta2']['button1']['text'] }}
+                                        </a>
+                                    </div>
+                                    </td>
+                                    <td align="center" class="px10">
+                                        <div class="btn01 active">
+                                        <a class="alignCenter" href=" {{ language['cta']['cta2']['button2']['href'] }}">
+                                            {{ language['cta']['cta2']['button2']['text'] }}
+                                        </a>
+                                    </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END CTA2 -->
+        <!-- START CTA3 -->
+        <tr>
+            <td class="cta pb20">
+                <a target="_blank" href="{{ language['cta']['cta3']['href'] }}">
+                    <img src=" {{ language['cta']['cta3']['src'] }}" alt=" {{ language['store']['name'] }}">
+                </a>
+            </td>
+        </tr>
+        <!-- END CTA3 -->
+
+        <!-- START LOYALTY -->
+        {% if data['loyalty']['external_id'] %}
+        <tr>
+            <td class="loyalty py5">
+                <table align="center" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="description">
+                            {% if "Nouveau solde" in data['receipt']['footer']['text'] %}
+                            {{ nl2br (data['receipt']['footer']['text']) }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {% endif %}
+        <!-- END LOYALTY -->
+
+        <!-- START COUPON -->
+        {% if data["coupons"] %}
+        <tr>
+            <td class="coupon">
+                <table align="center" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center" class="title alignCenter py10">
+                            Coupons
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-decoration-hover alignCenter">
+                            {% for coupon in data["coupons"] %}
+                            <div class="couponContainer tflex">
+                                <div class="couponCard">
+                                    {% if coupon["code"] in coupon["text"] %}
+                                    {{ nl2br (
+                                        coupon["text"].replace(
+                                            coupon["code"],
+                                            ('<br /><br /> <img src="{}?path=/coupons/{}/code" /> <br /><br />{}<br />'
+                                            .format( barcode_url, loop.index - 1, coupon["code"]))
+                                            )
+                                        )
+                                    }}
+                                    {% else %}
+                                    {{  nl2br (coupon["text"]) }}<br /><br />
+                                    {{ ('<img src="{}?path=/coupons/{}/code" /> <br /><br />{}<br />'
+                                        .format( barcode_url, loop.index - 1, coupon["code"])) }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {% endif %}
+        <!-- END COUPON -->
+        <!-- START SOCIAL -->
+        <tr>
+            <td class="social">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="text-decoration-hover">
+                            <div class="alignCenter">
+                                {% for link in  language['social']  %}
+                                <a target="_blank" href="{{ link['href'] }}">
+                                    <img src="{{ link['src'] }}" alt="{{ link['alt'] }}" />
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END SOCIAL -->
+        <!-- START LOCAL NAVIGATION BAR -->
+        <tr>
+            <td class="text-decoration-hover description">
+                <div class="lnb alignCenter">
+                    {% for menu in  language['lnb']  %}
+                    <a class="active px10 alignCenter" href="{{ menu['href'] }}" target="_blank">
+                        {{ menu['text'] }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </td>
+        </tr>
+        <!-- END LOCAL NAVIGATION BAR -->
+        <!-- START FOOTER -->
+        <!-- START TERMS AND CONDITIONS -->
+        <tr>
+            <td class="footer">
+                {{ language['tnc']['body'] }}
+                <a target="_blank" href="{{ language['tnc']['href'] }}">
+                    {{ language['tnc']['link'] }}</a>
+                {{ language['tnc']['body_2'] }}
+                {{ language['tnc']['rights'] }}
+            </td>
+        </tr>
+        <!-- END TERMS AND CONDITIONS -->
+        <!-- END FOOTER -->
+    </table>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-10379873-1']);
+        _gaq.push(['_setDomainName', '.yReceipts.com']);
+        _gaq.push(['_trackPageview']);
+    
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+        <script>
+        window.addEventListener('load', function() {
+    
+            jQuery('button:contains("More Clients")').click(function() {
+                _gaq.push(['_trackEvent', 'button', 'click', 'more clients']);
+            });
+    
+            jQuery('#email_receipt_form button:contains("Send")').click(function() {
+                _gaq.push(['_trackEvent', 'button', 'click', 'email subscription']);
+            });
+    
+    
+            jQuery('[data-target="#bookDemoModal"]:contains("Get in touch")').click(function() {
+                var label = jQuery(this).prev().prev().text();
+                _gaq.push(['_trackEvent', 'Get in touch', 'click', label]);
+            });
+    
+    
+            jQuery('a:contains("Learn More")').click(function() {
+                _gaq.push(['_trackEvent', 'button', 'click', 'learn more']);
+            });
+    
+            jQuery('button:contains("Partner with us")').click(function() {
+                _gaq.push(['_trackEvent', 'button', 'click', 'partner with us']);
+            });
+    
+            jQuery('#contactUsForm button:contains("Submit")').click(function() {
+                _gaq.push(['_trackEvent', 'contact', 'click', 'submit']);
+            });
+        });
+        </script>
+    <div class="modal fade" id="bookDemoModal" tabindex="-1" role="dialog" aria-labelledby="bookDemoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <input type="hidden" name="oid" value="00D1l0000008jHW">
+                <input type="hidden" name="retURL" value="https://www.eyos.com/">
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                <!--  these lines if you wish to test in debug mode.                          -->
+                <!--  <input type="hidden" name="debug" value=1>-->
+                <!--  <input type="hidden" name="debugEmail" value="eyos@weare4c.com">-->
+                <!--  ----------------------------------------------------------------------  -->
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="bookDemoLabel">Contact Us</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="first_name">First Name:</label><input id="first_name" maxlength="40" class="form-control" name="first_name" size="20" type="text" required="true"/><br>
+                    <label for="last_name">Last Name:</label><input id="last_name" maxlength="80" class="form-control" name="last_name" size="20" type="text" required="true"/><br>
+                    <label for="email">Email:</label><input id="email" maxlength="80" name="email" class="form-control" size="20" type="email" required="true"/><br>
+                    <label for="title">Title:</label><input id="title" maxlength="80" name="title" class="form-control" size="20" type="text" required="true"/><br>
+                    <label for="company">Company:</label><input id="company" maxlength="40" class="form-control" name="company" size="20" type="text" required="true"/><br>
+                    <label for="phone">Phone:</label><input id="phone" maxlength="40" class="form-control" name="phone" size="20" type="tel" required="true"/><br>
+                    <label for="00N1l000001J4Rr">Message:</label><textarea  id="00N1l000001J4Rr" class="form-control" name="00N1l000001J4Rr" rows="3" type="text" wrap="soft"></textarea><br>
+                    <input type="hidden" name="recordType" id="recordType" value="0121l0000005cqIAAQ">
+                    <input id="lead_source" name="lead_source" type="hidden" value="Website" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-theme-dark basic" role="submit">Submit</button>
+                    <span class="primary tr btn btn-default loader" style="display: none;">
+                        <img src="https://www.eyos.com/images/datahub_loading_small.gif" alt="Working..." />
+                    </span>
+                    <span style="display: none;" class="primary tr btn btn-default success"><span class="glyphicon glyphicon-ok"></span></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

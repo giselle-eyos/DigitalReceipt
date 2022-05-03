@@ -1,0 +1,639 @@
+{% set feedback_links = {
+    "9136": "https://www.feedback.fyi/feedback/DUJNJ?invoice=yes",
+    "9135": "https://www.feedback.fyi/feedback/CXEEM?invoice=yes",
+    "9121": "https://www.feedback.fyi/feedback/BKWCY?invoice=yes",
+    "9124": "https://www.feedback.fyi/feedback/BEYYY?invoice=yes",
+    "9126": "https://www.feedback.fyi/feedback/JWDER?invoice=yes",
+    "9129": "https://www.feedback.fyi/feedback/AHRCS?invoice=yes",
+    "9133": "https://www.feedback.fyi/feedback/XVMXC?invoice=yes",
+    "9125": "https://www.feedback.fyi/feedback/KEUFZ?invoice=yes",
+    "9134": "https://www.feedback.fyi/feedback/ZAGFH?invoice=yes",
+    "9140": "https://www.feedback.fyi/feedback/JPSTQ?invoice=yes",
+    "9145": "https://www.feedback.fyi/feedback/CMVSZ?invoice=yes",
+    "9137": "https://www.feedback.fyi/feedback/DASDX?invoice=yes"
+} %}
+{% set feedback_link = feedback_links.get(receipt["store"]["external_id"]) %}
+<mjml>
+  <mj-head>
+        <mj-font name="FontAwesome" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <mj-style>
+     @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
+      p {margin:inherit!important; line-height:20px!important;}
+      .section table table table {width:100%!important}
+      .section > table > tbody > tr > td {padding:0!important}
+    	.mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+      .header .image {padding:0!important}
+      .mj-column-per-100 > table > tbody > tr > td.nav {padding:inherit!important}
+      .nav a {padding:8px 10px 4px!important}
+      .order-detail table table td {padding:4px 25px 0!important}
+      .item-detail table table td {line-height:16px!important}
+      .total > table > tbody > tr > td {padding:4px 0!important}
+      .red {color:rgb(231,26,12)!important}
+      .white {color:#fff!important}
+      .phone {
+      width:14px!important;
+      height:14px!important;
+      display:inline-block!important;      	background:url("https://storage.googleapis.com/yreceipts-prod-public-assets/Bridgestone/phone.png")!important; 
+      filter: invert(1)!important;
+      }
+      .phone-detail a {width:120px!important}
+      .find-out-more a{ width:104px!important}
+      .gray {background:#ddd!important; margin-top:4px!important;}
+      .gray .mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+      table th, table td {vertical-align:top!important;}
+     .no-padding table table td {padding:0!important;}
+      .padding-20 > table > tbody > tr > td {padding-top:20px!important;}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section css-class="section header">
+      <mj-column>
+        <mj-image src="https://www.tonystyreservice.co.nz/media/1139/18667-bds-ttsl-logo-header-550x100-v1.jpg" href="https://www.tonystyreservice.co.nz/?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice" css-class="image" ></mj-image>
+        <mj-navbar css-class="nav">
+          <mj-navbar-link href="https://www.tonystyreservice.co.nz/stores?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Stores</mj-navbar-link>
+          <mj-navbar-link href="https://www.tonystyreservice.co.nz/tyres?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Tyres</mj-navbar-link>
+          <mj-navbar-link href="https://www.tonystyreservice.co.nz/services?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Services</mj-navbar-link>
+          <mj-navbar-link href="{{ feedback_link }}">Feedback</mj-navbar-link>
+        </mj-navbar>
+        </mj-column>
+    </mj-section>
+   
+    <!--  RECEIPT  -->
+    <!-- START STORE DETAIL -->
+    <mj-section css-class="section gray">
+      <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="35%"></col>   
+							<col width="65%"></col>     
+            </colgroup>
+            <tr>
+              <th rowspan="7" align="left">
+                Store : 
+              </th>
+              <td rowspan="7" align="left">
+        				-
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+        <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="35%"></col>   
+							<col width="65%"></col>           
+            </colgroup>
+            <tr>
+              <th align="left">
+                Tax Invoice : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Date : 
+              </th>
+              <td align="left">
+        			-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Account No : 
+              </th>
+              <td align="left">
+        			-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Your Reference : 
+              </th>
+              <td align="left">
+        				{{ receipt['sale_item']['additional_attribute']['service_reference_number'] }}
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Page No : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Original Invoice : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                GST No : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+    </mj-section>
+    <!-- END STORE DETAIL  -->
+    
+    <!-- START INVOICE DETAIL  -->
+    <mj-section css-class="section gray">
+      <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="35%"></col>   
+							<col width="65%"></col>        
+            </colgroup>
+            <tr>
+              <th align="left">
+                Invoice to : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Email : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+      <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="35%"></col>   
+							<col width="65%"></col>      
+            </colgroup>
+            <tr>
+              <th rowspan="2" align="left">
+                Ship to : 
+              </th>
+              <td rowspan="2" align="left">
+        				-
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+    </mj-section>
+    <!-- END INVOICE DETAIL  -->
+    
+    <!-- START SALES DETAIL -->
+    <mj-section css-class="section gray">
+      <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="35%"></col>   
+							<col width="65%"></col>           
+            </colgroup>
+            <tr>
+              <th align="left">
+                Registration : 
+              </th>
+              <td align="left">
+        				{{ receipt['receipt']['additional_attribute']['vehicle']['registration'] }}
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Odometer : 
+              </th>
+              <td align="left">
+        				{{ receipt['receipt']['additional_attribute']['vehicle']['odometer'] }}
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Make/Model : 
+              </th>
+              <td align="left">
+        				{{ receipt['receipt']['additional_attribute']['model'] }}
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2" align="left">
+                Service Date : 
+              </th>
+              <td rowspan="2" align="left">
+        			 {{ receipt['receipt']['additional_attribute']['vehicle']['serviceDate'] }}
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+      <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="35%"></col>   
+							<col width="65%"></col>            
+            </colgroup>
+            <tr>
+              <th align="left">
+                Contact : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Mobile No : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Salesperson : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Entered By : 
+              </th>
+              <td align="left">
+        			-
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                CRM Cust No : 
+              </th>
+              <td align="left">
+        				-
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+    </mj-section>
+    <!-- END SALES DETAIL -->
+
+
+    <!-- SALE ITEMS -->
+    <mj-section css-class="section no-padding">
+      <mj-column>
+        <mj-table>
+            <colgroup>
+							<col width=""></col>            
+            </colgroup>
+          <tr>
+            <th style="text-align: center;">Your Ref</th>
+            <th style="text-align: center;">Tag/Claim</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: center;">
+            </td>
+            <td style="text-align: center;">
+              -
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+      <mj-column>
+        <mj-table>
+            <colgroup>
+							<col width=""></col>            
+            </colgroup>
+          <tr>
+            <th style="text-align: center;">IPC</th>
+            <th style="text-align: center;">Description</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: center;">
+              {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['pos_item_id'] }}
+            </td>
+            <td style="text-align: center;">
+              {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['description'] }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+      <mj-column>
+        <mj-table>
+            <colgroup>
+							<col width=""></col>            
+            </colgroup>
+          <tr>
+            <th style="text-align: center;">Qty</th>
+            <th style="text-align: center;">Unit price</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: center;">
+              {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['quantity'] }} 
+            </td>
+            <td style="text-align: right;">
+             {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['value'] }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+      <mj-column>
+        <mj-table>
+            <colgroup>
+							<col width=""></col>            
+            </colgroup>
+          <tr>
+            <th style="text-align: center;">Line Total</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: right;">
+             {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['total'] }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+    <!-- START SALES NOTE -->
+    <mj-section css-class="section gray">
+      <mj-column>
+          <mj-table>
+            <tr>
+              <th align="left">
+               Sale Notes : 
+              </th>
+            </tr>
+            <tr>
+              <td align="left">
+        				{{ receipt['receipt']['footerInfo'] }}
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+    </mj-section>
+    <!-- END SALES NOTE -->
+      
+    <!-- START TOTAL -->
+    <mj-section css-class="section no-padding padding-20">
+      <mj-column>
+          <mj-table>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+        </mj-table>
+        </mj-column>
+      <mj-column>
+          <mj-table>
+            <colgroup>
+							<col width="40%"></col>   
+							<col width="60%"></col>         
+            </colgroup>
+            <tr>
+              <th align="left">
+                 Invoice Total :
+              </th>
+              <td align="right">
+        				{{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['total'] }}
+              </td>
+            </tr>
+            <tr>
+              <th align="left">
+                Includes GST of : 
+              </th>
+              <td align="right">
+        				-
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+    </mj-section>
+    <!-- END TOTAL -->
+      
+      
+    <!-- START PLUS -->
+   <mj-section css-class="section padding-20">
+      <mj-column>
+        <mj-text text-decoration="underline" font-size="16px">
+        <b>Tyre Cover Plus</b>
+        </mj-text>
+        <mj-table>
+          <col width="40%"></col>   
+          <col width="60%"></col>  
+          <tr>
+            <th style="text-align: left;">
+              Warranty Number
+            </th>
+            <th style="text-align: right;">
+              {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['certificationNumber'] }}
+            </th>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+   <mj-section css-class="section">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left;">Start Odometer</th>
+            <th style="text-align: left;">Start Date</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left;">
+            	{{ receipt['receipt']['additional_attribute']['vehicle']['certification']['odometer']['start'] }}
+            </td>
+            <td style="text-align: left;">
+             {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['startDate'] }} 
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+   <mj-section css-class="section no-padding">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left;">IPC</th>
+            <th style="text-align: left;">Description</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left;">
+              {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['pos_item_id'] }}
+            </td>
+            <td style="text-align: left;">
+               {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['description'] }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left;">Serial No.</th>
+            <th style="text-align: left;">Position</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: center;">
+              {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['serialNumber'] }}
+            </td>
+            <td style="text-align: center;">
+             {{ receipt['receipt']['additional_attribute']['vehicle']['certification']['tyre']['position'] }}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END PLUS -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section css-class="section tender-type">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Tender Type</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+       <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+    <!--  RECEIPT  -->
+
+    <!-- CTA1 -->
+    <mj-section background-color="rgb(254,239,1)">
+    	<mj-column>
+      	<mj-text align="center" font-size="28px">
+        	<b>How did </b><b class="red">we do?</b>
+        </mj-text>
+      	<mj-text align="center" font-size="40px">
+        &#9734;&nbsp;&#9734;&nbsp;&#9734;&nbsp;&#9734;&nbsp;&#9734;
+        </mj-text>
+      	<mj-text align="center" font-size="16px">
+        	<b>Let us know what you thought and be in to </b><b class="red">WIN </b><b>your share of</b><br/><b class="red"><span>&#36;</span>500 </b><b>worth of petrol vouchers.</b>
+        </mj-text>
+        <mj-button href="{{ feedback_link }}" background-color="#000" width="150px" padding="10px 25px 0">FEEDBACK</mj-button>
+      </mj-column>
+    	<mj-column>
+      	<mj-text align="center" font-size="28px">
+        	<b>Need </b><b class="red">assistance?</b>
+        </mj-text>
+      	<mj-text align="center" font-size="16px">
+        	Our friendly customer service team are happy to help.
+        </mj-text>
+      	<mj-text align="center" font-size="16px" padding-top="32px">
+        	<b>Mon - Fri: </b><b class="red">7:30am - 5:30pm</b><br/>
+        	<b>Sat - Sun: </b><b class="red">8:30am - 2:30pm</b>
+        </mj-text>
+        <mj-button css-class="phone-detail" href="tel:0800286697" background-color="#000" width="150px" padding="10px 25px 0"><img class="phone" src="https://storage.googleapis.com/yreceipts-prod-public-assets/Bridgestone/phone.png" /> 
+ &nbsp;0800 286 697</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA1 -->
+    
+    <!-- CTA2 -->
+    <mj-section background-color="#000">
+      <mj-column>
+      	<mj-text align="center" font-size="48px">
+        	<b class="red">Free </b><b class="white">puncture repairs</b>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section background-color="#000">
+      <mj-column>
+        
+        <mj-image src="https://www.canstarblue.co.nz/wp-content/uploads/2017/05/tonys-tyre-service.png" href="https://www.bridgestone.co.uk/"></mj-image>
+      </mj-column>
+      <mj-column>
+      	<mj-text align="center" font-size="16px">
+        	<p class="white">At Tony's Tyre Service we give our customers free* puncture repairs on their vehicles. If you ever get a flat, we'll repair it  and put it  back on your car for FREE. No stress.</p>
+        </mj-text>
+      	<mj-text align="center" font-size="12px">
+          <p class="white">*<span style="text-decoration:underline">Terms and conditions</span> apply.</p>
+        </mj-text>
+        <mj-button href="https://www.tonystyreservice.co.nz/services/free-puncture-repairs?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice" background-color="#fff" width="150px" padding="10px 25px 0" color="#000" css-class="find-out-more">
+FIND OUT MORE</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA2 -->
+
+    
+    <!-- CTA3 -->
+    <mj-section background-color="rgb(254,239,1)">
+    	<mj-column>
+      	<mj-text align="center" font-size="48px">
+        	<b>Auto servicing you can trust  </b><b class="red">from <span>&#36;</span>149</b>
+        </mj-text>
+      	<mj-text align="center" font-size="16px">
+        	<p style="padding:16px 0">Get your car, 4x4 or van serviced at Tony's Tyre Service from as low as &#36 149. Available at selected stores across New Zealand.</p>
+        </mj-text>
+        <mj-button background-color="#000" width="150px" padding="10px 25px 0" href="https://www.tonystyreservice.co.nz/services/auto-servicing-plans?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">FIND A STORE</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA3 -->
+
+    <!-- SOCIAL MEDIA -->
+    <mj-section background-color="black">
+      <mj-column>
+                <mj-table>
+            <tr>
+            <td>
+              <span style="color: white;">USEFUL LINKS</span><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Visit Tony's Website</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/services/wheel-alignment?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Check if you need a wheel alignment</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/services/tyre-rotation?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Learn about tyre rotations</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/services/batteries?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Get a free battery check</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/services/warrant-of-fitness?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">WOF</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/services/auto-servicing-plans?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Auto Servicing</a><br />
+                            <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/services/automotive-maintenance-repair?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Automotive Maintenance &amp; Repair</a><br />
+              <a style="text-decoration: none; color: white;" href="mailto:information@tonystyreservice.co.nz?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">information@tonystyreservice.co.nz</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/privacy-policy?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Privacy Policy</a><br />
+              <a style="text-decoration: none; color: white;" href="https://www.tonystyreservice.co.nz/terms-and-conditions?utm_source=keystone&utm_medium=invoice&utm_campaign=keystone-digital-invoice">Terms &amp; Conditions</a><br />
+            </td>
+            <td align="right" style="vertical-align: top;">
+                <img src="https://www.tonystyreservice.co.nz/media/1141/18667-mta-logo-50x50.png" />
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+  </mj-body>
+</mjml>

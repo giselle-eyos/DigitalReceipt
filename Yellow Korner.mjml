@@ -1,0 +1,259 @@
+{% set translations = {
+    "fr_FR": {
+        "date_of_purchase": "Date d\u2019achat\u00a0:",
+        "transaction_number": "Num\u00e9ro de transaction\u00a0:",
+        "salesperson": "Vendeur\u00a0:",
+        "store": "Store\u00a0:",
+        "till": "Caisse\u00a0:",
+        "item_id": "ID article",
+        "description": "Description",
+        "quantity": "Quantité",
+        "price": "Prix total",
+        "subtotal": "Sous-total\u00a0:",
+        "discount": "Remise",
+				"reason": "Motif",
+        "discount_amount": "Montant",
+        "net_amount": "Montant net",
+        "tax_rate": "TVA",
+        "taxable_amount": "Montant HT",
+        "tax_paid": "TVA pay\u00e9e",
+        "total": "Total TTC:",
+        "tender_type": "M\u00e9thode de paiement",
+        "tender_amount": "Montant",
+        "Thankyou": "Merci pour votre achat",
+				"unit_price" : "Prix unitaire"
+    },
+    "en_GB": {
+        "date_of_purchase": "Date of Purchase:",
+        "transaction_number": "Transaction Number:",
+        "salesperson": "Salesperson:",
+        "store": "Store:",
+        "till": "Till:",
+        "item_id": "Item ID",
+        "description": "Description",
+        "quantity": "Quantity",
+        "price": "Price",
+        "subtotal": "Subtotal:",
+        "discount": "Discount",
+		"reason": "Reason",
+        "discount_amount": "Amount",
+        "net_amount": "Net Amount",
+        "tax_rate": "VAT",
+        "taxable_amount": "Taxable Amount",
+        "tax_paid": "VAT Paid",
+        "total": "Total:",
+        "tender_type": "Payment method",
+        "tender_amount": "Amount",
+        "Thankyou": "Thank you for shopping at Yellow Korner",
+				"unit_price" : "Unit price"
+    }
+  }
+%}
+{% set language = translations[locale if locale in translations else "fr_FR"] %}
+<mjml>
+  <mj-head>
+    <mj-style>
+      p {margin:inherit!important; line-height:20px!important;}
+      .section > table > tbody > tr > td {padding:0!important}
+      .mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+      .mj-column-per-100 > table > tbody > tr > td.nav {padding:inherit!important}
+      .nav a {padding:8px 10px 4px!important}
+      .red {color:rgb(231,26,12)!important}
+      .white {color:#fff!important}
+      .mj-column-per-100 > table > tbody > tr > td.welcomemsg {padding:8px 25px!important}
+      .mj-column-per-100 > table > tbody > tr > td.image {padding-top:1rem!important}
+      .order-description .mj-column-per-100 > table > tbody > tr > td{padding:1px 25px!important}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section css-class="section header">
+      <mj-column>
+        <mj-image width="200px" src="https://storage.googleapis.com/yk-cdn/images/cegid/logo.png" href="https://www.yellowkorner.com/" css-class="image"></mj-image>
+        <mj-text css-class="welcomemsg" font-size="20px" align="center">{{ language['Thankyou'] }}</mj-text>
+        <mj-divider></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="section order-description">
+      <mj-column>
+        <mj-text font-size="12px" align="left">{{ language['date_of_purchase'] }} {{receipt.get_local_time().strftime('%d/%m/%Y')}}</mj-text>
+        <mj-text font-size="12px" align="left">{{ language['transaction_number'] }} {{ data['receipt']['transaction_number']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">{{ language['salesperson'] }} {{ data['receipt']['associate']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">{{ language['store'] }} {{ data['store']['name'] }}</mj-text>
+        <mj-text font-size="12px" align="left">{{ language['till'] }} {{ data['device']['external_id'] }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+    <!-- SALE ITEMS -->
+    <mj-section css-class="section item-detail">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 20%;">{{ language['item_id'] }}</th>
+            <th style="text-align: left; vertical-align: top; width: 55%;">{{ language['description'] }}</th>
+            <th style="text-align: center; vertical-align: top; width: 10%;">{{ language['quantity'] }}</th>
+            <th style="text-align: right; vertical-align: top; width: 25%;">{{ language['price'] }}</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+            <td style="text-align: left; vertical-align: top; width: 55%;">
+              {{ sale_item['text'] }}
+						  <br>{{ language['unit_price'] }}: {{  receipt.format_currency(sale_item['unit_price']['value']) }}
+              <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+              
+              <br>{{ language['discount'] }}: {{ format_currency(discount['amount']['value']) }}&nbsp;({{ discount['reduction_percent']['value'] }}%)&nbsp;{{ language['reason'] }}:&nbsp;{{ discount['text'] }}
+              <mj-raw>{% endfor %}</mj-raw>
+            </td>
+            <td style="text-align: center; vertical-align: top; width: 10%;">{{ sale_item['quantity']['value'] }}</td>
+            <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+    <!-- SUBTOTAL -->
+    <mj-raw>{% if receipt['receipt']['subtotal']['amount']['value'] %}</mj-raw>
+    <mj-section css-class="section total">
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>{{ language['subtotal'] }}</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END SUBTOTAL -->
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section css-class="section discount">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">{{ language['discount'] }}</th>
+            <th style="text-align: right; vertical-align: top;">{{ language['discount_amount'] }}</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+
+    <!-- TAXES -->
+    <mj-raw>{% if receipt['tax'] %}</mj-raw>
+    <mj-section css-class="section">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['tax_rate'] }}</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['taxable_amount'] }}</th>
+            <th style="text-align: right; vertical-align: top; width: 25%;">{{ language['tax_paid'] }}</th>
+          </tr>
+          <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 25%;">{{ language['tax_rate'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['value'] }}%</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+            <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TAXES -->
+
+    <!-- TOTAL -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section css-class="section total">
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>{{ language['total'] }}</b></td>
+            <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TOTAL -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section css-class="section tender-type">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">{{ language['tender_type'] }}</th>
+            <th style="text-align: right; vertical-align: top;">{{ language['tender_amount'] }}</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+    <!-- SECOND RECEIPT TEXT
+  <mj-section>
+    <mj-column>
+      <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+    </mj-column>
+  </mj-section>
+ END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+
+
+    <!-- CTA1 -->
+    <mj-section>
+      <mj-column vertical-align="middle">
+        <mj-text align="center">Merci de votre visite et à bientôt. Echange possible de votre photographie dans les 15 jours suivant votre achat, avec votre facture et dans son conditionnement d'origine. Pas de remboursement, échange uniquement dans la galerie d'acquisition.</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA1 -->
+    <!-- SOCIAL MEDIA -->
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="15px" icon-size="24px" mode="horizontal">
+          <mj-social-element src="https://storage.googleapis.com/yk-cdn/images/cegid/instagram.png" href="https://www.instagram.com/yellowkorner_official/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yk-cdn/images/cegid/facebook.png" href="https://www.facebook.com/YellowKornerFrench"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yk-cdn/images/cegid/youtube.png" href="https://www.youtube.com/user/YellowKorner/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yk-cdn/images/cegid/twitter.png" href="https://twitter.com/yellowkorner"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yk-cdn/images/cegid/pinterest.png" href="https://www.pinterest.fr/yellowkorner/"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+  </mj-body>
+</mjml>

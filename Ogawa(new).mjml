@@ -1,0 +1,211 @@
+
+<mjml>
+  <mj-head>
+    <mj-style>
+      p {margin:inherit!important; line-height:20px!important;}
+      .section > table > tbody > tr > td {padding:0!important}
+      .mj-column-per-100 > table > tbody > tr > td {padding:4px 25px!important}
+      .mj-column-per-100 > table > tbody > tr > td.nav {padding:inherit!important}
+      .nav a {padding:8px 10px 4px!important}
+      .red {color:rgb(231,26,12)!important}
+      .white {color:#fff!important}
+      .mj-column-per-100 > table > tbody > tr > td.welcomemsg {padding:8px 25px!important}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+
+    <!-- HEADER/NAV -->
+    <mj-section css-class="section header">
+      <mj-column>
+        <mj-image width="150px" src="https://i.im.ge/2021/11/02/o6LIw6.jpg" href="https://ogawa.com.sg"></mj-image>
+        <mj-navbar css-class="nav">
+          <mj-navbar-link href="https://ogawa.com.sg/products/view-all-collections/">About Us</mj-navbar-link>
+          <mj-navbar-link href="https://ogawa.com.sg/products/view-all-collections/">Products</mj-navbar-link>
+          <mj-navbar-link href="https://ogawa.com.sg/outlet-promotions/">Promotions</mj-navbar-link>
+          <mj-navbar-link href="https://ogawa.com.sg/online-shop/">Online Shop</mj-navbar-link>
+        </mj-navbar>
+
+        <mj-image src="https://i.im.ge/2021/11/05/oPLxDX.jpg" href="https://ogawa.com.sg"></mj-image>
+        <mj-text css-class="welcomemsg" font-size="20px" align="center">Thank you for shopping at Ogawa</mj-text>
+        <mj-divider></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="section order-detail">
+      <mj-column>
+        <mj-text font-size="12px" align="left">Date of Purchase: {{ data['receipt']['datetime']['text'] }}</mj-text>
+        <mj-text font-size="12px" align="left">Sales Order Number: {{ data['order']['order_number']['text'] }}</mj-text>
+        <mj-raw>{% if data['receipt']['salesperson'] %}</mj-raw>
+        <mj-text font-size="12px" align="left">Salesperson: {{ data['receipt']['salesperson']['name'] }}</mj-text>
+        <mj-raw>{% endif %}</mj-raw>
+        <mj-text font-size="12px" align="left">Store: {{ data['store']['name'] }}</mj-text>
+        <mj-raw>{% if data['device']['external_id'] %}</mj-raw>
+        <mj-text font-size="12px" align="left">Till: {{ data['device']['external_id'] }}</mj-text>
+        <mj-raw>{% endif %}</mj-raw>
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+    <!-- SALE ITEMS -->
+    <mj-section css-class="section item-detail">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 20%;">Item ID</th>
+            <th style="text-align: left; vertical-align: top; width: 35%;">Description</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Quantity</th>
+            <th style="text-align: right; vertical-align: top; width: 20%;">Price</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+            <td style="text-align: left; vertical-align: top; width: 35%;">
+              {{ sale_item['text'] }}
+            </td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+            <td style="text-align: right; vertical-align: top; width: 20%;">{{ sale_item['total']['value'] }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END SALE ITEMS -->
+
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section css-class="section discount">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top;">Discount</th>
+            <th style="text-align: right; vertical-align: top;">Amount</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+
+    <!-- TAXES -->
+    <mj-section css-class="section">
+      <mj-column>
+        <mj-table>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Rate</th>
+            <th style="text-align: center; vertical-align: top; width: 25%;">Taxable Amount</th>
+            <th style="text-align: right; vertical-align: top; width: 25%;">Tax Paid</th>
+          </tr>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top; width: 25%;">GST</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">7%</td>
+            <td style="text-align: center; vertical-align: top; width: 25%;">{{receipt.format_currency((data['other_total']['amount']['value'])/1.07) }}</td>
+            <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency((data['other_total']['amount']['value']) - ((data['other_total']['amount']['value'])/1.07)) }}</td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END TAXES -->
+
+    <!-- TOTAL -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section css-class="section total">
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table>
+          <tr>
+            <td align="left"><b>Total</b></td>
+            
+            <td align="right">
+              {{ receipt.format_currency(data['other_total']['amount']['value']) }}
+            </td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TOTAL -->
+
+    <!-- TENDER -->
+    <mj-raw>{% if receipt['tender'] %}</mj-raw>
+    <mj-section css-class="section tender-type">
+      <mj-column>
+        <mj-table>
+          <colgroup>
+            <col witdh="90%">
+            </col>
+            <col witdh="10%">
+            </col>
+          </colgroup>
+          <tr>
+            <th style="text-align: left; vertical-align: top; width: 80%;">Tender Type</th>
+            <th style="text-align: right; vertical-align: top; width: 20%;">Amount</th>
+          </tr>
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr style="border-top: 2px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+    <!-- SECOND RECEIPT TEXT
+      <mj-section>
+        <mj-column>
+          <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+        </mj-column>
+      </mj-section>
+     END SECOND RECEIPT TEXT -->
+
+    <!-- CTA1 -->
+    <mj-section>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-image src="https://i.im.ge/2021/11/02/o6neCS.jpg" />
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="center">Apply Code Upon Check-out: </mj-text>
+        <mj-text align="center" font-size="24px">OG20NOV-ONL</mj-text>
+        <mj-button padding-top="20px" href="https://ogawa.com.sg/online-shop/">SHOP NOW</mj-button>
+      </mj-column>
+    </mj-section>
+    <!-- END CTA1 -->
+
+    <!-- START T&C -->
+    <mj-section>
+      <mj-column>
+        <mj-text color="#888">
+          NB : Unit Price is GST inclusive if applicable .
+          Full settlement of payment is required before collection and/or delivery of goods .
+          Deposit paid and transaction not fulfilled within 03 months from the date of purchase shall be forfeited and no other
+          correspondences shall be entertained there after.
+          Goods sold are not returnable & any request for refund shall not be entertained .
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END T&C -->
+
+    <!-- SOCIAL MEDIA -->
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="15px" icon-size="24px" mode="horizontal">
+          <mj-social-element src="https://i.im.ge/2021/11/02/o6LCip.png" href="https://ogawa.com.sg/"></mj-social-element>
+          <mj-social-element src="https://i.im.ge/2021/11/02/o6LtKC.png" href="https://www.facebook.com/OgawaSingapore"></mj-social-element>
+          <mj-social-element src="https://i.im.ge/2021/11/02/o6LN2D.png" href="https://www.instagram.com/ogawasingapore/?hl=en"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+
+  </mj-body>
+</mjml>

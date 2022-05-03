@@ -1,0 +1,1513 @@
+<!--
+
+{% set translations = {
+        "en_GB": {
+            "store_site" : "https://uk.tumi.com/",
+            "luggage_site": "https://uk.tumi.com/luggage/",
+            "luggage": "LUGGAGE",
+            "backpacks_site": "https://uk.tumi.com/backpacks/",
+            "backpacks": "BACKPACKS",
+            "bags_site": "https://uk.tumi.com/bags/",
+            "bags": "BAGS",
+            "accessories_site": "https://uk.tumi.com/accessories/",
+            "accessories": "ACCESSORIES",
+            "eco_friendly_site": "https://uk.tumi.com/recycled-program/",
+            "eco_friendly": "ECO FRIENDLY",
+
+            "button_join" : "JOIN OUR TUMI TRACER PROGRAM",
+            "button_join_site" : "https://uk.tumi.com/tumi-tracer/",
+            "get_inspired": "Get Inspired",
+            "discover": "DISCOVER",
+            "discover_site": "https://uk.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://uk.tumi.com/newsletter-signup/",
+            "sign_up": "Sign up now",
+            "sign_up_text": "for exclusive email updates and special offers.",
+            
+            "date_of_purchase": "Date of Purchase: ",
+            "transaction_number": "Transaction Number: ",
+            "salesperson": "Cashier: ",
+            "tax_number": "VAT No. GB460791242",
+            "item_id": "Item ID",
+            "description": "Description",
+            "quantity": "Quantity",
+            "item_cost": "Cost",
+            "discount": "Discount",
+            "discount_reason": "Reason",
+            "discount_amount": "Amount",
+            "tax_rate": "Rate",
+            "tax_amount": "VAT: 20%",
+            "subtotal": "Subtotal",
+            "total": "Total",
+            "tender_type": "Payment method",
+            "tender_amount": "Amount",
+            
+            "welcomemsg_dear" : "Dear ",
+            "welcomemsg_1": "Thank you for shopping at TUMI!<br /><br />
+                                    Please find attached your requested receipt.<br /><br />
+                                    We hope you enjoy your new TUMI product and look forward to welcoming you back again
+                                    soon.<br /><br />
+                                    Please keep this email for future reference as it also acts as your warranty.<br /><br />
+                                    Kind Regards,<br />",
+            "welcomemsg_2": "CONTACT US for any further questions",
+
+            "warranty_1" : "We are pleased to inform you that many of our products are covered by their own brand manufacturer's warranty. However, We understand that you may wish to change your mind and return your purchase. We will be happy to exchange/refund your unused item within 30 days of purchase, on presentation of an original receipt. Reduced items may also be returned in line with the above conditions, but within 14 days of purchase. Refunds will only be made to the exact original payment method, or to a store credit if this is not available.. Personalised items can not be returned or exchanged. Purchases made at an airport store in an airside location may only be returned to an airside location. Puchases from a full price or high street store can only be returned/exchanged at a full price or high street store.<br /><br />Questions about repairs, replacement parts or maintenance of your product, please have a look on ",
+            "warranty_2" : "Thank you for shopping in our store.",
+            "support_site" : "https://www.supportandgo.com",
+            "footer": "This email is not a marketing newsletter from Tumi. Receiving this one-time email does not register you to receiving any marketing newsletters if you did not opt in to receive email newsletters from Tumi.<br><br> Tumi D2C GmbH, Hans-Böckler Strasse 6, 59423 Unna, Germany, is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy, with respect to e-commerce activity.<br><br>With respect to retail Stores, Samsonite Limited, 1 The Square, Stockley Park, Uxbridge, Middlesex, UB11 1TD, United Kingdom, is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy.",
+          },
+        "de_DE": {
+            "store_site" : "https://de.tumi.com/",
+            "luggage_site": "https://de.tumi.com/reisen/",
+            "luggage": "Reisegepäck",
+            "backpacks_site": "https://uk.tumi.com/backpacks/",
+            "backpacks": "Reisegepäck",
+            "bags_site": "https://de.tumi.com/taschen/",
+            "bags": "Taschen",
+            "accessories_site": "https://de.tumi.com/accessoires/",
+            "accessories": "Accessoires",
+            "eco_friendly_site": "https://de.tumi.com/recycled-program/",
+            "eco_friendly": "Umweltbewusst",
+
+            "button_join" : "DOE MEE AAN ONS TUMI TRACER-PROGRAMMA",
+            "button_join_site" : "https://de.tumi.com/tumi-tracer/",
+            "get_inspired": "LASSEN SIE SICH INSPIRIEREN",
+            "discover": "ENTDECKEN",
+            "discover_site": "https://de.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://de.tumi.com/newsletter-signup/",
+            "sign_up": "Meld je nu aan",
+            "sign_up_text": "Anmeldung für exklusive E-Mail-Updates und Sonderangebote.",
+            
+            "date_of_purchase": "Aankoopdatum: ",
+            "transaction_number": "Beleg-Nr: ",
+            "salesperson": "Kassier: ",
+            "tax_number": "VAT No. DE296527948",
+            "item_id": "Artikel",
+            "description": "Beschreibung",
+            "quantity": "Anzahl",
+            "item_cost": "Betrag",
+            "discount": "Rabatt",
+            "discount_reason": "Reden",
+            "discount_amount": "Bedrag",
+            "tax_rate": "Tarief",
+            "tax_amount": "USt 19%",
+            "subtotal": "Subtotal",
+            "total": "Gesamt:",
+            "tender_type": "Betaalmethode",
+            "tender_amount": "Bedrag",
+
+            "welcomemsg_dear" : "Liebe ",
+            "welcomemsg_1": "Vielen Dank für Ihre Einkauf !<br /><br />
+Anbei finden Sie Ihre Beleg.<br /><br />
+Wir hoffen Sie werden lange Freude an Ihrem Einkauf haben und freuen uns, Sie bald wieder bei uns begrüßen zu dürfen.<br /><br />
+TUMI bietet einen ergänzenden Check & Clean Up“-Service für Ihr TUMI Reisegepäck und Reisezubehör.<br /><br />
+Mit freundlichen Grüßen!<br />",
+            "welcomemsg_2": "Wenden Sie sich an Ihren Shop, um weitere Informationen zu erhalten",
+
+            "warranty_1" : "Umtausch* nur gegen Vorlage des Original-Kassenbeleges und innerhalb von 30 Tagen.<br/>
+*Ausgenommen ist reduzierte Ware.",
+            "warranty_2" : "Vielen Dank für Ihren Einkauf.",
+            "support_site" : "https://www.supportandgo.com",
+
+            
+            "footer": "Diese Email ist kein Marketing Newsletter von Tumi. Der Erhalt dieser einmaligen Email bedeutet nicht, dass Sie zukünftig automatische Newsletter erhalten werden - es sei denn, Sie haben dazu explizit Ihre Einwilligung gegeben.<br/><br/>
+ 
+Verantwortlich für die Erhebung, Verwendung und Offenlegung Ihrer Persönlichen Daten im Rahmen dieser Datenschutzrichtlinie ist die Tumi D2C GmbH, Hans-Böckler-Straße 6, 59423 Unna, Deutschland.
+Screen reader support enabled.",
+          },
+        "fr_FR": {
+            "store_site" : "https://fr.tumi.com/",
+            "luggage_site": "https://fr.tumi.com/bagages/",
+            "luggage": "BAGAGES",
+            "backpacks_site": "https://fr.tumi.com/sacs/",
+            "backpacks": "SACS",
+            "bags_site": "https://fr.tumi.com/sacs-a-dos/",
+            "bags": "SAC À DOS & SAC",
+            "accessories_site": "https://fr.tumi.com/accessoires/",
+            "accessories": "ACCESOIRES",
+            "eco_friendly_site": "https://fr.tumi.com/recycled-program/",
+            "eco_friendly": "ECO RESPONSABLE",
+
+            "button_join" : "Rejoignez dès à  présent notre programme TUMI TRACER",
+            "button_join_site" : "https://fr.tumi.com/tumi-tracer/",
+            "get_inspired": "Get Inspired",
+            "discover": "DÉCOUVRIR",
+            "discover_site": "https://fr.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://fr.tumi.com/newsletter-signup/",
+            "sign_up": "S'inscrire",
+            "sign_up_text": "Inscrivez-vous et recevez les mises à jour et les offres spéciales par e-mail.",
+            
+            "date_of_purchase": "Date d'achat:",
+            "transaction_number": "No. Ticket:",
+            "salesperson": "Vendeur:",
+            "tax_number": "No. TVA FR74652024159",
+            
+            "item_id": "ID article",
+            "description": "Description",
+            "quantity": "Qté",
+            "item_cost": "Montant",
+
+            "discount": "Remise",
+            "discount_reason": "Raison",
+            "discount_amount": "Montant",
+            "tax_rate": "Taux d'imposition",
+            "tax_amount": "TVA 20%",
+            "subtotal": "Sous-total",
+            "total": "Total",
+            "tender_type": "Mode de paiement",
+            "tender_amount": "Montant",
+
+            "welcomemsg_dear" : "Cher/Chère ",
+            "welcomemsg_1": "Merci pour votre achat TUMI !<br /><br />
+Veuillez-trouver votre reçu en pièce jointe.<br /><br />
+Nous espérons que vous apprécierez votre nouveau produit TUMI et attendons avec impatience de vous revoir.<br /><br />
+En cas de retour, la présentation de cet e-reçu suffira à retrouver vos achats en magasin<br /><br />
+Bien Cordialement,<br />",
+
+            "warranty_1" : "Les produits peuvent être échangés dans un délai de 30 jours à condition qu'ils soient dans leur état.
+d'origine et accompagnés de la facture d'achat en France. Autrement, un avoir peut être émis.
+Les produits achetés durant les ventes ne sont ni repris ni échangés.",
+            "warranty_2" : "Merci pour votre achat au sein de votre boutique TUMI.",
+            "support_site" : "https://www.supportandgo.com",
+
+            
+            "footer": "Cet email n'est pas une newsletter marketing Tumi. Si vous n'avez pas déjà donné votre accord pour recevoir des newsletters de la part de Tumi, cet email unique ne vous inscrira pas à nos newsletters marketing.<br/><br/>
+ 
+En ce qui concerne le commerce électronique (commerce en-ligne): la société responsable de la collecte, de l'utilisation et de la divulgation de vos Informations à Caractère Personnel conformément à la présente politique de confidentialité est la suivante : Tumi D2C GmbH, Hans-Böckler Strasse 6, 59423 Unna, Allemagne.<br/><br/>
+
+En ce qui concerne les commerces de détail: la société responsable de la collecte, de l'utilisation et de la divulgation de vos Informations à Caractère Personnel conformément à la présente politique de confidentialité est la suivante : Samsonite SAS , 7-11 boulevard Haussmann, 75009 Paris, France.",
+          },
+        "it_IT": {
+            "store_site" : "https://it.tumi.com/",
+            "luggage_site": "https://it.tumi.com/viaggio/",
+            "luggage": "VIAGGIO",
+            "backpacks_site": "https://it.tumi.com/zaini/",
+            "backpacks": "ZAINI",
+            "bags_site": "https://it.tumi.com/borse/",
+            "bags": "BORSE",
+            "accessories_site": "https://it.tumi.com/accessori/",
+            "accessories": "ACCESSORI",
+            "eco_friendly_site": "https://it.tumi.com/recycled-program/",
+            "eco_friendly": "SOSTENIBILITA",
+
+            "button_join" : "UNISCITI AL NOSTRO PROGRAMMA TUMI TRACER",
+            "button_join_site" : "https://it.tumi.com/tumi-tracer/",
+            "get_inspired": "LASCIATI ISPIRARE",
+            "discover": "SCOPRI",
+            "discover_site": "https://it.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://it.tumi.com/newsletter-signup/",
+            "sign_up": "Iscriviti",
+            "sign_up_text": "Iscriviti adesso per essere sempre aggiornato sulle novità e sulle offerte speciali.",
+
+        "date_of_purchase": "Data di acquisto:",
+        "transaction_number": "Scontrino:",
+        "salesperson": "Cassiere:",
+            "tax_number": "VAT No. IT05955950158",
+        "item_id": "Articolo",
+        "description": "Descrizione",
+        "quantity": "Qtà",
+        "item_cost": "Prezzo",
+        "discount": "Sconto",
+            "discount_reason": "Motivo",
+        "discount_amount": "Importo",
+        "tax_rate": "IVA",
+        "tax_amount": "IVA 22%",
+        "subtotal": "Totale parziale:",
+        "total": "Totale:",
+        "tender_type": "Modalità di pagament",
+        "tender_amount": "Importo",
+
+            "welcomemsg_dear" : "Gentile ",
+            "welcomemsg_1": "Ti ringraziamo per avere scelto TUMI per il tuo acquisto!<br/><br/>
+Troverai la tua ricevuta allegata a questa email.<br/><br/>
+Speriamo che l'articolo scelto sia di tuo gradimento e non vediamo
+l'ora di darti nuovamente il benvenuto sul nostro sito.<br/><br/>
+Cordiali saluti,<br />",
+
+            "warranty_1" : "La merce può essere sostituita entro 60 Giorni dalla data di acquisto, nel medesimo negozio, dietro presentazione dello scontrino di vendita.",
+            "warranty_2" : "Grazie per aver fatto acquisti.",
+            "support_site" : "https://www.supportandgo.com",
+
+            
+            "footer": "Questa non è un'email di marketing da parte di Tumi. La ricezione di questa email non significa che sei registrato alle marketing newsletter di Tumi se non hai scelto e accettato di ricevere le nostre comunicazioni via email.<br/><br/>
+Tumi D2C GmbH, Hans-Böckler Strasse 6, 59423 Unna, Germania è la società responsabile per la raccolta, uso e comunicazione delle tue Informazioni Personali ai sensi di questa Privacy Policy rispetto all’attività di e-commerce.<br/><br/>
+Rispetto ai negozi al dettaglio, Tumi S.R.L., Corso Magenta, 82, 20123 Milano, è la società responsabile per la raccolta, uso e comunicazione delle tue Informazioni Personali ai sensi di questa Privacy Policy; dall’ 1 settembre 2018 in la società responsabile sarà Samsonite S.p.A. Società Unipersonale, con Sede Legale in Piazza Don Mapelli 1 – 20099 Sesto San Giovanni (MI)",
+          },
+        "nl_NL": {
+            "store_site" : "https://nl.tumi.com/",
+            "luggage_site": "https://nl.tumi.com/luggage/",
+            "luggage": "LUGGAGE",
+            "backpacks_site": "https://nl.tumi.com/en/backpacks/",
+            "backpacks": "BACKPACKS",
+            "bags_site": "https://nl.tumi.com/en/bags/",
+            "bags": "BAGS",
+            "accessories_site": "https://nl.tumi.com/en/accessories/",
+            "accessories": "ACCESSORIES",
+            "eco_friendly_site": "https://nl.tumi.com/recycled-program/",
+            "eco_friendly": "ECO FRIENDLY",
+
+            "button_join" : "JOIN OUR TUMI TRACER PROGRAM",
+            "button_join_site" : "https://nl.tumi.com/tumi-tracer/",
+            "get_inspired": "Get Inspired",
+            "discover": "Discover",
+            "discover_site": "https://nl.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://nl.tumi.com/newsletter-signup/",
+            "sign_up": "Sign up now",
+            "sign_up_text": "Sign up now for exclusive email updates and special offers.",
+
+
+            
+        "date_of_purchase": "Aankoopdatum:",
+        "transaction_number": "Transactie:",
+        "salesperson": "Medewerker:",
+            "tax_number": "VAT No. NL008600223B01",
+            "item_id": "Artikel",
+            "description": "Beschreibung",
+            "quantity": "Aantal",
+            "item_cost": "Prijs",
+            "discount": "Korting",
+            "discount_reason": "Reden",
+            "discount_amount": "Hoeveelheid",
+            "tax_rate": "Tarief",
+            "tax_amount": "BTW 21%",
+            "subtotal": "Subtotaal",
+            "total": "Totaal",
+            "tender_type": "Betaalmethode",
+            "tender_amount": "Bedrag",
+            
+            "welcomemsg_dear" : "Dear ",
+            "welcomemsg_1": "Thank you for shopping at TUMI!<br /><br />
+                                    Please find attached your requested receipt.<br /><br />
+                                    We hope you enjoy your new TUMI product and look forward to welcoming you back again
+                                    soon.<br /><br />
+                                    Please keep this email for future reference as it also acts as your warranty.<br /><br />
+                                    Kind Regards,<br />",
+            "welcomemsg_2": "CONTACT US for any further questions",
+
+            "warranty_1" : "We are pleased to inform you that many of our products are covered by their own brand manufacturer's warranty. However, We understand that you may wish to change your mind and return your purchase. We will be happy to exchange/refund your unused item within 30 days of purchase, on presentation of an original receipt. Reduced items may also be returned in line with the above conditions, but within 14 days of purchase. Refunds will only be made to the exact original payment method, or to a store credit if this is not available.. Personalised items can not be returned or exchanged. Purchases made at an airport store in an airside location may only be returned to an airside location. Puchases from a full price or high street store can only be returned/exchanged at a full price or high street store.<br /><br />Questions about repairs, replacement parts or maintenance of your product, please have a look on ",
+            "warranty_2" : "Thank you for shopping in our store.",
+            "support_site" : "https://www.supportandgo.com",
+            "footer": "This email is not a marketing newsletter from Tumi. Receiving this one-time email does not register you to receiving any marketing newsletters if you did not opt in to receive email newsletters from Tumi.<br><br> Tumi D2C GmbH, Hans-Böckler Strasse 6, 59423 Unna, Germany, is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy, with respect to e-commerce activity.<br><br>With respect to retail Stores, Samsonite Limited, 1 The Square, Stockley Park, Uxbridge, Middlesex, UB11 1TD, United Kingdom, is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy.",
+          },
+        "hu_HU": {
+            "store_site" : "https://hu.tumi.com/",
+            "luggage_site": "https://hu.tumi.com/luggage/",
+            "luggage": "LUGGAGE",
+            "backpacks_site": "https://hu.tumi.com/en/backpacks/",
+            "backpacks": "BACKPACKS",
+            "bags_site": "https://hu.tumi.com/en/bags/",
+            "bags": "BAGS",
+            "accessories_site": "https://hu.tumi.com/en/accessories/",
+            "accessories": "ACCESSORIES",
+            "eco_friendly_site": "https://hu.tumi.com/recycled-program/",
+            "eco_friendly": "ECO FRIENDLY",
+
+            "button_join" : "JOIN OUR TUMI TRACER PROGRAM",
+            "button_join_site" : "https://hu.tumi.com/tumi-tracer/",
+            "get_inspired": "INSPIRÁCIÓK",
+            "discover": "FEDEZZE FEL",
+            "discover_site": "https://hu.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://hu.tumi.com/newsletter-signup/",
+            "sign_up": "Sign up now",
+            "sign_up_text": "Sign up now for exclusive email updates and special offers.",
+
+            "date_of_purchase": "Date of Purchase: ",
+            "transaction_number": "Transaction Number: ",
+            "salesperson": "Cashier: ",
+            "tax_number": "Adószám HU 10321111-2-17",
+            "item_id": "Item ID",
+            "description": "Description",
+            "quantity": "Quantity",
+            "item_cost": "Cost",
+            "discount": "Discount",
+            "discount_reason": "Reason",
+            "discount_amount": "Amount",
+            "tax_rate": "Rate",
+            "tax_amount": "ÁFA 27%",
+            "subtotal": "Subtotal",
+            "total": "Total",
+            "tender_type": "Payment method",
+            "tender_amount": "Amount",
+            
+            "welcomemsg_dear" : "Dear ",
+            "welcomemsg_1": "Thank you for shopping at TUMI!<br /><br />
+                                    Please find attached your requested receipt.<br /><br />
+                                    We hope you enjoy your new TUMI product and look forward to welcoming you back again
+                                    soon.<br /><br />
+                                    Please keep this email for future reference as it also acts as your warranty.<br /><br />
+                                    Kind Regards,<br />",
+            "welcomemsg_2": "CONTACT US for any further questions",
+
+            "warranty_1" : "We are pleased to inform you that many of our products are covered by their own brand manufacturer's warranty. However, We understand that you may wish to change your mind and return your purchase. We will be happy to exchange/refund your unused item within 30 days of purchase, on presentation of an original receipt. Reduced items may also be returned in line with the above conditions, but within 14 days of purchase. Refunds will only be made to the exact original payment method, or to a store credit if this is not available.. Personalised items can not be returned or exchanged. Purchases made at an airport store in an airside location may only be returned to an airside location. Puchases from a full price or high street store can only be returned/exchanged at a full price or high street store.<br /><br />Questions about repairs, replacement parts or maintenance of your product, please have a look on ",
+            "warranty_2" : "Thank you for shopping in our store.",
+            "support_site" : "https://www.supportandgo.com",
+            "footer": "This email is not a marketing newsletter from Tumi. Receiving this one-time email does not register you to receiving any marketing newsletters if you did not opt in to receive email newsletters from Tumi.<br><br> Tumi D2C GmbH, Hans-Böckler Strasse 6, 59423 Unna, Germany, is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy, with respect to e-commerce activity.<br><br>With respect to retail Stores, Samsonite Limited, 1 The Square, Stockley Park, Uxbridge, Middlesex, UB11 1TD, United Kingdom, is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy.",
+          },
+        "es_ES": {
+            "store_site" : "https://es.tumi.com/",
+            "luggage_site": "https://es.tumi.com/equipaje/",
+            "luggage": "EQUIPAJE",
+            "backpacks_site": "https://es.tumi.com/mochilas/",
+            "backpacks": "EQUIPAJE",
+            "bags_site": "https://es.tumi.com/bolsas-de-viaje/",
+            "bags": "BOLSAS DE VIAJE",
+            "accessories_site": "https://es.tumi.com/accesorios/",
+            "accessories": "ACCESORIOS",
+            "eco_friendly_site": "https://es.tumi.com/recycled-program/",
+            "eco_friendly": "ECO RESPONSABLE",
+
+            "button_join" : "ÚNASE A NUESTRO PROGRAMA TUMI TRACER",
+            "button_join_site" : "https://es.tumi.com/tumi-tracer/",
+            "get_inspired": "INSPÍRESE",
+            "discover": "DESCUBRIR",
+            "discover_site": "https://es.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://es.tumi.com/newsletter-signup/",
+            "sign_up": "Regístrese",
+            "sign_up_text": "Regístrese para recibir información sobre novedades y ofertas especiales.",
+
+            
+        "date_of_purchase": "Fecha de compra:",
+        "transaction_number": "Número de transacción:",
+        "salesperson": "Cajero:",
+            "tax_number": "VAT No. A28054369",
+        "item_id": "Article",
+
+        "description": "\nDescripci\u00f3n",
+        "quantity": "Quant.",
+        "item_cost": "\nPrecio",
+        "discount": "\nDescuento",
+            "discount_reason": "Motivo",
+        "discount_amount": "Cantidad",
+        "tax_rate": "\nIVA",
+        "tax_amount": "IVA 21%",
+        "subtotal": "Total parcial",
+        "total": "Total",
+        "tender_type": "Método de pago",
+        "tender_amount": "Monto",
+
+            
+            "welcomemsg_dear" : "Estimado ",
+            "welcomemsg_1": "¡Gracias por comprar en TUMI!<br /><br />
+Encontrará su recibo adjunto en este email.<br /><br />
+TUMI ofrece un servicio complementario de ""Check & Clean Up"" para su equipaje y accesorios de viaje TUMI.<br /><br />
+Esperamos que disfrute de su compra y podamos darle la bienvenida de nuevo en breve.<br />",
+"welcomemsg_2": "Comuníquese con su tienda para obtener más información.",
+            
+            
+
+            "warranty_1" : "Los artículos adquiridos en una tienda TUMI pueden ser cambiados en el plazo de 30 días naturales a
+partir del día de compra por otro producto o por un vale, cuya validez será de 365 días desde su emisión, siempre que el producto este en su condición original y con el ticket de compra.<br /><br />
+The items purchased in a TUMI store can be exchanged within 30 days from the day of purchase for another product or a voucher, valid for a period of 365 days from its issuance, upon presentation of an original receipt.",
+            "warranty_2" : "Gracias por su visita.",
+            "support_site" : "https://www.supportandgo.com",
+            "footer": "Este email no es una newsletter de Tumi. Recibir este email no implica que vayas a recibir newsletters de Tumi. Solo recibirás nuestras newsletters si te registras como subscriptor.<br /><br />Tumi D2C GmbH, Hans-Böckler Strasse 6, 59423 Unna, Alemania es la empresa responsable por la recogida, utilización y divulgación de su Información Personal bajo esta Política de Privacidad, con respecto a la actividad de E-Commerce.<br /><br />Samsonite España S.A., Calle Maria Tubau N°3, planta 4a, 28050 Madrid, España es la empresa responsable por la recogida, utilización y divulgación de su Información Personal bajo esta Política de Privacidad, de las tiendas de retail.",
+          },
+        "se_SE": {
+            "store_site" : "https://se.tumi.com/",
+            "luggage_site": "https://se.tumi.com/luggage/",
+            "luggage": "LUGGAGE",
+            "backpacks_site": "https://se.tumi.com/backpacks/",
+            "backpacks": "BACKPACKS",
+            "bags_site": "https://se.tumi.com/bags/",
+            "bags": "BAGS",
+            "accessories_site": "https://se.tumi.com/accessories/",
+            "accessories": "ACCESSORIES",
+            "eco_friendly_site": "https://se.tumi.com/recycled-program/",
+            "eco_friendly": "ECO FRIENDLY",
+
+            "button_join" : "JOIN OUR TUMI TRACER PROGRAM",
+            "button_join_site" : "https://se.tumi.com/tumi-tracer/",
+            "get_inspired": "BLI INSPIRERAD",
+            "discover": "UPPTÄCK",
+            "discover_site": "https://se.tumi.com/alpha-bravo-landing-page-alt-2/",
+
+            "sign_up_site": "https://se.tumi.com/newsletter-signup/",
+            "sign_up": "Sign up now",
+            "sign_up_text": "for exclusive email updates and special offers.",
+            
+            "date_of_purchase": "Date of Purchase: ",
+            "transaction_number": "Kvittonummer: ",
+            "salesperson": "Kassörska: ",
+            "tax_number": "Moms 556425-5510",
+            "item_id": "Vara",
+            "description": "Artikel",
+            "quantity": "Antal",
+            "item_cost": "Summa",
+            "discount": "Rabatt",
+            "discount_reason": "Skäl",
+            "discount_amount": "Antal",
+            "tax_rate": "Skattenivå",
+            "tax_amount": "Moms 25%",
+            "subtotal": "Delsumma",
+            "total": "Total",
+            "tender_type": "Betalningsmetod",
+            "tender_amount": "Belopp",
+            
+            "welcomemsg_dear" : "Dear ",
+            "welcomemsg_1": "Thank you for shopping at TUMI!<br /><br />
+                                    Please find attached your requested receipt.<br /><br />
+                                    We hope you enjoy your new TUMI product and look forward to welcoming you back again
+                                    soon.<br /><br />
+                                    Please keep this email for future reference as it also acts as your warranty.<br /><br />
+                                    Kind Regards,<br />",
+            "welcomemsg_2": "CONTACT US for any further questions",
+
+            "warranty_1" : "Tumi har en tillverkningsgaranti för din produkt. Vid tillfälle att du ångrar ditt köp ber vi dig returnera den oanvända produkten tillsammans med orginalkvitto inom 30 dagar från köpsdatum. Även rabatterade produkter kan returneras enligt samma förutsättningar som ovan, då inom 14 dagar. Samma betalkort du använt vid köptillfället måste uppvisas vid ev. återköp. ",
+            "warranty_2" : "Tack för ditt köp!",
+            "support_site" : "https://www.supportandgo.com",
+            "footer": "This email is not a marketing newsletter from Tumi. Receiving this one-time email does not register you to receiving any marketing newsletters if you did not opt in to receive email newsletters from Tumi.<br/><br/>For e-commerce related activities, Aboutbags NV, Westerring 17, 9700 Oudenaarde, Belgium is the company responsible for collection, use and disclosure of your Personal Information under this Privacy Policy.<br/><br/>For our stores, Samsonite AB, Drakegatan 2, 412 50 Göteborg, Sweden is responsible.",
+          },
+        } 
+    %}
+
+{% set language = translations[locale if locale in translations else "en_GB"] %}
+
+
+-->
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <title>
+    </title>
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        p {
+            display: block;
+            margin: 13px 0;
+        }
+
+        .ii a[href] {
+            color: inherit !important;
+        }
+    </style>
+    <!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+    <!--[if lte mso 11]>
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+    </style>
+    <!--<![endif]-->
+    <style type="text/css">
+        @media only screen and (min-width:480px) {
+            .mj-column-per-100 {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            .mj-column-per-30 {
+                width: 30% !important;
+                max-width: 30%;
+            }
+
+            .mj-column-per-70 {
+                width: 70% !important;
+                max-width: 70%;
+            }
+
+            .mj-column-per-33-333333333333336 {
+                width: 33.333333333333336% !important;
+                max-width: 33.333333333333336%;
+            }
+        }
+    </style>
+    <style media="screen and (min-width:480px)">
+        .moz-text-html .mj-column-per-100 {
+            width: 100% !important;
+            max-width: 100%;
+        }
+
+        .moz-text-html .mj-column-per-30 {
+            width: 30% !important;
+            max-width: 30%;
+        }
+
+        .moz-text-html .mj-column-per-70 {
+            width: 70% !important;
+            max-width: 70%;
+        }
+
+        .moz-text-html .mj-column-per-33-333333333333336 {
+            width: 33.333333333333336% !important;
+            max-width: 33.333333333333336%;
+        }
+    </style>
+    <style type="text/css">
+        @media only screen and (max-width:480px) {
+            table.mj-full-width-mobile {
+                width: 100% !important;
+            }
+
+            td.mj-full-width-mobile {
+                width: auto !important;
+            }
+        }
+
+        noinput.mj-menu-checkbox {
+            display: block !important;
+            max-height: none !important;
+            visibility: visible !important;
+        }
+
+        @media only screen and (max-width:480px) {
+            .mj-menu-checkbox[type="checkbox"]~.mj-inline-links {
+                display: none !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]:checked~.mj-inline-links,
+            .mj-menu-checkbox[type="checkbox"]~.mj-menu-trigger {
+                display: block !important;
+                max-width: none !important;
+                max-height: none !important;
+                font-size: inherit !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]~.mj-inline-links>a {
+                display: block !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-close {
+                display: block !important;
+            }
+
+            .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-open {
+                display: none !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .ii a[href],
+        a {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body style="word-spacing:normal;">
+    <div style="">
+        <!-- HEADER/NAV -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;max-width:600px;" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td
+                            style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0;padding-top:0;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;word-break:break-word;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="{{ language['store_site'] }}" target="_blank">
+                                                                    <img height="auto"
+                                                                        src="https://uk.tumi.com/on/demandware.static/Sites-tumi-Site/-/default/dwaaa5f4da/images/tumi-logo.png"
+                                                                        style="width:50%;border:0;display:block;margin:0 auto;outline:none;text-decoration:none;height:auto;font-size:13px;" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;word-break:break-word;">
+                                                <div class="mj-inline-links" style="">
+                                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td style="padding:15px 10px;" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['luggage_site'] }}"
+                                                        target="_blank"
+                                                        style="color:#000000;display:inline-block;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
+                                                        {{ language['luggage'] }}
+                                                    </a>
+                                                    <!--[if mso | IE]></td><td style="padding:15px 10px;" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['backpacks_site'] }}"
+                                                        target="_blank"
+                                                        style="color:#000000;display:inline-block;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
+                                                        {{ language['backpacks'] }}
+                                                    </a>
+                                                    <!--[if mso | IE]></td><td style="padding:15px 10px;" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['bags_site'] }}"
+                                                        target="_blank"
+                                                        style="color:#000000;display:inline-block;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
+                                                        {{ language['bags'] }}
+                                                    </a>
+                                                    <!--[if mso | IE]></td><td style="padding:15px 10px;" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['accessories_site'] }}"
+                                                        target="_blank"
+                                                        style="color:#000000;display:inline-block;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
+                                                        {{ language['accessories'] }}
+                                                    </a>
+                                                    <!--[if mso | IE]></td><td style="padding:15px 10px;" class="" ><![endif]-->
+                                                    <a class="mj-link" href="{{ language['eco_friendly_site'] }}"
+                                                        target="_blank"
+                                                        style="color:#000000;display:inline-block;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
+                                                        {{ language['eco_friendly'] }}
+                                                    </a>
+                                                    <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <center>
+                                <table  align="center" border="0" cellpadding="0" cellspacing="0"
+                                    style="font-family: Trebuchet MS, arial, helvetica, sans-serif; background:#ffffff; margin:0; padding:0; width: 100% !important; height: 100% !important;line-height: 100% !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;border-bottom:1px solid #acacac; border-top:1px solid #acacac;">
+                                    <tbody>
+                                        <tr>
+                                            <td class="side-image" valign="top" bgcolor="#ffffff" width="25%">
+                                                <img alt="Tumi"
+                                                    src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/samsonite/tumi/TumiBanner.png"
+                                                    style="display: block; border-width: 0px; border-style: solid; width: 100% !important;"
+                                                    width="25%">
+                                            </td>
+                                            <td width="6%" style="font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                            <td valign="middle"
+                                                style="font-family: Trebuchet MS, arial, helvetica, sans-serif; font-size: 12px; line-height: 16px; color:#7c7b7b;text-align:left;">
+
+                                                <!--[if mso | IE]></td><td class="" style="vertical-align:middle;width:420px;" ><![endif]-->
+                                                <div class="mj-outlook-group-fix"
+                                                    style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%; padding:1rem 0;">
+                                                    <table align="middle" border="0" cellpadding="0" cellspacing="0"
+                                                        role="presentation" style="vertical-align:middle;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:0px;word-break:break-word;">
+                                                                    <div
+                                                                        style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.2;text-align:left;color:#222;">
+
+                                                                        {{ language['welcomemsg_dear'] }}{{receipt['customer']['name']['first']}}
+                                                                        <br>
+                                                                        <br>
+                                                                        {{ language['welcomemsg_1'] }}
+                                                                        {{ data['store']['name'] }}<br /><br />
+                                                                        {{ language['welcomemsg_2'] }}<br />
+                                                                        {{ data['store']['telephone']['daytime']['text'] }}<br />
+                                                                        <a href="mailto:{{ data['store']['email_address'] }}"
+                                                                            style="color:#000000;">{{ data['store']['email_address'] }}<br /></a>
+                                                                        {% for address in data['store']['address']['street']%}
+                                                                        {{ address }}
+                                                                        {% endfor %}
+                                                                        <br>
+                                                                        <br>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" vertical-align="middle"
+                                                                    style="font-size:0px; word-break:break-word;padding: 8% 1% 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                                        role="presentation"
+                                                                        style="border-collapse:separate;line-height:100%;">
+                                                                        <tr>
+                                                                            <td align="center" bgcolor="#ce153f"
+                                                                                role="presentation"
+                                                                                style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:#ce153f;"
+                                                                                valign="middle">
+                                                                                <a href="{{ language['button_join_site'] }}"
+                                                                                    style="padding: 10px 25px;display:inline-block;background:#ce153f;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none; mso-padding-alt:0px;border-radius:3px;"
+                                                                                    target="_blank">{{ language['button_join'] }}</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END HEADER/NAV -->
+
+
+        <!-- CTA -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td colspan="3"
+                            style="font-family: Trebuchet MS, arial, helvetica, sans-serif; font-size: 20px; line-height: 24px; text-transform: uppercase; text-align: center; padding: 20px 0; color:#c00a2d;">
+                            {{ language['get_inspired'] }}</td>
+                    </tr>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding:0px 0px;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:100%;" ><![endif]-->
+                            <div class="mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px; padding-right:0px;padding-left:0px;word-break:break-word;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=" ">
+                                                                <a href="{{ language['discover_site'] }}"
+                                                                    style="display:block; width:100%;height:100%;">
+                                                                    <img alt="Tumi"
+                                                                        src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/samsonite/tumi/TumiCTA.jpg"
+                                                                        style="display: block; border-width: 0px; border-style: solid; width: 100%; height:100%;">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- END CTA -->
+
+        <!-- SOCIAL MEDIA -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:1rem auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;">
+                <tbody>
+
+                    <tr>
+                        <td align="center" style="font-size:0px; word-break:break-word;">
+                            <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="float:none;display:inline-table;">
+                                <tr>
+                                    <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            style="border-radius:3px;width:30px;">
+                                            <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                    <a href="https://www.facebook.com/TumiTravel/?utm_source=yReceipt&amp;utm_medium=email&amp;utm_campaign=Tumi_digital-receipt"
+                                                        target="_blank">
+                                                        <img height="30"
+                                                            src="http://www.samsonite.eu/images/gene/grfx/sams_digital-receipt_facebook-icon.jpg"
+                                                            style="border-radius:3px;display:block;" width="30" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if mso | IE]></td><td><![endif]-->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="float:none;display:inline-table;">
+                                <tr>
+                                    <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            style="border-radius:3px;width:30px;">
+                                            <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                    <a href="https://twitter.com/tumitravel/?utm_source=yReceipt&amp;utm_medium=email&amp;utm_campaign=Tumi_digital-receipt"
+                                                        target="_blank">
+                                                        <img height="30"
+                                                            src="http://www.samsonite.eu/images/gene/grfx/sams_digital-receipt_twitter-icon.jpg"
+                                                            style="border-radius:3px;display:block;" width="30" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if mso | IE]></td><td><![endif]-->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="float:none;display:inline-table;">
+                                <tr>
+                                    <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            style="border-radius:3px;width:30px;">
+                                            <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                    <a href="https://www.instagram.com/tumitravel/?utm_source=yReceipt&amp;utm_medium=email&amp;utm_campaign=Tumi_digital-receipt"
+                                                        target="_blank">
+                                                        <img height="30"
+                                                            src="http://www.samsonite.eu/images/gene/grfx/sams_digital-receipt_instagram-icon.jpg"
+                                                            style="border-radius:3px;display:block;" width="30" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if mso | IE]></td><td><![endif]-->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="float:none;display:inline-table;">
+                                <tr>
+                                    <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            style="border-radius:3px;width:25px;">
+                                            <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:25px;">
+                                                    <a href="https://www.youtube.com/user/tumitravel" target="_blank">
+                                                        <img src="https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-youtube-bk.png"
+                                                            style="border-radius:3px;display:block;width: 25px;" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if mso | IE]></td><td><![endif]-->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="float:none;display:inline-table;">
+                                <tr>
+                                    <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            style="border-radius:3px;width:25px;">
+                                            <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:25px;">
+                                                    <a href="https://www.pinterest.co.uk/tumitravel/" target="_blank">
+                                                        <img src="https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-pinterest-bk.png"
+                                                            style="border-radius:3px;display:block;width: 25px;" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- END SOCIAL MEDIA -->
+        <!-- SIGN UP -->
+        {% if not receipt.sign_up %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0 auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td align="center" vertical-align="middle"
+                            style="font-size:0px; word-break:break-word;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="border-collapse:separate;line-height:100%;">
+                                <tr>
+                                    <td align="center" bgcolor="#ce153f" role="presentation"
+                                        style="border:none;border-radius:6px;cursor:auto;mso-padding-alt:10px 25px;background:#ce153f;"
+                                        valign="middle">
+                                        <a href="{{ language['sign_up_site'] }}"
+                                            style="font-size:1.5rem;padding: 10px 25px;display:inline-block;background:#ce153f;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none; mso-padding-alt:0px;border-radius:6px;"
+                                            target="_blank">{{ language['sign_up'] }}<br />
+                                            <span style="font-size:1rem;">{{ language['sign_up_text'] }}</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        <!-- END SIGN UP -->
+
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:1rem auto 0;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;border-top: 1px solid #acacac;">
+                <tbody>
+                    <tr>
+                        <td
+                            style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0;padding-top:0;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top; border-bottom:1px solid #222;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td height="10" width="100%" style="font-size: 20px; line-height: 20px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:6px;word-break:break-word;">
+                                                <div
+                                                    style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#222;">
+                                                    {{ language['date_of_purchase'] }}
+                                                    {{ receipt.transaction_datetime.strftime("%d/%m/%y") }}</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:6px;word-break:break-word;">
+                                                <div
+                                                    style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#222;">
+                                                    {{ language['transaction_number'] }}
+                                                    {{ data['receipt']['transaction_number']['text'] }}</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:6px;word-break:break-word;">
+                                                <div
+                                                    style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#222;">
+                                                    {{ language['salesperson'] }}{{ data['receipt']['associate']['name'] }}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10" width="100%" style="font-size: 20px; line-height: 20px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END HEADER/NAV -->
+        <!-- SALE ITEMS -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                    style="color:#222;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top; width: 20%;">
+                                                            {{ language['item_id'] }}</th>
+                                                        <th style="text-align: left; vertical-align: top; width: 35%;">
+                                                            {{ language['description'] }}</th>
+                                                        <th
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ language['quantity'] }}</th>
+                                                        <th style="text-align: right; vertical-align: top; width: 20%;">
+                                                            {{ language['item_cost'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+                                                  
+                                                    <tr style="border-top: 1px solid #acacac">
+                                                        <td style="text-align: left; vertical-align: top; width: 20%;">
+                                                            {{ sale_item['pos_item_id'] }}</td>
+                                                        <td
+                                                            style="line-height:1rem; text-align: left; vertical-align: top; width: 35%;">
+                                                            {{ sale_item['text'] }}
+                                                            <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+                                                            <br> {{ language['discount'] }}:
+                                                            {{ discount['reduction_percent']['value'] }}
+                                                            <br>{{ language['discount_reason'] }}:
+                                                            {{ discount['text'] }}
+                                                            <br>{{ language['discount_amount'] }}:
+                                                            {{ format_currency(discount['amount']['value']) }}
+                                                            <mj-raw>{% endfor %}</mj-raw>
+                                                        </td>
+                                                        <td
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ sale_item['quantity']['value'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top; width: 20%;">
+                                                            {{ receipt.format_currency(sale_item['total']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END SALE ITEMS -->
+        <!-- SUBTOTAL -->{% if receipt['receipt']['subtotal']['amount']['value'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;" role="presentation" width="100%" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding:0.5rem 0;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" 
+                                                    style="color:#222;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <td align="left"><b>{{ language['subtotal'] }}</b></td>
+                                                        <td align="right">
+                                                            {{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;" role="presentation" width="100%" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END SUBTOTAL -->
+        <!-- DISCOUNTS -->{% if receipt['discount'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;" >
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" border="0"
+                                                    style="color:#222;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top;">
+                                                            {{ language['discount'] }}</th>
+                                                        <th style="text-align: right; vertical-align: top;">
+                                                            {{ language['discount_amount'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+                                                   
+                                                    <tr style="border-top: 1px solid #acacac">
+                                                        <td style="text-align: left; vertical-align: top;">
+                                                            {{ discount['text'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top;">
+                                                            {{ receipt.format_currency(discount['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END DISCOUNTS -->
+        <!-- TAXES -->{% if receipt['tax'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0"
+                                                    style="color:#222;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top; width: 25%;">
+                                                        </th>
+                                                        <th
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ language['tax_rate'] }}</th>
+                                                        <th style="text-align: right; vertical-align: top; width: 25%;">
+                                                            {{ language['tax_amount'] }}</th>
+                                                    </tr>
+                                                    {% for tax in receipt['tax'] %}
+                                                   
+                                                    <tr style="border-top: 1px solid #acacac">
+                                                        <td style="text-align: left; vertical-align: top; width: 25%;">
+                                                            {{ tax['text'] }}</td>
+                                                        <td
+                                                            style="text-align: center; vertical-align: top; width: 25%;">
+                                                            {{ tax['rate']['text'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top; width: 25%;">
+                                                            {{ receipt.format_currency(tax['amount']['value']) }}</td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END TAXES -->
+        <!-- TOTAL -->{% if receipt['receipt']['total']['amount']['value'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;" >
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;" role="presentation" width="100%" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" border="0"
+                                                    style="color:#222;width:100%;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <td align="left"><b>{{ language['total'] }}</b></td>
+                                                        <td align="right">
+                                                            {{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                <p
+                                                    style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;">
+                                                </p>
+                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #222;font-size:1px;margin:0px auto;width:100%;" role="presentation" width="100%" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END TOTAL -->
+        <!-- TENDER -->{% if receipt['tender'] %}
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="100%"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <table cellpadding="0" cellspacing="0" border="0"
+                                                    style="color:#222;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                                    <tr>
+                                                        <th style="text-align: left; vertical-align: top;">
+                                                            {{ language['tender_type'] }}
+                                                        </th>
+                                                        <th style="text-align: right; vertical-align: top;">
+                                                            {{ language['tender_amount'] }}</th>
+                                                    </tr>
+                                                    <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+                                                
+                                                    <tr style="border-top: 1px solid #acacac">
+                                                        <td style="text-align: left; vertical-align: top;">
+                                                            {{ tender['text'] }}</td>
+                                                        <td style="text-align: right; vertical-align: top;">
+                                                            {{ receipt.format_currency(tender['amount']['value']) }}
+                                                        </td>
+                                                    </tr>
+                                                    <mj-raw>{% endfor %}</mj-raw>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+        <!-- END TENDER -->
+        <!-- WARRANTY -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;padding:0 1rem;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;"style="width:100%;">
+                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px; word-break:break-word; padding:3%;">
+                                                <div
+                                                    style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.2;text-align:center;color:#222;">
+
+                                                    {{ language['warranty_1'] }}<br />
+                                                    <a href="{{ language['support_site'] }}"
+                                                        style="color:#000000;">{{ language['support_site'] }}</a><br /><br />
+                                                    {{ language['warranty_2'] }}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END WARRANTY -->
+        <!-- BARCODE -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:0px auto;max-width:600px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding-top:2%;text-align:center;">
+                            <!--[if mso | IE]><table style="width:100%;" role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;    margin: 0 auto;">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding-top:0.5rem;word-break:break-word;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:collapse;border-spacing:0px;width:100%;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="width:300px;">
+                                                                <img height="auto" src="{{ barcode_url }}"
+                                                                    style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                                    width="300" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:0px;padding:1% 0;word-break:break-word;">
+                                                <div
+                                                    style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#222;">
+                                                    {{ receipt.barcode_transaction_number }}</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END BARCODE -->
+        <!-- FOOTER -->
+        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin:1rem auto;max-width:600px; padding:0 1rem;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
+                            <!--[if mso | IE]><table style="width:100%;" role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="vertical-align:top;width:100%;" >
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" style="font-size:0px; word-break:break-word;">
+                                                <div
+                                                    style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.2;text-align:center;color:#222;">
+                                                    {{language['footer']}}</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+        <!-- END FOOTER -->
+    </div>
+</body>
+</html>

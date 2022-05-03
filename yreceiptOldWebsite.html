@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connecting in-store customers to transactions | eyos</title>
+    <link rel="canonical" href="https://www.yreceipts.com/" />
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- font awesome for icons -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- flex slider css -->
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- animated css  -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="screen">
+    <!--web fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <!--owl carousel css-->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="screen">
+    <!--mega menu -->
+    <link href="css/yamm.css" rel="stylesheet" type="text/css">
+    <!--popups css-->
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+    <!-- Contact Form CSS files -->
+    <link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        .tile_logo
+            {
+                max-width: 100%;
+                max-height: 50px;
+                margin: auto;
+                display: block;
+            }
+
+            .f2-work li img, .f2-work li a img
+            {
+                width: 140px;
+                height: 140px;
+                border:2px solid transparent;
+                -webkit-transition: 0.2s ease-in-out;
+                -moz-transition: 0.2s ease-in-out;
+                -ms-transition: 0.2s ease-in-out;
+                -o-transition: 0.2s ease-in-out;
+                transition: 0.2s ease-in-out;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 2px 0px, rgba(0, 0, 0, 0.7) 0px 2px 5px 0px;
+                border: 0;
+            }
+
+            .f2-work li img:hover
+            {
+                margin-top: 0px;
+                margin-bottom: 10px;
+                box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 2px 0px, rgba(0, 0, 0, 0.7) 0px 7px 20px 0px;
+            }
+
+            #awards div img
+            {
+                max-height: 70px;
+                margin-left: 5px;
+                margin-right: 5px;
+
+            }
+
+            #work-carousel .work-desc
+            {
+                height: 71px;
+            }
+
+            a[name]
+            {
+                margin-top: -72px;
+                position: absolute;
+            }
+
+            #footer .col-sm-4 + .col-sm-4
+            {
+                margin-top: 2em;
+            }
+
+            #footer
+            {
+                color: #777;
+            }
+
+            #clientLogosModal .row div
+            {
+                text-align:center;
+            }
+
+            #clientLogosModal .row
+            {
+                line-height: 70px;
+            }
+
+            #clientLogosModal .row img
+            {
+                display: inline-block;
+                vertical-align: middle;
+                float: none;
+            }
+
+            .main-flex-slider img
+            {
+                margin: auto
+            }
+
+            #slider-sec li
+            {
+                display: none;
+            }
+
+            @media (min-width: 768px)
+            {
+                #footer .col-sm-4 + .col-sm-4
+                {
+                    margin-top: 0;
+                }
+            }
+
+            a
+            {
+                color: inherit;
+
+            }
+
+            @media (max-width: 768px)
+            {
+                .slider-text
+                {
+                    margin-top: 0px;
+                }
+
+                .slider-text h1
+                {
+                    padding-top: 50px;
+                }
+            }
+
+
+        </style>
+</head>
+
+<body>
+    <!--
+        <div id="header-top" class="hidden-xs">
+            <div class="container">
+                <div class="top-bar">
+                    <div class="pull-left">
+                    </div>
+                    <div class="pull-right">
+                        <ul class="list-inline top-social">
+                            <a href="#">getintouch@eyos.com</a>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    <!--top bar end hidden in small devices-->
+    <!--navigation -->
+    <!-- Static navbar -->
+    <!-- modal content -->
+    <div class="navbar navbar-default navbar-static-top yamm sticky" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html"><img src="img/eyos-retail.svg" width="180" alt="eyos - Retail insights delivered through improved customer experience." border="0" float="left"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li class="dropdown">
+                            <a href="#slider">Home</i></a>
+                        </li>-->
+                    <li class="dropdown">
+                        <a href="#technology">Technology</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#digital_receipts">Identify</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#live_purchase_data">Connect</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#online_to_offline">Measure</a>
+                    </li>
+                    <li class="dropdown">
+                        <!--  hidden-md hidden-lg -->
+                        <a href="#contact">Contact</i></a>
+                    </li>
+                    <!--mega menu-->
+                    <li class="dropdown yamm-fw" style="display: none ! important;">
+                        <!--  hidden-xs hidden-sm -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact&nbsp;<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h3 class="heading">EMEA</h3>
+                                            <div class="mega-contact">
+                                                <p><strong><i class="fa fa-phone"></i></strong>+44 20 8099 5690</p>
+                                                <p><strong><i class="fa fa-map-marker"></i></strong><a href="https://maps.google.com/?q=167 City Road, London, EC1V 1AW, UK" target="_blank">167 City Road, London, EC1V 1AW, UK</a></p>
+                                                <p><strong><i class="fa fa-envelope"></i></strong><a href="mailto:getintouch@eyos.com">getintouch@eyos.com</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h3 class="heading">Asia &amp; Australasia</h3>
+                                            <p>
+                                            </p>
+                                            <div class="mega-contact">
+                                                <p><strong><i class="fa fa-phone"></i></strong>+61 242 048 102</p>
+                                                <p><strong><i class="fa fa-envelope"></i></strong><a href="mailto:getintouch@eyos.com">getintouch@eyos.com</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h3 class="heading">Americas</h3>
+                                            <p>
+                                            </p>
+                                            <div class="mega-contact">
+                                                <p><strong><i class="fa fa-phone"></i></strong>+44 20 8099 5690</p>
+                                                <p><strong><i class="fa fa-envelope"></i></strong><a href="mailto:getintouch@eyos.com">getintouch@eyos.com</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="https://twitter.com/eyos" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/eyos" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="dropdown">
+                        <a href="/frontend">Login</i></a>
+                    </li>
+                    <!--mega menu end-->
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    
+	<div class="eyos-banner">
+		<div class="container">
+			<div class="row">
+				<img src="img/yreceipt-eyos-banner@2x.png" class="eyos-banner-image" alt="yreceipts is now eyos"/>
+				<span class="eyos-link-info">For more information, visit <a href="http://eyos.one" alt="eyos.one">eyos.one</a></span>
+			</div>
+		</div>
+	</div>
+<div class="divide80"></div>
+    <div class="container">
+        <div class="row" style="background-image: url('img/shutterstock_546883993.jpg');
+                   background-repeat: no-repeat;
+                   background-size: 100%;
+                   /*background-attachment: fixed;*/
+                   background-position: center bottom;">
+            <div class="col-md-12 margin20" style="border-radius:0px 0px 20% 50% / 0px 0px 10% 20%;
+                        padding: 0 20% 20px 20%;
+                        margin-bottom: 300px;
+                        box-shadow: 0 0px 40px 60px white;
+                        /*box-shadow: 0 10px black inset, 0 -10px red inset, -10px 0 blue inset, 10px 0 green inset;*/
+                        background-color: white;
+                        text-align: center;">
+                <h1 class="heading"><span class="colored-text">Unlock the power of in-store data</span></h1>
+                <p>
+                    Retailers around the world use our software to identify in-store customers through digital receipts and connect 100% of in-store transactions into any platform they use in real-time.
+                </p>
+                <p>Without EPOS integrations, IT development, or new hardware.</p>
+                <p>
+                    <button type="button" class="btn btn-theme-dark btn-lg basic" data-toggle="modal" data-target="#bookDemoModal">Get in Touch</button>
+                </p>
+            </div>
+        </div>
+        <!--about intro-->
+    </div>
+    <a name="clients"></a>
+    <div class="divide50"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<div class="col-md-12  col-xs-12 service-3-meta">-->
+                <div class="col-md-12  col-xs-12">
+                    <h1 class="text-center"><span class="colored-text">Trusted Globally</span></h1>
+                    <section id="awards">
+                        <!-- awards -->
+                        <div style="text-align: center;">
+                            <p align="center">No matter which region, country or language, retailers use eyos to link billions of purchased products to in-store customers around the world.<br>
+                            </p>
+                        </div>
+                        <div class="divide40"></div>
+                    </section><!-- end awards -->
+                </div>
+            </div>
+            <div id="#customer-logos-outer">
+                <div id="customer-logos" class="row">
+                    <div class="img-container col-md-1 col-sm-6"><img class="img-responsive img-centered img-customer-logo" src="img/logos/lego.png" alt="Lego"></div>
+                    <!--<div class="img-container col-md-1 col-sm-6"><img class="img-responsive img-centered img-customer-logo" src="img/logos/puma.png" alt="PUMA"></div>-->
+                    <div class="img-container col-md-1 col-sm-6"><img class="img-responsive img-centered img-customer-logo" src="img/logos/smcp.png" alt="SMCP"></div>
+                    <div class="img-container col-md-1 col-sm-6"><img class="img-responsive img-centered img-customer-logo" src="img/logos/thenorthface.png" alt="The North Face"></div>
+                    <div class="img-container col-md-2 col-sm-12"><img class="img-responsive img-centered img-customer-logo" src="img/logos/esteelauder.png" alt="Estée Lauder"></div>
+                    <div class="img-container col-md-2 col-sm-12"><img class="img-responsive img-centered img-customer-logo" src="img/logos/newlook.png" alt="New Look"></div>
+                    <div class="img-container col-md-2 col-sm-12"><img class="img-responsive img-centered img-customer-logo" src="img/logos/samsonite.png" alt="Samsonite"></div>
+                    <!--<div class="img-container col-md-2 col-sm-12"><img class="img-responsive img-centered img-customer-logo" src="img/logos/travelex.png" alt="Travelex"></div>-->
+                </div>
+            </div>
+            <div class="divide10"></div>
+            <!--recent work-->
+        </div>
+    </div>
+    <a name="technology"></a>
+    <div style="background-color: #f4f3ff;">
+        <div class="container">
+            <div class="divide50"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!--<div class="col-md-12  col-xs-12 service-3-meta">-->
+                    <div class="col-md-12  col-xs-12">
+                        <h1 class="text-center"><span class="colored-text">Our Technology</span></h1>
+                        <p align="center">Our light-touch software application works around the world on any till or register. It does not require EPOS integration, IT development, or new hardware.</p>
+                        <!-- <span class="center-line"></span> -->
+                    </div>
+                    <!--center-heading-->
+                </div>
+            </div>
+            <!--row-->
+            <div class="divide40"></div>
+            <div id="our-technology-inner" class="row">
+                <div class="col-md-4 margin20 wow animated fadeInRight">
+                    <div class="price-wrap">
+                        <div class="price-price popular">
+                            IDENTIFY IN-STORE CUSTOMERS
+                        </div>
+                        <!--price price-->
+                        <div class="price-features">
+                            <ul class="list-unstyled">
+                                <li>Our software does not need to be integrated into existing EPOS systems and can be rolled out centrally.<br><br>
+                                    Offer fully branded & personalised digital receipts via any method such as email, text and more. It also works alongside loyalty programmes to identify non-members and their purchases.</li>
+                            </ul>
+                        </div>
+                        <!--price features-->
+                        <div class="price-action">
+                            <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                                <a href="#digital_receipts" class="btn btn-theme-dark btn-lg">Learn More</a>
+                                <span class="section-line"></span>
+                            </div>
+                        </div>
+                        <!--price action-->
+                    </div>
+                    <!--price-wrap-->
+                </div>
+                <!--price col-->
+                <div class="col-md-4 margin20 wow animated fadeInRight">
+                    <div class="price-wrap">
+                        <div class="price-price popular">
+                            CONNECT IN-STORE DATA IN REAL TIME
+                        </div>
+                        <!--price price-->
+                        <div class="price-features">
+                            <ul class="list-unstyled">
+                                <li>As a transaction happens in-store, we connect it to any of your in-house or external platforms in real time.<br><br>
+                                    Whether you are building a single customer view, intend to collect in-store product reviews, or need to activate in-store data in any other way, we stream it where you need it.</li>
+                            </ul>
+                        </div>
+                        <!--price features-->
+                        <div class="price-action">
+                            <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                                <a href="#live_purchase_data" class="btn btn-theme-dark btn-lg">Learn More</a>
+                                <span class="section-line"></span>
+                            </div>
+                        </div>
+                        <!--price action-->
+                    </div>
+                    <!--price-wrap-->
+                </div>
+                <!--price col-->
+                <div class="col-md-4 margin20 wow animated fadeInRight">
+                    <div class="price-wrap">
+                        <div class="price-price popular">
+                            MEASURE IN-STORE ROI OF DIGITAL ADS
+                        </div>
+                        <!--price price-->
+                        <div class="price-features">
+                            <ul class="list-unstyled">
+                                <li>We connect in-store transactions to your digital ad campaigns so you can measure their revenue impact in your retail stores.<br><br>
+                                    As official partners of Facebook, Google and other ad platforms, we enable you to optimise ad spend & strategy; taking into account the offline impact of your digital ads.</li>
+                            </ul>
+                        </div>
+                        <!--price features-->
+                        <div class="price-action">
+                            <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                                <a href="#online_to_offline" class="btn btn-theme-dark btn-lg">Learn More</a>
+                                <span class="section-line"></span>
+                            </div>
+                        </div>
+                        <!--price action-->
+                    </div>
+                    <!--price-wrap-->
+                </div>
+                <!--price col-->
+            </div>
+            <!--row for 3 col-->
+            <!--service col-->
+        </div>
+    </div>
+    </div>
+    <div class="divide50"></div>
+    <!--services section 2 end-->
+    <section class="testimonials parallax" data-stellar-background-ratio="0.5" style="padding-top: 0 ! important;">
+        <div class="divide50"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+            <!--center heading row-->
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div id="testi-carousel" class="owl-carousel owl-spaced">
+                        <div>
+                            <p>VF Corporation</p>
+                            <h4>
+                                Rolled out eyos to 17 countries across 3 brands in 4 weeks.
+                            </h4>
+                        </div>
+                        <!--testimonials item like paragraph-->
+                        <!--<div>
+                            <p>Mothercare</p>
+                            <h4>
+                                eyos helped measure that each £1 invested in Google search ads generated a 2.5 times higher ROI in-store than online.
+                            </h4>
+                        </div>-->
+                        <!--testimonials item like paragraph-->
+                        <div>
+                            <p>Lifestyle Sports</p>
+                            <h4>
+                                Ran Facebook ads to drive offline sales and used eyos to measure a 9x Return-On-Ad-Spend in-store.
+                            </h4>
+                        </div>
+                        <!--testimonials item like paragraph-->
+                        <div>
+                            <p>Lego</p>
+                            <h4>
+                                Introduced eyos to increase in-store customer visibility beyond the existing loyalty programme member base around the world.
+                            </h4>
+                        </div>
+                        <!--testimonials item like paragraph-->
+                        <!--<div>
+                            <p>Travelex</p>
+                            <h4>
+                                Rolled out eyos on 4 continents and track Net Promoter Score in each digital receipt.
+                            </h4>
+                        </div>-->
+                        <!--testimonials item like paragraph-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--testimonials-->
+    <!-- <a name="technology"></a>
+        <a name="retail_connector_product"></a>
+        <a name="online_click_tracking_product"></a>
+        <div class="divide50"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-heading">
+                        <h2>Our technology</h2>
+                        <p>A lightweight software application that captures in-store purchase data, links it to shoppers and connects it to data ecosystems in real-time.</p>
+                        <!-- <span class="center-line"></span> -->
+    <!-- </div><!--center-heading-->
+    <!--</div>
+            </div><!--row-->
+    <!--<div class="row">
+                <div class="col-md-4 margin20">
+                    <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.2s">
+                        <a href="#digital_receipts_product"><i class="fa fa-file-text"></i>
+                        <h3>For retailers</h3></a>
+                            <p>Reach in-store shoppers with digital receipts and enable a single view of customers.</p>
+
+                            <div class="divide30"></div>
+                            <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+    <!-- <span class="section-line"></span>
+                    </div><!--service box-->
+    </div>
+    <!--service col-->
+    <!--<div class="col-md-4 margin20">
+                    <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.4s">
+                        <a href="#live_purchase_data"><i class="fa fa-chain"></i>
+                        <h3>For technology providers</h3>
+                            <p>Access live brick-and-mortar purchase data in your own technology solution.</p>
+                            <div class="divide30"></div>
+                            <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+    <!--<span class="section-line"></span>
+                    </div><!--service box-->
+    <!--</div><!--service col-->
+    <!--<div class="col-md-4 margin20">
+                    <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                        <a href="#online_to_offline"><i class="fa fa-bullseye"></i>
+                        <h3>for marketers</h3>
+                            <p>Tie online campaigns to in-store purchases and track online to offline attribution.</p>
+                            <div class="divide30"></div>
+                            <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+    <!-- <span class="section-line"></span>
+                    </div><!--service box-->
+    <!-- </div><!--service col-->
+    <!--</div>
+        </div><!--services section 2 end-->
+    <!--<a name="digital_receipts_product"></a>
+        <section id="services-bg-wrap" style="padding-bottom: 0 ! important;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 hidden-sm wow animated fadeInLeft">
+                        <img src="img/digital_receipt_product.jpg" class="img-responsive" alt="mockup">
+                    </div>
+                    <div class="col-md-8  col-xs-12 service-3-meta">
+                        <h1 class="wow animated fadeInDownfadeInRight"><span class="colored-text">Digital Receipts </span>in Retail Stores</h1>
+                        <div class="services-box margin30 wow animated fadeInRight">
+                            <!--<div class="services-box-icon">
+                                <i class="fa fa-tablet"></i>
+                            </div>-->
+    <!--services icon-->
+    <!--<div class="services-box-info">
+                                <h4>Any Point of Sale</h4>
+                                <p>
+                                    Our application is non-intrusive and requires no change to your existing hardware or EPOS solution. It can be remotely deployed across all of your Point of Sale locations enabling you to start issuing digital receipts instantly.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+    <!--<div class="services-box margin30 wow animated fadeInRight">
+                            <!--<div class="services-box-icon">
+                                <i class="fa fa-twitter"></i>
+                            </div>-->
+    <!--services icon-->
+    <!--<div class="services-box-info">
+                                <h4>Your brand, your design, endless possbilities</h4>
+                                <p>
+                                    Keep control over receipt design and turn your digital receipts into a powerful customer engagement channel. Drive targeted dynamic content on your digital receipts, receive feedback about in-store customer experiences or increase social media interaction.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+    <!--<div class="services-box margin30 wow animated fadeInRight">
+                            <!--<div class="services-box-icon">
+                                <i class="fa fa-code"></i>
+                            </div>-->
+    <!--services icon-->
+    <!--<div class="services-box-info">
+                                <h4>Truly digital</h4>
+                                <p>
+                                    Provide instant digital receipts via email, your own apps or any other digital channel. Track performance of your receipts on all levels through our powerful reporting and backend tools.
+                                </p>
+                            </div>
+                            <div class="divide30"></div>
+                            <div id="basic-modal">
+                                <p><a href="#" class="btn btn-theme-dark btn-lg basic">Get in touch</a></p>
+                            </div>
+                            <div id="basic-modal-content">
+                            <div class=" alert-success alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                Thank you for your message, we will be in contact shortly.
+                            </div>
+                                <h3>Contact Us</h3>
+                                <p>Get in contact with us for a quick and easy install - you could start offering paperless receipts today. It works with your existing Register, Till or EPOS</p>
+                                <form action="/business" method="POST">
+                                <p>Name:<input type="text" class="form-control" placeholder="Name"></p>
+                                <p>Company:<input type="text" class="form-control" placeholder="Company name"></p>
+                                <p>Phone:<input type="text" class="form-control" placeholder="Phone number"></p>
+                                <p>E-mail:<input type="text" class="form-control" placeholder="E-mail address"></p>
+                                <p>POS Software:<input type="text" class="form-control" placeholder="POS provider and version"></p>
+                                <p>Message:<textarea class="form-control" rows="4" placeholder="Enter message"></textarea></p>
+                            <br>
+                            <input class="btn btn-theme-dark btn-lg basic" type="Submit">
+                            </form>
+                            </div>
+                            </div>
+                            <!-- preload the images -->
+    <!--<div style='display:none'>
+                                <img src='img/basic/x.png' alt='' />
+                            </div>
+                        </div><!--service box-->
+    <!--</div>
+                </div>
+            </div>
+        </section><!--services with the showcase mockups-->
+    <a name="digital_receipts"></a>
+    <div class="divide50 center"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<div class="col-md-12  col-xs-12 service-3-meta">-->
+                <div class="col-md-12  col-xs-12">
+                    <h1 class="text-center"><span class="colored-text">Identify in-store customers through digital receipts</span></h1>
+                    <!-- <span class="center-line"></span> -->
+                    <div style="text-align: center;">
+                        <p align="center">Our software enables retailers to offer digital receipts in their stores - all without integration with their EPOS system.</p>
+                    </div>
+                </div>
+                <!--center-heading-->
+            </div>
+        </div>
+        <section class="services-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>ON-BRAND</h4>
+                                <p>
+                                    Control the design of your digital receipts to ensure a bespoke and on-brand experience.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="200ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>GLOBAL</h4>
+                                <p>
+                                    Digital receipts are official documents, always localised and can be sent in any language.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="600ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-bolt"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>REAL-TIME</h4>
+                                <p>
+                                    Your customers receive their proof of purchase receipt in real time.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-share-alt"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>CONNECTED</h4>
+                                <p>
+                                    Build third-party content like product recommendations, Net Promoter Score and others into your digital receipts.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                </div>
+                <!--services row-->
+                <div class="divide30"></div>
+                <div class="row">
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>IDENTIFICATION</h4>
+                                <p>
+                                    Whether manual, digital or linked to the payment, we support many ways to identify shoppers.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="500ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>DISTRIBUTION</h4>
+                                <p>
+                                    Send digital receipts through any channel: email, SMS, apps and other platforms.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-signal"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>REPORTING</h4>
+                                <p>
+                                    Use our real-time and email reporting tool to track any KPI down to store assistant level.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                    <div class="col-md-3 margin20">
+                        <div class="services-box wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="600ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                            <!--services icon-->
+                            <div class="services-box-info">
+                                <h4>QUALITY</h4>
+                                <p>
+                                    Validate customer identifiers in real time to ensure quality data capture in your stores.
+                                </p>
+                            </div>
+                        </div>
+                        <!--services box-->
+                    </div>
+                    <!--services col-->
+                </div>
+                <!--services row-->
+            </div>
+            <div class="row" style="padding-top: 40px;">
+                <form id="email_receipt_form" action="https://www.yreceipts.com" class="subscribe-form" style="width:77%; margin: 0 auto">
+                    <div class="col-sm-12 col-md-10 col-md-offset-1">
+                        <h3 class="text-center">Send yourself a sample receipt</h3>
+                        <div class="input-group">
+                            <input type="email" required="required" placeholder="Email address" id="email_address" name="email_address" spellcheck="false" class="form-control">
+                            <span class="input-group-btn">
+                                <span class="primary tr btn btn-lg btn-default loader" style="padding-top: 12px; display: none; ">
+                                    <img src="https://www.eyos.com/images/datahub_loading_small.gif" alt="Working..." />
+                                </span>
+                                <span style="display: none;" class="primary tr btn btn-lg btn-default success"><span class="glyphicon glyphicon-ok"></span></span>
+                                <button class="primary tr btn btn-theme-dark btn-lg" value="Send" role="submit">Send</button>
+                            </span>
+                        </div>
+                        <input type="hidden" name="receipt_items" value="<Receipt><Device><DeviceID>ahBzfnlyZWNlaXB0cy1wcm9kchILEglQb3NEZXZpY2UYwNSNBgw</DeviceID><TransactionNumber>4949313122</TransactionNumber></Device><TransactionDetail><SaleItem><Text>Black Flats, Size 7</Text><POSItemID>BF1231</POSItemID><Quantity>1</Quantity><UnitPrice>69.99</UnitPrice><ExtendedAmount>69.99</ExtendedAmount></SaleItem><SaleItem><Text>Blue Dress, Size 38</Text><POSItemID>BD2912</POSItemID><Quantity>1</Quantity><UnitPrice>120.00</UnitPrice><ExtendedAmount>120.00</ExtendedAmount></SaleItem><SaleItem><Text>Tights</Text><POSItemID>S-1238</POSItemID><Quantity>3</Quantity><UnitPrice>4.99</UnitPrice><ExtendedAmount>14.97</ExtendedAmount></SaleItem><SaleItem><Text>Jersey Shawl</Text><POSItemID>SH1352</POSItemID><Quantity>1</Quantity><UnitPrice>19.99</UnitPrice><ExtendedAmount>19.99</ExtendedAmount></SaleItem><SaleItem><Text>Midnight T, Size S</Text><POSItemID>T8232</POSItemID><Quantity>1</Quantity><UnitPrice>20.99</UnitPrice><ExtendedAmount>20.99</ExtendedAmount></SaleItem><Tender><Text>Visa</Text><Amount>245.94</Amount></Tender><Tax><Text>Tax 20%</Text><Amount>49.19</Amount></Tax><Operator><AssociateName>Scott</AssociateName><AssociateID /></Operator></TransactionDetail><Total TotalType='Subtotal'><Text>Subtotal</Text><Amount>245.94</Amount></Total><Total TotalType='Total'><Text>Total</Text><Amount>245.94</Amount><ItemCount>5</ItemCount></Total></Receipt>">
+                    </div>
+                </form>
+            </div>
+            <div id="email_receipt_confirmation" style="display: none; text-align: center;">
+                Done. Please check your inbox for your sample digital receipt.
+                <div style="text-align: center; padding-bottom: 10px;"><br />
+                    <a class="send_another_email_receipt yr_button" href="/">Click to send another one</a><br />
+                </div>
+            </div>
+        </section>
+        <!--section services-->
+        <!--row-->
+        <div class="divide30"></div>
+        <div style="text-align: center;">
+            <p align="center">Some examples of our customers' digital receipt designs</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="work-carousel" class="owl-carousel owl-spaced">
+                    <div>
+                        <div class="item-img-wrap">
+                            <img src="img/receipts/clarks.png" class="img-responsive" srcset="img/receipts/clarks.png 1000w,
+                                 img/receipts/clarks.png 500w" alt="Clarks">
+                            <div class="item-img-overlay">
+                                <a href="img/receipts/clarks.png" class="show-image">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--item img wrap-->
+                        <div class="work-desc">
+                            <img src="img/logos/clarks.png" alt="Clarks" class="tile_logo" />
+                        </div>
+                        <!--work desc-->
+                    </div>
+                    <!--owl item-->
+                    <div>
+                        <div class="item-img-wrap ">
+                            <img src="img/receipts/barbour.png" class="img-responsive" srcset="img/receipts/barbour.png 1000w,
+                                 img/receipts/barbour.png 500w" alt="Barbour">
+                            <div class="item-img-overlay">
+                                <a href="img/receipts/barbour.png" class="show-image">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--item img wrap-->
+                        <div class="work-desc">
+                            <img src="img/logos/barbour.png" alt="Barbour" class="tile_logo" />
+                        </div>
+                        <!--work desc-->
+                    </div>
+                    <!--owl item-->
+                    <div>
+                        <div class="item-img-wrap ">
+                            <img src="img/receipts/mac.png" class="img-responsive" srcset="img/receipts/mac.png 1000w,
+                            img/receipts/mac.png 500w" alt="MAC">
+                            <div class="item-img-overlay">
+                                <a href="img/receipts/mac.png" class="show-image">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--item img wrap-->
+                        <div class="work-desc">
+                            <img src="img/logos/mac.png" alt="MAC" class="tile_logo" />
+                        </div>
+                        <!--work desc-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--row-->
+        <div class="row">
+            <!--service col-->
+            <div class="col-md-12 margin20">
+                <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                    <div class="divide30"></div>
+                    <button type="button" class="btn btn-theme-dark btn-lg basic" data-toggle="modal" data-target="#bookDemoModal">
+                        Get in touch
+                    </button>
+                    <span class="section-line"></span>
+                </div>
+                <!--service box-->
+            </div>
+            <!--service col-->
+        </div>
+    </div>
+    <!--services section 2 end-->
+    <section class="product-img2 parralex" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 margin20 facts-in">
+                    <!--<h3><i class="fa fa-image"></i><span class="counter">22,128,145</span></h3>
+                        <h4>Retail Transactions</h4>
+                        <h3><i class="fa fa-image"></i><span class="counter">146,000,000</span></h3>
+                        <h4>Retailers and Brands</h4>-->
+                </div>
+                <!--facts in-->
+                <div class="col-md-6 margin20 facts-in">
+                    <!--<h3><i class="fa fa-users"></i><span class="counter">9,921,621</span></h3>
+                        <h4>Customer Responses</h4>
+                        <h3><i class="fa fa-image"></i><span class="counter">250</span></h3>
+                        <h4>Different Point of Sales</h4>-->
+                </div>
+                <!--facts in-->
+            </div>
+        </div>
+    </section>
+    <!--fun facts-->
+    <!--<div class="divide00"></div>-->
+    <a name="live_purchase_data"></a>
+    <div class="divide50 center"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<div class="col-md-12  col-xs-12 service-3-meta">-->
+                <div class="col-md-12  col-xs-12">
+                    <h1 class="text-center"><span class="colored-text">Connect in-store data in real time</span></h1>
+                    <!-- <span class="center-line"></span> -->
+                    <div style="text-align: center;">
+                        <p align="center">eyos connects in-store data to any data platform in the retailer’s digital ecosystem to enable teams and partners to increase customer value.</p>
+                    </div>
+                    <div class="text-center">
+                        <video id="video-wrap" controls>
+                            <source src="https://storage.googleapis.com/website-public-assets/eyos.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <!--center-heading-->
+            </div>
+        </div>
+        <div class="divide40"></div>
+        <div style="text-align: center;">
+            <p align="center">Some of the benefits retailers see when connecting in-store data through eyos to the platforms they use.</p>
+        </div>
+        <div class="divide10"></div>
+        <div class="row">
+            <div class="col-md-4 margin20 wow animated fadeInRight">
+                <div class="price-wrap">
+                    <div class="price-price popular">
+                        900%
+                        <span>12-month growth of customer database</span>
+                    </div>
+                    <!--price price-->
+                    <div class="price-features">
+                        <ul class="list-unstyled">
+                            <li><strong style="font-weight: bold;">Live data connection to CRM database</strong></li>
+                            <li>Linking customers to transactions through digital receipts, capturing data consent and establishing a live connection into the CRM platform led to 9-fold growth of customer visibility.<br /><br /></li>
+                        </ul>
+                    </div>
+                    <!--price features-->
+                </div>
+                <!--price-wrap-->
+            </div>
+            <!--price col-->
+            <div class="col-md-4 margin20 wow animated fadeInRight">
+                <div class="price-wrap">
+                    <div class="price-price popular">
+                        5 to 1
+                        <span>Google Page Rank jump</span>
+                    </div>
+                    <!--price price-->
+                    <div class="price-features">
+                        <ul class="list-unstyled">
+                            <li><strong style="font-weight: bold;">Live data connection to product review platform</strong></li>
+                            <li>In-store customers left public product reviews through their digital receipts. This led to increased traffic to the retailer’s website, resulting in an improved organic Google Page Rank for relevant keywords.</li>
+                        </ul>
+                    </div>
+                    <!--price features-->
+                </div>
+                <!--price-wrap-->
+            </div>
+            <!--price col-->
+            <div class="col-md-4 margin20 wow animated fadeInRight">
+                <div class="price-wrap">
+                    <div class="price-price popular">
+                        400%
+                        <span>Increase in in-store event sales</span>
+                    </div>
+                    <!--price price-->
+                    <div class="price-features">
+                        <ul class="list-unstyled">
+                            <li><strong style="font-weight: bold;">Live data connection to event booking engine</strong></li>
+                            <li>Digital receipts allowed the retailer to send invitations to store events in the name of individual stores. More invitees attended, which led to an increase in event sales.<br /><br /></li>
+                        </ul>
+                    </div>
+                    <!--price features-->
+                </div>
+                <!--price-wrap-->
+            </div>
+            <!--price col-->
+        </div>
+        <!--row for 3 col-->
+        <!--row-->
+        <div class="row">
+            <!--service col-->
+            <div class="col-md-12 margin20">
+                <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                    <div class="divide30"></div>
+                    <button type="button" class="btn btn-theme-dark btn-lg basic" data-toggle="modal" data-target="#bookDemoModal">
+                        Get in touch
+                    </button>
+                    <span class="section-line"></span>
+                </div>
+                <!--service box-->
+            </div>
+            <!--service col-->
+        </div>
+    </div>
+    <div class="divide30"></div>
+    <!--services section 2 end-->
+    <!--<div class="divide00"></div>-->
+    <!--<a name="live_purchase_data"></a>
+        <section id="services-bg-wrap" style="background-color: white ! important;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8  col-xs-12 service-3-meta">
+                        <h1 class="wow animated fadeInDownfadeInRight"><span class="colored-text">Live </span>retail data</h1>
+                        <div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-info">
+                                <h4>Any Point of Sale</h4>
+                                <p>
+                                    Our application is non-intrusive and requires no change to your existing hardware or EPOS solution. It can be remotely deployed across all of your Point of Sale locations enabling you to start collecting data in real-time.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+    <!--<div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-info">
+                                <h4>Your data anywhere</h4>
+                                <p>
+                                    Collect real-time in-store shopper and transactional data in internal and third party systems.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+    <!--<div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-info">
+                                <h4>Rich or raw data</h4>
+                                <p>
+                                    Capture identified or non-identified purchase data. Whether you need rich customer and purchase information or raw transactional data, leverage our live data feeds to enhance your technology platform.
+                                </p>
+                            </div>
+                            <div class="divide30"></div>
+                            <div id="basic-modal">
+                                <p><a href="#" class="btn btn-theme-dark btn-lg basic">Get in touch</a></p>
+                            </div>
+                            <div id="basic-modal-content">
+                            <div class=" alert-success alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                Thank you for your message, we will be in contact shortly.
+                            </div>
+                            <form action="/business" method="POST">
+                                <h3>Contact Us</h3>
+                                <p>Get in contact with us for a quick and easy install - you could start offering paperless receipts today. It works with your existing Register, Till or EPOS</p>
+                                <p>Name:<input type="text" class="form-control" placeholder="Name"></p>
+                                <p>Company:<input type="text" class="form-control" placeholder="Company name"></p>
+                                <p>Phone:<input type="text" class="form-control" placeholder="Phone number"></p>
+                                <p>E-mail:<input type="text" class="form-control" placeholder="E-mail address"></p>
+                                <p>POS Software:<input type="text" class="form-control" placeholder="POS provider and version"></p>
+                                <p>Message:<textarea class="form-control" rows="4" placeholder="Enter message"></textarea></p>
+                            <br>
+                            <button class="btn btn-theme-dark btn-lg basic" type="button">Go</button>
+                            </form>
+                            </div>
+                            </div>
+                            <!-- preload the images -->
+    <!--<div style='display:none'>
+                                <img src='img/basic/x.png' alt='' />
+                            </div>
+                        </div><!--service box-->
+    <!--</div>
+                    <div class="col-md-4 hidden-sm wow animated fadeInRight">
+                        <img src="img/data_connector.png" class="img-responsive" alt="mockup">
+                    </div>
+                </div>
+            </div>
+        </section><!--services with the showcase mockups-->
+    <a name="online_to_offline"></a>
+    <div class="divide50 center"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<div class="col-md-12  col-xs-12 service-3-meta">-->
+                <div class="col-md-12  col-xs-12">
+                    <h1 class="text-center"><span class="colored-text">Measure in-store ROI of digital ads</span></h1>
+                    <div style="text-align: center;">
+                        <p align="center">As global partners of Facebook, Google and other major advertising platforms, we enable real-time measurement of how digital ads impact in-store revenues. Just drop the eyos software on your till, just like the Google Tag or Facebook Pixel on your website, and start tracking offline ad conversions in-store.</p>
+                    </div>
+                    <div class="divide40"></div>
+                </div>
+                <!--center-heading-->
+            </div>
+        </div>
+        <!--row-->
+        <div class="row">
+            <div class="col-md-4 margin50">
+                <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.2s">
+                    <!--<a href="#digital_receipts_product"><i class="fa fa-file-text"></i>-->
+                    <h3>FACEBOOK AND INSTAGRAM</h3>
+                    <p>We are a Facebook Marketing Partner and connects in-store sales directly to your Facebook ad account.<br><br>Track live offline conversion value of Facebook &amp; Instagram ads using your existing tools. Create new audiences and optimise ad spend, campaigns and ROI.</p>
+                    <div class="divide30"></div>
+                    <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+                    <span class="section-line"></span>
+                </div>
+                <!--service box-->
+            </div>
+            <!--service col-->
+            <div class="col-md-4 margin20">
+                <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.4s">
+                    <!--<a href="#live_purchase_data"><i class="fa fa-chain"></i>-->
+                    <h3>GOOGLE</h3>
+                    <p>Our native integrations into Google's advertising ecosystem offers many possibilities to advertisers.<br><br>Measure the in-store sales impact of Google ads, run store-specific product ads without inventory feeds using Google's Local Inventory Ads and much more.</p>
+                    <div class="divide30"></div>
+                    <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+                    <span class="section-line"></span>
+                </div>
+                <!--service box-->
+            </div>
+            <!--service col-->
+            <div class="col-md-4 margin20">
+                <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.4s">
+                    <!--<a href="#live_purchase_data"><i class="fa fa-chain"></i>-->
+                    <h3>IN-HOUSE AND AGENCIES</h3>
+                    <p>We empower in-house marketing teams and agencies with in-store sales data.<br><br>Your digital marketing experts can now optimise ad spend and Return-On-Investment leveraging your offline data alongside your online sales.</p>
+                    <div class="divide30"></div>
+                    <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+                    <span class="section-line"></span>
+                </div>
+                <!--service col-->
+                <div class <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                    <!--<a href="#online_to_offline"><i class="fa fa-bullseye"                    <h3>IN-HOUSE AND AGENCIES</h3>
+                    <p>We stream in-store data directly from your stores into andigital marketing experts - whether in-house teams or external agencies - can now optimise your digital ad spend and strategy across all sales channels taking into account in-store data alongside o                    <div class="divide30"></div>
+                    <!--<p><a href="#" class="btn btn-theme-dark btn-lg">Learn More</a></p>-->
+                    <span class="section-line"></span>
+                </div>
+                <!--service box-->
+            </div>
+            <div class="divide50"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 margin20">
+                        <div style="height: 160px;"></div>
+                        <h3 class="heading">SOME OFFLINE CONVERSION STATS OF OUR CLIENTS:</h3>
+                        <p>
+                            <big style="font-weight: bold;">40%</big> of sales attributed to Facebook ads came from in-store.<br><br>
+                            <big style="font-weight: bold;">24x</big> Return-On-Ad-Spend of Google ads generated in-store.<br><br>
+                            <big style="font-weight: bold;">2.5x</big> higher Google ads ROI offline compared to online.<br><br>
+                            <big style="font-weight: bold;">752%</big> ROI of Facebook ads with objective to convert in-store.<br><br>
+                            <big style="font-weight: bold;">80%</big> match rate of in-store identified customers on Facebook.<br>
+                        </p>
+                        <p>
+                            <button type="button" class="btn btn-theme-dark btn-lg basic" data-toggle="modal" data-target="#bookDemoModal">Get in touch</button>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/facebook_ad.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <!--about intro-->
+            </div>
+            <!--service col-->
+            <div class="col-md-12 margin20">
+                <div class="service-box text-center wow animated fadeInLeft animated" data-wow-delay="0.6s">
+                    <div class="divide50"></div>
+                    <div id="basic-modal-content">
+                        <div class=" alert-success alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            Thank you for your message, we will be in contact shortly.
+                        </div>
+                        <h3>Contact Us</h3>
+                        <p>Get in contact with us for a quick and easy install - you could start offering paperless receipts today. It works with your existing Register, Till or EPOS</p>
+                        <form action="/business" method="POST">
+                            <p>Name:<input type="text" class="form-control" placeholder="Name"></p>
+                            <p>Company:<input type="text" class="form-control" placeholder="Company name"></p>
+                            <p>Phone:<input type="text" class="form-control" placeholder="Phone number"></p>
+                            <p>E-mail:<input type="text" class="form-control" placeholder="E-mail address"></p>
+                            <p>POS Software:<input type="text" class="form-control" placeholder="POS provider and version"></p>
+                            <p>Message:<textarea class="form-control" rows="4" placeholder="Enter message"></textarea></p>
+                            <br>
+                            <input class="btn btn-theme-dark btn-lg basic" type="Submit">
+                        </form>
+                    </div>
+                    <span class="section-line"></span>
+                </div>
+                <!--service box-->
+            </div>
+            <!--service col-->
+        </div>
+    </div>
+    <!--services section 2 end-->
+    <section class="product-img2 parralex" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 margin20 facts-in">
+                    <!--<h3><i class="fa fa-image"></i><span class="counter">22,128,145</span></h3>
+                        <h4>Retail Transactions</h4>
+                        <h3><i class="fa fa-image"></i><span class="counter">146,000,000</span></h3>
+                        <h4>Retailers and Brands</h4>-->
+                </div>
+                <!--facts in-->
+                <div class="col-md-6 margin20 facts-in">
+                    <!--<h3><i class="fa fa-users"></i><span class="counter">9,921,621</span></h3>
+                        <h4>Customer Responses</h4>
+                        <h3><i class="fa fa-image"></i><span class="counter">250</span></h3>
+                        <h4>Different Point of Sales</h4>-->
+                </div>
+                <!--facts in-->
+            </div>
+        </div>
+    </section>
+    <!--fun facts-->
+    <!--<div class="divide00"></div>-->
+    <!--<a name="online_to_offline"></a>
+        <section id="services-bg-wrap" style="padding-bottom: 0 ! important;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 hidden-sm wow animated fadeInLeft">
+                        <img src="img/digital_receipt_product.jpg" class="img-responsive" alt="mockup">
+                    </div>
+                    <div class="col-md-8  col-xs-12 service-3-meta">
+                        <h1 class="wow animated fadeInDownfadeInRight"><span class="colored-text">Online to offline </span>conversion</h1>
+                        <div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-info">
+                                <h4>Any Point of Sale</h4>
+                                <p>
+                                    Our application is non-intrusive and requires no change to your existing hardware or EPOS solution. It can be remotely deployed across all of your Point of Sale locations enabling you to start linking your online campiagns to offline transactions.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+    <!--<div class="services-box margin30 wow animated fadeInRight">
+                            <!--<div class="services-box-icon">
+                                <i class="fa fa-twitter"></i>
+                            </div>-->
+    <!--services icon-->
+    <!-- <div class="services-box-info">
+                                <h4>Tie online to offline</h4>
+                                <p>
+                                    Break the barrier between the online and offline channels. Run promotions and campaigns from your online platform, and in real-time allow your customers to redeem them in-store.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+    <!--<div class="services-box margin30 wow animated fadeInRight">
+                            <!--<div class="services-box-icon">
+                                <i class="fa fa-code"></i>
+                            </div>-->
+    <!--services icon-->
+    <!--<div class="services-box-info">
+                                <h4>Cross-channel attribution</h4>
+                                <p>
+                                    Measure the performance and Return of Investment of online campaigns by linking them to in-store transactions.
+                                </p>
+                            </div>
+                            <div class="divide30"></div>
+                            <div id="basic-modal">
+                                <p><a href="#" class="btn btn-theme-dark btn-lg basic">Get in touch</a></p>
+                            </div>
+                            <div id="basic-modal-content">
+                            <div class=" alert-success alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                Thank you for your message, we will be in contact shortly.
+                            </div>
+                                <h3>Contact Us</h3>
+                                <p>Get in contact with us for a quick and easy install - you could start offering paperless receipts today. It works with your existing Register, Till or EPOS</p>
+                                <form action="/business" method="POST">
+                                <p>Name:<input type="text" class="form-control" placeholder="Name"></p>
+                                <p>Company:<input type="text" class="form-control" placeholder="Company name"></p>
+                                <p>Phone:<input type="text" class="form-control" placeholder="Phone number"></p>
+                                <p>E-mail:<input type="text" class="form-control" placeholder="E-mail address"></p>
+                                <p>POS Software:<input type="text" class="form-control" placeholder="POS provider and version"></p>
+                                <p>Message:<textarea class="form-control" rows="4" placeholder="Enter message"></textarea></p>
+                            <br>
+                            <button class="btn btn-theme-dark btn-lg basic" type="button">Go</button>
+                            </form>
+                            </div>
+                            </div>
+                            <!-- preload the images -->
+    <!--<div style='display:none'>
+                                <img src='img/basic/x.png' alt='' />
+                            </div>
+                        </div><!--service box-->
+    <!-- </div>
+                </div>
+            </div>
+        </section><!--services with the showcase mockups-->
+    <!--<section class="fun-fact-wrap parallax" data-stellar-background-ratio="0.5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="center-heading">
+                                    <h2>Dear Technology Providers,</h2>
+                                    <p class="lead">
+                                        We are a technology agnostic business. If you see value in what we do, please get in touch today so we can jointly help retailers unlock and action brick-and-mortar data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section><!--fun facts-->
+    <a name="partners"></a>
+    <section id="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-heading">
+                        <h2>We help companies working with retailers access in-store data</h2>
+                        <!--<span class="center-line"></span>-->
+                        <br /><br />
+                        <p class="lead">
+                            We are a technology agnostic business helping companies working with our own clients or other retailers to bring in-store data into their own solutions. <br><br>Many businesses, ranging from CRM and ratings &amp; reviews companies to advertising or analytics platforms, trust our software to stream in-store data into their systems.<br><br>Get in touch if you need to add offline data to your solution.
+                        </p>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary btn-lg basic" data-toggle="modal" data-target="#bookDemoModal">
+                                Partner with us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--center heading row-->
+    </section>
+    <!--clients carousel end-->
+    <a name="about"></a>
+    <div class="divide40"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="center-heading">
+                    <h1 class="text-center"><span class="colored-text">Meet the Team</span></h1>
+                    <p>eyos started in 2009 in London as the first independent digital receipt provider in Europe. We now help some of the best retailers in the world link shoppers to purchases and connect the information to their wider data and partner ecosystems.</br></br>Everyone in our team is passionate about what we do, and we are lucky to work amongst great people with very complementary skill sets developing some of the best solutions around the globe. Our people have developed global customer retention programmes, implemented complex data analytics schemes, ran retail and technology businesses, invented the click-and-collect concept, designed software security systems for banks and governments and have done many more exciting things, which form the foundation for the great eyos team spirit and our focus on delivering relevant and powerful in-store data capture and connector products for our clients.</p>
+                </div>
+                <!--center-heading-->
+            </div>
+        </div>
+        <!--row-->
+        <!--<div class="row">
+            <div class="col-md-12">
+                <div class="center-heading">
+                    <div class="footer-col">
+                        <ul class="list-inline f2-work">
+                            <li data-toggle="popover" title="Alexander Kayser" data-content="Before co-founding eyos in 2009 Alexander worked at Deutsche Bank, eCircle (now Teradata) and Monitor Group. He runs the business side of eyos and spends his spare time on the tennis court or ski slopes." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/kayseralexander"><img src="img/team/AlexanderKayser.jpg" class="img-responsive" alt="Alexander"></a></li>
+                            <li data-toggle="popover" title="Richard Druce" data-content="Richard co-founded eyos and is the architect of our technology. His background in designing security systems for Catlin, Ricoh, banks and governments drives the secure architecture of our own technology. A keen outdoors sportsman, he's lucky to be based in our Sydney office." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/richarddruce"><img src="img/team/RichardDruce.jpg" class="img-responsive" alt="Richard"></a></li>
+                            <li data-toggle="popover" title="Dawid Humbla" data-content="As a self-confessed problem solver, Dawid studied Artifical Intelligence and oversees the powers of our cloud engine if he is not busy tinkering with the latest technologies." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/dawidhumbla"><img src="img/team/DawidHumbla.jpg" class="img-responsive" alt="Dawid"></a></li>
+                            <li data-toggle="popover" title="Patrick Murray" data-content="With a passion for creating systems, Patrick is part of our excellent team of engineers. He is based at our Sydney office and has been coding for many years, now working for eyos helping to develop and maintain our software." data-placement="top" data-trigger="hover" data-container="body"><a href="https://au.linkedin.com/pub/patrick-murray/ba/508/624"><img src="img/team/PatrickMurray.jpg" class="img-responsive" alt="Dawid"></a></li>
+                            <li data-toggle="popover" title="Christopher Hannigan" data-content="Chris has experience of working with various retailers within the market. As part of the Business Development team, Chris works closely with our new and existing clients. On the outside, Chris can be found watching football and attending festivals." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/chris-hannigan-8441b618/"><img src="img/team/ChrisHannigan.jpg" class="img-responsive" alt="Chris"></a></li>
+                            <li data-toggle="popover" title="Adam Short" data-content="Adam has tinkered around with technology since he was young. When not working on the latest eyos features in our lab, Adam is likely to be found at the table tennis table." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/shortadam/en"><img src="img/team/AdamShort.jpg" class="img-responsive" alt="Adam"></a></li>
+                            <li data-toggle="popover" title="Simon Harris" data-content="With a passion for solution sales, Simon has worked at several leading location and analytics SaaS vendors. Simon looks after our new business and out of hours you will find him running and watching Sky Sports." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/simonharris17/"><img src="img/team/SimonHarris.jpg" class="img-responsive" alt="Simon"></a></li>
+                            <li data-toggle="popover" title="Silviu Marcu" data-content="With a background in mathematics and programming, Silviu started writing code way before joining eyos. Now, he is part of our engineering team, tackling difficult problems while working with the latest cloud technologies." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/silviu-marcu/"><img src="img/team/SilviuMarcu.png" class="img-responsive" alt="Silviu"></a></li>
+                            <li data-toggle="popover" title="Raaqim Kabir" data-content="Raaqim has experience of working with clients to deliver quality assurance across multiple streaming and web platforms. As part of the software support team, Raaqim engages with our clients and helps deliver solutions across our eyos applications. Outside of work, Raaqim enjoys attending rock gigs and playing cricket." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/raaqim-kabir-9b8b6337/"><img src="img/team/RaaqimKabir.png" class="img-responsive" alt="Raaqim"></a></li>
+                            <li data-toggle="popover" title="Clinton Mead" data-content="Clinton enjoys writing flexible and reliable software components that find new uses beyond their original intention. In his free time, he's a football goalkeeper, enjoys watching Formula 1, and has an interest in space travel." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/clintonmead/"><img src="img/team/ClintonMead.png" class="img-responsive" alt="Clinton"></a></li>
+                            <li data-toggle="popover" title="Anthony O'Brien" data-content="Anthony has loved technology since he was little and funnels that love into every line of code he writes. When he's not programming, you will find him watching movies or listening to music." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/anthony-o-brien-510406150/"><img src="img/team/AnthonyOBrien.png" class="img-responsive" alt="Anthony"></a></li>
+                            <li data-toggle="popover" title="Benjamin Chilcott" data-content="Benj has been an advisor and NED for eyos since day one. For the last fifteen years Benj has run a consultancy, focusing on business growth for clients like Shell Retail, Adidas, Philips, Wickes and others – whenever possible Benj helps coach his sons' local football and cricket teams" data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/benjaminchilcott"><img src="img/team/BenjaminChilcott.jpg" class="img-responsive" alt="Benjamin"></a></li>
+                            <li data-toggle="popover" title="Eamonn Quinn" data-content="Eamonn was the Marketing Director at Superquinn before his family sold the supermarket chain to Musgrave. He is an expert in building successful businesses, a 'Dragon in the Den' and enjoys racing his bike across the Irish hills." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/eamonndquinn"><img src="img/team/EamonnQuinn.jpg" class="img-responsive" alt="Benj"></a></li>
+                            <li data-toggle="popover" title="Sophie Albizua" data-content="Passionate about the digital revolution, Sophie left her City career at Goldman Sachs and in private equity to start boutique digital consultancy eNova. When not busy managing her business or talking at conferences, Sophie can be found with her family and exploring the world." data-placement="top" data-trigger="hover" data-container="body"><a href="https://uk.linkedin.com/pub/sophie-albizua/6/5a/b3/en"><img src="img/team/SophieAlbizua.jpg" class="img-responsive" alt="Sophie"></a></li>
+                            <li data-toggle="popover" title="Andy Morrey" data-content="Andy is a houshold name in the retail and multichannel industry ever since he invented 'Click and Collect'. He headed up eCommerce divisons at Norwich Union, Marks and Spencer and Argos and co-founded eNova with Sophie." data-placement="top" data-trigger="hover" data-container="body"><a href="https://uk.linkedin.com/pub/andy-morrey/0/99/353/en"><img src="img/team/AndyMorrey.jpg" class="img-responsive" alt="Andy"></a></li>
+                            <li data-toggle="popover" title="Laura Wynch" data-content="Always mingling with the Old Street roundabout crowd, Laura is eNova’s innovation champion and longest standing employee. An ex buyer and consultant, she now works alongside Sophie and Andy, helping her retail clients develop their digital ambitions. Laura loves travelling, politics, and all things digital." data-placement="top" data-trigger="hover" data-container="body"><a href="https://uk.linkedin.com/pub/laura-wynch/22/158/22a/en"><img src="img/team/LauraWynch.jpg" class="img-responsive" alt="Laura"></a></li>
+                            <li data-toggle="popover" title="Mark Adams" data-content="If someone knows how to effectively build multi-channel propositions, it is Mark. In his own company Portaltech, one of the global top hybris Partners, Mark was the Sales &amp; Marketing Director. Mark loves sailing." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/adamsmp/en"><img src="img/team/MarkAdams.jpg" class="img-responsive" alt="Mark"></a></li>
+                            <li data-toggle="popover" title="Paul Tough" data-content="Paul co-founded Portaltech with Mark and Andrew and has built successful software and services businesses over the years where he was responsible as the CTO or COO." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/paultough/en"><img src="img/team/PaulTough.jpg" class="img-responsive" alt="Paul"></a></li>
+                            <li data-toggle="popover" title="Andrew Walker" data-content="Andrew has 20+ years experience in the eCommerce/ software services industry. Co-founding Portaltech from start-up to multi award winning, eCommerce business with a trade sale in 2014. He enjoys kitesurfing and running on the New Forest." data-placement="top" data-trigger="hover" data-container="body"><a href="https://www.linkedin.com/in/andrewmwalker/en"><img src="img/team/AndrewWalker.jpg" class="img-responsive" alt="Benj"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--center-heading
+            </div>
+        </div>-->
+        <!--row-->
+    </div>
+    <!--recent work-->
+    <div class="divide20"></div>
+    <a name="contact"></a>
+    <footer id="footer">
+        <div class="container">
+            <div class="yamm-content">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3 class="heading">EMEA</h3>
+                        <div class="mega-contact">
+                            <p><strong><i class="fa fa-phone"></i></strong>+44 20 8099 5690</p>
+                            <p><strong><i class="fa fa-map-marker"></i></strong><a href="https://goo.gl/maps/Uesa62w82s2mZDCc6" target="_blank">20 St Thomas Street, London SE1 9RS, UK</a></p>
+                            <p><strong><i class="fa fa-envelope"></i></strong><a href="mailto:getintouch@eyos.com">getintouch@eyos.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="heading">Asia &amp; Australasia</h3>
+                        <p>
+                        </p>
+                        <div class="mega-contact">
+                            <p><strong><i class="fa fa-phone"></i></strong>+61 242 048 102</p>
+                            <p><strong><i class="fa fa-envelope"></i></strong><a href="mailto:getintouch@eyos.com">getintouch@eyos.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="heading">Americas</h3>
+                        <p>
+                        </p>
+                        <div class="mega-contact">
+                            <p><strong><i class="fa fa-phone"></i></strong>+44 20 8099 5690</p>
+                            <p><strong><i class="fa fa-envelope"></i></strong><a href="mailto:getintouch@eyos.com">getintouch@eyos.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="display: none;">
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="footer-col">
+                        <h3>About eyos</h3>
+                        <p>
+                            We started helping retailers digitise receipts in 2009. We understand the importance of brand perception for retailers and our focus is enhancing theirs not our own. We've helped small and large businesses in the US, UK and Australia providing a useful piece in the transition to multi-channel retailers. The receipts are all custom designed with integrated social media and real time feedback and provide an effective bridge between online offline retail spaces. For shoppers the option to receive a digital receipt is just a better service making returns, warranties and expenses simple. And it's good for the environment.
+                        </p>
+                        <ul class="list-inline social-1">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--footer col-->
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="footer-col">
+                        <h3>Contact</h3>
+                        <ul class="list-unstyled contact">
+                            <li>
+                                <p><strong><i class="fa fa-envelope"></i> Email Us:</strong> <a href="#">getintouch@eyos.com</a></p>
+                            </li>
+                            <li>
+                                <p><strong><i class="fa fa-phone"></i> Phone UK:</strong> 0845 544 0803</p>
+                            </li>
+                            <li>
+                                <p><strong><i class="fa fa-phone"></i> Phone Aus:</strong> 0242 048 102</p>
+                            </li>
+                            <li>
+                                <p><strong><i class="fa fa-phone"></i> Phone International:</strong> +44 20 8099 5690</p>
+                            </li>
+                            <li>
+                                <p><strong><i class="fa fa-map-marker"></i> Address UK:</strong>167 City Road, London, EC1V 1AW, UK</p>
+                            </li>
+                            <li>
+                                <p><strong><i class="fa fa-map-marker"></i> Address Aus:</strong>305/15 Lime St, Sydney, NSW 2000</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--footer col-->
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="footer-col">
+                    </div>
+                </div>
+                <!--footer col-->
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="footer-col">
+                        <h3>Newsletter</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam,
+                        </p>
+                        <form role="form" class="subscribe-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter email to subscribe">
+                                <span class="input-group-btn">
+                                    <button class="btn  btn-theme-dark btn-lg" type="submit">Ok</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--footer col-->
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div>
+                        <br />
+                        <span>&copy; <span class="eyos-years"></span> eyos Ltd</span>
+                        <br />
+                        <a href="/frontend">Retailer Login</a>
+                        <br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--default footer end here-->
+    <!-- Modal -->
+    <div class="modal fade" id="bookDemoModal" tabindex="-1" role="dialog" aria-labelledby="bookDemoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <input type="hidden" name="oid" value="00D1l0000008jHW">
+                <input type="hidden" name="retURL" value="https://www.eyos.com/">
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                <!--  these lines if you wish to test in debug mode.                          -->
+                <!--  <input type="hidden" name="debug" value=1>-->
+                <!--  <input type="hidden" name="debugEmail" value="eyos@weare4c.com">-->
+                <!--  ----------------------------------------------------------------------  -->
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="bookDemoLabel">Contact Us</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="first_name">First Name:</label><input id="first_name" maxlength="40" class="form-control" name="first_name" size="20" type="text" required="true"/><br>
+                    <label for="last_name">Last Name:</label><input id="last_name" maxlength="80" class="form-control" name="last_name" size="20" type="text" required="true"/><br>
+                    <label for="email">Email:</label><input id="email" maxlength="80" name="email" class="form-control" size="20" type="email" required="true"/><br>
+                    <label for="title">Title:</label><input id="title" maxlength="80" name="title" class="form-control" size="20" type="text" required="true"/><br>
+                    <label for="company">Company:</label><input id="company" maxlength="40" class="form-control" name="company" size="20" type="text" required="true"/><br>
+                    <label for="phone">Phone:</label><input id="phone" maxlength="40" class="form-control" name="phone" size="20" type="tel" required="true"/><br>
+                    <label for="00N1l000001J4Rr">Message:</label><textarea  id="00N1l000001J4Rr" class="form-control" name="00N1l000001J4Rr" rows="3" type="text" wrap="soft"></textarea><br>
+                    <input type="hidden" name="recordType" id="recordType" value="0121l0000005cqIAAQ">
+                    <input id="lead_source" name="lead_source" type="hidden" value="Website" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-theme-dark basic" role="submit">Submit</button>
+                    <span class="primary tr btn btn-default loader" style="display: none;">
+                        <img src="https://www.eyos.com/images/datahub_loading_small.gif" alt="Working..." />
+                    </span>
+                    <span style="display: none;" class="primary tr btn btn-default success"><span class="glyphicon glyphicon-ok"></span></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="clientLogosModal" tabindex="-1" role="dialog" aria-labelledby="clientLogosLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" action="/business" method="POST">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="clientLogosLabel">Some of our clients include:</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/logos/mothercare.png" alt="Mothercare" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/dune.jpg" alt="DUNE London" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/PhaseEight.jpg" alt="PhaseEight" class="tile_logo" />
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Pandora.png" alt="Pandora.png" class="tile_logo" />
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/topshop.jpg" alt="TOPSHOP TOPMAN" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Duchamp.jpg" alt="Duchamp" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/DSM.jpg" alt="Dover Street Market" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Charles_Tyrwhitt.jpg" alt="Charles Tyrwhitt" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/aesop.jpg" alt="Aesop" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/BenSherman.png" alt="Ben Sherman" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/lkbennett.png" alt="L.K.Bennett" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/TwoSeasons.jpg" alt="Two Seasons" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Tumi.png" alt="TUMI" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/MossBros.png" alt="Moss Bros" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/MoltonBrown.png" alt="Molton Brown" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Element.jpeg" alt="Element" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/StoneIsland.png" alt="Stone Island" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/puma_logo.png" alt="Puma" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/LCS.png" alt="Le Coq Sportif" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Bloch.jpg" alt="BLOCH" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/LarryAdler.gif" alt="Larry Adler" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Telstra.gif" alt="Telstra" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/JohnSmedley.jpg" alt="John Smedley" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Henleys.jpg" alt="Henleys" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Timberland.png" alt="Timberland" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Glue.jpeg" alt="Glue" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Fonezone.gif" alt="Fonezone" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/gant_logo.png" alt="GANT" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Roman.png" alt="Roman Originals" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/radley_logo.png" alt="Radley" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/boden_logo.png" alt="Boden" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/TNF.png" alt="The North Face" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/VinceCamuto.jpg" alt="Vince Camuto" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Tog24.png" alt="Tog24" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Godfreys.png" alt="Godfreys" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/kit.jpg" alt="kit" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/MeccaCosmetica.jpg" alt="Mecca Cosmetica" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/adairs.png" alt="Adairs" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Saltrock.jpg" alt="Saltrock" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/Vivobarefoot.png" alt="Vivobarefoot" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/NHM_logo.jpg" alt="Natural History Museum" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/jewish_museum_NY_logo.jpeg" alt="Jewish Museum New York" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/steamer_trading_logo.png" alt="Steamer" class="tile_logo">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="img/logos/billabong_logo.jpg" alt="Billabong" class="tile_logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-theme-dark basic" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--scripts and plugins -->
+    <!--must need plugin jquery-->
+    <script src="javascript/jquery.min.js"></script>
+    <!--bootstrap js plugin-->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--easing plugin for smooth scroll-->
+    <script src="javascript/jquery.easing.1.3.min.js" type="text/javascript"></script>
+    <!--sticky header-->
+    <script type="text/javascript" src="javascript/jquery.sticky.js"></script>
+    <!--flex slider plugin-->
+    <script src="javascript/jquery.flexslider-min.js" type="text/javascript"></script>
+    <!--parallax background plugin-->
+    <script src="javascript/jquery.stellar.min.js" type="text/javascript"></script>
+    <!--very easy to use portfolio filter plugin -->
+    <script src="javascript/jquery.mixitup.min.js" type="text/javascript"></script>
+    <!--digit countdown plugin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <!--digit countdown plugin-->
+    <script src="javascript/jquery.counterup.min.js" type="text/javascript"></script>
+    <!--on scroll animation-->
+    <script src="javascript/wow.min.js" type="text/javascript"></script>
+    <!--owl carousel slider-->
+    <script src="javascript/owl.carousel.min.js" type="text/javascript"></script>
+    <!--popup js-->
+    <script src="javascript/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery.mb.YTPlayer.min.js" type="text/javascript"></script>
+    <!--customizable plugin edit according to your needs-->
+    <script src="javascript/custom.js" type="text/javascript"></script>
+    <script type='text/javascript' src='javascript/jquery.simplemodal.js'></script>
+    <script type='text/javascript' src='javascript/basic.js'></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10379873-1']);
+    _gaq.push(['_setDomainName', '.yReceipts.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script>
+    window.addEventListener('load', function() {
+
+        jQuery('button:contains("More Clients")').click(function() {
+            _gaq.push(['_trackEvent', 'button', 'click', 'more clients']);
+        });
+
+        jQuery('#email_receipt_form button:contains("Send")').click(function() {
+            _gaq.push(['_trackEvent', 'button', 'click', 'email subscription']);
+        });
+
+
+        jQuery('[data-target="#bookDemoModal"]:contains("Get in touch")').click(function() {
+            var label = jQuery(this).prev().prev().text();
+            _gaq.push(['_trackEvent', 'Get in touch', 'click', label]);
+        });
+
+
+        jQuery('a:contains("Learn More")').click(function() {
+            _gaq.push(['_trackEvent', 'button', 'click', 'learn more']);
+        });
+
+        jQuery('button:contains("Partner with us")').click(function() {
+            _gaq.push(['_trackEvent', 'button', 'click', 'partner with us']);
+        });
+
+        jQuery('#contactUsForm button:contains("Submit")').click(function() {
+            _gaq.push(['_trackEvent', 'contact', 'click', 'submit']);
+        });
+    });
+    </script>
+    <!-- Google Code for Remarketing Tag -->
+    <!--
+        Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+        -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1012131093;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1012131093/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+</body>
+
+</html>

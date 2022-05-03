@@ -1,0 +1,439 @@
+{% set translations = {
+    "nl_NL": {
+            "date_of_purchase": "Aankoopdatum:",
+            "transaction_number": "Transactienummer:",
+            "salesperson": "Verkoper:",
+            "store": "Winkel:",
+            "till": "Tot:",
+            "item_id": "Item-ID",
+            "description": "Beschrijving",
+            "quantity": "Hoeveelheid",
+            "price": "Prijs",
+            "subtotal": "Subtotaal:",
+            "discount": "Korting",
+            "discount_amount": "Bedrag",
+            "net_amount": "Netto bedrag",
+            "tax_rate": "BTW",
+            "taxable_amount": "Btw-grondslag",
+            "tax_paid": "Btw betaald",
+            "total": "Totaal:",
+            "tender_type": "Betaalwijze",
+            "tender_amount": "Bedrag",
+            "Thankyou_1": "Het hele KENZO-team dankt u voor uw vertrouwen en hoopt dat u volledig tevreden bent met uw aankopen.\nWij blijven beschikbaar voor al uw vragen.",
+            "Thankyou_2": "Hieronder vindt u uw e-ticket.",
+            "Thankyou_3": "Tot binnenkort,",
+            "cta_1": "WINKELS",
+            "cta_2": "MANNEN",
+            "cta_3": "DAMES",
+            "cta_4": "ACCESSOIRES",
+            "tc_title": "RETOUR &amp; TERUG BETAAL BELEID",
+            "tc_1": "De artikelen kunnen binnen 1 maand geruild worden, in deze winkel alleen op vertoon van de bon. Elk restitutieverzoek wordt binnen 14 dagen na de aankoopdatum vermeld op de kassabon ingediend.",
+            "tc_2": "Restitutie vindt alleen plaats via de betaalmethode die voor de aankoop is gebruikt. Artikelen moeten gelabeld, ongebruikt en in hun originele verpakking worden geretourneerd. Gewijzigde artikelen kunnen niet worden geretourneerd of geruild.",
+            "tc_3": "E-commerce aankopen kunnen niet geretourneerd worden in de winkel.",
+            "tc_4": "CREDIT NOTES zijn 1 jaar geldig vanaf hun uitgiftedatum en kunnen worden gebruikt in Nederland, met uitzondering van e-commerce, warenhuizen en franchises.",
+            "tc_5": "CADEAUBONNEN zijn 1 jaar geldig vanaf de aankoopdatum en kunnen worden gebruikt in Nederland, met uitzondering van e-commerce, warenhuizen en franchises.",
+                    "oc_1": "De artikelen kunnen binnen 1 maand geruild worden, in
+    deze winkel alleen op vertoon van de bon. Elk restitutieverzoek wordt binnen 14 dagen na de aankoopdatum vermeld op de kassabon ingediend.",
+                    "oc_2": "Restitutie vindt alleen plaats via de betaalmethode die voor de aankoop is gebruikt.Artikelen moeten gelabeld, ongebruikt en in
+    hun originele verpakking worden geretourneerd. Gewijzigde artikelen kunnen niet worden geretourneerd of geruild.",
+                    "oc_3": "Online aankopen kunnen in de winkel niet worden geretourneerd.",
+                    "oc_4": "CHEQUES worden niet geaccepteerd.CREDIT NOTES zijn 1 jaar geldig vanaf hun uitgiftedatum en kunnen worden gebruikt in Nederland, met uitzondering van e-commerce, warenhuizen en franchises.",
+                    "oc_5": "CADEAUBONNEN zijn 1 jaar geldig vanaf de aankoopdatum en kunnen worden gebruikt in
+    Nederland, met uitzondering van e-commerce, warenhuizen en franchises."
+        },
+        "fr_BE": {
+            "date_of_purchase": "Date d\u2019achat\u00a0:",
+            "transaction_number": "Num\u00e9ro de transaction\u00a0:",
+            "salesperson": "Vendeur\u00a0:",
+            "store": "Store\u00a0:",
+            "till": "Caisse\u00a0:",
+            "item_id": "ID article",
+            "description": "Description",
+            "quantity": "Quantité",
+            "price": "Prix",
+            "subtotal": "Sous-total\u00a0:",
+            "discount": "Remise",
+            "discount_amount": "Montant",
+            "net_amount": "Montant net",
+            "tax_rate": "TVA",
+            "taxable_amount": "Montant HT",
+            "tax_paid": "Montant TVA",
+            "total": "Total\u00a0:",
+            "tender_type": "Mode(s) de paiement",
+            "tender_amount": "Montant",
+            "Thankyou_1": "Toute l\u2019\u00e9quipe KENZO vous remercie de votre confiance et esp\u00e8re que vos achats vous donneront enti\u00e8re satisfaction.\nNous restons disponibles pour toute question.",
+            "Thankyou_2": "Ci-dessous votre e-ticket.",
+            "Thankyou_3": "A bient\u00f4t,",
+            "cta_1": "NOS BOUTIQUES",
+            "cta_2": "HOMME",
+            "cta_3": "FEMME",
+            "cta_4": "ACCESSOIRES",
+            "tc_title": "POLITIQUE D\u2019ECHANGE ET DE REMBOURSEMENT",
+            "tc_1": "Les articles peuvent être échangés sous un mois, dans la boutique KENZO Bruxelles uniquement, sur présentation du ticket de caisse. Toute demande de remboursement devra être effectuée dans un délai de 14 jours à compter de la date d’achat mentionnée sur le ticket de caisse.",
+            "tc_2": "Le remboursement sera effectué selon le même mode de paiement que celui utilisé lors de l’achat. Les articles doivent être restitués étiquetés, non utilisés et dans leur emballage d’origine. Les articles retouchés ne sont ni repris ni échangés.",
+            "tc_3": "Les achats e-commerce ne peuvent \u00eatre retourn\u00e9s en boutique.",
+            "tc_4": "LES AVOIRS sont valables pour une période de 1 an à compter de leur date de création et utilisables dans la boutique KENZO Bruxelles uniquement, hors e-commerce, grands magasins et concessions.",
+            "tc_5": "LES BONS CADEAUX sont valables pour une durée de 1 an à compter de la date d’achat et utilisables dans dans la boutique KENZO Bruxelles uniquement, hors e-commerce, grands magasins et concessions.",
+                    "oc_1": "",
+                    "oc_2": "",
+                    "oc_3": "",
+                    "oc_4": "",
+                    "oc_5": ""
+        },
+        "it_IT": {
+            "date_of_purchase": "Data di acquisto:",
+            "transaction_number": "Numero di transazione:",
+            "salesperson": "Venditore:",
+            "store": "Negozio:",
+            "till": "Fino:",
+            "item_id": "Numero identificativo dell'oggetto",
+            "description": "Descrizione",
+            "quantity": "Quantità",
+            "price": "Prezzo",
+            "subtotal": "Totale parziale:",
+            "discount": "Sconto",
+            "discount_amount": "Importo",
+            "net_amount": "Netto",
+            "tax_rate": "IVA",
+            "taxable_amount": "Importo al netto d’imposta",
+            "tax_paid": "Tassa pagata",
+            "total": "Totale:",
+            "tender_type": "Modalità di pagament",
+            "tender_amount": "Importo",
+            "Thankyou_1": "Tutto il team KENZO ti ringrazia per la tua fiducia e spera che i tuoi acquisti ti diano piena soddisfazione.\nRestiamo a disposizione per qualsiasi domanda.",
+            "Thankyou_2": "Trova il tuo biglietto elettronico qui sotto.",
+            "Thankyou_3": "\nA presto,",
+            "cta_1": "I NEGOZI",
+            "cta_2": "UOMINI",
+            "cta_3": "DONNE",
+            "cta_4": "ACCESSORI",
+            "tc_title": "POLITICA PER RESI E RIMBORSI",
+            "tc_1": "Gli articoli acquistati possono essere cambiati entro 1 mese presso tutti i punti vendita ufficiali KENZO in Italia (ad eccezione degli outlet, department store e negozi in franchising) previa presentazione dello scontrino fiscale.  Eventuali rimborsi devono essere richiesti entro 14 giorni dalla data di acquisto riportata sullo scontrino fiscale.",
+            "tc_2": "Il rimborso sarà effettuato unicamente tramite lo stesso metodo di pagamento utilizzato per l’acquisto. Gli articoli devono essere resi etichettati e nella loro confezione originale, senza che siano stati utilizzati. Gli articoli che hanno subito riparazioni non potranno essere resi o rimborsati.",
+            "tc_3": "Gli acquisti effettuati online non possono essere resi presso il punto vendita.",
+            "tc_4": "Le NOTE DI CREDITO hanno validità di 1 anno dalla data di emissione e possono essere utilizzate in tutti i punti vendita italiani, ad esclusione dell’e-commerce, dei department store e dei punti vendita in franchising.",
+            "tc_5": "I BUONI REGALO hanno validità di 1 anno dalla data di acquisto e possono essere utilizzati presso tutti i punti vendita italiani, ad esclusione dell’e-commerce, department store e punti vendita in franchising.",
+                    "oc_1": "",
+                    "oc_2": "",
+                    "oc_3": "",
+                    "oc_4": "",
+                    "oc_5": ""
+        },
+        "es_ES": {
+            "date_of_purchase": "Fecha de compra:",
+            "transaction_number": "N\u00famero de transacci\u00f3n:",
+            "salesperson": "Vendedor:",
+            "store": "Tienda:",
+            "till": "\nHasta:",
+            "item_id": "\nIdentificaci\u00f3n del art\u00edculo",
+            "description": "\nDescripci\u00f3n",
+            "quantity": "Cantidad",
+            "price": "\nPrecio",
+            "subtotal": "\nTotal parcial:",
+            "discount": "\nDescuento:",
+            "discount_amount": "Importe:",
+            "net_amount": "Neto",
+            "tax_rate": "\nIVA",
+            "taxable_amount": "\nImporte antes de impuestos",
+            "tax_paid": "\nImpuesto Pagado",
+            "total": "Total:",
+            "tender_type": "Medio de pago",
+            "tender_amount": "Importe:",
+            "Thankyou_1": "Todo el equipo de KENZO le agradece su confianza y espera que sus compras le satisfagan plenamente.\nQuedamos a su disposición para cualquier información.",
+            "Thankyou_2": "Encontrará su boleto electrónico a continuación.",
+            "Thankyou_3": "\nHasta pronto,",
+            "cta_1": "TIENDAS",
+            "cta_2": "HOMBRE",
+            "cta_3": "MUJER",
+            "cta_4": "ACCESORIOS",
+            "tc_title": "POLÍTICA DE CAMBIO Y DEVOLUCIÓN",
+            "tc_1": "Los artículos se pueden cambiar en el plazo de 1 mes, en todas las tiendas oficiales KENZO en España (excepto outlets, grandes almacenes y franquicias), previa presentación del ticket de compra. Cualquier devolución se hará dentro de los 14 días posteriores a la fecha de compra mencionada en el recibo.",
+            "tc_2": "El reembolso se realizar\u00e1 utilizando el mismo m\u00e9todo de pago que se utiliz\u00f3 para la compra.\nLos art\u00edculos deben devolverse etiquetados, sin usar y en su embalaje original. Los art\u00edculos retocados no se devuelven ni cambian.",
+            "tc_3": "Las compras de comercio electr\u00f3nico no se pueden devolver en la tienda.",
+            "tc_4": "Los VALES DE CRÉDITO son válidos por 1 año a partir de su fecha de emisión y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias.",
+            "tc_5": "Los VALES DE REGALO son válidos por 1 año a partir de la fecha de compra y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias.",
+                    "oc_1": "Los artículos se pueden cambiar en el plazo de 1 mes, en todas las tiendas oficiales KENZO en outlets en España (La Roca Village o Las Rozas Village), previa presentación del ticket de compra. Cualquier devolución se hará dentro de los 14 días posteriores a la fecha de compra mencionada en el recibo.",
+                    "oc_2": "El reembolso sólo se realizará en la misma forma de pago utilizada para la compra. Los artículos deben devolverse etiquetados, sin usar y en su embalaje original. Los artículos alterados o dañados no se pueden cambiar ni devolver.",
+                    "oc_3": "Las compras online no se pueden devolver en tienda.",
+                    "oc_4": "No se aceptan CHEQUES. Los VALES DE CRÉDITO son válidos por 1 año a partir de su fecha de emisión y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias.",
+                    "oc_5": "Los VALES DE REGALO son válidos por 1 año a partir de la fecha de compra y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias."
+        },
+        "fr_FR": {
+            "date_of_purchase": "Date d\u2019achat\u00a0:",
+            "transaction_number": "Num\u00e9ro de transaction\u00a0:",
+            "salesperson": "Vendeur\u00a0:",
+            "store": "Store\u00a0:",
+            "till": "Caisse\u00a0:",
+            "item_id": "ID article",
+            "description": "Description",
+            "quantity": "Quantité",
+            "price": "Prix total",
+            "subtotal": "Sous-total\u00a0:",
+            "discount": "Remise",
+            "discount_amount": "Montant",
+            "net_amount": "Montant net",
+            "tax_rate": "TVA",
+            "taxable_amount": "Montant HT",
+            "tax_paid": "TVA pay\u00e9e",
+            "total": "Total TTC",
+            "tender_type": "M\u00e9thode de paiement",
+            "tender_amount": "Montant",
+            "Thankyou_1": "Toute l\u2019\u00e9quipe KENZO vous remercie de votre confiance et esp\u00e8re que vos achats vous donneront enti\u00e8re satisfaction.\nNous restons disponibles pour toute question.",
+            "Thankyou_2": "Ci-dessous votre e-ticket.",
+            "Thankyou_3": "A bient\u00f4t,",
+            "cta_1": "NOS BOUTIQUES",
+            "cta_2": "HOMME",
+            "cta_3": "FEMME",
+            "cta_4": "ACCESSOIRES",
+            "tc_title": "POLITIQUE D\u2019ECHANGE ET DE REMBOURSEMENT",
+            "tc_1": "Les articles peuvent \u00eatre \u00e9chang\u00e9s sous un mois, dans les boutiques \u00e0 enseigne KENZO en France (sauf outlets, grands magasins et concessions), sur pr\u00e9sentation du ticket de caisse. Toute demande de remboursement devra \u00eatre effectu\u00e9e dans un d\u00e9lai de 14 jours \u00e0 compter de la date d\u2019achat mentionn\u00e9e sur le ticket de caisse.",
+            "tc_2": "Le remboursement sera effectu\u00e9 selon le m\u00eame mode de paiement que celui utilis\u00e9 lors de l\u2019achat.\nLes articles doivent \u00eatre restitu\u00e9s \u00e9tiquet\u00e9s, non utilis\u00e9s et dans leur emballage d\u2019origine. Les articles retouch\u00e9s ne sont ni repris ni \u00e9chang\u00e9s.",
+            "tc_3": "Les achats e-commerce ne peuvent \u00eatre retourn\u00e9s en boutique.",
+            "tc_4": "LES AVOIRS sont valables pour une p\u00e9riode de 1 an \u00e0 compter de leur date de cr\u00e9ation et utilisables dans toutes les boutiques Kenzo en France, hors e-commerce, grands magasins et concessions.",
+            "tc_5": "LES BONS CADEAUX sont valables pour une dur\u00e9e de 1 an \u00e0 compter de la date d\u2019achat et utilisables dans toutes les boutiques Kenzo en France, hors e-commerce, grands magasins et concessions.",
+                    "oc_1": "Les articles peuvent être échangés sous un mois, dans l’un des outlets KENZO en France, sur présentation du ticket de caisse. Toute demande de remboursement devra être effectuée dans un délai de 14 jours à compter de la date d’achat mentionnée sur le ticket de caisse. Le remboursement sera effectué selon le même mode de paiement que celui utilisé lors de l’achat.",
+                    "oc_2": "Les articles doivent être restitués étiquetés, non utilisés et dans leur emballage d’origine. Les articles retouchés ne sont ni repris ni échangés.",
+                    "oc_3": "Les achats e-commerce ne peuvent être retournés en boutique.\nLes CHEQUES ne sont pas acceptés.",
+                    "oc_4": "LES AVOIRS sont valables pour une période de 1 an à compter de leur date de création et utilisables dans toutes les boutiques KENZO en France, hors e-commerce, grands magasins et concessions.",
+                    "oc_5": "LES BONS CADEAUX sont valables pour une durée de 1 an à compter de la date d’achat et utilisables dans toutes les boutiques KENZO en France, hors e-commerce, grands magasins et concessions."
+        },
+        "en_GB": {
+            "date_of_purchase": "Date of Purchase: ",
+            "transaction_number": "Transaction Number:",
+            "salesperson": "Salesperson: ",
+            "store": "Store: ",
+            "till": "Till:",
+            "item_id": "Item ID",
+            "description": "Description",
+            "quantity": "Quantity",
+            "price": "Price",
+            "subtotal": "Subtotal:",
+            "discount": "Discount",
+            "discount_amount": "Amount",
+            "net_amount": "Net Amount",
+            "tax_rate": "VAT",
+            "taxable_amount": "Taxable Amount",
+            "tax_paid": "VAT Paid",
+            "total": "Total:",
+            "tender_type": "Payment method",
+            "tender_amount": "Amount",
+            "Thankyou_1": "Thank you for shopping at KENZO.\nOur whole team hope your purchases will give you complete satisfaction and remain available for any questions.",
+            "Thankyou_2": "Here is your digital receipt.",
+            "Thankyou_3": "See you soon,",
+            "cta_1": "STORES",
+            "cta_2": "MEN",
+            "cta_3": "WOMEN",
+            "cta_4": "ACCESSORIES",
+            "tc_title": "EXCHANGE &amp; REFUND POLICY",
+            "tc_1": "Items can be exchanged within a month, in KENZO stores in the UK (except outlets, department stores and concessions), on presentation of the sales receipt. Any refund request must be made within 14 days of the date of purchase mentioned on the sales receipt.",
+            "tc_2": "The refund will be made using the same method of payment as that used for the purchase.\nItems must be returned labeled, unused and in their original packaging. Retouched items cannot be returned or exchanged.",
+            "tc_3": "E-commerce purchases cannot be returned in store.",
+            "tc_4": "CREDIT NOTES are valid for 1 year from their date of issuance and can be used in all stores in the UK, excluding ecommerce, department stores and franchises.",
+            "tc_5": "GIFT VOUCHERS are valid for 1 year from the date of purchase and can be used in all stores in the UK, excluding ecommerce, department stores and franchises.",
+                    "oc_1": "The items can be exchanged within 1 month, in this store only, upon presentation of
+    the receipt. Any refund request shall be issued within14 days following the date of
+    purchase mentioned on the receipt.",
+                    "oc_2": "Refunds will only be made to the method of
+    payment used for the purchase.\nItems must be returned labeled, unused, in their original packaging. Altered items cannot be returned or exchanged.",
+                    "oc_3": "Online purchases cannot be returned in store.",
+                    "oc_4": "Cheques are not accepted.CREDIT NOTES are valid for 1 year from their date of issuance and can be used in
+    all stores in the UK, excluding ecommerce, department stores and franchises.",
+                    "oc_5": "GIFT VOUCHERS are valid for 1 year from the date of purchase and can be used in
+    all stores in the UK, excluding ecommerce, department stores and franchises."
+        }
+    } %}
+    
+    {% set language = translations[locale if locale in translations else "en_GB"] %}
+    <mjml>
+      <mj-head>
+        <mj-breakpoint width="0px" />
+        <mj-raw>
+          <link href="https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/futura-pt.css?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D" rel="stylesheet" type="text/css">
+          </link>
+          <link href="https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/gitanlat-regular.css?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D" rel="stylesheet" type="text/css">
+          </link>
+        </mj-raw>
+      </mj-head>
+      <mj-body>
+    
+        <!-- HEADER/NAV -->
+        <mj-section>
+          <mj-column>
+            <mj-raw>{% if receipt['store']['external_id'] in ['566510', '565819', '565756', '563947', '557445', '516195'] %}</mj-raw>
+            <mj-image width="100px" src="https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-KENZO_300X100.jpg?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D"></mj-image>
+            <mj-raw>{% else %}</mj-raw>
+            <mj-image width="100px" src="https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-TAG-COULEUR-NO-FRAME-RVB.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D"></mj-image>
+            <mj-raw>{% endif %}</mj-raw>
+            <mj-navbar>
+              <mj-navbar-link href="https://www.kenzo.com/eu/fr/recherche-magasin" font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">{{ language['cta_1'] }}</mj-navbar-link>
+              <mj-navbar-link href="https://www.kenzo.com/eu/fr/hommes" font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">{{ language['cta_2'] }}</mj-navbar-link>
+              <mj-navbar-link href="https://www.kenzo.com/eu/fr/femmes" font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">{{ language['cta_3'] }}</mj-navbar-link>
+              <mj-navbar-link href="https://www.kenzo.com/eu/fr/accessoires-1" font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">{{ language['cta_4'] }}</mj-navbar-link>
+            </mj-navbar>
+            <mj-divider></mj-divider>
+    
+            <mj-image src="https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/TICKET_CAISSE_DIGITAL_D4.jpg?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D"></mj-image>
+    
+            <mj-divider></mj-divider>
+    
+            <mj-text font-size="18px" align="center" font-family="Gitan Latn, futura-pt, Times New Roman">{{ language['Thankyou_1'] }}
+              <br /><br />{{ language['Thankyou_2'] }}<br />{{ language['Thankyou_3'] }}
+            </mj-text>
+            <mj-divider></mj-divider>
+            <mj-text font-size="12px" align="left" font-family="Gitan Latn, futura-pt, Times New Roman" line-height="1.5">{{ language['date_of_purchase'] }} {{receipt.get_local_time().strftime('%d/%m/%Y')}}<br />{{ language['transaction_number'] }} {{ data['receipt']['transaction_number']['text'] }}<br />{{ data['store']['name'] }}</mj-text>
+            <mj-table font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">
+              <tr>
+                <th style="text-align: left; vertical-align: top; width: 20%;"></th>
+                <th style="text-align: left; vertical-align: top; width: 55%;">{{ language['description'] }}</th>
+                <th style="text-align: center; vertical-align: top; width: 10%;">{{ language['quantity'] }}</th>
+                <th style="text-align: right; vertical-align: top; width: 15%;">{{ language['price'] }}</th>
+              </tr>
+              <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+              <tr style="border-top: 1px solid #000000">
+                <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['item_alternate_id'][:12] }}</td>
+                <td style="text-align: left; vertical-align: top; width: 55%;">{{ sale_item['text'] }}</td>
+                <td style="text-align: center; vertical-align: top; width: 10%;">{{ sale_item['quantity']['value'] }}</td>
+                <td style="text-align: right; vertical-align: top; width: 15%;">{{ receipt.format_currency(sale_item['regular_price']['value']) }}</td>
+              </tr>
+    
+              <mj-raw>{% if sale_item['discount'] %}</mj-raw>
+              <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw>
+              <tr>
+    
+                <td colspan="3" style="text-align: right; vertical-align: top;">
+                  {{ discount['text'] }}&nbsp; &nbsp; {{ discount['reduction_percent']['value']|int }}%
+                </td>
+                <td style="text-align: right; vertical-align: top; width: 15%;">{{ format_currency(discount['amount']['value']) }}</td>
+              </tr>
+              <mj-raw>{% endfor %}</mj-raw>
+              <tr>
+                <td colspan="3" style="text-align: right; vertical-align: top;">
+                  {{ language['net_amount'] }}
+                </td>
+                <td style="text-align: right; vertical-align: top; width: 15%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+    
+              </tr>
+              <mj-raw>{% endif %}</mj-raw>
+              <mj-raw>{% endfor %}</mj-raw>
+            </mj-table>
+          </mj-column>
+        </mj-section>
+        <!-- END HEADER/NAV -->
+        <!-- DISCOUNTS -->
+        <mj-raw>{% if receipt['discount'] %}</mj-raw>
+        <mj-section>
+          <mj-column>
+            <mj-table font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">
+              <tr>
+                <th style="text-align: left; vertical-align: top;">{{ language['discount'] }}</th>
+                <th style="text-align: right; vertical-align: top;">{{ language['discount_amount'] }}</th>
+              </tr>
+              <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+              <tr style="border-top: 1px solid #000000">
+                <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+                <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+              </tr>
+              <mj-raw>{% endfor %}</mj-raw>
+            </mj-table>
+          </mj-column>
+        </mj-section>
+        <mj-raw>{% endif %}</mj-raw>
+        <!-- END DISCOUNTS -->
+    
+    
+        <!-- TOTAL -->
+        <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+        <mj-section>
+          <mj-column>
+            <mj-divider border-width="1px"></mj-divider>
+            <mj-table font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">
+              <tr>
+                <td align="left"><b>{{ language['total'] }}</b></td>
+                <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+              </tr>
+            </mj-table>
+            <mj-divider border-width="1px"></mj-divider>
+            <mj-raw>{% endif %}</mj-raw>
+            <mj-raw>{% if receipt['tax'] %}</mj-raw>
+            <mj-table font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">
+              <tr>
+                <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+                <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['tax_rate'] }}</th>
+                <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['taxable_amount'] }}</th>
+                <th style="text-align: right; vertical-align: top; width: 25%;">{{ language['tax_paid'] }}</th>
+              </tr>
+              <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+              <tr style="border-top: 1px solid #000000">
+                <td style="text-align: left; vertical-align: top; width: 25%;"></td>
+                <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['value']|int }}%</td>
+                <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+                <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+              </tr>
+              <mj-raw>{% endfor %}</mj-raw>
+              <mj-raw>{% endif %}</mj-raw>
+            </mj-table>
+            <mj-raw>{% if receipt['tender'] %}</mj-raw>
+            <mj-table font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">
+              <tr>
+                <th style="text-align: left; vertical-align: top;">{{ language['tender_type'] }}</th>
+                <th style="text-align: right; vertical-align: top;">{{ language['tender_amount'] }}</th>
+              </tr>
+              <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+              <tr style="border-top: 1px solid #000000">
+                <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+                <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+              </tr>
+              <mj-raw>{% endfor %}</mj-raw>
+            </mj-table>
+          </mj-column>
+        </mj-section>
+        <mj-raw>{% endif %}</mj-raw>
+        <!-- END TOTAL -->
+    
+        <!-- TAXES -->
+    
+        <!-- END TAXES -->
+    
+        <!-- END TENDER -->
+    
+        <!-- SECOND RECEIPT TEXT
+        <mj-section>
+          <mj-column>
+            <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+          </mj-column>
+        </mj-section>
+       END SECOND RECEIPT TEXT -->
+    
+        <!-- BARCODE -->
+        <mj-section>
+          <mj-column>
+            <mj-image width="300px" src="{{ barcode_url }}" />
+          </mj-column>
+        </mj-section>
+        <!-- END BARCODE -->
+    
+        <!-- CTA1 -->
+        <mj-section>
+          <mj-column>
+            <mj-raw>{% if receipt['store']['external_id'] in ['565756', '563947', '566510', '516195', '557445', '565696', '565819'] %}</mj-raw>
+            <mj-text font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">{{ language['tc_title'] }}<br /><br />{{ language['oc_1'] }}<br /><br />{{ language['oc_2'] }}<br /><br />{{ language['oc_3'] }}<br /><br />{{ language['oc_4'] }}<br /><br />{{ language['oc_5'] }}</mj-text>
+            <mj-raw>{% else %}</mj-raw>
+            <mj-text font-family="Gitan Latn, futura-pt, Times New Roman" font-size="12px">{{ language['tc_title'] }}<br /><br />{{ language['tc_1'] }}<br /><br />{{ language['tc_2'] }}<br /><br />{{ language['tc_3'] }}<br /><br />{{ language['tc_4'] }}<br /><br />{{ language['tc_5'] }}</mj-text>
+            <mj-raw>{% endif %}</mj-raw>
+          </mj-column>
+        </mj-section>
+        <!-- END CTA1 -->
+    
+    
+    
+        <!-- SOCIAL MEDIA -->
+        <mj-section>
+          <mj-column>
+            <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+              <mj-social-element src="https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/logo-instagram-noir.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D" href="https://www.instagram.com/kenzo/"></mj-social-element>
+            </mj-social>
+          </mj-column>
+        </mj-section>
+        <!-- END SOCIAL MEDIA -->
+      </mj-body>
+    </mjml>
