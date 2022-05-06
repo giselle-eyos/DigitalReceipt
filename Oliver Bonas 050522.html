@@ -232,7 +232,9 @@
             border-spacing: 0;
         }
 
-body > img {width:auto!important;}
+        body > img, .CToWUd {
+        width: auto !important;
+    }
 
         table,
         td {
@@ -260,7 +262,7 @@ body > img {width:auto!important;}
         img {
             border: 0;
             height: auto;
-            width: 100% !important;
+            /* width: 100% !important; */
             max-width: 500px !important;
             line-height: 100%;
             outline: none;
@@ -647,14 +649,10 @@ body > img {width:auto!important;}
 
         .ctaText {
             background-color: #E79B99;
-    color: #fff;
-    padding: 2em;
+            color: #fff;
+            padding: 2em;
         }
 
-        .ctaImage {
-            text-align: right;
-            background-position: center !important;
-        }
 
         .coupon {
             padding: 0.5em 0 2em;
@@ -769,13 +767,6 @@ body > img {width:auto!important;}
                 background:url({{ language['store']['banner'] }}) 0 0/contain no-repeat !important;
             }
 
-            .ctaText {
-                text-align: center;
-            }
-
-            .ctaImage {
-                background-position: center !important;
-            }
 
         }
 
@@ -1010,14 +1001,18 @@ body > img {width:auto!important;}
                                                             {% endif %}
                                                         </td>
                                                     </tr>
+                                                    {% if sale_item['discount']['amount']['value'] %}
                                                     {% for discount in sale_item['discount'] %}
+                                                    {% if discount['amount']['value'] != 0 %}
                                                     <tr>
                                                         <td class="description">
                                                             {{ format_currency(discount['amount']['value']) }}
-                                                            ( {{ discount['text'] }} )
                                                         </td>
                                                     </tr>
+                                                    {% endif %}
                                                     {% endfor %}
+                                                    {% endif %}
+
                                                     <tr>
                                                         <td class="price" valign="top">
 
@@ -1274,7 +1269,7 @@ body > img {width:auto!important;}
 
                     <!-- START CTA1 -->
                     <tr>
-                        <td class="cta tflex" style="padding:2em 0;">
+                        <td class="cta tflex py20">
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tbody>
                                     <tr class="thold">
@@ -1293,7 +1288,7 @@ body > img {width:auto!important;}
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <table class="w50p " cellpadding="0"
+                                                            <table class="w50p" cellpadding="0"
                                                                 cellspacing="0">
                                                                 <tbody>
                                                                     <tr>
