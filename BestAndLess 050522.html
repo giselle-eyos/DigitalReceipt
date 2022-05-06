@@ -324,7 +324,7 @@
         }
 
         .pb0 {
-            padding-bottom: 0;
+            padding-bottom: 0 !important;
         }
 
         .pb5 {
@@ -478,7 +478,10 @@
             vertical-align: top;
             padding-right: 1em;
         }
-
+        .greetingText {
+            padding-top:1rem;
+            padding-bottom:6rem;
+        }
         .greetingButton {
             width: 100%;
         }
@@ -549,6 +552,7 @@
         .description {
             text-align: left;
             font-size: 0.9em;
+            font-weight: normal!important;
         }
 
         .description2 {
@@ -585,8 +589,8 @@
         }
 
         .ctaText {
-            width: 60%;
-            padding-right: 1em;
+            width: 57%;
+            padding-right: 2em;
         }
 
         .ctaImage {
@@ -692,6 +696,10 @@
                 max-width: 55% !important;
             }
 
+            .greetingText {
+                padding-top:1rem;
+                padding-bottom:1rem;
+            }
             .banner {
 
                 background:url({{ language['store']['banner'] }}) 0 0/contain no-repeat !important;
@@ -785,7 +793,7 @@
                                     <th class="greeting tfoot">
                                         <table class="floatNone" width="100%" cellpadding="0" cellspacing="0">
                                             <tr>
-                                                <td class="py10">
+                                                <td class="greetingText">
                                                     {{ language['greeting']['dear'] }}<br /><br />
                                                     {{ language['greeting']['thankyou'] }}{{ data['store']['name'] }}.<br /><br />
                                                     {{ language['greeting']['body'] }}
@@ -812,6 +820,21 @@
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td class="storeDetailDescription">
+                                                    ABN 29 003 724 696
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailTitle">
+                                                    Email:
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="storeDetailDescription">
+                                                    customerservice@bestandless.com.au
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <td class="storeDetailTitle">
                                                     {{ language['store']['address'] }}
                                                 </td>
@@ -828,7 +851,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="storeDetailDescription">
+                                                <td class="storeDetailDescription pb0">
                                                     <a href="tel: {{receipt.business_location.phone_number}}">{{receipt.business_location.phone_number}}
                                                     </a>
                                                 </td>
@@ -853,7 +876,7 @@
                     <!-- START RECEIPT HEADER -->
                     <tr>
                         <td class="receiptIntro">
-                            {{ language['receipt']['intro'] }}
+                            {{ language['receipt']['intro'] }}<br/><br/>TAX INVOICE
                         </td>
                     </tr>
                     <!-- END RECEIPT HEADER -->
@@ -902,6 +925,7 @@
                                 </tr>
                                 {% endif %}
                                 {% for discount in sale_item['discount'] %}
+
                                 <tr>
                                     <td class="description">
                                         {{ nl2br(discount['text']) }}
@@ -1014,7 +1038,7 @@
                                 {% if tender['amount']['value'] %}
                                 <tr>
                                     <td class="description">
-                                        {{ tender['text'] }}
+                                        {{ tender['text'] }} {{ tender['card']['slip'] }}
                                     </td>
                                     <td class="price">
                                         {{ receipt.format_currency(tender['amount']['value']) }}
