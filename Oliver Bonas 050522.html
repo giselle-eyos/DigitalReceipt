@@ -1001,7 +1001,6 @@
                                                             {% endif %}
                                                         </td>
                                                     </tr>
-                                                    {% if sale_item['discount']['amount']['value'] %}
                                                     {% for discount in sale_item['discount'] %}
                                                     {% if discount['amount']['value'] != 0 %}
                                                     <tr>
@@ -1011,7 +1010,6 @@
                                                     </tr>
                                                     {% endif %}
                                                     {% endfor %}
-                                                    {% endif %}
 
                                                     <tr>
                                                         <td class="price" valign="top">
