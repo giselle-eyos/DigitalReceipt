@@ -1,0 +1,405 @@
+{% set translations = 
+    {
+        "en_GB": {
+            "store" : {
+                "show" : True,
+                "name" : "Cegid",
+                "href" : "#",
+                "logo" : {
+                    "href" : "#",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_cegidLogo.png",
+                    "eyosretail_src" : "https://eyos.one/wp-content/uploads/2020/12/eyos-retail.png",
+                },
+                "banner" : "'https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/img-01.jpg'",
+                "banner_src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/img-01.jpg",
+                "detail" : "Store Details",
+                "address" : "Address:",
+                "telephone" : "Phone number:",
+            },
+                "gnb" : [
+                    {
+                        "href" : "#",
+                        "text" : "MENS",
+                    },
+                    {
+                        "href" : "#",
+                        "text" : "WOMENS",
+                    },
+                    {
+                        "href" : "#",
+                        "text" : "ACCESSORIES",
+                    },
+                    {
+                        "href" : "#",
+                        "text" : "PERFUMES",
+                    }
+            ],
+            "headline" : {
+                "href" : "#",
+                "text": "Don't go empty handed! Grab yourself an amazing deal!",
+                "button" : "SHOP NOW"
+            },
+            "greeting" : {
+                "dear" : "Dear ",
+                "customer" : "Customer",
+                "thankyou" : "Thanks for shopping with us at ",
+                "gift" : "Here is your gift receipt at ",
+                "body" : "We hope you enjoyed your time with us!",
+                "href" : "#",
+                "button" : "Explore more",
+            },
+            "receipt" : {
+                "title" : "Here Is Your eReceipt For Your Recent Purchase",
+                "gift" : "Here Is Your Gift Receipt",
+                "discount" : "Discount",
+                "subtotal" : "Subtotal",
+                "tax" : "Tax (20%)",
+                "total" : "Total",
+                "payment_method" : "Payment_method",
+                "till" : "Till:",
+                "salesperson" : "Salesperson:",
+                "transaction_id" : "Transaction ID:",
+                "time" : "Date and Time:",
+            },
+            "sale_item" : [
+                {
+                    "name" : "Short Main 77 - MIDNIGHT BLUE 30",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dw81f7d67e/Assets/FC55SH335CDE_77_P_01/7/8/e/7/78e7585093b3a8ad1d46b53ee0de78991834e77a_FC55SH335CDE.77_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+                {
+                    "name" : "Short Main 64 - SKY BLUE 30",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dw85318877/Assets/FC52DJ2636EA_76_P_01/d/4/e/b/d4ebcc57fab166cd3060122ff07d594b98da3730_FC52DJ2636EA.76_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+                {
+                    "name" : "Women Main Trousers Main 99 - BLACK 34",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dw7f9c96ff/Assets/FC52PA0575AI_77_P_01/1/8/6/3/18637aafb3c2d55d60dd284cfe28a150aa85eca5_FC52PA0575AI.77_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+                {
+                    "name" : "Women Main Pull Crew neck Main MU - MULTICOLOR S",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dwb137b078/Assets/FA65PU5383TA_99_P_01/b/7/7/c/b77c9e6d4ace72989f85dd6857edde47d344d6ca_FA65PU5383TA.99_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+            ],
+            "refund" : {
+                "title" : "Refund Policy:",
+                "body" : "Thank you for your purchase. We hope you are happy with your purchase. However,
+                if you are not completely satisfied with your purchase for any reason, you may
+                return it to us for [a full refund/store credit /an exchange/a full refund or
+                store credit/for a full refund or an exchange/for store credit or an
+                exchange/for a full refund, store credit, or an exchange only].",
+            },
+            "cta" : {
+                "cta1" : {
+                    "body_1" : "This receipt is powered by ",
+                    "body_2" : "providing dynamic HTML receipts by email, SMS and Whatsapp. Integrated with Live Store, Y2 and MPOS.",
+                    "title" : "Find us in partner village.",
+                    "href" : "https://eyosretail.com/#con",
+                    "button" : "Get in Touch",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_retail_website/website-retail-1.png",
+                },
+                "cta3" : {
+                    "href" : "#",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/eyosButtons.png",
+                },
+                "cta3_2" : {
+                    "href" : "#",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/cegidCTA.png",
+                }
+            },
+            "product_recommendation" : {
+                "title" : "Other Things You May Like",
+                "button" : "SHOP NOW",
+                "items" : [
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_4.png",
+                        "name" : "Leather cross-body",
+                        "price" : "£231.00",
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_3.png",
+                        "name" : "Sport espadrilles",
+                        "price" : "£160.00",
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_2.png",
+                        "name" : "Sunglasses",
+                        "price" : "£135.50",
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_1.png",
+                        "name" : "Leather clutch",
+                        "price" : "£190.00",
+                    },
+                ],
+            },
+            "social" : [
+                {
+                    "href": "#",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-youtube-bk.png",
+                    "alt" : "youtube"
+                },
+                {
+                    "href": "#",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-facebook-bk.png",
+                    "alt" : "facebook"
+                },
+                {
+                    "href": "#",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-linkedin-bk.png",
+                    "alt" : "linkedin"
+                },
+            ],
+            "clients" : {
+                "title" : " working with 200 retailers across 40 countries",
+                "list" : [
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_KenzoLogo.png",
+                        "alt" : "Kenzo"
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Celio%27s_logo.svg/400px-Celio%27s_logo.svg.png",
+                        "alt" : "Celio"
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_JennyferLogo.png",
+                        "alt" : "Jennyfer"
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b7/Logo-smcp-black.svg/langfr-560px-Logo-smcp-black.svg.png",
+                        "alt" : "SMCP"
+                    },
+                    {
+                        "href": "#",
+                        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Logo_Groupe_Beaumanoir.png?20200611152828",
+                        "alt" : "Beaumanoir"
+                    },
+                    {
+                        "href": "#",
+                        "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_PSLogo.png",
+                        "alt" : "Paul Smith"
+                    }
+                ],
+            }
+        },
+        "fr_FR": {
+            "store": {
+                "show": True,
+                "name": "Cegid",
+                "href" : "#",
+                "logo": {
+                    "href" : "#",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_cegidLogo.png",
+                    "eyosretail_src" : "https://eyos.one/wp-content/uploads/2020/12/eyos-retail.png",
+                },
+                "banner" : "'https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/img-01.jpg'",
+                "banner_src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/img-01.jpg",
+                "detail": "Informations boutique",
+                "address": "Adresse:",
+                "email": "Email Adresse:",
+                "telephone": "Téléphone:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href" : "#",
+                    "text": "FEMME",
+                },
+                {
+                    "href" : "#",
+                    "text": "HOMME",
+                },
+                {
+                    "href" : "#",
+                    "text": "ACCESSOIRES",
+                },
+                {
+                    "href" : "#",
+                    "text": "PARFUMS",
+                }
+            ],
+            "headline" : {
+                "href" : "#",
+                "text": "Ne partez pas les mains vides ! Profitez d'une offre incroyable !",
+                "button" : "ACHETEZ MAINTENANT"
+            },
+
+            "greeting" : {
+                "dear": "Chère ",
+                "customer": "Cliente",
+                "thankyou" : "Merci pour vos achats à ",
+                "gift" : "Voici votre reçu cadeau à ",
+                "body" : "Nous espérons que vous avez apprécié votre shopping!",
+                "href" : "#",
+                "button" : "Visitez notre site",
+            },
+            "receipt" : {
+                "title": "Voici votre reçu électronique pour votre achat récent",
+                "gift": "Voici votre reçu cadeau",
+                "discount": "Discount",
+                "subtotal": "Sous-total",
+                "tax": "Taxe payée",
+                "total": "Total",
+                "payment_method": "Moyen de paiement",
+                "till": "Caisse:",
+                "salesperson": "Vendeur/Vendeuse:",
+                "transaction_id": "ID de la transaction:",
+                "time": "Date et heure:",
+            },
+            "sale_item" : [
+                {
+                    "name" : "Short Main 77 - MIDNIGHT BLUE 30",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dw81f7d67e/Assets/FC55SH335CDE_77_P_01/7/8/e/7/78e7585093b3a8ad1d46b53ee0de78991834e77a_FC55SH335CDE.77_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+                {
+                    "name" : "Short Main 64 - SKY BLUE 30",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dw85318877/Assets/FC52DJ2636EA_76_P_01/d/4/e/b/d4ebcc57fab166cd3060122ff07d594b98da3730_FC52DJ2636EA.76_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+                {
+                    "name" : "Women Main Trousers Main 99 - BLACK 34",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dw7f9c96ff/Assets/FC52PA0575AI_77_P_01/1/8/6/3/18637aafb3c2d55d60dd284cfe28a150aa85eca5_FC52PA0575AI.77_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+                {
+                    "name" : "Women Main Pull Crew neck Main MU - MULTICOLOR S",
+                    "src" :
+                    "https://www.kenzo.com/dw/image/v2/AAUH_PRD/on/demandware.static/-/Sites-kenzo-master/default/dwb137b078/Assets/FA65PU5383TA_99_P_01/b/7/7/c/b77c9e6d4ace72989f85dd6857edde47d344d6ca_FA65PU5383TA.99_P_01_eShop.jpg?sw=750&sh=1200",
+                },
+            ],
+            "refund" : {
+                "title" : "Politique de remboursement:",
+                "body" : "Merci pour votre achat. Nous espérons que vous êtes satisfait de votre achat. Cependant, si vous n'êtes pas entièrement satisfait de votre achat pour quelque raison que ce soit, vous pouvez nous le retourner pour [un remboursement complet/un crédit en magasin/un échange/un remboursement complet ou un crédit en magasin/pour un remboursement complet ou un échange/pour un magasin un crédit ou un échange/pour un remboursement complet, un crédit en magasin ou un échange uniquement].",
+            },
+            "cta" : {
+                "cta1" : {
+                    "body_1" : "Ce reçu est réalsié par ",
+                    "body_2" : "fournir des reçus HTML dynamiques par e-mail, SMS et Whatsapp. Intégré avec Live Store, Y2 et MPOS.",
+                    "title" : "Avez vous apprécié votre visite ?
+                    Nous aimerions connaître votre expérience.",
+                    "href" : "https://eyosretail.com/#con",
+                    "button" : "Contact",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_retail_website/website-retail-1.png",
+                },
+                "cta3" : {
+                    "href" : "#",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/eyosButtons.png",
+                },
+                "cta3_2" : {
+                    "href" : "#",
+                    "src" : "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/cegidCTA.png",
+                }
+            },
+            "product_recommendation" : {
+                "title" : "Nous vous recommandons",
+                "button" : "ACHETEZ MAINTENANT",
+                "items" : [
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_4.png",
+                        "name" : "Leather cross-body",
+                        "price" : "£231.00",
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_3.png",
+                        "name" : "Sport espadrilles",
+                        "price" : "£160.00",
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_2.png",
+                        "name" : "Sunglasses",
+                        "price" : "£135.50",
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/cegid_pr_1.png",
+                        "name" : "Leather clutch",
+                        "price" : "£190.00",
+                    },
+                ],
+            },
+            "social" : [
+                {
+                    "href": "#",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-youtube-bk.png",
+                    "alt" : "youtube"
+                },
+                {
+                    "href": "#",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-facebook-bk.png",
+                    "alt" : "facebook"
+                },
+                {
+                    "href": "#",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-linkedin-bk.png",
+                    "alt" : "linkedin"
+                },
+            ],
+            "clients" : {
+                "title" : " travaille avec 200 détaillants dans 40 pays",
+                "list" : [
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_KenzoLogo.png",
+                        "alt" : "Kenzo"
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Celio%27s_logo.svg/400px-Celio%27s_logo.svg.png",
+                        "alt" : "Celio"
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_JennyferLogo.png",
+                        "alt" : "Jennyfer"
+                    },
+                    {
+                        "href": "#",
+                        "src":
+                        "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b7/Logo-smcp-black.svg/langfr-560px-Logo-smcp-black.svg.png",
+                        "alt" : "SMCP"
+                    },
+                    {
+                        "href": "#",
+                        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Logo_Groupe_Beaumanoir.png?20200611152828",
+                        "alt" : "Beaumanoir"
+                    },
+                    {
+                        "href": "#",
+                        "src": "https://storage.googleapis.com/yreceipts-prod-public-assets/Cegid/Cegid_PSLogo.png",
+                        "alt" : "Paul Smith"
+                    }
+                ],
+            }
+        },
+    }
+%}
+{% set language = translations[locale if locale in translations else "en_GB"] %}

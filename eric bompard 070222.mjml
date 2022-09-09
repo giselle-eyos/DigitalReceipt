@@ -1,0 +1,416 @@
+{% set translations = {
+    "fr_LU": {
+        "date_of_purchase": "Date d’achat:",
+        "transaction_number": "Numéro de transaction:",
+        "salesperson": "Vendeur:",
+        "tax_number": "LU26799617",
+        "item_id": "ID article",
+        "product": "Produit",
+        "description": "Description",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "subtotal": "Sous-total",
+        "discount": "Remise",
+        "amount": "Montant",
+        "tax_text": "Montant TVA",
+        "total": "Total",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "vous remercie de votre achat.",
+        "lower_cta3": "A bientot sur",
+        "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+        "main_dual_language": "",
+        "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_FR.png",
+        "oc_1": ""
+    },
+    "fr_FR": {
+        "date_of_purchase": "Date d’achat:",
+        "transaction_number": "Numéro de transaction:",
+        "salesperson": "Vendeur:",
+        "tax_number": "FR 34 338 375 454",
+        "item_id": "ID article",
+        "product": "Produit",
+        "description": "Description",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "subtotal": "\nSous-total",
+        "discount": "Remise",
+        "amount": "Montant",
+        "tax_text": "Montant TVA",
+        "total": "Total",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "vous remercie de votre achat.",
+        "lower_cta3": "A bientot sur",
+        "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+        "main_dual_language": "",
+        "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_FR.png",
+        "oc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement en outlets, à La Vallée Village ou The Village. L'article ne doit être ni porté, ni lavé."
+    },
+    "fr_CH": {
+        "date_of_purchase": "Date d’achat:",
+        "transaction_number": "Numéro de transaction:",
+        "salesperson": "Vendeur:",
+        "tax_number": "CH112 834 722",
+        "item_id": "ID article",
+        "product": "Produit",
+        "description": "Description",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "subtotal": "\nSous-total",
+        "discount": "Remise",
+        "amount": "Montant",
+        "tax_text": "Montant TVA",
+        "total": "Total",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "vous remercie de votre achat.",
+        "lower_cta3": "A bientot sur",
+        "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+        "main_dual_language": "Klicken Sie hier, um die E-Mail auf Französisch anzuzeigen",
+"policy_image": "",
+        "oc_1": ""
+    },
+    "de_CH": {
+        "date_of_purchase": "Kaufdatum:",
+        "transaction_number": "Transaktionsnummer:",
+        "salesperson": "Verkäufer:",
+        "tax_number": "CH112 834 722",
+        "item_id": "Artikel-ID",
+        "product": "Produkt",
+        "description": "Beschreibung",
+        "quantity": "Menge",
+        "price": "Preis",
+        "subtotal": "Zwischensumme:",
+        "discount": "Rabatt",
+        "amount": "Betrag",
+        "tax_text": "MwST",
+        "total": "Gesamtsumme",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+        "lower_cta3": "Bis bald auf",
+        "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+        "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "",
+        "oc_1": ""
+    },
+    "de_AT": {
+        "date_of_purchase": "Kaufdatum:",
+        "transaction_number": "Transaktionsnummer:",
+        "salesperson": "Verkäufer:",
+        "tax_number": "ATU68910609",
+        "item_id": "Artikel-ID",
+        "product": "Produkt",
+        "description": "Beschreibung",
+        "quantity": "Menge",
+        "price": "Preis",
+        "subtotal": "Zwischensumme:",
+        "discount": "Rabatt",
+        "amount": "Betrag",
+        "tax_text": "MwST",
+        "total": "Gesamtsumme",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+        "lower_cta3": "Bis bald auf",
+        "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+        "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "",
+        "oc_1": ""
+    },
+    "de_DE": {
+        "date_of_purchase": "Kaufdatum:",
+        "transaction_number": "Transaktionsnummer:",
+        "salesperson": "Verkäufer:",
+        "tax_number": "DE180325510",
+        "item_id": "Artikel-ID",
+        "product": "Produkt",
+        "description": "Beschreibung",
+        "quantity": "Menge",
+        "price": "Preis",
+        "subtotal": "Zwischensumme:",
+        "discount": "Rabatt",
+        "amount": "Betrag",
+        "tax_text": "MwST",
+        "total": "Gesamtsumme",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+        "lower_cta3": "Bis bald auf",
+        "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+        "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_DE.png",
+        "oc_1": ""
+    },
+    "fr_BE": {
+        "date_of_purchase": "Date d’achat:",
+        "transaction_number": "Numéro de transaction:",
+        "salesperson": "Vendeur:",
+        "tax_number": "BE0881410492",
+        "item_id": "ID article",
+        "product": "Produit",
+        "description": "Description",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "subtotal": "Sous-total",
+        "discount": "Remise",
+        "amount": "Montant",
+        "tax_text": "Montant TVA",
+        "total": "Total",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "vous remercie de votre achat.",
+        "lower_cta3": "A bientot sur",
+        "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+        "main_dual_language": "Klik hier om de e-mail in het Frans te zien",
+        "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_FR.png",
+        "oc_1": ""
+    },
+    "nl_BE": {
+        "date_of_purchase": "Aankoopdatum:",
+        "transaction_number": "Transactie nummer:",
+        "salesperson": "verkoper:",
+        "tax_number": "BE0881410492",
+        "item_id": "Item ID",
+        "product": "Product",
+        "description": "Beschrijving",
+        "quantity": "Hoeveelheid",
+        "price": "Prijs",
+        "subtotal": "subtotaal",
+        "discount": "Korting",
+        "amount": "bedrag",
+        "tax_text": "BTW bedrag",
+        "total": "Totaal",
+        "lower_cta1": "La Maison Eric Bompard ",
+        "lower_cta2": "dankt U voor uw aankoop.",
+        "lower_cta3": "Tot snel op",
+        "tc_1": "Ruilen mogelijk binnen 30 dagen na aankoopdatum. Slechts één keer geldig, op vertoon van de kassabon of cadeaubon, alleen in het land waar de aankoop is gedaan. Het artikel mag niet gedragen of gewassen zijn. Met uitzondering van producten die zijn gekocht in warenhuizen, in outlet winkels en in de uitverkoop.",
+        "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+        "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_NL.png",
+        "oc_1": ""
+    },
+    "en_GB": {
+        "date_of_purchase": "Date of purchase:",
+        "transaction_number": "Transaction number:",
+        "salesperson": "Salesperson:",
+        "tax_number": "GB937828378",
+        "item_id": "Item ID",
+        "product": "Product",
+        "description": "Description",
+        "quantity": "Quantity",
+        "price": "Price",
+        "subtotal": "subtotal",
+        "discount": "Discount",
+        "amount": "Amount",
+        "tax_text": "Rate",
+        "total": "Total",
+        "lower_cta1": "La Maison Eric Bompard",
+        "lower_cta2": "thank you for your purchase.",
+        "lower_cta3": "See you soon on",
+        "tc_1": "Exchange possible within 30 days of the date of purchase. Valid only once, on presentation of the receipt or gift receipt, only in the country where the purchase was made. The item should not be worn or washed. Excluding products purchased in department stores, in outlets and in clearance sales.",
+        "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+  "policy_image": "",
+        "oc_1": ""
+    }
+} %}
+
+{% set language = translations[locale if locale in translations else "fr_FR"] %}
+<mjml>
+  <mj-head>
+    <mj-breakpoint width="0px" />
+    <mj-raw>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </mj-raw>
+    <mj-attributes>
+      <mj-all font-family="Montserrat, sans-serif" color="#404040" line-height="1.4" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="white">
+
+    <!-- HEADER/NAV -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/LOGO%20300x100.png"></mj-image>
+        <mj-text align="center" font-size="13px"><span style="font-weight: 500; font-size: 16px;">{{ receipt['store']['name'] }}</span><br />{% for line in receipt['store']['address']['street'] %}{{ line }}<br />{% endfor %}<span style="font-size: 14px;">{{ receipt['store']['telephone']['daytime']['text'] }}</span><br /><br />{{ language['tax_number'] }}<br /><br /></mj-text>
+        <mj-text align="center" font-size="13px" font-weight="600">Receipt number<br /><span style="font-size: 15px;">{{ receipt['receipt']['transaction_id'] }}</span></mj-text>
+        <mj-raw>{% if "en_GB" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_FR">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+                <mj-raw>{% if "nl_BE" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_BE">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+         <mj-raw>{% if "fr_BE" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=nl_BE">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+         <mj-raw>{% if "de_DE" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_FR">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+                 <mj-raw>{% if "de_AT" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_FR">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+             <mj-raw>{% if "de_CH" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_CH">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+          <mj-raw>{% if "fr_CH" in locale %}</mj-raw>
+                <mj-text align="center" font-size="13px" font-weight="600"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=de_CH">{{ language['main_dual_language'] }}</a></mj-text>
+             <mj-raw>{% endif %}</mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="14px" align="left">{% if not (receipt["customer"]["name"]["last"] == "Passage Passage") %}{{ receipt["customer"]["name"]["first"] }} {{ receipt["customer"]["name"]["last"] }}{% endif %}<br />{{ language['date_of_purchase'] }} {{receipt.get_local_time().strftime('%d/%m/%Y %H:%M')}}<br />{{ language['transaction_number'] }} {{ data['receipt']['transaction_number']['text'] }}<br />{{ language['salesperson'] }} {{ data['receipt']['associate']['name'] }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr style="border-top: 1px solid #000000;">
+            <th style="text-align: left; vertical-align: middle; height: 40px; width: 33%; font-size: 14px;">{{ language['product'] }}</th>
+            <th style="text-align: center; vertical-align: middle; width: 34%; height: 40px; font-size: 14px;">{{ language['quantity'] }}</th>
+            <th style="text-align: right; vertical-align: middle; width: 33%; height: 40px; font-size: 14px;">{{ language['price'] }}</th>
+          </tr>
+          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+          <tr style="border-top: 1px solid #000000;">
+            <td style="text-align: left; vertical-align: top; width: 33%;">{{ language['item_id'] }}: {{ sale_item['item_alternate_id'][:12] }}<br />{{ sale_item['text'] }}</td>
+            <td style="text-align: center; vertical-align: top; width: 34%;">{{ sale_item['quantity']['value'] }}</td>
+            <td style="text-align: right; vertical-align: top; width: 33%;">{% if sale_item['footer'] and "NOPRINT_" in sale_item['footer'] %}{% else %}{{ receipt.format_currency(sale_item['regular_price']['value']) }}{% endif %}</td>
+          </tr>
+         <mj-raw>{% if sale_item['footer'] and "NOPRINT_" in sale_item['footer'] %}</mj-raw>
+          <tr>
+            <td style="padding-bottom: 10px" colspan="4" align="right">
+              {{ language['subtotal'] }} {{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% elif sale_item['footer'] %}</mj-raw>
+          <tr>
+            <td style="padding-bottom: 10px" colspan="4" align="right">{{ nl2br(sale_item['footer']) }}<br /><br />
+              {{ language['subtotal'] }} {{ receipt.format_currency(sale_item['total']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endif %}</mj-raw>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <!-- END HEADER/NAV -->
+
+
+    <!-- DISCOUNTS -->
+    <mj-raw>{% if receipt['discount'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-table>
+          <tr style="border-top: 1px solid #000000;">
+            <th style="text-align: left; vertical-align: middle; height: 40px; font-size: 14px;">{{ language['discount'] }}</th>
+            <th style="text-align: right; vertical-align: middle; height: 40px; font-size: 14px;">{{ language['amount'] }}</th>
+          </tr>
+          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+          <tr style="border-top: 1px solid #000000">
+            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END DISCOUNTS -->
+
+    <!-- TAXES -->
+    <mj-raw>{% if receipt['receipt']['total']['amount']['value'] %}</mj-raw>
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table font-size="12px">
+          <tr>
+            <td align="left" style="font-size: 14px;"><b>{{ language['subtotal'] }}</b></td>
+            <td align="right" style="font-size: 14px;">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-raw>{% endif %}</mj-raw>
+        <mj-raw>{% if receipt['tax'] %}</mj-raw>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table font-size="12px">
+          <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+          <tr>
+            <td style="text-align: left; vertical-align: top; width: 50%; font-size: 14px;"><b>{{ language['tax_text'] }}</b></td>
+            <td style="text-align: right; vertical-align: top; width: 50%; font-size: 14px;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+          <mj-divider border-width="1px"></mj-divider>
+          <mj-raw>{% endif %}</mj-raw>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-table font-size="12px">
+          <tr>
+            <td align="left" style="font-size: 14px;"><b>{{ language['total'] }}</b></td>
+            <td align="right" style="font-size: 14px;">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+          </tr>
+        </mj-table>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-raw>{% if receipt['tender'] %}</mj-raw>
+        <mj-table font-size="12px">
+          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+          <tr>
+            <td style="text-align: left; vertical-align: top; font-size: 14px;"><b>{{ tender['text'] }}</b></td>
+            <td style="text-align: right; vertical-align: top; font-size: 14px;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+          </tr>
+          <mj-raw>{% endfor %}</mj-raw>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-raw>{% endif %}</mj-raw>
+    <!-- END TENDER -->
+
+    <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+
+    <!-- BARCODE -->
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="{{ barcode_url }}" />
+        <mj-text align="center">{{ receipt.barcode_transaction_number }}</mj-text>
+     <mj-raw>{% if receipt['store']['external_id'] in ['FR701', 'FR702'] %}</mj-raw>     
+        <mj-raw>{% else %}</mj-raw>
+             <mj-image src="{{ language['policy_image'] }}" />
+          <mj-raw>{% endif %}</mj-raw>
+      </mj-column>
+    </mj-section>
+    <!-- END BARCODE -->
+
+    <!-- LOWER CTA -->
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="16px" align="center" color="#808080">{{ language['lower_cta1'] }}<br />{{ language['lower_cta2'] }}<br />{{ language['lower_cta3'] }} <a style="color: inherit; text-decoration: none;" href="https://www.eric-bompard.com">www.eric-bompard.com</a>.</mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- END LOWER CTA -->
+
+
+
+    <!-- SOCIAL MEDIA -->
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px"></mj-divider>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+          <mj-social-element src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_FB%2030x30.png" href="https://www.facebook.com/ericbompard/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_insta%2030x30.png" href="https://www.instagram.com/ericbompard/?hl=fr"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_pinterest%2030x30.png" href="https://www.pinterest.fr/ericbompard/_shop/"></mj-social-element>
+          <mj-social-element src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_youtube%2030x30.png" href="https://www.youtube.com/channel/UCYalSmBX2OBD6C3DYH6v2jw"></mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- END SOCIAL MEDIA -->
+
+    <!-- REFUND -->
+    <mj-section>
+      <mj-column>
+        <mj-raw>{% if receipt['store']['external_id'] in ['FR701', 'FR702'] %}</mj-raw>
+        <mj-text align="center" color="#A0A0A0" font-size="10px">{{ language['oc_1'] }}</mj-text>
+        <mj-raw>{% else %}</mj-raw>
+        <mj-text align="center" color="#A0A0A0" font-size="10px">{{ language['tc_1'] }}</mj-text>
+           <mj-raw>{% endif %}</mj-raw>
+      </mj-column>
+    </mj-section>
+    <!-- END REFUND -->
+  </mj-body>
+</mjml>

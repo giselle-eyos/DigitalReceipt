@@ -1,0 +1,26 @@
+{% set prod_rec = receipt.execute_hook("receipts.hooks.DevNewLookEmarsysProductRecommendationsReceiptHook") %}
+{% set base64 = data.slice(((data.toString()).search(',') + 1)) %}
+<td align="center">
+    <a href="https://email-content.newlook.com/predict/recommender/1FB7B4B4A0052E76/257mfe/{{loop.index}}.html?ci={{ prod_rec.sap_customer_id }}&eh={{ prod_rec.predict_user_id }}&es={{ prod_rec.predict_secret }}?extcam=UK_EML_TRA_DIGRECEIPT"
+        style="text-decoration: none; font-weight: normal; color: #283583;" target="_blank"><img e-editable="imageA_1"
+            src="https://email-content.newlook.com/predict/recommender/1FB7B4B4A0052E76/257mfe/{{loop.index}}.jpg?ci={{ prod_rec.sap_customer_id }}&eh={{ prod_rec.predict_user_id }}&es={{ prod_rec.predict_secret }}"
+            alt="product recommendation" width="{{530/loop.length}}" border="0" style="display:block;"
+            class="image"></a>
+</td>
+
+userdata1 : ?token=10484892115407/1/2022 12:00:00AM10825421437612&placeid=1540&date_purchase=7/1/2022 12:00:00AM &firstname=Michael&lastname=Mathieux&customer_id=104848921&email=m_mathieux@orange.fr&telephone=+33610101665
+{% set 
+    receiptHeaderID2 = {{ data['receipt']['transaction_id'] }},
+    placeid = '&placeid='{{ data['store']['external_id'] }},
+    datepurchase = '&date_purchase='{{ data['receipt']['datetime']['text'] }},
+    Firstname = '&firstname='{{ data['customer']['name']['first'] }},
+    Lastname = '&lastname='{{ data['customer']['name']['last'] }},
+    customerID = '&customer_id='{{ data['loyalty']['external_id'] }},
+    token = '?token='customerID+placeid+datepurchase+receiptHeaderID2,
+    email = '&email='{{ data['customer']['email_address'] }},
+    tel = '&tellephone='{{ data['customer']['telephone']['sms'] }}
+    concatPOS2 = ,
+%}
+
+{% set customerData = concat(token,Firstname,Lastname,customerID,email,tel) %}
+http://celio.wizville.fr/survey/campaign/814?t={{ customerData | base64_encode }}

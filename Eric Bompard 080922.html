@@ -1,0 +1,813 @@
+{% set translations = {
+  "fr_LU": {
+      "date_of_purchase": "Date d’achat:",
+      "transaction_number": "Numéro de transaction:",
+      "salesperson": "Vendeur:",
+      "tax_number": "LU26799617",
+      "item_id": "ID article",
+      "product": "Produit",
+      "description": "Description",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "subtotal": "Sous-total",
+      "discount": "Remise",
+      "amount": "Montant",
+      "tax_text": "Montant TVA",
+      "total": "Total",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "vous remercie de votre achat.",
+      "lower_cta3": "A bientot sur",
+      "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+      "main_dual_language": "",
+      "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_FR.png",
+      "oc_1": ""
+  },
+  "fr_FR": {
+      "date_of_purchase": "Date d’achat:",
+      "transaction_number": "Numéro de transaction:",
+      "salesperson": "Vendeur:",
+      "tax_number": "FR 34 338 375 454",
+      "item_id": "ID article",
+      "product": "Produit",
+      "description": "Description",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "subtotal": "\nSous-total",
+      "discount": "Remise",
+      "amount": "Montant",
+      "tax_text": "Montant TVA",
+      "total": "Total",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "vous remercie de votre achat.",
+      "lower_cta3": "A bientot sur",
+      "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+      "main_dual_language": "",
+      "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_FR.png",
+      "oc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement en outlets, à La Vallée Village ou The Village. L'article ne doit être ni porté, ni lavé."
+  },
+  "fr_CH": {
+      "date_of_purchase": "Date d’achat:",
+      "transaction_number": "Numéro de transaction:",
+      "salesperson": "Vendeur:",
+      "tax_number": "CH112 834 722",
+      "item_id": "ID article",
+      "product": "Produit",
+      "description": "Description",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "subtotal": "\nSous-total",
+      "discount": "Remise",
+      "amount": "Montant",
+      "tax_text": "Montant TVA",
+      "total": "Total",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "vous remercie de votre achat.",
+      "lower_cta3": "A bientot sur",
+      "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+      "main_dual_language": "Klicken Sie hier, um die E-Mail auf Französisch anzuzeigen",
+"policy_image": "",
+      "oc_1": ""
+  },
+  "de_CH": {
+      "date_of_purchase": "Kaufdatum:",
+      "transaction_number": "Transaktionsnummer:",
+      "salesperson": "Verkäufer:",
+      "tax_number": "CH112 834 722",
+      "item_id": "Artikel-ID",
+      "product": "Produkt",
+      "description": "Beschreibung",
+      "quantity": "Menge",
+      "price": "Preis",
+      "subtotal": "Zwischensumme:",
+      "discount": "Rabatt",
+      "amount": "Betrag",
+      "tax_text": "MwST",
+      "total": "Gesamtsumme",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+      "lower_cta3": "Bis bald auf",
+      "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+      "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "",
+      "oc_1": ""
+  },
+  "de_AT": {
+      "date_of_purchase": "Kaufdatum:",
+      "transaction_number": "Transaktionsnummer:",
+      "salesperson": "Verkäufer:",
+      "tax_number": "ATU68910609",
+      "item_id": "Artikel-ID",
+      "product": "Produkt",
+      "description": "Beschreibung",
+      "quantity": "Menge",
+      "price": "Preis",
+      "subtotal": "Zwischensumme:",
+      "discount": "Rabatt",
+      "amount": "Betrag",
+      "tax_text": "MwST",
+      "total": "Gesamtsumme",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+      "lower_cta3": "Bis bald auf",
+      "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+      "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "",
+      "oc_1": ""
+  },
+  "de_DE": {
+      "date_of_purchase": "Kaufdatum:",
+      "transaction_number": "Transaktionsnummer:",
+      "salesperson": "Verkäufer:",
+      "tax_number": "DE180325510",
+      "item_id": "Artikel-ID",
+      "product": "Produkt",
+      "description": "Beschreibung",
+      "quantity": "Menge",
+      "price": "Preis",
+      "subtotal": "Zwischensumme:",
+      "discount": "Rabatt",
+      "amount": "Betrag",
+      "tax_text": "MwST",
+      "total": "Gesamtsumme",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+      "lower_cta3": "Bis bald auf",
+      "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+      "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_DE.png",
+      "oc_1": ""
+  },
+  "fr_BE": {
+      "date_of_purchase": "Date d’achat:",
+      "transaction_number": "Numéro de transaction:",
+      "salesperson": "Vendeur:",
+      "tax_number": "BE0881410492",
+      "item_id": "ID article",
+      "product": "Produit",
+      "description": "Description",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "subtotal": "Sous-total",
+      "discount": "Remise",
+      "amount": "Montant",
+      "tax_text": "Montant TVA",
+      "total": "Total",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "vous remercie de votre achat.",
+      "lower_cta3": "A bientot sur",
+      "tc_1": "Echange possible dans les 30 jours après la date d'achat. Valable une seule fois, sous présentation du ticket de caisse ou du ticket cadeau, uniquement dans le pays où l'achat a été réalisé. L'article ne doit être ni porté, ni lavé. Hors produits achetés en grands magasins, en outlets et en braderie.",
+      "main_dual_language": "Klik hier om de e-mail in het Frans te zien",
+      "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_FR.png",
+      "oc_1": ""
+  },
+  "nl_BE": {
+      "date_of_purchase": "Aankoopdatum:",
+      "transaction_number": "Transactie nummer:",
+      "salesperson": "verkoper:",
+      "tax_number": "BE0881410492",
+      "item_id": "Item ID",
+      "product": "Product",
+      "description": "Beschrijving",
+      "quantity": "Hoeveelheid",
+      "price": "Prijs",
+      "subtotal": "subtotaal",
+      "discount": "Korting",
+      "amount": "bedrag",
+      "tax_text": "BTW bedrag",
+      "total": "Totaal",
+      "lower_cta1": "La Maison Eric Bompard ",
+      "lower_cta2": "dankt U voor uw aankoop.",
+      "lower_cta3": "Tot snel op",
+      "tc_1": "Ruilen mogelijk binnen 30 dagen na aankoopdatum. Slechts één keer geldig, op vertoon van de kassabon of cadeaubon, alleen in het land waar de aankoop is gedaan. Het artikel mag niet gedragen of gewassen zijn. Met uitzondering van producten die zijn gekocht in warenhuizen, in outlet winkels en in de uitverkoop.",
+      "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+      "policy_image": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/MOIS_DU_SOIN_LONGUEVIE_NL.png",
+      "oc_1": ""
+  },
+  "en_GB": {
+      "date_of_purchase": "Date of purchase:",
+      "transaction_number": "Transaction number:",
+      "salesperson": "Salesperson:",
+      "tax_number": "GB937828378",
+      "item_id": "Item ID",
+      "product": "Product",
+      "description": "Description",
+      "quantity": "Quantity",
+      "price": "Price",
+      "subtotal": "subtotal",
+      "discount": "Discount",
+      "amount": "Amount",
+      "tax_text": "Rate",
+      "total": "Total",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "thank you for your purchase.",
+      "lower_cta3": "See you soon on",
+      "tc_1": "Exchange possible within 30 days of the date of purchase. Valid only once, on presentation of the receipt or gift receipt, only in the country where the purchase was made. The item should not be worn or washed. Excluding products purchased in department stores, in outlets and in clearance sales.",
+      "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "",
+      "oc_1": ""
+  },
+  "de_AT": {
+      "date_of_purchase": "Kaufdatum:",
+      "transaction_number": "Transaktionsnummer:",
+      "salesperson": "Verkäufer:",
+      "tax_number": "ATU68910609",
+      "item_id": "Artikel-ID",
+      "product": "Produkt",
+      "description": "Beschreibung",
+      "quantity": "Menge",
+      "price": "Preis",
+      "subtotal": "Zwischensumme",
+      "discount": "Rabatt",
+      "amount": "Betrag",
+      "tax_text": "MwST",
+      "total": "Gesamtsumme",
+      "lower_cta1": "La Maison Eric Bompard",
+      "lower_cta2": "bedankt sich recht herzlich für Ihren Einkauf.",
+      "lower_cta3": "Bis bald auf",
+      "tc_1": "Umtausch ein Mal innerhalb von 30 Tagen ab Kaufdatum möglich, gegen Vorlage des Kaufbelegs oder Geschenkbelegs, nur in dem Land, in dem der Kauf getätigt wurde. Der Artikel darf nicht getragen oder gewaschen werden. Ausgenommen sind Artikel, die in Kaufhäusern, und im Ausverkauf gekauft wurden, sowie Outlet.",
+      "main_dual_language": "Cliquez ici pour voir l'e-mail en français",
+"policy_image": "",
+      "oc_1": ""
+  }
+} %}
+
+{% set language = translations[locale if locale in translations else "fr_FR"] %}
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title>
+  </title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+  </style>
+  <!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+  <!--[if lte mso 11]>
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:0px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+  </style>
+  <style media="screen and (min-width:0px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width:0px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+
+<body style="word-spacing:normal;background-color:white;">
+  <div style="background-color:white;">
+    <!-- HEADER/NAV -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:300px;">
+                                <img height="auto" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/LOGO%20300x100.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="300" />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;line-height:1.4;text-align:center;color:#404040;"><span style="font-weight: 500; font-size: 16px;">{{ receipt['store']['name'] }}</span><br />{% for line in receipt['store']['address']['street'] %}{{ line }}<br />{% endfor %}<span style="font-size: 14px;">{{ receipt['store']['telephone']['daytime']['text'] }}</span><br /><br />{{ language['tax_number'] }}<br /><br /></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;">Receipt number<br /><span style="font-size: 15px;">{{ receipt['receipt']['transaction_id'] }}</span></div>
+                      </td>
+                    </tr> {% if "en_GB" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_FR">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}{% if "nl_BE" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_BE">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}{% if "fr_BE" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=nl_BE">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}{% if "de_DE" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_FR">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}{% if "de_AT" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_FR">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}{% if "de_CH" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=fr_CH">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}{% if "fr_CH" in locale %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;font-weight:600;line-height:1.4;text-align:center;color:#404040;"><a style="text-decoration:none;color:black;" href="{{ receipt.generate_tiny_url() }}?locale=de_CH">{{ language['main_dual_language'] }}</a></div>
+                      </td>
+                    </tr> {% endif %}
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:14px;line-height:1.4;text-align:left;color:#404040;">{% if not (receipt["customer"]["name"]["last"] == "Passage Passage") %}{{ receipt["customer"]["name"]["first"] }} {{ receipt["customer"]["name"]["last"] }}{% endif %}<br />{{ language['date_of_purchase'] }} {{receipt.get_local_time().strftime('%d/%m/%Y %H:%M')}}<br />{{ language['transaction_number'] }} {{ data['receipt']['transaction_number']['text'] }}<br />{{ language['salesperson'] }} {{ data['receipt']['associate']['name'] }}</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#404040;font-family:Montserrat, sans-serif;font-size:13px;line-height:1.4;table-layout:auto;width:100%;border:none;">
+                          <tr style="border-top: 1px solid #000000;">
+                            <th style="text-align: left; vertical-align: middle; height: 40px; width: 33%; font-size: 14px;">{{ language['product'] }}</th>
+                            <th style="text-align: center; vertical-align: middle; width: 34%; height: 40px; font-size: 14px;">{{ language['quantity'] }}</th>
+                            <th style="text-align: right; vertical-align: middle; width: 33%; height: 40px; font-size: 14px;">{{ language['price'] }}</th>
+                          </tr>
+                          <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+                          <tr style="border-top: 1px solid #000000;">
+                            <td style="text-align: left; vertical-align: top; width: 33%;">{{ language['item_id'] }}: {{ sale_item['item_alternate_id'][:12] }}<br />{{ sale_item['text'] }}</td>
+                            <td style="text-align: center; vertical-align: top; width: 34%;">{{ sale_item['quantity']['value'] }}</td>
+                            <td style="text-align: right; vertical-align: top; width: 33%;">{% if sale_item['footer'] and "NOPRINT_" in sale_item['footer'] %}{% else %}{{ receipt.format_currency(sale_item['regular_price']['value']) }}{% endif %}</td>
+                          </tr>
+                          <mj-raw>{% if sale_item['footer'] and "NOPRINT_" in sale_item['footer'] %}</mj-raw>
+                          <tr>
+                            <td style="padding-bottom: 10px" colspan="4" align="right">
+                              {{ language['subtotal'] }} {{ receipt.format_currency(sale_item['total']['value']) }}
+                            </td>
+                          </tr>
+                          <mj-raw>{% elif sale_item['footer'] %}</mj-raw>
+                          <tr>
+                            <td style="padding-bottom: 10px" colspan="4" align="right">{{ nl2br(sale_item['footer']) }}<br /><br />
+                              {{ language['subtotal'] }} {{ receipt.format_currency(sale_item['total']['value']) }}
+                            </td>
+                          </tr>
+                          <mj-raw>{% endif %}</mj-raw>
+                          <mj-raw>{% endfor %}</mj-raw>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- END HEADER/NAV -->
+    <!-- DISCOUNTS -->{% if receipt['discount'] %}
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#404040;font-family:Montserrat, sans-serif;font-size:13px;line-height:1.4;table-layout:auto;width:100%;border:none;">
+                          <tr style="border-top: 1px solid #000000;">
+                            <th style="text-align: left; vertical-align: middle; height: 40px; font-size: 14px;">{{ language['discount'] }}</th>
+                            <th style="text-align: right; vertical-align: middle; height: 40px; font-size: 14px;">{{ language['amount'] }}</th>
+                          </tr>
+                          <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+                          <tr style="border-top: 1px solid #000000">
+                            <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+                            <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+                          </tr>
+                          <mj-raw>{% endfor %}</mj-raw>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+    <!-- END DISCOUNTS -->
+    <!-- TAXES -->{% if receipt['receipt']['total']['amount']['value'] %}
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#404040;font-family:Montserrat, sans-serif;font-size:12px;line-height:1.4;table-layout:auto;width:100%;border:none;">
+                          <tr>
+                            <td align="left" style="font-size: 14px;"><b>{{ language['subtotal'] }}</b></td>
+                            <td align="right" style="font-size: 14px;">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr> {% endif %}{% if receipt['tax'] %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#404040;font-family:Montserrat, sans-serif;font-size:12px;line-height:1.4;table-layout:auto;width:100%;border:none;">
+                          <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+                          <tr>
+                            <td style="text-align: left; vertical-align: top; width: 50%; font-size: 14px;"><b>{{ language['tax_text'] }}</b></td>
+                            <td style="text-align: right; vertical-align: top; width: 50%; font-size: 14px;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+                          </tr>
+                          <mj-raw>{% endfor %}</mj-raw>
+                          <mj-divider border-width="1px"></mj-divider>
+                          <mj-raw>{% endif %}</mj-raw>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#404040;font-family:Montserrat, sans-serif;font-size:12px;line-height:1.4;table-layout:auto;width:100%;border:none;">
+                          <tr>
+                            <td align="left" style="font-size: 14px;"><b>{{ language['total'] }}</b></td>
+                            <td align="right" style="font-size: 14px;">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr> {% if receipt['tender'] %} <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#404040;font-family:Montserrat, sans-serif;font-size:12px;line-height:1.4;table-layout:auto;width:100%;border:none;">
+                          <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+                          <tr>
+                            <td style="text-align: left; vertical-align: top; font-size: 14px;"><b>{{ tender['text'] }}</b></td>
+                            <td style="text-align: right; vertical-align: top; font-size: 14px;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+                          </tr>
+                          <mj-raw>{% endfor %}</mj-raw>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+    <!-- END TENDER -->
+    <!-- SECOND RECEIPT TEXT
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">{{nl2br(receipt.second_receipt_text)}}</mj-text>
+      </mj-column>
+    </mj-section>
+   END SECOND RECEIPT TEXT -->
+    <!-- BARCODE -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:300px;">
+                                <img height="auto" src="{{ barcode_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="300" />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:13px;line-height:1.4;text-align:center;color:#404040;">{{ receipt.barcode_transaction_number }}</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- END BARCODE -->
+    <!-- LOWER CTA -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:16px;line-height:1.4;text-align:center;color:#808080;">{{ language['lower_cta1'] }}<br />{{ language['lower_cta2'] }}<br />{{ language['lower_cta3'] }} <a style="color: inherit; text-decoration: none;" href="https://www.eric-bompard.com">www.eric-bompard.com</a>.</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- END LOWER CTA -->
+    <!-- SOCIAL MEDIA -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                          <tr>
+                            <td style="padding:4px;vertical-align:middle;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                                <tr>
+                                  <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                    <a href="https://www.facebook.com/ericbompard/" target="_blank">
+                                      <img height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_FB%2030x30.png" style="border-radius:3px;display:block;" width="30" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso | IE]></td><td><![endif]-->
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                          <tr>
+                            <td style="padding:4px;vertical-align:middle;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                                <tr>
+                                  <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                    <a href="https://www.instagram.com/ericbompard/?hl=fr" target="_blank">
+                                      <img height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_insta%2030x30.png" style="border-radius:3px;display:block;" width="30" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso | IE]></td><td><![endif]-->
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                          <tr>
+                            <td style="padding:4px;vertical-align:middle;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                                <tr>
+                                  <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                    <a href="https://www.pinterest.fr/ericbompard/_shop/" target="_blank">
+                                      <img height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_pinterest%2030x30.png" style="border-radius:3px;display:block;" width="30" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso | IE]></td><td><![endif]-->
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                          <tr>
+                            <td style="padding:4px;vertical-align:middle;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                                <tr>
+                                  <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                    <a href="https://www.youtube.com/channel/UCYalSmBX2OBD6C3DYH6v2jw" target="_blank">
+                                      <img height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/eric%20bompard/icon_RS_youtube%2030x30.png" style="border-radius:3px;display:block;" width="30" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- END SOCIAL MEDIA -->
+    <!-- REFUND -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody> {% if receipt['store']['external_id'] in ['FR701', 'FR702'] %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:10px;line-height:1.4;text-align:center;color:#A0A0A0;">{{ language['oc_1'] }}</div>
+                      </td>
+                    </tr> {% else %} <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Montserrat, sans-serif;font-size:10px;line-height:1.4;text-align:center;color:#A0A0A0;">{{ language['tc_1'] }}</div>
+                      </td>
+                    </tr> {% endif %} </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- END REFUND -->
+  </div>
+</body>
+
+</html>

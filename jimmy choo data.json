@@ -1,0 +1,991 @@
+{% set translations = 
+    {
+        "en_GB": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "Store Details",
+                "address": "Address:",
+                "email": "Email Address:",
+                "telephone": "Telephone:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://www.jimmychoo.com/en/women/?utm_source=UKreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "WOMENS",
+                },
+                {
+                    "href": "https://www.jimmychoo.com/en/men/?utm_source=UKreceipt&utm_medium=MenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=MenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "MENS",
+                },
+                {
+                    "href": "https://www.jimmychoo.com/en/women/new-arrivals/?utm_source=UKreceipt&utm_medium=newarrivals&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=newarrivals-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "NEW ARRIVALS",
+                },
+                {
+                    "href": "https://www.jimmychoo.com/en/store-locator?utm_source=UKreceipt&utm_medium=BottomNavSL&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=BottomNavSL-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "FIND A STORE",
+                }
+            ],
+            "greeting": {
+                "dear": "Dear ",
+                "customer": "Customer",
+                "body": "We are thrilled that you chose to shop with us today. Please find your digital receipt attached.<br/><br/>
+      We really do hope you enjoy your purchase and that we will see you again very soon.<br/><br/>
+      Do not hesitate to contact us if we can help with anything further.<br/><br/>
+      With kind regards,",
+        "body_gift": "Here is your gift receipt at ",
+        "href": "https: //yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "Explore more",
+            },
+            "receipt": {
+                "title": "Here Is Your eReceipt For Your Recent Purchase",
+                "gift": "Here Is Your Gift Receipt",
+                "discount": "Discount",
+                "subtotal": "Subtotal",
+                "tax": "Tax (20%)",
+                "total": "Total",
+                "payment_method": "Payment_method",
+                "till": "Till:",
+                "salesperson": "Salesperson:",
+                "transaction_id": "Transaction ID:",
+                "time": "Date and Time:",
+            },
+            "refund": {
+                "title": "Refund Policy:",
+                "body": "Our Service commitment. If you change your mind about your purchase Jimmy Choo
+      offers a facility for exchanging your goods for either; i) A full credit note to the value of the goods
+      purchased; or ii) Other merchandise to the same value all we ask is that the goods are returned in
+      perfect condition and that you provide suitable proof of purchase and return the goods within 14 days.
+      Once issued a credit note is your responsibility and if lost or stolen it can not be replaced. Credit note
+      is valid indefinitely. We do not issue refunds unless items are deemed faulty. The above policy does
+      not affect your statutory rights. Please note that all faults are at the discretion of our company. If in the
+      opinion of the company faults are caused by misuse, a refund will not be issued. Many Thanks.",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "How did we do today?<br/>We would love to hear about your experience.",
+                    "href": "https://jimmychoo.typeform.com/to/XWLsCg?utm_source=UKreceipt&utm_medium=Survey&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=Survey-_-UKreceipt-_-DigitalReceipts-_-EReceipts&typeform-source=beta-dot-receipts-out-dot-yreceipts-prod-uk.appspot.com",
+                    "button": "Take Survey",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fwomen%2F%3Futm_source%3DUKreceipt%26utm_medium%3DShopWomen%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DShopWomen-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "SHOP WOMENS",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fmen%2F%3Futm_source%3DUKreceipt%26utm_medium%3DShopMen%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DShopMen-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "SHOP MENS",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "Join Team Choo on our Social Media channels to<br/>keep up to date with the latest news and launches",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://www.jimmychoo.com/en/women/?utm_source=UKreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "WOMENS",
+                },
+                {
+                    "href": "https://www.jimmychoo.com/en/men/?utm_source=UKreceipt&utm_medium=MenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=MenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "MENS",
+                },
+                {
+                    "href": "https://www.jimmychoo.com/en/store-locator?utm_source=UKreceipt&utm_medium=BottomNavSL&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=BottomNavSL-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "FIND A STORE",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+      Company Number: 03185783<br/><br/>
+      © 2022 Jimmy Choo",
+            }
+        },
+        "de_DE": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "Shop- Details",
+                "address": "Adresse:",
+                "email": "Email Address:",
+                "telephone": "Telefonnummer:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/damen/?utm_source=UKreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-DEreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "DAMEN",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/herren//?utm_source=DEreceipt&utm_medium=MenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=MenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "HERREN",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/damen/neuheiten/?utm_source=UKreceipt&utm_medium=newarrivals&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=newarrivals-_-DEreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "NEUHEITEN",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/store-locator?utm_source=UKreceipt&utm_medium=BottomNavSL&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=BottomNavSL-_-DEreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "STORE - FINDER",
+                }
+            ],
+            "greeting": {
+                "dear": "Liebe ",
+                "customer": "Customer",
+                "body": "Wir freuen uns, dass wir Sie heute in unserer Boutique empfangen durften. Bitte finden Sie Ihre digitale Quittung im Anhang.<br/>
+        Wir hoffen, dass Ihre Artikel Sie zufriedenstellen und Sie uns bald wieder besuchen.<br/>
+        Falls Sie weitere Fragen haben, stehen wir Ihnen jederzeit zur Verfügung.<br/><br/>
+        Mit freundlichen Grüßen,",
+        "body_gift": "Hier ist Ihr Geschenkbeleg an ",
+        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "Explore more",
+            },
+            "receipt": {
+                "title": "Hier ist Ihre elektronische Quittung für Ihren letzten Einkauf",
+                "gift": "Hier ist Ihr Geschenkbeleg",
+                "discount": "Discount",
+                "subtotal": "Zwischensumme",
+                "tax": "Taxe payée",
+                "total": "Total",
+                "payment_method": "Moyen de paiement",
+                "till": "Kasse:",
+                "salesperson": "Verkäuferin:",
+                "transaction_id": "Transaktions-ID:",
+                "time": "Datum und uhrzeit:",
+            },
+            "refund": {
+                "title": "Hinweis:",
+                "body": "Umtauschrecht innerhalb von 14 Tagen. Keine Geldauszahlung. Kein Umtausch von reduzierter Ware. 12 Monate Garantie ab Kaufdatum.",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "Wie bewerten Sie uns?<br/>Wir freuen uns über Ihr Feedback.",
+                    "href": "https://jimmychoo.typeform.com/to/m2TZU7?utm_source=UKreceipt&utm_medium=Survey&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=Survey-_-DEreceipt-_-DigitalReceipts-_-EReceipts&typeform-source=beta-dot-receipts-out-dot-yreceipts-prod-uk.appspot.com",
+                    "button": "UMFRAGE BEGINNEN",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fwomen%2F%3Futm_source%3DUKreceipt%26utm_medium%3DShopWomen%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DShopWomen-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "DAMEN KOLLEKTION SHOPPEN",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fmen%2F%3Futm_source%3DUKreceipt%26utm_medium%3DShopMen%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DShopMen-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "HERREN KOLLEKTION SHOPPEN",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "Rejoignez Team Choo sur nos réseaux sociaux afin de rester<br/>informé des dernières actualités et collections",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/damen/?utm_source=UKreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-DEreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "DAMEN",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/herren//?utm_source=DEreceipt&utm_medium=MenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=MenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "HERREN",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/de_DE/store-locator?utm_source=UKreceipt&utm_medium=BottomNavSL&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=BottomNavSL-_-DEreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "STORE - FINDER",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+        Company Number: 03185783<br/><br/>
+        © 2022 Jimmy Choo",
+            }
+        },
+        "es_ES": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "Información de la tienda",
+                "address": "Dirección:",
+                "email": "Email Address:",
+                "telephone": "Teléfono:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/mujer/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "PARA MUJER",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/mujer/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "PARA HOMBRE",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/mujer/novedades/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "NOVEDADES",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/store-locator?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "ENCONTRAR UNA TIENDA",
+                }
+            ],
+            "greeting": {
+                "dear": "Estimada ",
+                "customer": "Cliente",
+                "body": "Estamos encantados de que nos haya elegido hoy para realizar sus compras. Le adjuntamos su recibo digital.<br/>
+        Esperamos que disfrute de su compra y deseamos volver a asesorarle muy pronto.<br/>
+        No dude en ponerse en contacto con nosotros para cualquier consulta.<br/>
+        Atentamente,<br/><br/>",
+        "body_gift": "Aquí está su recibo de regalo en ",
+        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "Explore more",
+            },
+            "receipt": {
+                "title": "Aquí está su recibo electrónico de su compra reciente",
+                "gift": "Aquí está su recibo de regalo",
+                "discount": "Discount",
+                "subtotal": "Subtotal",
+                "tax": "Impuestos pagados",
+                "total": "Total",
+                "payment_method": "Método de pago",
+                "till": "Caja registradora:",
+                "salesperson": "Vendedor/a:",
+                "transaction_id": "ID. de la transacción:",
+                "time": "Fecha y hora:",
+            },
+            "refund": {
+                "title": "NUESTRO SERVICIO DE DEVOLUCIÓN:",
+                "body": "Si cambia de opinión sobre su compra, Jimmy Choo le ofrece la comodidad de cambiar su artículo por cualquiera de las siguientes opciones: 1) Un vale de compra por el mismo valor del artículo adquirido. 2) Otro artículo del mismo valor. Los artículos deberán ser devueltos dentro de los 15 días siguientes a la fecha de la compra y en perfectas condiciones, siendo necesario que se acompa¿e el ticket de compra. En caso de que la mercancía adquirida adolezca de algún defecto de fabricación, se procederá a la elección del cliente, a su cambio o devolución de su importe en el mismo modo en que haya sido abonado. La valoración del estado en que se devuelve la mercancía quedará a discreción de nuestra compa¿ía. No se admitirán cambios o devoluciones de artículos comprados en otro país. Los artículos rebajados o con descuento no se podrán cambiar ni se rembolsará su importe. Las normas descritas anteriormente no afectan a las garantías legales y demás derechos reconocidos al consumidor y en particular a los derechos reconocidos en la Ley 23/2003",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "¿Qué tal ha ido todo hoy?<br/>
+          Nos encantaría saber cómo ha sido su experiencia.
+          ",
+        "href": "https: //jimmychoo.typeform.com/to/fY1osS?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "button": "HACER ENCUESTA",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://row.jimmychoo.com/es_ES/mujer/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "COMPRAR ARTÍCULOS PARA MUJER",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://row.jimmychoo.com/es_ES/mujer/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "COMPRAR ARTÍCULOS PARA HOMBRE",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "Únase al equipo Choo en nuestros canales de redes sociales para estar al día de las últimas noticias y lanzamientos",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/mujer/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "PARA MUJER",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/mujer/?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "PARA HOMBRE",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/es_ES/store-locator?utm_source=esreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "ENCONTRAR UNA TIENDA",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+      Company Number: 03185783<br/><br/>
+      © 2022 Jimmy Choo",
+            }
+        },
+        "it_IT": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "Dettagli negozio",
+                "address": "Indirizzo:",
+                "email": "Email Address:",
+                "telephone": "Telefono:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/donna/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "DONNE",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/uomo/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "UOMINI",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/donna/nuovi-arrivi/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "NUOVI-ARRIVI",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/store-locator/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "TROVA-NEGOZI",
+                }
+            ],
+            "greeting": {
+                "dear": "Gentile ",
+                "customer": "Cliente",
+                "body": "Siamo entusiasti che oggi abbia scelto di fare acquisti presso di noi. In allegato troverà lo scontrino digitale.<br/>
+  
+        Ci auguriamo che l'acquisto sia di suo gradimento e di rivederla presto.<br/>
+        
+        Non esiti a contattarci per eventuali altre richieste.<br/>
+        
+        Cordiali saluti,<br/><br/>",
+        "body_gift": "Ecco la ricevuta del regalo su ",
+        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "Explore more",
+            },
+            "receipt": {
+                "title": "Ecco la tua ricevuta elettronica per il tuo acquisto recente",
+                "gift": "Ecco la ricevuta del regalo",
+                "discount": "Discount",
+                "subtotal": "Subtotale",
+                "tax": "Imposta pagata",
+                "total": "Totale",
+                "payment_method": "Metodo di pagamento",
+                "till": "Cassa:",
+                "salesperson": "Addetto vendite:",
+                "transaction_id": "ID transazione:",
+                "time": "Data e ora:",
+            },
+            "refund": {
+                "title": "Politica di rimborso:",
+                "body": "Siamo lieti di offrire un servizio gratuito di ritiro dei resi ai clienti i cui acquisti soddisfano la nostra politica di reso.
+  
+        Hai 14 giorni dalla ricezione dell'ordine per comunicarci l'intenzione di restituire o sostituire uno o più articoli. Quindi hai altri 14 giorni per restituirci la merce, seguendo la procedura riportata di seguito.
+        
+        Ci impegniamo a elaborare i resi entro 3 giorni di calendario dalla ricezione del tuo ordine. Durante i saldi, potrebbero essere necessari fino a 5 giorni di calendario.
+        ",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "Com'è stata la sua esperienza, oggi?<br/>Gradiremmo conoscere la sua opinione.",
+                    "href": "https://jimmychoo.typeform.com/to/FYt49s/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceiptss",
+                    "button": "Partecipa al sondaggio",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://row.jimmychoo.com/it_IT/donna/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "ACQUISTA PER LEI",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://row.jimmychoo.com/it_IT/uomo/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "ACQUISTA PER LUI",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "Unisciti al Team Choo sui nostri canali social per ricevere aggiornamenti sulle ultime novità e sui lanci.",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/donna/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "DONNE",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/uomo/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "UOMINI",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/it_IT/store-locator/?utm_source=ITreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "TROVA-NEGOZI",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+      Company Number: 03185783<br/><br/>
+      © 2022 Jimmy Choo",
+            }
+        },
+        "fr_FR": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "Détails de la boutique",
+                "address": "Adresse:",
+                "email": "Email Adresse:",
+                "telephone": "Téléphone:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/femme/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "FEMME",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/homme/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "HOMME",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/femme/nouveaut%C3%A9s/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "NOUVEAUTÉS",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/store-locator",
+                    "text": "BOUTIQUE",
+                }
+            ],
+            "greeting": {
+                "dear": "Chère ",
+                "customer": "Bonjour",
+                "body": "Nous sommes ravis d’avoir pu vous accueillir dans notre boutique aujourd’hui. Veuillez trouver votre reçu digital en pièce jointe.<br/>
+  
+        Nous espérons que votre achat vous satisfera et que nous vous reverrons bientôt.<br/>
+        
+        N’hésitez pas à nous contacter pour toute autre information.<br/>
+        
+        Meilleures salutations,<br/><br/>
+      With kind regards,",
+        "body_gift": "Voici votre reçu cadeau à ",
+        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "Explore more",
+            },
+            "receipt": {
+                "title": "Voici votre reçu électronique pour votre achat récent",
+                "gift": "Voici votre reçu cadeau",
+                "discount": "Discount",
+                "subtotal": "Sous-total",
+                "tax": "Taxe payée",
+                "total": "Total",
+                "payment_method": "Moyen de paiement",
+                "till": "Caisse:",
+                "salesperson": "Vendeur/Vendeuse:",
+                "transaction_id": "ID de la transaction:",
+                "time": "Date et heure:",
+            },
+            "refund": {
+                "title": "NOTRE ENGAGEMENT:",
+                "body": "Si vous changez d'avis sur votre achat Jimmy Choo facilite l'échange de
+        vos achats et propose au choix: i) Emission d'un avoir du montant de vos achats OU ii) L'échange
+        contre des marchandises de même valeur. Les marchandises doivent être retournées être en parfait
+        état sous 14 jours avec une preuve d'achat Les retours ne seront en aucun cas acceptés pour des
+        marchandises soldées ou remisées. L'avoir est sous votre responsabilité: il ne pourra pas être
+        remplacé en cas de perte ou de vol. Les marchandises soldées ne sont ni remboursables ni
+        échangeables. Ces règles n'affectent pas vos droits statutaires Jimmy Choo se réserve le droit
+        d'apprécier les éventuels défauts. Si les défauts résultent d'une mauvaise utilisation, aucun
+        remboursement ou echange ne sera effectué. Merci beaucoup.",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "Comment nous évaluez-vous?<br/>
+          Nous aimerions entendre vos retours sur votre visite.",
+        "href": "https: //jimmychoo.typeform.com/to/szvlte/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "button": "RÉPONDRE AU SONDAGE",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://row.jimmychoo.com/fr_FR/homme/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "COLLECTION FEMME",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fmen%2F%3Futm_source%3DUKreceipt%26utm_medium%3DShopMen%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DShopMen-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "COLLECTION HOMME",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "Rejoignez Team Choo sur nos réseaux sociaux afin de rester informé(e) des dernières actualités et collections",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/femme/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "FEMME",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/homme/?utm_source=FRreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "HOMME",
+                },
+                {
+                    "href": "https://row.jimmychoo.com/fr_FR/store-locator",
+                    "text": "BOUTIQUE",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+      Company Number: 03185783<br/><br/>
+      © 2022 Jimmy Choo",
+            }
+        },
+        "cn_CN": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "门店详情",
+                "address": "地址:",
+                "email": "電子郵件地址:",
+                "telephone": "电话:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://www.jimmychoo.cn/women.html/",
+                    "text": "女装",
+                },
+                {
+                    "href": "https://www.jimmychoo.cn/men.html",
+                    "text": "男装",
+                },
+                {
+                    "href": "https://www.jimmychoo.cn/collection.html",
+                    "text": "新品上市",
+                },
+                {
+                    "href": "https://www.jimmychoo.cn/store_management/index/seachpage/",
+                    "text": "查找门店",
+                }
+            ],
+            "greeting": {
+                "dear": "尊敬的 ",
+                "customer": "顧客",
+                "body": "感谢您选购我们的商品。 请查收附件中的电子收据。<br/>
+   
+        我们衷心希望您对购物心满意足，并欢迎您再次光临。<br/>
+        
+        如需其他任何协助，请直接与我们联系。<br/>
+        
+        此致，<br/><br/>",
+        "body_gift": "這是你的禮物收據",
+        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "探索更多",
+            },
+            "receipt": {
+                "title": "這是您最近購買的電子收據",
+                "gift": "這是你的禮物收據",
+                "discount": "折扣",
+                "subtotal": "小计",
+                "tax": "所付税款",
+                "total": "全部的",
+                "payment_method": "支付方式",
+                "till": "收银台:",
+                "salesperson": "店员:",
+                "transaction_id": "交易 ID:",
+                "time": "日期和时间:",
+            },
+            "refund": {
+                "title": "退款政策:",
+                "body": "未经使用，修改并无坏损之原价货品 如需更换，可在购买之日起十四天内 凭销售凭证换货",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "您对我们今天的服务满意吗<br/>
+          我们非常希望了解您对本次购物体验的感受。",
+        "href": "https: //jimmychoo.typeform.com/to/nD4nFw",
+                    "button": "填写调查问卷",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://www.jimmychoo.cn/women.html/",
+                        "text": "选购女装",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://www.jimmychoo.cn/men.html",
+                        "text": "选购男装",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "通过社交媒体频道加入 Team Choo，及时了解最新发布的新闻和单品。",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://www.jimmychoo.cn/women.html/",
+                    "text": "女装",
+                },
+                {
+                    "href": "https://www.jimmychoo.cn/men.html",
+                    "text": "男装",
+                },
+                {
+                    "href": "https://www.jimmychoo.cn/store_management/index/seachpage/",
+                    "text": "查找门店",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+      Company Number: 03185783<br/><br/>
+      © 2022 Jimmy Choo",
+            }
+        },
+        "jp_JP": {
+            "store": {
+                "show": True,
+                "name": "Jimmy Choo",
+                "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "logo": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/logo-01.png",
+                },
+                "banner": "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg'",
+                "banner_src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-01.jpg",
+                "detail": "店舗",
+                "address": "住所:",
+                "email": "Email Address:",
+                "telephone": "電話:",
+                "phone_number": "",
+            },
+            "gnb": [
+                {
+                    "href": "https://www.jimmychoo.jp/ja/%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "レディース",
+                },
+                {
+                    "href": "https://www.jimmychoo.jp/ja/%E3%83%A1%E3%83%B3%E3%82%BA/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "メンズ",
+                },
+                {
+                    "href": "https://www.jimmychoo.jp/ja/%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9/%E6%96%B0%E7%9D%80%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "新着",
+                },
+                {
+                    "href": "https://www.jimmychoo.jp/ja/store-locator/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "店舗検索",
+                }
+            ],
+            "greeting": {
+                "dear": "Dear ",
+                "customer": "Customer",
+                "body": "We are thrilled that you chose to shop with us today. Please find your digital receipt attached.<br/><br/>
+      We really do hope you enjoy your purchase and that we will see you again very soon.<br/><br/>
+      Do not hesitate to contact us if we can help with anything further.<br/><br/>
+      With kind regards,",
+        "body_gift": "ギフトの領収書はこちら",
+        "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=http%3A%2F%2Fwww.jimmychoo.com%2Fen%2Fhome%3Futm_source%3DUKreceipt%26utm_medium%3DHomeTopNav%26utm_campaign%3DDigitalReceipts%26utm_content%3DEReceipts%26cm_mmc%3DHomeTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                "button": "Explore more",
+            },
+            "receipt": {
+                "title": "最近購入した電子レシートはこちら",
+                "gift": "Hギフトの領収書はこちら",
+                "discount": "割引",
+                "subtotal": "小計",
+                "tax": "課税対象額",
+                "total": "合計",
+                "payment_method": "Tender Type",
+                "till": "Till:",
+                "salesperson": "担当スタッフ:",
+                "transaction_id": "レシート番号:",
+                "time": "日時:",
+            },
+            "cta": {
+                "cta1_1": {
+                    "body": "本日のお買い物はいかがでしたでしょうか。<br/>
+          今後のサービス向上のために、ぜひお客様の貴重なご意見をお聞かせください。",
+        "href": "https: //jimmychoo.typeform.com/to/mALDXz/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "button": "アンケートに回答",
+                },
+                "cta1_2": {
+                    "src1": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-03.jpg",
+                    "button1": {
+                        "href": "https://www.jimmychoo.jp/ja/%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "SHOP WOMENS",
+                    },
+                    "src2": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/img-04.jpg",
+                    "button2": {
+                        "href": "https://www.jimmychoo.jp/ja/%E3%83%A1%E3%83%B3%E3%82%BA/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                        "text": "SHOP MENS",
+                    }
+                },
+                "cta3": {
+                    "href": "https://yreceipts-prod-uk.appspot.com/businesses/advertising?key=ahNlfnlyZWNlaXB0cy1wcm9kLXVrchQLEgdSZWNlaXB0GICA4JamsIgLDA&url=https%3A%2F%2Fwww.instagram.com%2Fjimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/Social%20Banner.jpg",
+                }
+            },
+            "join": {
+                "body": "Join Team Choo on our Social Media channels to<br/>keep up to date with the latest news and launches",
+            },
+            "social": [
+                {
+                    "href": "https://www.facebook.com/JimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/facebook.jpg",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://twitter.com/jimmychoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/twitter.jpg",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.pinterest.co.uk/jimmychooworld/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/pinterest.jpg",
+                    "alt": "pinterest"
+                },
+                {
+                    "href": "https://www.instagram.com/jimmychoo/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/instagram.jpg",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/OfficialJimmyChoo",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/jimmychoo/01092022/youtube.jpg",
+                    "alt": "youtube"
+                },
+            ],
+            "lnb": [
+                {
+                    "href": "https://www.jimmychoo.jp/ja/%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "レディース",
+                },
+                {
+                    "href": "https://www.jimmychoo.jp/ja/%E3%83%A1%E3%83%B3%E3%82%BA/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "メンズ",
+                },
+                {
+                    "href": "https://www.jimmychoo.jp/ja/store-locator/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+                    "text": "店舗検索",
+                }
+            ],
+            "tnc": {
+                "body": "J.Choo limited 10 Howick Place, London, SW1P 1GW<br/>
+      Company Number: 03185783<br/><br/>
+      © 2022 Jimmy Choo",
+        "line": "<JIMMY CHOO LINE公式アカウントのご案内>
+        友だち登録していただいた方に、
+        LINEだけの特別なキャンペーンをはじめ、
+        限定品や新製品の情報をいち早くお届けします。"
+            }
+        },
+    }
+%}

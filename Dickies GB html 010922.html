@@ -1,0 +1,810 @@
+{% set translations = 
+    {
+        "en_GB": {
+            "store" : {
+                "show" : True,
+                "name" : "Vans",
+                "href" : "https://www.dickieslife.com/?utm_source=digital_receipt&utm_medium=%28Other%29&utm_campaign=Carnaby&utm_id=Carnaby",
+                "logo" : {
+                "href" : "https://www.dickieslife.com/?utm_source=digital_receipt&utm_medium=%28Other%29&utm_campaign=Carnaby&utm_id=Carnaby",
+                "src" : "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/dickies/DickiesMasterLogo.png",
+                },
+                "banner" : "'https://storage.googleapis.com/yreceipts-prod-uk-public-assets/dickies/DK_BANNER.jpg'",
+                "banner_src" : "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/dickies/DK_BANNER.jpg",
+                "detail" : "Store Details",
+                "address" : "Address:",
+                "telephone" : "Telephone:",
+                "tax_number" : "VAT No. GB 943074330",
+            },
+            "customer" : {
+                "address" : "address",
+            },
+            "greeting" : {
+                "dear" : "Dear ",
+                "customer" : "Customer",
+                "title" : "YOUR RECEIPT INFORMATION",
+                "thankyou" : "Please find your receipt attached to this email.<br/><br/>
+                Thank you for shopping at Dickies.<br/>
+                If you have any request, please do not hesitate to contact the store you
+                purchased from or our Customer Service.<br/><br/>",
+                "body": "Thank you<br/>Dickies Team",
+            },
+            "receipt" : {
+                "discount" : "Discount",
+                "subtotal" : "Subtotal",
+                "tax" : "VAT: 20%",
+                "total" : "Total",
+                "payment_method" : "Payment_method",
+                "till" : "Till:",
+                "store" : "Store:",
+                "salesperson" : "Cashier:",
+                "transaction_number" : "Transaction number:",
+                "time" : "Date of Purchase:",
+                "order_number" : "Order Number:",
+                "item_id" : "Item ID",
+                "description" : "Description",
+                "quantity" : "Quantity",
+                "price" : "Price",
+                "tax" : {
+                "rate" : "Rate",
+                "taxable_amount" : "Taxable Amount",
+                "tax_paid" : "Tax Paid",
+                },
+                "tender" : {
+                "type" : "Tender Type",
+                "amount" : "Amount",
+                },
+            },
+            "cta" : {
+                "body" : "Not subscribed to our newsletter yet?<br/>
+                Subscribe to our newsletter and get first dibs on the latest Dickies news, products and exclusive offers.
+                Plus, we’ll send you a <b>10% off</b> code to say thanks for joining our community.",
+                "href" : "https://www.dickieslife.com/uk_en/newsletter?utm_source=digital_receipt&utm_medium=%28Other%29&utm_campaign=Carnaby&utm_id=Carnaby",
+            },
+            "social" : [
+                {
+                    "href": "https://www.facebook.com/dickieseuro/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/dickies/FB%20LOGO.png",
+                    "alt" : "Facebook"
+                },
+                {
+                    "href": "https://www.instagram.com/dickies_europe/",
+                    "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/dickies/INSTA%20LOGO.png",
+                    "alt" : "Instagram"
+                },
+            ],
+            "tnc" : {
+                "body" : '"If you are not entirely happy with your product(s), you can, within 30 days of the date of purchase, return the item(s) to us in its original condition with original proof of purchase.<br/><br/>We will issue a full refund for the price you paid for the item, in the form of exchange or original payment.<br/><br/>Returns must be processed only in the store where the original purchase was made.<br/><br/>In any instance where no original receipt/packing slip can be presented, a return will be at the store manager’s discretion in the form of an exchange at the current selling price. We will only accept any re-saleable, unworn, current season merchandise.<br/><br/>Items purchased during end of season/clearance sale may only be returned within 14 days of the date of purchase.<br/><br/>Our return policy gives you specific legal rights subject to its conditions. It does not affect your consumer’s Guarantee Statutory Rights with respect to defective product, in particular those relating to the mandatory consumer warranty on the sales of consumer goods, where applicable."',
+            },
+        }, 
+    }
+%}
+  
+{% set language = translations[locale if locale in translations else "en_GB"] %}
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<title>
+</title>
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+  #outlook a {
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  table,
+  td {
+    border-collapse: collapse;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+  }
+
+  img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+  }
+
+  p {
+    display: block;
+    margin: 13px 0;
+  }
+</style>
+<!--[if mso]>
+      <noscript>
+      <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+      </xml>
+      </noscript>
+      <![endif]-->
+<!--[if lte mso 11]>
+      <style type="text/css">
+        .mj-outlook-group-fix { width:100% !important; }
+      </style>
+      <![endif]-->
+<!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+<style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+</style>
+<!--<![endif]-->
+<style type="text/css">
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  }
+</style>
+<style media="screen and (min-width:480px)">
+  .moz-text-html .mj-column-per-100 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+</style>
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+    table.mj-full-width-mobile {
+      width: 100% !important;
+    }
+
+    td.mj-full-width-mobile {
+      width: auto !important;
+    }
+  }
+
+  noinput.mj-menu-checkbox {
+    display: block !important;
+    max-height: none !important;
+    visibility: visible !important;
+  }
+
+  @media only screen and (max-width:480px) {
+    .mj-menu-checkbox[type="checkbox"]~.mj-inline-links {
+      display: none !important;
+    }
+
+    .mj-menu-checkbox[type="checkbox"]:checked~.mj-inline-links,
+    .mj-menu-checkbox[type="checkbox"]~.mj-menu-trigger {
+      display: block !important;
+      max-width: none !important;
+      max-height: none !important;
+      font-size: inherit !important;
+    }
+
+    .mj-menu-checkbox[type="checkbox"]~.mj-inline-links>a {
+      display: block !important;
+    }
+
+    .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-close {
+      display: block !important;
+    }
+
+    .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-open {
+      display: none !important;
+    }
+  }
+</style>
+<style type="text/css">
+  p {
+    margin: inherit !important;
+    line-height: 20px !important;
+  }
+
+  .section>table>tbody>tr>td {
+    padding: 0 !important
+  }
+
+  .mj-column-per-100>table>tbody>tr>td {
+    padding: 4px 25px !important
+  }
+
+  .mj-column-per-100>table>tbody>tr>td.nav {
+    padding: inherit !important
+  }
+
+  .nav a {
+    padding: 8px 10px 4px !important
+  }
+
+  .red {
+    color: rgb(231, 26, 12) !important
+  }
+
+  .white {
+    color: #fff !important
+  }
+
+  .mj-column-per-100>table>tbody>tr>td.welcomemsg {
+    padding: 8px 25px !important
+  }
+</style>
+</head>
+
+<body style="word-spacing:normal;">
+<div style="">
+  <!-- HEADER/NAV -->
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook header-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section header" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="center" class="welcomemsg" style="font-size:0px;padding:10px 25px!important;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1.2;text-align:center;color:#000000;">
+                        {{ data['store']['name'] }}<br />
+                        {% for address in data['store']['address']['street'] %}
+                        {{ address }}
+                        {% endfor %}<br />
+                        {{ language['store']['tax_number'] }}<br />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                        <tbody>
+                          <tr>
+                            <td align="center" width="20%">
+                              <a href="{{ language['store']['logo']['href'] }}" target="_blank">
+                                <img width="20%" height="auto" src="{{ language['store']['logo']['src'] }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:20%;font-size:13px;" />
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- START STORE IMAGE -->
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                        <tbody>
+                          <tr>
+                            <td style="width:550px;">
+                              <a href="{{ language['store']['href'] }}" target="_blank">
+                                <img height="auto" src="{{ language['store']['banner_src'] }}" alt="{{ language['store']['name'] }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="550" />
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END STORE IMAGE -->
+                  <tr>
+                    <td align="center" class="welcomemsg" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;">
+                        {% if receipt.temporary_type != "gift" %}
+                        <h3>{{ language['greeting']['title'] }}</h3>{{ language['greeting']['thankyou'] }}<br/><a href="{{language['store']['href']}}" style="text-decoration:none; color:#000000;">www.dickieslife.com</a><br/><br/>{{language['greeting']['body']}}
+                        {% else %}
+                        {{ language['greeting']['gift'] }}{{ language['store']['name'] }}<br /><br />
+                        {% endif %}
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 4px #000000;font-size:1px;margin:0px auto;width:100%;">
+                      </p>
+                      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 4px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook order-detail-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section order-detail" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{language['receipt']['time']}} {{receipt.get_local_time().strftime('%d/%m/%Y %H:%M')}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;"> {{language['receipt']['order_number']}} {{ data['order']['order_number']['text'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{language['receipt']['transaction_number']}} {{ data['receipt']['transaction_number']['text'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{language['receipt']['salesperson']}} {{ data['receipt']['associate']['name'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{language['receipt']['till']}} {{ data['device']['external_id'] }}</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <!-- END HEADER/NAV -->
+  <!-- SALE ITEMS -->
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook item-detail-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section item-detail" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top; width: 20%;">{{language['receipt']['item_id']}}</th>
+                          <th style="text-align: left; vertical-align: top; width: 35%;">{{language['receipt']['description']}}</th>
+                          {% if receipt.temporary_type != "gift" %}
+                          <th style="text-align: center; vertical-align: top; width: 25%;">{{language['receipt']['quantity']}}</th>
+                          <th style="text-align: right; vertical-align: top; width: 20%;">{{language['receipt']['price']}}</th>
+                          {% else %}
+                          <th style="text-align: center; vertical-align: top; width: 45%;">{{language['receipt']['quantity']}}</th>
+                          {% endif %}
+                        </tr>
+                        {% for sale_item in receipt['sale_item'] %}
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+                          <td style="text-align: left; vertical-align: top; width: 35%;">
+                            {{ sale_item['text'] }}
+                            {% for discount in sale_item['discount'] %}
+                            <br>Discount Reason: {{ discount['text'] }}
+                            <br>Discount Amount: {{ format_currency(discount['amount']['value']) }}
+                            {% endfor %}
+                          </td>
+                          {% if receipt.temporary_type != "gift" %}
+                          <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+                          <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+                          {% else %}
+                          <td style="text-align: center; vertical-align: top; width: 45%;">{{ sale_item['quantity']['value'] }}</td>
+                          {% endif %}
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <!-- END SALE ITEMS -->
+
+  {% if receipt.temporary_type != "gift" %}
+  <!-- SUBTOTAL -->{% if receipt['receipt']['subtotal']['amount']['value'] %}
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook total-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section total" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                      </p>
+                      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <td align="left"><b>{{ language['receipt']['subtotal'] }}</b></td>
+                          <td align="right">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                      </p>
+                      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+  <!-- END SUBTOTAL -->
+  <!-- DISCOUNTS -->{% if receipt['discount'] %}
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook discount-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section discount" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top;">Discount</th>
+                          <th style="text-align: right; vertical-align: top;">Amount</th>
+                        </tr>
+                        {% for discount in receipt['discount'] %}
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+                          <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+  <!-- END DISCOUNTS -->
+  <!-- TAXES -->{% if receipt['tax'] %}
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top; width: 25%;"></th>
+                          <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['receipt']['tax']['rate'] }}</th>
+                          <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['receipt']['tax']['taxable_amount'] }}</th>
+                          <th style="text-align: right; vertical-align: top; width: 25%;">{{ language['receipt']['tax']['paid'] }}</th>
+                        </tr>
+                        {% for tax in receipt['tax'] %}
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top; width: 25%;">{{ tax['text'] }}</td>
+                          <td style="text-align: center; vertical-align: top; width: 25%;">{{ tax['rate']['text'] }}</td>
+                          <td style="text-align: center; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+                          <td style="text-align: right; vertical-align: top; width: 25%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+  <!-- END TAXES -->
+  <!-- TOTAL -->{% if receipt['receipt']['total']['amount']['value'] %}
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook total-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section total" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                      </p>
+                      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <td align="left"><b>{{ language['receipt']['total'] }}</b></td>
+                          <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                      </p>
+                      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+  <!-- END TOTAL -->
+  <!-- TENDER -->{% if receipt['tender'] %}
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-outlook tender-type-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div class="section tender-type" style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top;">{{ language['receipt']['tender']['type'] }}</th>
+                          <th style="text-align: right; vertical-align: top;">{{ language['receipt']['tender']['amount'] }}</th>
+                        </tr>
+                        {% for tender in receipt['tender'] %}
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+                          <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]--> {% endif %}
+  <!-- END TENDER -->
+  {% endif %}
+  
+  <!-- BARCODE -->
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                        <tbody>
+                          <tr>
+                            <td style="width:300px;">
+                              <img height="auto" src="{{ barcode_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="300" />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;"> {{ receipt.barcode_transaction_number }}</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <!-- END BARCODE -->
+  <!-- CTA -->
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="center" class="welcomemsg" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;">
+                        {% if receipt.temporary_type != "gift" %}
+                        {{ language['cta']['body'] }}
+                        {% endif %}
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td align="center" vertical-align="middle"
+                          style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                              style="border-collapse:separate;line-height:100%;">
+                              <tr>
+                                  <td align="center" bgcolor="#000" role="presentation"
+                                      style="border:none;cursor:auto;mso-padding-alt:10px 25px;background:#000;"
+                                      valign="middle">
+                                      <a href="{{ language['cta']['href']}}"
+                                          style="display:inline-block;background:#000;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;"
+                                          target="_blank"> SIGN UP </a>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <!-- END CTA -->
+
+    <!-- SOCIAL MEDIA -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
+<div style="margin:1rem auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="width:100%;border-top:solid 2px #222;">
+        <tbody>
+            <tr>
+                <td align="center" style="font-size:0px; word-break:break-word; padding-top:2rem;">
+                    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+  
+                    {% for link in language['social'] %}
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                        style="float:none;display:inline-table;">
+                        <tr>
+                            <td style="padding:4px;vertical-align:middle;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="border-radius:3px;width:30px;">
+                                    <tr>
+                                        <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                            <a href="{{ link['href'] }}" target="_blank">
+                                                <img height="30" src="{{ link['src'] }}"
+                                                    style="border-radius:3px;display:block;width:20px; margin:0 auto;" />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    {% if loop.last %}
+                    <!--[if mso | IE]></td></tr></table><![endif]-->
+                    {% else %}
+                    <!--[if mso | IE]></td><td><![endif]-->
+                    {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <!-- END SOCIAL MEDIA -->
+  <!-- TNC -->
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                <tbody>
+                  <tr>
+                    <td align="center" class="welcomemsg" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:center;color:#000000;">
+                        {{ language['tnc']['body'] }}
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <!-- END TNC -->
+</div>
+</body>
+
+</html>

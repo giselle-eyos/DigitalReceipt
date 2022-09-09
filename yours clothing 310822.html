@@ -1,0 +1,352 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta charset="utf-8">
+    <title>
+    </title>
+
+    <body style="margin: 0pt; min-width: 100%;font-family: Calibri, Arial, Helvetica, sans-serif;">
+        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; align:center;" width="100%">
+            <tbody>
+                <tr>
+                    <td align="center" style="display: block; min-width:686px;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background-color: #ffffff; align:center; border-spacing:0;"
+                            width="686">
+                            <tbody>
+
+                                <tr style="white-space: nowrap;">
+                                    <td align="center" style="width: 100%; display: inline-block; font-size: 40px; font-family: Calibri, Arial, Helvetica, sans-serif; vertical-align: middle; line-height: 65px">
+                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610764,nosent:257467,nosrep:3227/http://www.yoursclothing.co.uk?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                            style="display:block; width:100%; color: #dc3795;" title="Yours Clothing">
+                                            <img alt="♡ Yours Clothing" border="0" height="auto" src="https://www.yoursclothing.co.uk/content/img/logos/Logo_QUEEN_OF_CURVES.png?inline"
+                                                style="display:block;" width="30%">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                
+                                <tr style="white-space: nowrap;">
+                                    <td style="display: block;">
+                                        <img style="display:block;" width="100%" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/Yours%20Clothing/eReceiptBannerTest.png">
+                                    </td>
+                                </tr>
+
+                                <tr style="white-space: nowrap;">
+                                    <td style="width:100%;display: inline-block;text-align:center; letter-spacing: 2px; color:rgb(224, 149, 174);font-size: 1.2em; padding-top:25px;padding-bottom:25px;">
+                                        This is your e-receipt for your recent purchase at:
+                                    </td>
+                                </tr>
+
+                                <tr style="white-space: nowrap;">
+                                    <td style="width:100%;display: inline-block;text-align:center;">
+                                        <span id="lblStoreInfo">{{receipt.device.business_location.store_name}}
+                                      {{receipt.device.business_location.address_line_one}}
+                                      {{receipt.device.business_location.address_line_two}}</span>
+                                    </td>
+                                </tr>
+
+                                <tr style="white-space: nowrap;">
+                                    <td style="width:100%;display: inline-block;text-align:center; letter-spacing: 2px; color:rgb(224, 149, 174);font-size: 1.2em; padding-top:25px;padding-bottom:25px;">
+                                        YOUR ORDER
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+
+                                <tr style="white-space: nowrap;">
+                                    <td style="width:100%;display: inline-block;text-align:center;font-weight:bold;">
+                                        Transaction ID: <span id="lblTransactionId">{{receipt.transaction_number}}</span>
+                                    </td>
+                                </tr>
+                                <tr style="white-space: nowrap;">
+                                    <td style="width:100%;display: inline-block;text-align:center;font-weight:bold;">
+                                        Date Of Purchase: <span id="lblTransactionId">{{receipt.formatted_datetime}}</span>    
+                                    </td>
+                                </tr>
+                                <tr style="white-space: nowrap;">
+                                    <td style="width:100%;display: inline-block;text-align:center;font-weight:bold;">
+                                        You were served by: <span id="lblTransactionId">{{receipt.associate_name.split(' ')[0]}}</span>  
+                                    </td>
+                                </tr>
+                                <tr>
+                            
+    <tr>
+ 
+      <td width="100%">
+<br>
+              <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;margin:0 auto;width:100%"><tbody><tr style="padding:0;text-align:left;vertical-align:top">
+                  <td style="word-break:break-word;padding:15px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:50%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-left:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-top:2px solid #d3d3d3">Product</td>
+                  <td style="word-break:break-word;padding:15px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-top:2px solid #d3d3d3">Quantity</td>
+                  <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-top:2px solid #d3d3d3">Total</td>
+                </tr>
+
+             {% for item in receipt.sale_items() %}
+                  <tr style="padding:0;text-align:left;vertical-align:top">
+                      <td style="word-break:break-word;padding:15px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:normal;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:50%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-left:1px solid #d3d3d3;">
+                          <b>{{ item.text }}</b><br><br>
+                          {{ item.serial_number }}
+                    </td>
+                      <td style="word-break:break-word;padding:15px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:normal;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3">{{ item.quantity }}</td>
+                    <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:normal;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;">
+                        {{ "{:.2f}".format(item.total) }}
+                    </td>
+                  </tr>
+                  {% endfor %}
+
+                  {% for tax in receipt.taxes %}
+                  <tr style="padding:0;text-align:left;vertical-align:top"><td style="word-break:break-word;padding:0 0 10px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:normal;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:50%;border-collapse:collapse!important"></td>
+                    <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-left:1px solid #d3d3d3;">Tax</td>
+                    <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;"> £{{ "{:.2f}".format(tax.amount) }}</td>
+                  </tr>
+                  {% endfor %}
+                <tr style="padding:0;text-align:left;vertical-align:top"><td style="word-break:break-word;padding:0 0 10px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:normal;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:50%;border-collapse:collapse!important"></td>
+                  <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-left:1px solid #d3d3d3;">Total</td>
+                  <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;">£{{ "{:.2f}".format(receipt.total) }}</td>
+                </tr>
+                {% for tender in receipt.tenders() %}
+                  <tr style="padding:0;text-align:left;vertical-align:top"><td style="word-break:break-word;padding:0 0 10px;text-align:left;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:normal;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:50%;border-collapse:collapse!important"></td>
+
+                    <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-left:1px solid #d3d3d3;">{{ tender.type }}</td>
+
+                    <td style="word-break:break-word;padding:15px;text-align:right;vertical-align:top;color:#222;font-family:'Arial',sans-serif;font-weight:bold;line-height:19px;margin:0;font-size:14px;min-width:0;padding-right:10px;width:25%;border-collapse:collapse!important;border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;">£{{ "{:.2f}".format(tender.amount) }}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table>
+      </td>
+    </tr>
+
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr style="white-space: nowrap;">
+                                    <td>
+                                        <table>
+                                            <tbody>
+                                                <tr style="white-space: nowrap;">
+                                                    <td height="100" style="display: inline-block; text-align: center; background-color: #f2f2f2;" width="340">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610785,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/new-in-clothing?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="text-decoration: none; font-weight: bold; font-size: 1.5em; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px; line-height: 100px;"
+                                                            title="NEW IN">
+                                                            <span style="font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px">NEW IN</span>
+                                                        </a>
+                                                    </td>
+
+                                                    <td style="display: inline-block; line-height:100px">
+                                                        <img alt="-" border="0" height="100" src="http://reporting.yoursclothing.co.uk/images/41596fe7e357e195a4645e5e3ef19e3ac4d2c757.jpg"
+                                                            style="display:block;" width="5">
+                                                    </td>
+
+                                                    <td height="100" style="display: inline-block; text-align: center; background-color: #f2f2f2;" width="340">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610786,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/productlist?filter=true&amp;sale=true&amp;sortby=topsellingfirst&amp;utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="text-decoration: none; font-weight: bold; font-size: 1.5em; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px; line-height: 100px;"
+                                                            title="SALE">
+                                                            <span style="font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px">SALE</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="white-space: nowrap;">
+                                                    <td colspan="3" style="display: inline-block; line-height:5px">
+                                                        <img alt="-" border="0" height="5" src="http://reporting.yoursclothing.co.uk/images/d8bc25c2573415e7d2d07dcc5a7a67f06dfb351a.jpg"
+                                                            style="display:block;" width="686">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td height="100" style="display: inline-block; text-align: center; background-color: #f2f2f2;" width="340">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610787,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/dresses?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="text-decoration: none; font-weight: bold; font-size: 1.5em; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px; line-height: 100px;"
+                                                            title="DRESSES">
+                                                            <span style="text-decoration: bold; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px">DRESSES</span>
+                                                        </a>
+                                                    </td>
+
+                                                    <td style="display: inline-block; line-height:100px">
+                                                        <img alt="-" border="0" height="100" src="http://reporting.yoursclothing.co.uk/images/41596fe7e357e195a4645e5e3ef19e3ac4d2c757.jpg"
+                                                            style="display:block;" width="5">
+                                                    </td>
+
+                                                    <td height="100" style="display: inline-block; text-align: center; background-color: #f2f2f2;" width="340">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610788,nosent:257467,nosrep:3227/https://www.badrhino.com?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="text-decoration: none; font-weight: bold; font-size: 1.5em; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px; line-height: 100px;"
+                                                            title="MENS">
+                                                            <span style="text-decoration: none; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px">MENSWEAR</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="white-space: nowrap;">
+                                                    <td colspan="3" style="display: inline-block; line-height:5px">
+                                                        <img alt="-" border="0" height="5" src="http://reporting.yoursclothing.co.uk/images/d8bc25c2573415e7d2d07dcc5a7a67f06dfb351a.jpg"
+                                                            style="display:block;" width="686">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td height="100" style="display: inline-block; text-align: center; background-color: #f2f2f2;" width="340">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610789,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/store-finder?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="text-decoration: none; font-weight: bold; font-size: 1.5em; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px; line-height: 100px;"
+                                                            title="STORE FINDER">
+                                                            <span style="text-decoration: bold; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px">STORE FINDER</span>
+                                                        </a>
+                                                    </td>
+
+                                                    <td style="display: inline-block; line-height:100px">
+                                                        <img alt="-" border="0" height="100" src="http://reporting.yoursclothing.co.uk/images/41596fe7e357e195a4645e5e3ef19e3ac4d2c757.jpg"
+                                                            style="display:block;" width="5">
+                                                    </td>
+
+                                                    <td height="100" style="display: inline-block; text-align: center; background-color: #f2f2f2;" width="340">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610790,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/app?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="text-decoration: none; font-weight: bold; font-size: 1.5em; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px; line-height: 100px;"
+                                                            title="APP">
+                                                            <span style="text-decoration: none; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;letter-spacing: 5px">DOWNLOAD APP</span>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr style="white-space: nowrap;">
+                                                    <td colspan="3" style="display: inline-block; line-height:5px">
+                                                        <img alt="-" border="0" height="5" src="http://reporting.yoursclothing.co.uk/images/d8bc25c2573415e7d2d07dcc5a7a67f06dfb351a.jpg"
+                                                            style="display:block;" width="686">
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr style="white-space: nowrap;">
+                                    <td style="display: inline-block;">
+                                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0; background-color: #f2f2f2;"
+                                            width="686">
+                                            <tbody>
+                                                <tr style="white-space: nowrap;">
+                                                    <td align="middle" style="display: inline-block; font-size: 1em; font-family: Calibri, Arial, Helvetica, sans-serif; vertical-align: middle; line-height: 100px">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610791,nosent:257467,nosrep:3227/https://www.facebook.com/yoursclothingOFFICIAL"
+                                                            style="color: #858585" title="Facebook">
+                                                            <img alt="Facebook" border="0" height="100" src="https://www.yoursclothing.co.uk/content/img/icons/social/yc/facebook.svg?lazy"
+                                                                style="display:block;" width="188">
+                                                        </a>
+                                                    </td>
+                                                    <td align="middle" style="display: inline-block; font-size: 1em; font-family: Calibri, Arial, Helvetica, sans-serif; vertical-align: middle; line-height: 100px">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610792,nosent:257467,nosrep:3227/https://instagram.com/yoursclothinguk/"
+                                                            style="color: #858585" title="Instagram">
+                                                            <img alt="Instagram" border="0" height="100" src="https://www.yoursclothing.co.uk/content/img/icons/social/yc/instagram.svg?lazy"
+                                                                style="display:block;" width="155">
+                                                        </a>
+                                                    </td>
+                                                    <td align="middle" style="display: inline-block; font-size: 1em; font-family: Calibri, Arial, Helvetica, sans-serif; vertical-align: middle; line-height: 100px">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610793,nosent:257467,nosrep:3227/https://twitter.com/Yoursclothing"
+                                                            style="color: #858585" title="Twitter">
+                                                            <img alt="Twitter" border="0" height="100" src="https://www.yoursclothing.co.uk/content/img/icons/social/yc/twitter.svg?lazy"
+                                                                style="display:block;" width="160">
+                                                        </a>
+                                                    </td>
+                                                    <td align="middle" style="display: inline-block; font-size: 1em; font-family: Calibri, Arial, Helvetica, sans-serif; vertical-align: middle; line-height: 100px">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610794,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/blog"
+                                                            style="color: #858585" title="blog">
+                                                            <img alt="blog" border="0" height="100" src="https://www.yoursclothing.co.uk/content/img/icons/social/yc/blog.svg?lazy"
+                                                                style="display:block;" width="189">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- <tr style="white-space: nowrap;">
+                                    <td style="display: inline-block;" width="100%">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0; text-align:center;" width="100%">
+                                            <tbody>
+                                                <tr style="white-space: nowrap;">
+
+                                                    <td style="display: inline-block; text-align: center;" width="25%">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610795,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/terms-and-conditions?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="color: #595959; font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 1em; text-decoration: none"
+                                                            title="terms and conditions">
+                                                            <span style="text-decoration: none; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;">Terms &amp; conditions</span>
+                                                        </a>
+                                                    </td>
+
+                                                    <td style="display: inline-block; text-align: center;" width="25%">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610796,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/contact-us?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="color: #595959; font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 1em; text-decoration: none"
+                                                            title="HELP AND CONTACT">
+                                                            <span style="text-decoration: none; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;">Customer service</span>
+                                                        </a>
+                                                    </td>
+
+                                                    <td style="display: inline-block; text-align: center;" width="25%">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610797,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/privacy-policy?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="color: #595959; font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 1em; text-decoration: none"
+                                                            title="PRIVACY POLICY">
+                                                            <span style="text-decoration: none; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;">Privacy policy</span>
+                                                        </a>
+                                                    </td>
+
+                                                    <td style="display: inline-block; text-align: center;" width="25%">
+                                                        <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610798,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk/gift-vouchers?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                            style="color: #595959; font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 1em; text-decoration: none"
+                                                            title="GIFT VOUCHERS">
+                                                            <span style="text-decoration: none; font-family: Calibri, Arial, Helvetica, sans-serif; color: #595959;">
+                                                            Buy a gift voucher</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr> -->
+
+                                <tr>
+                                    <td style="display: inline-block; font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 0.8em; color: #858585; text-align: center"
+                                        width="686">
+                                        <p>If you would prefer not to receive any emails with special news and offers from Yours
+                                            Clothing please
+                                            <a href="http://reporting.yoursclothing.co.uk/cgi-bin/unsub?1+257467+610799+3227+i4_llP1$gZ=iSg=W$gQ$1T=PZ=l"
+                                                style="color: #858585">click here</a>.
+                                        </p>
+                                        <p>Please note that it may take up to five working days to unsubscribe.
+                                        </p>
+                                        <p>Neither
+                                            <a href="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610801,nosent:257467,nosrep:3227/https://www.yoursclothing.co.uk?utm_source=Email&amp;utm_medium=Email&amp;utm_campaign=Eshot050718-BottomsUp&amp;s=n"
+                                                style="text-decoration: none; color: #858585">Yours Clothing or BadRhino accepts responsibility for the accuracy or completeness
+                                                of the contents of this email as it has been transmitted over a public network.
+                                                If you receive this email in error please accept our apology. If this is
+                                                the case we would be obliged if you would contact the sender and then delete
+                                                this email.</a>
+                                        </p>
+                                        <p>Order helpline: 08448 204 204
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <img height="1" src="http://reporting.yoursclothing.co.uk/cgi-bin/rr/nobook:610800,nosent:257467,nosrep:3227/images/mailshot.gif"
+            width="1">
+    </body>
+
+</html>
