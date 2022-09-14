@@ -9,8 +9,8 @@
             "href" : "https://celio.commander1.com/c3/?tcs=4945&chn=emailing_crm&src=celio&cty=fr&cmp=FR_E_TICKET&med=newsletter&url=https://www.celio.com/?utm_source=celio&utm_medium=emailing_fid&utm_campaign=FR_E_TICKET",
             "src" : "https://www.celio.com/medias/newsletters/202203/FR/02_MONOCHROME_ECRU/1.jpg",
             },
-            "banner" : "'https://www.celio.com/medias/newsletters/2022_TRIGGERS/10_TICKET_DEMAT/ticket_demat.png'",
-            "banner_src" : "https://www.celio.com/medias/newsletters/2022_TRIGGERS/10_TICKET_DEMAT/ticket_demat.png",
+            "banner" : "'https://www.celio.com/medias/newsletters/2022_TRIGGERS/10_TICKET_DEMAT/TICKET_DEMAT_V1.png'",
+            "banner_src" : "https://www.celio.com/medias/newsletters/2022_TRIGGERS/10_TICKET_DEMAT/TICKET_DEMAT_V1.png",
             "detail" : "Votre magasin",
             "address" : "Adresse:",
             "telephone" : "Numéro de téléphone:",
@@ -19,9 +19,9 @@
             "greeting" : {
             "dear" : "Hello ",
             "customer" : "Cliente",
-            "thankyou" : "L'équipe ",
+            "thankyou" : "L'équipe de votre magasin ",
             "gift" : "Voici votre reçu cadeau à ",
-            "body" : "L'équipe de votre magasin celio Test Store vous remercie de votre visite ! Voici votre ticket électronique.<br/><br/>Envie de compléter votre look sans bouger de votre canapé ?",
+            "body" : "vous remercie de votre visite ! Voici votre ticket électronique.<br/><br/>Envie de compléter votre look sans bouger de votre canapé ?",
             "href" : "https://celio.commander1.com/c3/?tcs=4945&chn=emailing_crm&src=celio&cty=fr&cmp=FR_E_TICKET&med=newsletter&url=https://www.celio.com/?utm_source=celio&utm_medium=emailing_fid&utm_campaign=FR_E_TICKET",
             "button" : "Go sur celio.com",
             },
@@ -1420,9 +1420,14 @@
                                         {{ language['store']['detail'] }}
                                       </td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                       <td class="storeDetailDescription">
                                         {{ language['store']['address'] }}
+                                      </td>
+                                    </tr> -->
+                                    <tr>
+                                      <td class="storeDetailDescription">
+                                        {{ receipt['store']['name'] }}
                                       </td>
                                     </tr>
                                     <tr>
@@ -1431,11 +1436,11 @@
                                         {{receipt.business_location.address_line_two}}
                                       </td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                       <td class="storeDetailDescription">
                                         {{ language['store']['telephone'] }}
                                       </td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                       <td class="storeDetailTitle">
                                         <a href="tel: {{receipt.business_location.phone_number}}" style="
