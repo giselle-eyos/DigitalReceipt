@@ -67,13 +67,13 @@
       },
       ],
       "tnc" : {
-        "body" : "THE EXPORTER OF THE PRODUCTS COVERED BY THIS DOCUMENT DECLARES
-        THAT EXCEPT WHERE OTHERWISE CLEARLY INDICATED THESE PRODUCTS ARE OF E.U.
-        PREFERENTIAL ORIGIN.
+        "body" : "Les produits peuvent être retournés ou échangés sous 14 jours à compter de la date d’achat sur présentation du ticket de caisse et dans leur condition originale.<br/><br/>
+
+        Products can be exchanged or returned within 14 days in their original condition and with presentation of the sale receipt.<br/><br/>
         
-        JACQUEMUS SAS - 69 RUE DE MONCEAU 75008 PARIS FRANCE
-        SIRET 793 555 368 00034 - TVA FR63793555368 - EORI FR6379355536800059 -
-        CAPITAL SOCIAL 83 097 €",
+         
+        
+        JACQUEMUS SAS – 69 RUE DE MONCEAU 75008 France, SIRET 793 555 368 00034 – TVA FR63793555368 – EORI R6379355536800059",
       }
     }, 
   }
@@ -759,63 +759,6 @@
       </mj-column>
     </mj-section>
    END SECOND RECEIPT TEXT -->
-        <!-- SOCIAL MEDIA -->
-        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-        <div style="margin:0px auto;max-width:600px;">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
-                <tbody>
-                    <tr>
-                        <td style="direction:ltr;padding:20px 0;text-align:center;">
-                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-                            <div class="mj-column-per-100 mj-outlook-group-fix"
-                                style="text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                    style="vertical-align:top;" width="100%">
-                                    <tbody>
-                                        <tr>
-                                            <td align="center"
-                                                style="padding:10px 25px;word-break:break-word;">
-                                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
-                                                    {% for link in language['social'] %}
-                                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
-                                                        role="presentation" style="float:none;display:inline-table;">
-                                                        <tr>
-                                                            <td style="padding:4px;vertical-align:middle;">
-                                                                <table border="0" cellpadding="0" cellspacing="0"
-                                                                    role="presentation"
-                                                                    style="border-radius:3px;">
-                                                                    <tr>
-                                                                        <td
-                                                                            style="vertical-align:middle;">
-                                                                            <a href="{{ link['href'] }}"
-                                                                                target="_blank" style="text-decoration:none; font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
-                                                                                {{ link['text'] }}
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    {% if loop.last %}
-                                                    <!--[if mso | IE]></td></tr></table><![endif]-->
-                                                    {% else %}
-                                                    <!--[if mso | IE]></td><td><![endif]-->
-                                                    {% endif %}
-                                                    {% endfor %}
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!--[if mso | IE]></td></tr></table><![endif]-->
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!--[if mso | IE]></td></tr></table><![endif]-->
-        <!-- END SOCIAL MEDIA -->
         <!-- TNC -->
         <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
             <div style="margin:0px auto;max-width:600px;">
@@ -831,7 +774,7 @@
                                         <tbody>
                                             <tr>
                                                 <td align="center"
-                                                    style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                                    style="font-size:0px;padding:25px!important;word-break:break-word;">
                                                     <div
                                                         style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
                                                         {{ language['tnc']['body'] }}</div>
