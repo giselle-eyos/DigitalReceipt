@@ -240,10 +240,6 @@
             table-layout: fixed;
         }
 
-        th {
-            font-weight: normal;
-        }
-
         td {
             word-break: break-word;
             mso-line-height-rule: exactly;
@@ -396,10 +392,6 @@
             mso-padding-right-alt: 1em !important;
         }
 
-        .m0 {
-            margin: 0 !important;
-        }
-
         .alignCenter {
             text-align: center !important;
         }
@@ -466,12 +458,6 @@
             word-break: break-word;
         }
 
-        .banner {
-            background:url({{ language['store']['banner'] }}) 0 0/cover no-repeat;
-            width: 100% !important;
-            /* height: 200px; */
-        }
-
         .storeInfo {
             padding-top: 4em;
             mso-padding-bottom-alt: 4em !important;
@@ -480,8 +466,6 @@
         .storeInfo * {
             text-align: center;
         }
-
-
         .textContainer * {
             text-align: center;
             vertical-align: top;
@@ -541,7 +525,6 @@
             margin: 0px auto;
             width: 100%;
         }
-
 
         .receiptSection {
             padding-top: 0.5em;
@@ -1269,7 +1252,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td align="center">
-                                                                    <table class="floatNone m0" cellpadding="0"
+                                                                    <table class="floatNone" cellpadding="0"
                                                                         cellspacing="0">
                                                                         <tbody>
                                                                             <tr>
@@ -1331,7 +1314,7 @@
                                                         cellspacing="0">
                                                         <tbody>
                                                             <tr>
-                                                                <td align="left" class="title accent">
+                                                                <td align="left" class="title accent" style="text-align:left;">
                                                                     {{ language['refund']['title'] }}
                                                                 </td>
                                                             </tr>
