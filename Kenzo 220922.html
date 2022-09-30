@@ -1,5 +1,128 @@
+{% if receipt.language_code == 'fr' %}Votre ticket de caisse KENZO {{store_name}}
+{% elif receipt.language_code == 'it' %}La tua ricevuta KENZO {{store_name}}
+{% elif receipt.language_code == 'nl' %}Uw KENZO-bon {{store_name}}
+{% elif receipt.language_code == 'es' %}Su recibo de KENZO {{store_name}}
+{% else %}Your receipt KENZO {{store_name}}
+{% endif %}
+
 {% set translations = 
     {
+        "en_GB": {
+            "store": {
+                "show": True,
+                "name": "Kenzo",
+                "href": "https://www.kenzo.com/",
+                "logo": {
+                    "href": "https://www.kenzo.com/",
+                    "src": "https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-TAG-COULEUR-NO-FRAME-RVB.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D",
+                    "outlet_src": "https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-KENZO_300X100.jpg?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D",
+                },
+            },
+            "greeting": {
+                "title": "THANK YOU FOR YOUR VISIT",
+                "body": "Thank you for shopping at KENZO. 
+                Our whole team hope your purchases will give you complete satisfaction and remain available for any questions.",
+                "hidden_message": "If you cannot see this message, click here.",
+            },
+            "receipt": {
+                "title": "Here is your digital receipt.",
+                "time": "Date of Purchase : ",
+                "transaction_id": "Transaction Number : ",
+                "store": "Store : ",
+                "your_purchase": "YOUR PURCHASE",
+                "ref": "Réf. : ",
+                "colour": "Color : ",
+                "quantity": "Quantity : ",
+                "size": "Size : ",
+                "subtotal": "SUBTOTAL",
+                "discount": "DISCOUNT",
+                "total": "TOTAL VAT",
+                "tax": "Taxes included",
+                "payment_method": "Paid with",
+            },
+            "cta": {
+                "cta1": {
+                    "title": "GET YOUR KENZO CARD",
+                    "body": "Stay connected to your account and to the lastest KENZO news directly on your smartphone.",
+                    "button": "DOWNLOAD MY KENZO CARD",
+                    "href": "https://kenzo.captainwallet.com/UK_en/enroll/kenzoparis?channel=store&tag=ereceipt",
+                },
+            },
+            "refund": {
+                "title": "EXCHANGE & REFUND POLICY",
+                "body": "Items can be exchanged within a month, in KENZO stores in the UK (except outlets, department stores and concessions), on presentation of the sales receipt. Any refund request must be made within 14 days of the date of purchase mentioned on the sales receipt.<br/><br/>
+                The refund will be made using the same method of payment as that used for the purchase. Items must be returned labeled, unused and in their original packaging. Retouched items cannot be returned or exchanged.<br/><br/>
+                        E-commerce purchases cannot be returned in store.<br/><br/>
+                        CREDIT NOTES are valid for 1 year from their date of issuance and can be used in all stores in the UK, excluding ecommerce, department stores and franchises.",
+                "outlet_body" : "The items can be exchanged within 1 month, in this store only, upon presentation of the receipt. Any refund request shall be issued within14 days following the date of purchase mentioned on the receipt. Refunds will only be made to the method of payment used for the purchase.<br/><br/>
+                                Items must be returned labeled, unused, in their original packaging. Altered items cannot be returned or exchanged.<br/><br/>
+                                Online purchases cannot be returned in store.<br/><br/>
+                                <b>Cheques</b> are not accepted.<br/><br/>
+                                <b>CREDIT NOTES</b> are valid for 1 year from their date of issuance and can be used in all stores in the UK, excluding ecommerce, department stores and franchises.<br/><br/>
+                                <b>GIFT VOUCHERS</b> are valid for 1 year from the date of purchase and can be used in all stores in the UK, excluding ecommerce, department stores and franchises.",
+            },
+            "lnb": [
+                {
+                    "href": "https://www.kenzo.com/",
+                    "text": "KENZO.COM",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/en/kenzo-club-account-creation",
+                    "text": "My account",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/en/storelocator",
+                    "text": "OUR STORES",
+                }
+            ],
+            "follow_us": "FOLLOW US",
+            "social": [
+                {
+                    "href": "https://www.instagram.com/kenzo/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/instagram.png",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/kenzoparis",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/youtube.png",
+                    "alt": "youtube"
+                },
+                {
+                    "href": "https://twitter.com/kenzo",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/twitter.png",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.facebook.com/KENZOParis/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/facebook.png",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://page.line.me/716fsban",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/line.png",
+                    "alt": "line"
+                },
+                {
+                    "href": "https://discord.com/invite/kenzo-paris",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/discord.png",
+                    "alt": "discord"
+                },
+                {
+                    "href": "https://mp.weixin.qq.com/s/2XWfbKtFnLJzhcFvPckHzA",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/wechat.png",
+                    "alt": "wechat"
+                },
+                {
+                    "href": "https://weibo.com/login.php",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/weibo.png",
+                    "alt": "weibo"
+                },
+            ],
+            "tnc": {
+                "title": "Legal mentions",
+                "href": "https://www.kenzo.com/eu/en/eu_cgv",
+            }
+        },
         "fr_FR": {
             "store": {
                 "show": True,
@@ -16,7 +139,8 @@
                 "hidden_message": "Si vous n'arrivez pas à visualiser ce message, cliquez ici",
             },
             "receipt": {
-                "time": "Date d’achat :",
+                "title": "Ci-dessous votre e-ticket.",
+                "time": "Date d’achat : ",
                 "transaction_id": "Numéro de transaction : ",
                 "store": "Boutique : ",
                 "your_purchase": "VOTRE ACHAT",
@@ -48,9 +172,9 @@
                 "outlet_body" : "Les articles peuvent être échangés sous un mois, dans l’un des outlets KENZO en France, sur présentation du ticket de caisse. Toute demande de remboursement devra être effectuée dans un délai de 14 jours à compter de la date d’achat mentionnée sur le ticket de caisse. Le remboursement sera effectué selon le même mode de paiement que celui utilisé lors de l’achat.<br/><br/>
                                 Les articles doivent être restitués étiquetés, non utilisés et dans leur emballage d’origine. Les articles retouchés ne sont ni repris ni échangés.<br/><br/>
                                 Les achats e-commerce ne peuvent être retournés en boutique.<br/><br/>
-                                Les CHEQUES ne sont pas acceptés.<br/><br/>
-                                LES AVOIRS sont valables pour une période de 1 an à compter de leur date de création et utilisables dans toutes les boutiques KENZO en France, hors e-commerce, grands magasins et concessions.<br/><br/>
-                                LES BONS CADEAUX sont valables pour une durée de 1 an à compter de la date d’achat et utilisables dans toutes les boutiques KENZO en France, hors e-commerce, grands magasins et concessions.",
+                                Les <b>CHEQUES</b> ne sont pas acceptés.<br/><br/>
+                                <b>LES AVOIRS</b> sont valables pour une période de 1 an à compter de leur date de création et utilisables dans toutes les boutiques KENZO en France, hors e-commerce, grands magasins et concessions.<br/><br/>
+                                <b>LES BONS CADEAUX</b> sont valables pour une durée de 1 an à compter de la date d’achat et utilisables dans toutes les boutiques KENZO en France, hors e-commerce, grands magasins et concessions.",
             },
             "lnb": [
                 {
@@ -113,7 +237,446 @@
                 "title": "Mentions légales",
                 "href": "https://www.kenzo.com/eu/fr/eu_cgv",
             }
-        }
+        },
+        "es_ES": {
+            "store": {
+                "show": True,
+                "name": "Kenzo",
+                "href": "https://www.kenzo.com/",
+                "logo": {
+                    "href": "https://www.kenzo.com/",
+                    "src": "https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-TAG-COULEUR-NO-FRAME-RVB.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D",
+                },
+            },
+            "greeting": {
+                "title": "GRACIAS POR SU VISITA",
+                "body": "Todo el equipo de KENZO le agradece su confianza y espera que sus compras le satisfagan plenamente. Quedamos a su disposición para cualquier información.",
+                "hidden_message": "Si no llega a visualizar este mensaje, haga clic aquí.",
+            },
+            "receipt": {
+                "title": "Encontrará su boleto electrónico a continuación.",
+                "time": "Fecha de compra :",
+                "transaction_id": "Número de transacción : ",
+                "store": "Tienda : ",
+                "your_purchase": "TU COMPRA",
+                "ref": "Réf. : ",
+                "colour": "Color : ",
+                "quantity": "Cantidad : ",
+                "size": "Talla : ",
+                "subtotal": "TOTAL PARCIAL",
+                "discount": "DESCUENTO",
+                "total": "TOTAL IMPUESTOS INCLUIDOS",
+                "tax": "IVA incluido",
+                "payment_method": "Pago realizado con",
+            },
+            "cta": {
+                "cta1": {
+                    "title": "OBTÉN TU TARJETA KENZO",
+                    "body": "Encuentra fácilmente tu cuenta de cliente en tienda y sigue todas las novedades de KENZO en tu smartphone.",
+                    "button": "DESCARGAR MI TARJETA",
+                    "href": "https://kenzo.captainwallet.com/EU_en/enroll/kenzoparis?channel=store&tag=ereceiptlangue",
+                },
+            },
+            "refund": {
+                "title": "POLÍTICA DE CAMBIO Y DEVOLUCIÓN",
+                "body": "Los artículos se pueden cambiar en el plazo de 1 mes, en todas las tiendas oficiales KENZO en España (excepto outlets, grandes almacenes y franquicias), previa presentación del ticket de compra. Cualquier devolución se hará dentro de los 14 días posteriores a la fecha de compra mencionada en el recibo.<br/><br/>
+                El reembolso se realizará utilizando el mismo método de pago que se utilizó para la compra. Los artículos deben devolverse etiquetados, sin usar y en su embalaje original. Los artículos retocados no se devuelven ni cambian.<br/><br/>
+                Las compras de comercio electrónico no se pueden devolver en la tienda.<br/><br/>
+                Los VALES DE CRÉDITO son válidos por 1 año a partir de su fecha de emisión y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias.<br/><br/>",
+                "outlet_body" : "Los artículos se pueden cambiar en el plazo de 1 mes, en todas las tiendas oficiales KENZO en outlets en Espana (La Roca Village o Las Rozas Village), previa presentación del ticket de compra. Cualquier devolución se hará dentro de los 14 días posteriores a la fecha de compra mencionada en el recibo. El reembolso sólo se realizará en la misma forma de pago utilizada para la compra.<br/><br/>
+                Los artículos deben devolverse etiquetados, sin usar y en su embalaje original. Los artículos alterados o dañados no se pueden cambiar ni devolver.<br/><br/>
+                Las compras online no se pueden devolver en tienda.<br/><br/>
+                No se aceptan <b>CHEQUES.</b><br/><br/>
+                <b>Los VALES DE CRÉDITO</b> son válidos por 1 año a partir de su fecha de emisión y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias.<br/><br/>
+                <b>Los VALES DE REGALO</b> son válidos por 1 año a partir de la fecha de compra y se pueden usar en todas las tiendas de España, excluyendo comercio electrónico, tiendas de grandes almacenes y franquicias.",
+            },
+            "lnb": [
+                {
+                    "href": "https://www.kenzo.com/",
+                    "text": "KENZO.COM",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/es/kenzo-club-account-creation",
+                    "text": "Mi cuenta",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/es/storelocator",
+                    "text": "NUESTRAS TIENDAS",
+                }
+            ],
+            "follow_us": "SÍGANOS",
+            "social": [
+                {
+                    "href": "https://www.instagram.com/kenzo/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/instagram.png",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/kenzoparis",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/youtube.png",
+                    "alt": "youtube"
+                },
+                {
+                    "href": "https://twitter.com/kenzo",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/twitter.png",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.facebook.com/KENZOParis/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/facebook.png",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://page.line.me/716fsban",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/line.png",
+                    "alt": "line"
+                },
+                {
+                    "href": "https://discord.com/invite/kenzo-paris",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/discord.png",
+                    "alt": "discord"
+                },
+                {
+                    "href": "https://mp.weixin.qq.com/s/2XWfbKtFnLJzhcFvPckHzA",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/wechat.png",
+                    "alt": "wechat"
+                },
+                {
+                    "href": "https://weibo.com/login.php",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/weibo.png",
+                    "alt": "weibo"
+                },
+            ],
+            "tnc": {
+                "title": "Menciones legales",
+                "href": "https://www.kenzo.com/eu/es/eu_cgv",
+            }
+        },
+        "it_IT": {
+            "store": {
+                "show": True,
+                "name": "Kenzo",
+                "href": "https://www.kenzo.com/",
+                "logo": {
+                    "href": "https://www.kenzo.com/",
+                    "src": "https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-TAG-COULEUR-NO-FRAME-RVB.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D",
+                },
+            },
+            "greeting": {
+                "title": "GRAZIE PER LA VOSTRA VISITA",
+                "body": "Tutto il team KENZO ti ringrazia per la tua fiducia e spera che i tuoi acquisti ti diano piena soddisfazione. Restiamo a disposizione per qualsiasi domanda.",
+                "hidden_message": "Se non riuscite a visualizzare questo messaggio, cliccate qui.",
+            },
+            "receipt": {
+                "title": "Trova il tuo biglietto elettronico qui sotto.",
+                "time": "Data di acquisto :",
+                "transaction_id": "Numero di transazione : ",
+                "store": "Negozio : ",
+                "your_purchase": "IL TUO ACQUISTO",
+                "ref": "Réf. : ",
+                "colour": "Colore : ",
+                "quantity": "Quantità : ",
+                "size": "Taglia : ",
+                "subtotal": "TOTALE PARZIALE",
+                "discount": "SCONTO",
+                "total": "TOTALE TASSE INCLUSE",
+                "tax": "IVA inclusa",
+                "payment_method": "Pagamento effettuato con",
+            },
+            "cta": {
+                "cta1": {
+                    "title": "OTTIENI LA TUA TESSERA KENZO",
+                    "body": "Ritrova facilmente il tuo account cliente in negozio e segui tutte le novità Kenzo sul tuo smartphone.",
+                    "button": "SCARICARE LA MIA TESSERA",
+                    "href": "https://kenzo.captainwallet.com/EU_en/enroll/kenzoparis?channel=store&tag=ereceipt",
+                },
+            },
+            "refund": {
+                "title": "POLITICA PER RESI E RIMBORSI",
+                "body": "Gli articoli acquistati possono essere cambiati entro 1 mese presso tutti i punti vendita ufficiali KENZO in Italia (ad eccezione degli outlet, department store e negozi in franchising) previa presentazione dello scontrino fiscale.  Eventuali rimborsi devono essere richiesti entro 14 giorni dalla data di acquisto riportata sullo scontrino fiscale.<br/><br/>
+                        Il rimborso sarà effettuato unicamente tramite lo stesso metodo di pagamento utilizzato per l’acquisto. Gli articoli devono essere resi etichettati e nella loro confezione originale, senza che siano stati utilizzati. Gli articoli che hanno subito riparazioni non potranno essere resi o rimborsati.<br/><br/>
+                        Gli acquisti effettuati online non possono essere resi presso il punto vendita.<br/><br/>
+                        Le NOTE DI CREDITO hanno validità di 1 anno dalla data di emissione e possono essere utilizzate in tutti i punti vendita italiani, ad esclusione dell’e-commerce, dei department store e dei punti vendita in franchising.<br/><br/>",
+            },
+            "lnb": [
+                {
+                    "href": "https://www.kenzo.com/",
+                    "text": "KENZO.COM",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/it/kenzo-club-account-creation",
+                    "text": "Il mio account",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/it/storelocator",
+                    "text": "I NOSTRI NEGOZI",
+                }
+            ],
+            "follow_us": "SEGUICI",
+            "social": [
+                {
+                    "href": "https://www.instagram.com/kenzo/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/instagram.png",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/kenzoparis",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/youtube.png",
+                    "alt": "youtube"
+                },
+                {
+                    "href": "https://twitter.com/kenzo",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/twitter.png",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.facebook.com/KENZOParis/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/facebook.png",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://page.line.me/716fsban",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/line.png",
+                    "alt": "line"
+                },
+                {
+                    "href": "https://discord.com/invite/kenzo-paris",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/discord.png",
+                    "alt": "discord"
+                },
+                {
+                    "href": "https://mp.weixin.qq.com/s/2XWfbKtFnLJzhcFvPckHzA",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/wechat.png",
+                    "alt": "wechat"
+                },
+                {
+                    "href": "https://weibo.com/login.php",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/weibo.png",
+                    "alt": "weibo"
+                },
+            ],
+            "tnc": {
+                "title": "Note legali",
+                "href": "https://www.kenzo.com/eu/it/eu_cgv",
+            }
+        },
+        "nl_NL": {
+            "store": {
+                "show": True,
+                "name": "Kenzo",
+                "href": "https://www.kenzo.com/",
+                "logo": {
+                    "href": "https://www.kenzo.com/",
+                    "src": "https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-TAG-COULEUR-NO-FRAME-RVB.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D",
+                },
+            },
+            "greeting": {
+                "title": "BEDANKT VOOR UW BEZOEK",
+                "body": "Het hele KENZO-team dankt u voor uw vertrouwen en hoopt dat u volledig tevreden bent met uw aankopen. Wij blijven beschikbaar voor al uw vragen.",
+                "hidden_message": "Klik hier als u dit bericht niet kunt zien",
+            },
+            "receipt": {
+                "title": "Hieronder vindt u uw e-ticket.",
+                "time": "Aankoopdatum :",
+                "transaction_id": "Transactienummer : ",
+                "store": "Winkel : ",
+                "your_purchase": "UW AANKOOP",
+                "ref": "Réf. : ",
+                "colour": "Kleur : ",
+                "quantity": "Hoeveelheid : ",
+                "size": "Maat : ",
+                "subtotal": "SUBTOTAAL",
+                "discount": "KORTING",
+                "total": "TOTAAL BTW",
+                "tax": "Incl. BTW (21%)",
+                "payment_method": "Betaald met",
+            },
+            "cta": {
+                "cta1": {
+                    "title": "HAAL UW KENZO CARD",
+                    "body": "Blijf verbonden met uw account en ontvang alle KENZO nieuws direkt op uw smartphone.",
+                    "button": "DOWNLOAD MIJN KENZO CARD",
+                    "href": "",
+                },
+            },
+            "refund": {
+                "title": "RETOUR & TERUGBETALINGSBELEID",
+                "outlet_body": "De artikelen kunnen binnen 1 maand geruild worden, in deze winkel alleen op vertoon van de bon. Elk restitutieverzoek wordt binnen 14 dagen na de aankoopdatum vermeld op de kassabon ingediend. Restitutie vindt alleen plaats via de betaalmethode die voor de aankoop is gebruikt.<br/><br/>
+                Artikelen moeten gelabeld, ongebruikt en in hun originele verpakking worden geretourneerd. Gewijzigde artikelen kunnen niet worden geretourneerd of geruild.<br/><br/> Online aankopen kunnen in de winkel niet worden geretourneerd.<br/><br/>
+                <b>CHEQUES</b> worden niet geaccepteerd.<br/><br/>
+                <b>CREDIT NOTES</b> zijn 1 jaar geldig vanaf hun uitgiftedatum en kunnen worden gebruikt in Nederland, met uitzondering van e-commerce, warenhuizen en franchises.<br/><br/>
+                <b>CADEAUBONNEN</b> zijn 1 jaar geldig vanaf de aankoopdatum en kunnen worden gebruikt in Nederland, met uitzondering van e-commerce, warenhuizen en franchises.",
+            },
+            "lnb": [
+                {
+                    "href": "https://www.kenzo.com/",
+                    "text": "KENZO.COM",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/it/kenzo-club-account-creation",
+                    "text": "Mijn account",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/it/storelocator",
+                    "text": "ONZE STORES",
+                }
+            ],
+            "follow_us": "VOLG ONS",
+            "social": [
+                {
+                    "href": "https://www.instagram.com/kenzo/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/instagram.png",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/kenzoparis",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/youtube.png",
+                    "alt": "youtube"
+                },
+                {
+                    "href": "https://twitter.com/kenzo",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/twitter.png",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.facebook.com/KENZOParis/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/facebook.png",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://page.line.me/716fsban",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/line.png",
+                    "alt": "line"
+                },
+                {
+                    "href": "https://discord.com/invite/kenzo-paris",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/discord.png",
+                    "alt": "discord"
+                },
+                {
+                    "href": "https://mp.weixin.qq.com/s/2XWfbKtFnLJzhcFvPckHzA",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/wechat.png",
+                    "alt": "wechat"
+                },
+                {
+                    "href": "https://weibo.com/login.php",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/weibo.png",
+                    "alt": "weibo"
+                },
+            ],
+            "tnc": {
+                "title": "Algemene voorwaarden",
+                "href": "https://www.kenzo.com/eu/it/eu_cgv",
+            }
+        },
+        "fr_BE": {
+            "store": {
+                "show": True,
+                "name": "Kenzo",
+                "href": "https://www.kenzo.com/",
+                "logo": {
+                    "href": "https://www.kenzo.com/",
+                    "src": "https://sastdassetspimweuprd.blob.core.windows.net/assets-pim-prd/E-Ticket/LOGO-TAG-COULEUR-NO-FRAME-RVB.png?si=KZ-OCTIPAS-PIM-PRD&sv=2019-02-02&sr=c&sig=onuMsL%2BVoory0J5pmOpx37DQxUflUWZqxOdqeNe%2BjKA%3D",
+                },
+            },
+            "greeting": {
+                "title": "MERCI DE VOTRE VISITE",
+                "body": "Toute l’équipe KENZO vous remercie de votre confiance et espère que vos achats vous donneront entière satisfaction. Nous restons disponibles pour toute question.",
+                "hidden_message": "Si vous n'arrivez pas à visualiser ce message, cliquez ici",
+            },
+            "receipt": {
+                "title": "Ci-dessous votre e-ticket.",
+                "time": "Date d’achat : ",
+                "transaction_id": "Numéro de transaction : ",
+                "store": "Boutique : ",
+                "your_purchase": "VOTRE ACHAT",
+                "ref": "Réf. : ",
+                "colour": "Couleur : ",
+                "quantity": "Quantité : ",
+                "size": "Taille : ",
+                "subtotal": "Sous-total",
+                "discount": "Remise",
+                "total": "TOTAL TTC",
+                "tax": "TVA incluse",
+                "payment_method": "Paiement réalisé avec [MOYEN DE PAIEMENT]",
+            },
+            "cta": {
+                "cta1": {
+                    "title": "OBTENEZ VOTRE CARTE KENZO",
+                    "body": "Retrouvez facilement votre compte client en magasin et suivez toute l’actualité KENZO sur votre smartphone.",
+                    "button": "TELECHARGER MA CARTE",
+                    "href": "https://kenzo.captainwallet.com/FR_fr/enroll/kenzoparis?channel=store&tag=ereceipt",
+                },
+            },
+            "refund": {
+                "title": "POLITIQUE D’ECHANGE ET DE REMBOURSEMENT",
+                "body": "Les articles peuvent être échangés sous un mois, dans la boutique KENZO Bruxelles uniquement, sur présentation du ticket de caisse. Toute demande de remboursement devra être effectuée dans un délai de 14 jours à compter de la date d’achat mentionnée sur le ticket de caisse.<br/><br/>
+                        Le remboursement sera effectué selon le même mode de paiement que celui utilisé lors de l’achat. Les articles doivent être restitués étiquetés, non utilisés et dans leur emballage d’origine. Les articles retouchés ne sont ni repris ni échangés.<br/><br/>
+                        Les achats e-commerce ne peuvent être retournés en boutique.<br/><br/>
+                        LES AVOIRS sont valables pour une période de 1 an à compter de leur date de création et utilisables dans la boutique KENZO Bruxelles uniquement, hors e-commerce, grands magasins et concessions.<br/><br/>",
+            },
+            "lnb": [
+                {
+                    "href": "https://www.kenzo.com/",
+                    "text": "KENZO.COM",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/fr/kenzo-club/creer-un-compte",
+                    "text": "MON compte",
+                },
+                {
+                    "href": "https://www.kenzo.com/eu/fr/recherche-magasin",
+                    "text": "nos boutiques",
+                }
+            ],
+            "follow_us": "SUIVEZ-NOUS",
+            "social": [
+                {
+                    "href": "https://www.instagram.com/kenzo/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/instagram.png",
+                    "alt": "instagram"
+                },
+                {
+                    "href": "https://www.youtube.com/user/kenzoparis",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/youtube.png",
+                    "alt": "youtube"
+                },
+                {
+                    "href": "https://twitter.com/kenzo",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/twitter.png",
+                    "alt": "twitter"
+                },
+                {
+                    "href": "https://www.facebook.com/KENZOParis/",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/facebook.png",
+                    "alt": "facebook"
+                },
+                {
+                    "href": "https://page.line.me/716fsban",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/line.png",
+                    "alt": "line"
+                },
+                {
+                    "href": "https://discord.com/invite/kenzo-paris",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/discord.png",
+                    "alt": "discord"
+                },
+                {
+                    "href": "https://mp.weixin.qq.com/s/2XWfbKtFnLJzhcFvPckHzA",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/wechat.png",
+                    "alt": "wechat"
+                },
+                {
+                    "href": "https://weibo.com/login.php",
+                    "src": "https://www.kenzo.com/on/demandware.static/Sites-Kenzo_FR-Site/-/default/dwc8d3683c/images/email/preorder/weibo.png",
+                    "alt": "weibo"
+                },
+            ],
+            "tnc": {
+                "title": "Mentions légales",
+                "href": "https://www.kenzo.com/eu/fr/eu_cgv",
+            }
+        },
     }
 %}
 
@@ -853,7 +1416,11 @@
                                         <tr>
                                             <td align="center">
                                                 <a class="logo" href="{{ language['store']['logo']['href'] }}">
+                                                    {% if receipt['store']['external_id'] in ['566510', '565819', '565756', '563947', '557445', '516195'] %}
+                                                    <img width="35%" src="{{ language['store']['logo']['outlet_src'] }}" />
+                                                    {% else %} 
                                                     <img width="35%" src="{{ language['store']['logo']['src'] }}" />
+                                                    {% endif %}  
                                                 </a>
                                             </td>
                                         </tr>
@@ -1324,9 +1891,12 @@
                                                                                     <tr>
                                                                                         <td align="left"
                                                                                             class="description">
-                                                                                            <br /><br />{{
-                                                                                            language['refund']['body']
-                                                                                            }}
+                                                                                            <br /><br />
+                                                                                            {% if receipt['store']['external_id'] in ['566510', '565819', '565756', '563947', '557445', '516195'] %}
+                                                                                                {{language['refund']['outlet_body']}}
+                                                                                            {% else %}
+                                                                                                {{language['refund']['body']}}
+                                                                                            {% endif %}
                                                                                         </td>
                                                                                     </tr>
                                                                                 </tbody>
