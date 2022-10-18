@@ -963,7 +963,7 @@
                                     <tr>
                                       <td class="py10">
                                         {% if data['customer']['name']['first'] %}
-                                        {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']}}{% if data['customer']['name']['last'] %}{{ data['customer']['name']['last']}}
+                                        {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']}}{% if data['customer']['name']['last'] %} {{ data['customer']['name']['last']}}
                                         {% endif %},<br /><br />
                                         {% else %}
                                         {{ language['greeting']['dear']}}{{
