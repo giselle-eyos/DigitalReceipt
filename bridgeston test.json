@@ -1,0 +1,70 @@
+{% set feedback = feedbacklink+"source=invoice&mobile="+
+    {
+        { data['customer'
+            ]['telephone'
+            ]['daytime'
+            ]['text'
+            ]
+        }
+    }+"&name="+{
+        { data['customer'
+            ]['name'
+            ]['first'
+            ]
+        }
+    }{
+        { data['customer'
+            ]['name'
+            ]['last'
+            ]
+        }
+    }+"&registration="+{
+        { data['receipt'
+            ]['additional_attribute'
+            ]['vehicle'
+            ]['registration'
+            ]
+        }
+    }+"&email="+{
+        { data['customer'
+            ]['email_address'
+            ]
+        }
+    }+"&invoice_number="+{
+        { data['receipt'
+            ]['transaction_number'
+            ]['text'
+            ]
+        }
+    }+"&salesperson="+{
+        { data['receipt'
+            ]['salesperson'
+            ]['id'
+            ]
+        }
+    }+"&booking_reference="+{
+        {booking_reference
+        }
+    }+"&transaction_items="+{
+        {transaction_items
+        }
+    }+"&transaction_date="+{
+        { data['receipt'
+            ]['transaction_id'
+            ]
+        }
+    }+"&customer_creation_date="+{
+        { data['customer'
+            ]['meta'
+            ]['creation'
+            ]['datetime'
+            ]['local'
+            ]
+        }
+    }+"&customer_number="+{
+        { data['customer'
+            ]['party_id'
+            ]
+        }
+    }
+%}

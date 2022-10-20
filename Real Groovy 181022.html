@@ -6,7 +6,7 @@
       "href" : "https://realgroovy.co.nz/",
       "logo" : {
       "href" : "https://realgroovy.co.nz/",
-      "src" : "https://realgroovy-media.s3.ap-southeast-2.amazonaws.com/Uploads/Content/Blog-post/161/RG_LOGO.png",
+      "src" : "https://realgroovy-media.s3.ap-southeast-2.amazonaws.com/Uploads/Content/Blog-post/161/RG_LOGO-large.png",
     },
     "banner" : "'https://realgroovy-media.s3.ap-southeast-2.amazonaws.com/Uploads/Content/Blog-post/161/MAIN_BANNER.jpg'",
     "banner_src" : "https://realgroovy-media.s3.ap-southeast-2.amazonaws.com/Uploads/Content/Blog-post/161/MAIN_BANNER.jpg",
@@ -35,8 +35,8 @@
     ],
     "headline" : {
       "href" : "https://realgroovy.co.nz/?utm_source=in-store-receipt&utm_medium=email&utm_campaign=navigation&utm_content=music-lives-here",
-      "text": "Music lives here",
-      "button" : "Discover more"
+      "text": "Latest Secondhand Vinyl & CDs",
+      "button" : "SHOP NOW"
     },
     "greeting" : {
       "dear" : "Hey ",
@@ -98,7 +98,7 @@
       {
         "href" :
         "https://www.google.co.nz/maps/place/520+Queen+Street,+Auckland+CBD,+Auckland+1010/@-36.8574626,174.7620465,17z/data=!3m1!4b1!4m5!3m4!1s0x6d0d47e88c1b624b:0x2704dde970ead64!8m2!3d-36.8574626!4d174.7620465",
-        "text" : "Get Directions",
+        "text" : "GET DIRECTIONS",
       }
     ],
     "tnc" : {
@@ -168,7 +168,7 @@
       text-align: left;
       font-size: 16px;
       font-weight: normal;
-      color: #1c1e23;
+      color: #000;
     }
 
     #outlook a {
@@ -392,13 +392,13 @@
     }
 
     .btn01 {
-      background: #dd5b02;
+      background: #000;
       padding: 0.8em 0.6em;
       mso-padding-alt: 0.8em 0.6em !important;
     }
 
     .btn02 {
-      background: #dd5b02;
+      background: #000;
       padding: 0.5em 0;
       mso-padding-alt: 0.5em 0 !important;
     }
@@ -422,6 +422,11 @@
       text-transform: none !important;
       font-size: 0.7em;
       text-align: right;
+    }
+    .logo {
+      background-color: #f68e3a;
+      padding: 0.5em 0;
+      mso-padding-alt: 0.5em 0 !important;
     }
 
     .logo img {
@@ -455,7 +460,7 @@
     }
 
     .headline {
-      background: #dd5b02;
+      background: #000;
       padding: 0 0.9em;
       mso-padding-alt: 0 0.9em !important;
     }
@@ -685,7 +690,7 @@
 
     .couponCard {
       font-size: 0.8em;
-      border: 4px solid #dd5b02;
+      border: 4px solid #000;
       border-radius: 8px;
       padding: 1em;
       mso-padding-alt: 1em !important;
@@ -731,8 +736,8 @@
     .social {
       padding: 1em 0;
       mso-padding-alt: 1em 0 !important;
-      border-top: 2px solid #1c1e23;
-      border-bottom: 2px solid #1c1e23;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
     }
 
     .social a {
@@ -782,6 +787,9 @@
     .footer {
       color: #9c9d9e;
       font-size: 0.8em;
+    }
+    .footer {
+      text-align: center;
     }
 
     @media only screen and (max-width:617px) {
@@ -922,8 +930,8 @@
                   <!-- START LOGO -->
                   <tbody>
                     <tr>
-                      <td align="center">
-                        <a class="logo" href="{{ language['store']['logo']['href'] }}">
+                      <td align="center" class="logo">
+                        <a href="{{ language['store']['logo']['href'] }}">
                           <img width="40%" src="{{ language['store']['logo']['src'] }}" />
                         </a>
                       </td>
@@ -943,7 +951,7 @@
                                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td class="alignCenter" style="padding:1em;" ><![endif]-->
                                     {% for menu in language['gnb'] %}
                                     <a class="active alignCenter" href="{{ menu['href'] }}" target="_blank"
-                                      style="color: #1c1e23; text-decoration: none;">
+                                      style="color: #000; text-decoration: none;">
                                       {{ menu['text'] }}
                                     </a>
                                     {% if loop.last %}
@@ -1031,7 +1039,7 @@
                                         <table width="100%" class="buttonContainer" cellpadding="0" cellspacing="0">
                                           <tbody>
                                             <tr>
-                                              <td align="center" class="btn01 active" bgcolor="#dd5b02">
+                                              <td align="center" class="btn01 active" bgcolor="#000">
                                                 <a href="{{ language['greeting']['href'] }}" style="display: block; text-decoration: none; color: #ffffff;
   ">{{
                                                   language['greeting']['button']
@@ -1076,7 +1084,7 @@
                                     <tr>
                                       <td class="storeDetailDescription pb0">
                                         <a href="tel: {{receipt.business_location.phone_number}}" style="
-  color: #1c1e23;
+  color: #000;
   text-decoration: none;">{{receipt.business_location.phone_number}}
                                         </a>
                                       </td>
@@ -1579,7 +1587,7 @@
                               <table class="w100p" cellpadding="0" cellspacing="0">
                                 <tbody>
                                   <tr>
-                                    <td align="center" class="btn01 active" bgcolor="#dd5b02">
+                                    <td align="center" class="btn01 active" bgcolor="#000">
                                       <a href="{{ language['cta']['cta1']['href'] }}" style="display: block; color:#ffffff; text-decoration: none;
   ">
                                         {{ language['cta']['cta1']['button'] }}
@@ -1740,12 +1748,7 @@
           <!-- START TERMS AND CONDITIONS -->
           <tr>
             <td class="footer">
-              {{ language['tnc']['body'] }}<br/>
-              
-            </td>
-          </tr>
-          <tr>
-            <td class="footer alignCenter">
+              {{ language['tnc']['body'] }}<br/><br/>
               Real Groovy {{ receipt['store']['name'] }}<br/>   
               {% for address in data['store']['address']['street'] %}
               {{ address }}<br/>
