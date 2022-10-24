@@ -43,7 +43,8 @@
  "7557": "https://www.feedback.fyi/feedback/MDNZJ?",
  "7507": "https://www.feedback.fyi/feedback/ZVZPT?",
  } %}
- {% set feedback = feedbacks.get(receipt["store"]["external_id"]) %}
+ {% set feedbacklink = feedbacks.get(receipt["store"]["external_id"]) %}
+ {% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+''+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&booking_reference=booking_reference&transaction_items=transaction_items&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
  <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
  xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -222,7 +223,7 @@
               style="display:inline-block;color:#000000;font-family:Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
               Services </a>
              <!--[if mso | IE]></td><td style="padding:15px 10px;" class="" ><![endif]-->
-             <a class="mj-link" href="{{ feedback }}source=invoice&mobile={{ data['customer']['telephone']['daytime']['text'] }}&name={{ data['customer']['name']['first'] }}{{ data['customer']['name']['last'] }}&registration={{ data['receipt']['additional_attribute']['vehicle']['registration'] }}&email={{ data['customer']['email_address'] }}&invoice_number={{ data['receipt']['transaction_number']['text'] }}&salesperson={{ data['receipt']['salesperson']['id'] }}&booking_reference={{booking_reference}}&transaction_items={{transaction_items}}&transaction_date={{ data['receipt']['datetime']['local'] }}&customer_creation_date={{ data['customer']['meta']['creation']['datetime']['local'] }}&customer_number={{ data['customer']['party_id'] }}" target="_blank"
+             <a class="mj-link" href="{{ feedback }}" target="_blank"
               style="display:inline-block;color:#000000;font-family:Arial, sans-serif;font-size:13px;font-weight:normal;line-height:22px;text-decoration:none;text-transform:uppercase;padding:15px 10px;">
               Feedback </a>
              <!--[if mso | IE]></td></tr></table><![endif]-->
@@ -727,7 +728,7 @@
             <table cellpadding="0" cellspacing="0" width="100%" border="0"
              style="color:#000000;font-family:Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
              <tr>
-              <th align="left"> Sale&nbsp;Notes: {{ feedback }}source=invoice&mobile={{ data['customer']['telephone']['daytime']['text'] }}&name={{ data['customer']['name']['first'] }}{{ data['customer']['name']['last'] }}/&registration={{ data['receipt']['additional_attribute']['vehicle']['registration'] }}&email={{ data['customer']['email_address'] }}&invoice_number={{ data['receipt']['transaction_number']['text'] }}&salesperson={{ data['receipt']['salesperson']['id'] }}&booking_reference={{booking_reference}}&transaction_items={{transaction_items}}&transaction_date={{ data['receipt']['datetime']['local'] }}&customer_creation_date={{ data['customer']['meta']['creation']['datetime']['local'] }}&customer_number={{ data['customer']['party_id'] }}</th>
+              <th align="left"> Sale&nbsp;Notes:</th>
              </tr>
              <tr>
               <td align="left">
@@ -1109,7 +1110,7 @@ END SECOND RECEIPT TEXT -->
                </tr>
                <tr>
                 <td style="padding:14px 0 0;mso-padding-alt:14px 0 0;">
-                 <a href="{{ feedback }}source=invoice&mobile={{ data['customer']['telephone']['daytime']['text'] }}&name={{ data['customer']['name']['first'] }}{{ data['customer']['name']['last'] }}&registration={{ data['receipt']['additional_attribute']['vehicle']['registration'] }}&email={{ data['customer']['email_address'] }}&invoice_number={{ data['receipt']['transaction_number']['text'] }}&salesperson={{ data['receipt']['salesperson']['id'] }}&booking_reference={{booking_reference}}&transaction_items={{transaction_items}}&transaction_date={{ data['receipt']['datetime']['local'] }}&customer_creation_date={{ data['customer']['meta']['creation']['datetime']['local'] }}&customer_number={{ data['customer']['party_id'] }}"
+                 <a href="{{ feedback }}"
                   style="display:block;text-decoration: none;padding:8px 0;mso-padding-alt:8px 0;font-family:Arial, sans-serif;font-size:40px;line-height:1.2!important;text-align:center;color:#000000;">
                   &#9734;&nbsp;&#9734;&nbsp;&#9734;&nbsp;&#9734;&nbsp;&#9734;
                 </a>
@@ -1134,7 +1135,7 @@ END SECOND RECEIPT TEXT -->
               <td align="center" bgcolor="#000000" role="presentation"
                style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 0;background:#000000;"
                valign="middle">
-               <a href="{{ feedback }}source=invoice&mobile={{ data['customer']['telephone']['daytime']['text'] }}&name={{ data['customer']['name']['first'] }}{{ data['customer']['name']['last'] }}&registration={{ data['receipt']['additional_attribute']['vehicle']['registration'] }}&email={{ data['customer']['email_address'] }}&invoice_number={{ data['receipt']['transaction_number']['text'] }}&salesperson={{ data['receipt']['salesperson']['id'] }}&booking_reference={{booking_reference}}&transaction_items={{transaction_items}}&transaction_date={{ data['receipt']['datetime']['local'] }}&customer_creation_date={{ data['customer']['meta']['creation']['datetime']['local'] }}&customer_number={{ data['customer']['party_id'] }}"
+               <a href="{{ feedback }}"
                 style="display:inline-block;background:#000000;color:#ffffff;font-family:Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 0;mso-padding-alt:0px;border-radius:3px;"
                 target="_blank">FEEDBACK</a>
               </td>
