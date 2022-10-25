@@ -46,37 +46,18 @@
  } %}
  {% set feedbacklink = feedbacks.get(receipt["store"]["external_id"]) %}
 
- {% macro get_if_exist(obj, attrlist) %}
-    {% set x = namespace(val=obj, success=True) %}
-    {% for a in attrlist %}
-        {% if a in x.val %}
-            {% set x.val = x.val[a] %}
-        {% else %}
-            {% set x.success = False %}
+ {% set mobile =  data['customer']['telephone']['daytime']['text'] if data['customer']['telephone']['daytime']['text'] or '' %}
+ {% set first_name = data['customer']['name']['first'] if data['customer']['name']['first'] or '' %}
+ {% set last_name = data['customer']['name']['last'] if data['customer']['name']['last'] or '' %}
+ {% set registration = data['receipt']['additional_attribute']['vehicle']['registration'] if data['receipt']['additional_attribute']['vehicle']['registration'] or '' %}
+ {% set email =data['customer']['email_address'] if data['customer']['email_address'] or '' %}
+ {% set invoice_number = data['receipt']['transaction_number']['text'] if data['receipt']['transaction_number']['text'] or '' %}
+ {% set salesperson =data['receipt']['salesperson']['id'] if data['receipt']['salesperson']['id'] or '' %}
+ {% set transaction_date = data['receipt']['datetime']['local'] if data['receipt']['datetime']['local'] or '' %}
+ {% set customer_creation_date = data['customer']['meta']['creation']['datetime']['local'] if data['customer']['meta']['creation']['datetime']['local'] or '' %}
+ {% set customer_number =data['customer']['party_id'] if data['customer']['party_id'] or '' %}
 
-            {% set x.o = x.o[a] %}
-        {% endif %}
-    {% endfor %}
-
-    {% if x.success %}
-        {{ x.val }}
-    {% else %}
-        {{ 'default' }}
-    {% endif %}
-{% endmacro %}
-
-{% set mobile = get_if_exist(data, ['customer','telephone','daytime','text'] %}
-{% set firstName = get_if_exist(data, ['customer','name','first'] %}
-{% set lastName = get_if_exist(data, ['customer','name','last'] %}
-{% set registration = get_if_exist(data, ['receipt','additional_attribute','vehicle','registration'] %}
-{% set email = get_if_exist(data, ['customer','email_address'] %}
-{% set invoice_number = get_if_exist(data, ['receipt','transaction_number','text','registration'] %}
-{% set salesperson = get_if_exist(data, ['receipt','salesperson','id'] %}
-{% set transaction_date = get_if_exist(data, ['receipt','datetime','local'] %}
-{% set customer_creation_date = get_if_exist(data, ['customer','meta','creation','datetime','local'] %}
-{% set customer_number = get_if_exist(data, ['customer','party_id'] %}
-
-{% set feedback = feedbacklink+'source=invoice&mobile='+mobile+'&name='+firstName+lastName+'&registration='+registration+'&email='+email+'&invoice_number='+invoice_number+'&salesperson='+salesperson+'&transaction_date='+transaction_date+'&customer_creation_date='+customer_creation_date+'&customer_number='+customer_number %}
+{% set feedback = feedbacklink+'source=invoice&mobile='+mobile+'&name='+first_name+last_name+'&registration='+registration+'&email='+email+'&invoice_number='+invoice_number+'&salesperson='+salesperson+'&transaction_date='+transaction_date+'&customer_creation_date='+customer_creation_date+'&customer_number='+customer_number %}
   
 
  <!doctype html>
