@@ -1,1 +1,64 @@
- 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+''+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&booking_reference=booking_reference&transaction_items=transaction_items&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id']+'
+ 'source=invoice&
+mobile='+data['customer']['telephone']['daytime']['text']+'&
+name='+data['customer']['name']['first']+''+data['customer']['name']['last']+'&
+registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&
+email='+data['customer']['email_address']+'&
+// invoice_number='+data['receipt']['transaction_number']['text']+'&
+// salesperson='+data['receipt']['salesperson']['id']+'&
+// transaction_date='+data['receipt']['datetime']['local']+'&
+// customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&
+customer_number='+data['customer']['party_id']+'
+
+
+
+
+
+
+{% if not data['customer']['telephone']['daytime']['text'] %}
+{% set feedback = feedbacklink+ 'source=invoice&mobile=none&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% elif data['customer']['name'] %}
+{% if not data['customer']['name']['first'] and data['customer']['name']['last'] %}
+  {% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% elif not data['customer']['name']['last'] and data['customer']['name']['first'] %}
+{% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% else %}
+  {% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name=none&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% endif %}
+{% elif not getattr(data['receipt']['additional_attribute']['vehicle'], 'registration',  %}
+{% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration=none&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% elif not data['customer']['email_address'] %}
+{% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email=none&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% elif not data['customer']['party_id'] %}
+{% set feedback = feedbacklink+ 'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number=none' %}
+{% else %}
+{% set feedback = feedbacklink+'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
+{% endif %}
+
+
+
+{% set valueList = {
+    "mobile" : data['customer']['telephone']['daytime']['text'],
+    "firstName" : data['customer']['name']['first'],
+    "lastName" : data['customer']['name']['last'],
+    "registration" : data['receipt']['additional_attribute']['vehicle']['registration'],
+    "email" : data['customer']['email_address'],
+    "invoice_number" : data['receipt']['transaction_number']['text'],
+    "salesperson" : data['receipt']['salesperson']['id'],
+    "transaction_date" : data['receipt']['datetime']['local'],
+    "customer_creation_date" : data['customer']['meta']['creation']['datetime']['local'],
+    "customer_number" : data['customer']['party_id']
+   } %}
+   
+   {% macro setFeedbackLink(value) -%}
+    {% set newValueList = {} %}
+  
+    {%- for key, value in valueList %}
+      {% if value %}
+       {% set newValueList[key] = value %}
+      {% endif %}
+    {%- endfor %}
+  {%- endmacro %}
+  {% call setFeedbackLink('') %}
+  {% endcall %}
+  
+  {% set feedback = feedbacklink+'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
