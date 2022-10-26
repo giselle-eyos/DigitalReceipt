@@ -1,0 +1,1475 @@
+{% set banners = {
+    "GRL": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/banners/Store_image_Grenelle.jpg",
+    "ALG": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/banners/Store_image_SaintHonore%CC%81.JPG",
+    "DUK": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/banners/Store_image_mayfair.png",
+    "BMC": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/banners/Store_image_Beaumarchais.png",
+"NYC": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/banners/Store_image_mayfair.png",
+    "default": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/banners/Store_image_mayfair.png"
+} %}
+{% set banner_url = banners.get(receipt["store"]["external_id"], banners["default"]) %}
+
+{% set store_type_list = {
+   "default": "COLLECTION HOMME ET FEMME",
+   "GRL": "COLLECTION FEMME",
+   "ALG": "COLLECTION HOMME ET FEMME",
+   "DUK": "MENSWEAR AND WOMENSWEAR",
+   "BMC": "COLLECTION HOMME",
+   "NYC": "MENSWEAR AND WOMENSWEAR"
+} %}
+
+{% set store_type = store_type_list.get(receipt["store"]["external_id"], store_type_list["default"]) %}
+
+{% set translations = {
+    "en": {
+        "men": "Men",
+        "women": "Women",
+        "accessories": "Accessories",
+        "collections": "Collections",
+        "thank_you": "THANK YOU FOR YOUR VISIT",
+        "content_explanation": "PLEASE FIND YOUR DIGITAL RECEIPT BELOW ALONG WITH ALL PERTAINING INFORMATION ABOUT YOUR PURCHASE.",
+        "date": "Date of Purchase",
+        "tran_num": "Transaction Number",
+        "salesperson": "Salesperson",
+        "store": "Store",
+        "till": "Till",
+        "item_id": "Item ID",
+        "description": "Description",
+        "quantity": "Quantity",
+        "price": "Price",
+        "discount": "Discount",
+        "reason": "Reason",
+        "amount": "Amount",
+        "subtotal": "Subtotal",
+        "rate": "Rate",
+        "taxable_amount": "Taxable Amount",
+        "tax_paid": "Tax Paid",
+        "total": "Total",
+        "tender_type": "Tender Type",
+        "cta2_text": "SIGN UP TO OUR NEWSLETTER TO GET FIRST ACCESS TO OUR NEW COLLECTION DROPS, COLLABORATIONS, SHOWS, AND AMI SALES.",
+        "cta2_button": "LET'S STAY FRIENDS",
+        "the_house": "THE HOUSE",
+        "customer_service": "CUSTOMER SERVICE",
+        "store_locator": "STORE LOCATOR",
+        "return_policy": "ANY ITEM(S) BOUGHT IN ANY OF OUR AMI STORES LOCATED IN THE UNITED KINGDOM CAN BE EXCHANGED WITHIN 30 DAYS OF PURCHASE AND CAN ONLY BE ACCEPTED UNDER THE FOLLOWING CONDITIONS: 1. UNWORN, NOT DAMAGED AND IN THE ORIGINAL CONDITION OF PURCHASE 2. MUST BE ACCOMPANIED BY A PROOF OF PURCHASE (PRINTED OR DIGITAL RECEIPT). 3. SALE ITEMS CAN ONLY BE RETURNED WITHIN THE SAME SALE PERIOD. CREDIT NOTES ARE NOMINATIVE AND TO BE USED ONLY BY THE PERSON TO WHOM IT WAS ISSUED AND ONLY VALID WITHIN OUR STORES IN THE UK. REFUNDS WILL NOT BE ACCEPTED UNLESS GOODS ARE DEEMED FAULTY. THIS DOES NOT AFFECT YOUR STATUTORY RIGHTS."
+    },
+"de": {
+        "men": "Herren",
+        "women": "Frauen",
+        "accessories": "Zubehör",
+        "collections": "Sammlungen",
+        "thank_you": "DANKE FÜR IHREN BESUCH",
+        "content_explanation": "BITTE FINDEN SIE UNTEN IHREN EMPFANG SOWIE ALLE INFORMATIONEN ZU IHRER FAHRT.",
+        "date": "Datum",
+        "tran_num": "Transaktionsnummer",
+        "salesperson": "Verkäufer",
+        "store": "Laden",
+        "till": "Kasse",
+        "item_id": "Artikel",
+        "description": "Bezeichnung",
+        "quantity": "Anzahl",
+        "price": "Preis",
+        "discount": "rabatt",
+        "reason": "grund",
+        "amount": "Menge",
+        "subtotal": "Subtotal",
+        "rate": "MwSt",
+        "taxable_amount": "Steuerpflichtiger Betrag",
+        "tax_paid": "Steuer gezahlt",
+        "total": "Gesamt",
+        "tender_type": "Zahlungsart",
+        "cta2_text": "ABONNIEREN SIE HEUTE UNSEREN NEWSLETTER, UM ÜBER UNSERE NEUEN KOLLEKTIONEN, KOOPERATIONEN UND NACHRICHTEN INFORMIERT ZU WERDEN.",
+        "cta2_button": "RESTONS AMIS",
+        "the_house": "DAS HAUS",
+        "customer_service": "SERVICE CLIENT",
+        "store_locator": "VERKAUFSSTELLEN",
+        "return_policy": "JEDER ARTIKEL, DER IN AMI BOUTIQUES IN FRANKREICH IM VERKAUFSZUSTAND UND AUF VORLAGE DER RECHNUNG GEKAUFT WURDE, KANN AUSSCHLIESSLICH IN AMI BOUTIQUES IN FRANKREICH INNERHALB VON 30 TAGEN NACH DEM KAUFDATUM GEGEN DEN NICHTVERKAUF UMTAUSCHT ODER GEGEN EINEN GUTSCHRIFT WERDEN PRODUKTE UND WÄHREND DER VERKAUFSZEIT FÜR VERKAUFSPRODUKTE. DAS GUTSCHEIN IST PERSÖNLICH UND FÜR EIN JAHR IN AMI-LÄDEN IN DEUTSCHLAND GÜLTIG."
+    },
+    "fr": {
+        "men": "L'Homme",
+        "women": "La Femme",
+        "accessories": "Accessoires",
+        "collections": "Collections",
+        "thank_you": "MERCI POUR VOTRE VISITE",
+        "content_explanation": "VEUILLEZ TROUVER CI-DESSOUS VOTRE REÇU AINSI QUE TOUTES LES INFORMATIONS CONCERNANT VOTRE PASSAGE.",
+        "date": "Date d'achat",
+        "tran_num": "Numéro de transaction",
+        "salesperson": "Vendeur",
+        "store": "Boutique",
+        "till": "Caisse",
+        "item_id": "Article",
+        "description": "Description",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "discount": "Discount",
+        "reason": "Reason",
+        "amount": "Total",
+        "subtotal": "Total",
+        "rate": "Taux",
+        "taxable_amount": "Montant Imposable",
+        "tax_paid": "Taxe payée",
+        "total": "Total",
+        "tender_type": "Méthode de paiement",
+        "cta2_text": "ABONNEZ-VOUS DÈS AUJOURD'HUI À NOTRE NEWSLETTER POUR ÊTRE INFORMÉ(E) DE NOS NOUVELLES COLLECTIONS, COLLABORATIONS ET ACTUALITÉS.",
+        "cta2_button": "RESTONS AMIS",
+        "the_house": "LA MAISON",
+        "customer_service": "SERVICE CLIENT",
+        "store_locator": "POINTS DE VENTE",
+        "return_policy": "TOUT ARTICLE ACHETÉ DANS LES BOUTIQUES AMI SITUÉES EN FRANCE, EN CONDITION DE VENTE ET SUR PRÉSENTATION DE FACTURE, POURRA ÊTRE ÉCHANGÉ OU FAIRE L’OBJET D’UN AVOIR DANS LES BOUTIQUES AMI SITUÉES EN FRANCE EXCLUSIVEMENT, DANS UN DÉLAI DE 30 JOURS SUIVANT LEUR DATE D’ACHAT POUR LES PRODUITS NON SOLDÉS, ET PENDANT LA PÉRIODE DES SOLDES POUR LES PRODUITS SOLDÉS. L’AVOIR EST NOMINATIF ET VALABLE UN AN DANS LES BOUTIQUES AMI SITUÉES EN FRANCE."
+    }
+} %}
+{% set language = translations[receipt.language_code if receipt.language_code in translations else "fr"] %}
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title> </title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+  </style>
+  <!--[if mso]>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+  <!--[if lte mso 11]>
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+  </style>
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+      .mj-column-per-33-333333333333336 {
+        width: 33.333333333333336% !important;
+        max-width: 33.333333333333336%;
+      }
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width:480px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+
+    noinput.mj-menu-checkbox {
+      display: block!important;
+      max-height: none!important;
+      visibility: visible!important;
+    }
+
+    @media only screen and (max-width:480px) {
+      .mj-menu-checkbox[type="checkbox"]~.mj-inline-links {
+        display: none!important;
+      }
+      .mj-menu-checkbox[type="checkbox"]:checked~.mj-inline-links,
+      .mj-menu-checkbox[type="checkbox"]~.mj-menu-trigger {
+        display: block!important;
+        max-width: none!important;
+        max-height: none!important;
+        font-size: inherit!important;
+      }
+      .mj-menu-checkbox[type="checkbox"]~.mj-inline-links>a {
+        display: block!important;
+      }
+      .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-close {
+        display: block!important;
+      }
+      .mj-menu-checkbox[type="checkbox"]:checked~.mj-menu-trigger .mj-menu-icon-open {
+        display: none!important;
+      }
+    }
+  </style>
+  <style type="text/css">
+    @font-face {
+      font-family: 'Mier';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.amiparis.com/mier/MierA-Regular.woff) format('woff');
+    }
+  </style>
+  <!--[if (mso)|(mso 16)]>
+      <style type="text/css">
+        body, div, table, td, a, span { font-family: Helvetica, Arial, sans-serif !important; }
+      </style>
+    <![endif]-->
+</head>
+
+<body>
+  <div style="">
+    <!-- HEADER/NAV -->
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:black;background-color:black;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:black;background-color:black;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                          <tr>
+                            <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                <tbody>
+                                  <tr>
+                                    <td style="width:100px;"> <a href="https://www.amiparis.com/" target="_blank">
+          
+      <img
+         height="auto" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/Top_logo_all_stores.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100"
+      />
+    
+        </a> </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="font-size:0px;word-break:break-word;">
+                              <div class="mj-inline-links" style="">
+                                <!--[if mso | IE]>
+    
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+        
+    
+    
+          <td
+             style="padding:20px;" class=""
+          >
+        
+    <![endif]--><a class="mj-link" href="https://www.amiparis.com/shopping/man/clothing" target="_blank" style="display:inline-block;color:white;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:22px;text-decoration:none;text-transform:none;padding:20px;">
+        {{ language['men'] }}
+      </a>
+                                <!--[if mso | IE]>
+    
+          </td>
+        
+    
+    
+          <td
+             style="padding:20px;" class=""
+          >
+        
+    <![endif]--><a class="mj-link" href="https://www.amiparis.com/sets/woman/womenswear" target="_blank" style="display:inline-block;color:white;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:22px;text-decoration:none;text-transform:none;padding:20px;">
+        {{ language['women'] }}
+      </a>
+                                <!--[if mso | IE]>
+    
+          </td>
+        
+    
+    
+          <td
+             style="padding:20px;" class=""
+          >
+        
+    <![endif]--><a class="mj-link" href="https://www.amiparis.com/sets/accessories" target="_blank" style="display:inline-block;color:white;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:22px;text-decoration:none;text-transform:none;padding:20px;">
+        {{ language['accessories'] }}
+      </a>
+                                <!--[if mso | IE]>
+    
+          </td>
+        
+    
+    
+          <td
+             style="padding:20px;" class=""
+          >
+        
+    <![endif]--><a class="mj-link" href="https://www.amiparis.com/news" target="_blank" style="display:inline-block;color:white;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:22px;text-decoration:none;text-transform:none;padding:20px;">
+        {{ language['collections'] }}
+      </a>
+                                <!--[if mso | IE]>
+    
+          </td>
+        
+    
+    
+            </tr></table>
+          
+    <![endif]-->
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                <tbody>
+                                  <tr>
+                                    <td style="width:600px;"> <a href="https://www.amiparis.com/" target="_blank">
+          
+      <img
+         height="auto" src="{{ banner_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600"
+      />
+    
+        </a> </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:20px;line-height:1;text-align:center;color:#000000;">{{ language['thank_you'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:1;text-align:center;color:#000000;">{{ receipt['store']['name'].upper() }}<br />{% for line in receipt['store']['address']['street'] %}{{ line.upper() }}<br />{% endfor %}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:10px;font-weight:1;line-height:1;text-align:center;color:#000000;">{{ store_type }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;padding-right:15%;padding-left:15%;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:1;text-align:center;color:#000000;">{{ language['content_explanation'] }}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{ language['date'] }}: {{ data['receipt']['datetime']['text'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{ language['tran_num'] }}: {{ data['receipt']['transaction_number']['text'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{ language['salesperson'] }}: {{ data['receipt']['associate']['name'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{ language['store'] }}: {{ data['store']['name'] }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">{{ language['till'] }}: {{ data['device']['external_id'] }}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    <!-- END HEADER/NAV -->
+    <!-- SALE ITEMS -->
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                       
+                        {% if receipt.temporary_type != "gift" %}
+                        <tr>
+                          <th style="text-align: left; vertical-align: top; width: 20%;">{{ language['item_id'] }}</th>
+                          <th style="text-align: left; vertical-align: top; width: 35%;">{{ language['description'] }}</th>
+                          <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['quantity'] }}</th>
+                          <th style="text-align: right; vertical-align: top; width: 20%;">{{ language['price'] }}</th>
+                        </tr>
+                        <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+                          <td style="text-align: left; vertical-align: top; width: 35%;"> {{ sale_item['text'] }}
+                            <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw> <br>{{ language['discount'] }}: {{ discount['reduction_percent']['value'] }} <br>{{ language['reason'] }}: {{ discount['text'] }}
+                            <mj-raw>{% endfor %}</mj-raw>
+                          </td>
+                          <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+                          <td style="text-align: right; vertical-align: top; width: 20%;">{{ receipt.format_currency(sale_item['total']['value']) }}</td>
+                        </tr>
+                        <mj-raw>{% endfor %}</mj-raw>
+                        {% else %}
+                        <tr>
+                          <th style="text-align: left; vertical-align: top; width: 20%;">{{ language['item_id'] }}</th>
+                          <th style="text-align: left; vertical-align: top; width: 55%;">{{ language['description'] }}</th>
+                          <th style="text-align: center; vertical-align: top; width: 25%;">{{ language['quantity'] }}</th>
+                        </tr>
+                        <mj-raw>{% for sale_item in receipt['sale_item'] %}</mj-raw>
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top; width: 20%;">{{ sale_item['pos_item_id'] }}</td>
+                          <td style="text-align: left; vertical-align: top; width: 55%;"> {{ sale_item['text'] }}
+                            <mj-raw>{% for discount in sale_item['discount'] %}</mj-raw> <br>{{ language['discount'] }}: {{ discount['reduction_percent']['value'] }} <br>{{ language['reason'] }}: {{ discount['text'] }}
+                            <mj-raw>{% endfor %}</mj-raw>
+                          </td>
+                          <td style="text-align: center; vertical-align: top; width: 25%;">{{ sale_item['quantity']['value'] }}</td>
+                        </tr>
+                        <mj-raw>{% endfor %}</mj-raw>
+                        {% endif %}
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    <!-- END SALE ITEMS -->
+
+    {% if receipt.temporary_type != "gift" %}
+    <!-- SUBTOTAL -->{% if receipt['receipt']['subtotal']['amount']['value'] %}
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;"> </p>
+                      <!--[if mso | IE]>
+        <table
+           align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px"
+        >
+          <tr>
+            <td style="height:0;line-height:0;">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      <![endif]-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <td align="left"><b>{{ language['subtotal'] }}</b></td>
+                          <td align="right">{{ receipt.format_currency(data['receipt']['subtotal']['amount']['value']) }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;"> </p>
+                      <!--[if mso | IE]>
+        <table
+           align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px"
+        >
+          <tr>
+            <td style="height:0;line-height:0;">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->{% endif %}
+    <!-- END SUBTOTAL -->
+    <!-- DISCOUNTS -->{% if receipt['discount'] %}
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top;">{{ language['discount'] }}</th>
+                          <th style="text-align: right; vertical-align: top;">{{ language['amount'] }}</th>
+                        </tr>
+                        <mj-raw>{% for discount in receipt['discount'] %}</mj-raw>
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top;">{{ discount['text'] }}</td>
+                          <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(discount['amount']['value']) }}</td>
+                        </tr>
+                        <mj-raw>{% endfor %}</mj-raw>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->{% endif %}
+    <!-- END DISCOUNTS -->
+    <!-- TAXES -->{% if receipt['tax'] %}
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top; width: 33%;">{{ language['rate'] }}</th>
+                          <th style="text-align: center; vertical-align: top; width: 33%;">{{ language['taxable_amount'] }}</th>
+                          <th style="text-align: right; vertical-align: top; width: 33%;">{{ language['tax_paid'] }}</th>
+                        </tr>
+                        <mj-raw>{% for tax in receipt['tax'] %}</mj-raw>
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top; width: 33%;">{{ tax['rate']['value'] }}%</td>
+                          <td style="text-align: center; vertical-align: top; width: 33%;">{{ receipt.format_currency(tax['taxable_amount']['value']) }}</td>
+                          <td style="text-align: right; vertical-align: top; width: 33%;">{{ receipt.format_currency(tax['amount']['value']) }}</td>
+                        </tr>
+                        <mj-raw>{% endfor %}</mj-raw>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->{% endif %}
+    <!-- END TAXES -->
+    <!-- TOTAL -->{% if receipt['receipt']['total']['amount']['value'] %}
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;"> </p>
+                      <!--[if mso | IE]>
+        <table
+           align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px"
+        >
+          <tr>
+            <td style="height:0;line-height:0;">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      <![endif]-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <td align="left"><b>{{ language['total'] }}</b></td>
+                          <td align="right">{{ receipt.format_currency(data['receipt']['total']['amount']['value']) }}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;"> </p>
+                      <!--[if mso | IE]>
+        <table
+           align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px"
+        >
+          <tr>
+            <td style="height:0;line-height:0;">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->{% endif %}
+    <!-- END TOTAL -->
+    <!-- TENDER -->{% if receipt['tender'] %}
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                        <tr>
+                          <th style="text-align: left; vertical-align: top;">{{ language['tender_type'] }}</th>
+                          <th style="text-align: right; vertical-align: top;">{{ language['amount'] }}</th>
+                        </tr>
+                        <mj-raw>{% for tender in receipt['tender'] %}</mj-raw>
+                        <tr style="border-top: 2px solid #000000">
+                          <td style="text-align: left; vertical-align: top;">{{ tender['text'] }}</td>
+                          <td style="text-align: right; vertical-align: top;">{{ receipt.format_currency(tender['amount']['value']) }}</td>
+                        </tr>
+                        <mj-raw>{% endfor %}</mj-raw>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->{% endif %}
+    <!-- END TENDER -->
+    {% endif %}
+    
+    <!-- BARCODE -->
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="background:#f2f2f2;background-color:#f2f2f2;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f2f2f2;background-color:#f2f2f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                        <tbody>
+                          <tr>
+                            <td style="width:200px;"> <img height="auto" src="{{ barcode_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="200" /> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">{{ receipt.barcode_transaction_number }}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    <!-- END BARCODE -->
+    <!-- CTA2 -->
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;padding-top:50px;padding-bottom:50px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                        <tbody>
+                          <tr>
+                            <td style="width:80px;"> <a href="https://www.amiparis.com/" target="_blank">
+          
+      <img
+         height="auto" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/AMI%20DE%20COEUR%202020.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="80"
+      />
+    
+        </a> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;padding-right:10%;padding-left:10%;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:12px;font-weight:1;line-height:1.5;text-align:center;color:#000000;">{{ language['cta2_text'] }}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" vertical-align="middle" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:200px;line-height:100%;">
+                        <tr>
+                          <td align="center" bgcolor="white" role="presentation" style="border:1px solid black;border-radius:0;cursor:auto;mso-padding-alt:10px 25px;background:white;" valign="middle"> <a href="https://www.amiparis.com/us/account/" style="display:inline-block;width:148px;background:white;color:black;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:0;"
+                              target="_blank">
+              {{ language['cta2_button'] }}
+            </a> </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;padding-right:10%;padding-left:10%;word-break:break-word;">
+                      <div style="font-family:Mier, Arial, Helvetica, sans-serif;font-size:9px;font-weight:1;line-height:2;text-align:center;color:#999999;">{{ language['return_policy'] }}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:200px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-33-333333333333336 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
+                        <nobr><a href="https://www.amiparis.com/la-maison" style="text-decoration: none; color: black;">{{ language['the_house'] }}</a></nobr>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+            <td
+               class="" style="vertical-align:top;width:200px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-33-333333333333336 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
+                        <nobr><a href="https://www.amiparis.com/contacts" style="text-decoration: none; color: black;">{{ language['customer_service'] }}</a></nobr>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+            <td
+               class="" style="vertical-align:top;width:200px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-33-333333333333336 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#000000;">
+                        <nobr><a href="https://www.amiparis.com/retailers" style="text-decoration: none; color: black;">{{ language['store_locator'] }}</a></nobr>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    <!-- SOCIAL MEDIA -->
+    <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0px;padding-bottom:0px;word-break:break-word;">
+                      <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      >
+        <tr>
+      
+              <td>
+            <![endif]-->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                        <tr>
+                          <td style="padding:20px;vertical-align:middle;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                              <tr>
+                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;"> <a href="https://www.instagram.com/amiparis/" target="_blank">
+                    <img
+                       height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/social%20media/Instagram_icon_all_stores.png" style="border-radius:3px;display:block;" width="30"
+                    />
+                  </a> </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                        <tr>
+                          <td style="padding:20px;vertical-align:middle;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                              <tr>
+                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;"> <a href="https://www.facebook.com/AMIPARIS/" target="_blank">
+                    <img
+                       height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/social%20media/Facebook_icon_all_stores.png" style="border-radius:3px;display:block;" width="30"
+                    />
+                  </a> </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                        <tr>
+                          <td style="padding:20px;vertical-align:middle;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                              <tr>
+                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;"> <a href="https://www.youtube.com/channel/UCc_iDUG4FUUA3Ga4dyOwuFA" target="_blank">
+                    <img
+                       height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/social%20media/Youtube_icon_all_stores.png" style="border-radius:3px;display:block;" width="30"
+                    />
+                  </a> </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                        <tr>
+                          <td style="padding:20px;vertical-align:middle;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                              <tr>
+                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;"> <a href="https://fr.linkedin.com/company/ami-paris" target="_blank">
+                    <img
+                       height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/social%20media/Linkedin_icon_all_stores.png" style="border-radius:3px;display:block;" width="30"
+                    />
+                  </a> </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                        <tr>
+                          <td style="padding:20px;vertical-align:middle;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                              <tr>
+                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;"> <a href="https://weibo.com/u/6568401638" target="_blank">
+                    <img
+                       height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/social%20media/Wechat_icon_all_stores.png" style="border-radius:3px;display:block;" width="30"
+                    />
+                  </a> </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                        <tr>
+                          <td style="padding:20px;vertical-align:middle;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                              <tr>
+                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;"> <a href="https://www.amiparis.com/fr/article/wechat-qr-code" target="_blank">
+                    <img
+                       height="30" src="https://storage.googleapis.com/yreceipts-prod-uk-public-assets/ami/29-05-2020/social%20media/Weibo_icon_all_stores.png" style="border-radius:3px;display:block;" width="30"
+                    />
+                  </a> </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if mso | IE]>
+              </td>
+            
+          </tr>
+        </table>
+      <![endif]-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" vertical-align="middle" style="font-size:0px;padding:10px 25px;padding-top:0px;word-break:break-word;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                        <tr>
+                          <td align="center" bgcolor="white" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:white;" valign="middle"> <a href="https://www.amiparis.com/" style="display:inline-block;background:white;color:black;font-family:Mier, Arial, Helvetica, sans-serif;font-size:13px;font-weight:1;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;"
+                              target="_blank">
+              <b>@amiparis</b>
+            </a> </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    <!-- END SOCIAL MEDIA -->
+  </div>
+</body>
+
+</html>

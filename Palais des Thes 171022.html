@@ -41,7 +41,7 @@
       "button" : "Visitez notre site",
     },
     "receipt" : {
-      "title": "Voici votre ticket électronique pour votre achat récent",
+      "title": "Voici votre ticket électronique pour votre dernier achat",
       "gift": "Voici votre ticket cadeau",
       "discount": "Discount",
       "subtotal": "Sous-total",
@@ -54,14 +54,14 @@
       "time": "Date et heure:",
     },
     "refund" : {
-      "title" : "Politique de remboursement:",
+      "title" : "Politique de remboursement :",
       "body" : "Echanges sous 30 jours sur présentation du ticket de caisse. Les produits doivent être dans leur emballage d'origine. Hors thé en vrac. Nous ne pratiquons ni avoir ni remboursement. Merci de votre visite, à bientôt.",
     },
     "cta" : {
       "cta1" : {
         "title" : "Pour en savoir plus sur notre programme de fidélité :",
         "body" : "",
-        "href" : "www.palaisdesthes.com/fr/programme.fidélité",
+        "href" : "https://www.palaisdesthes.com/fr/programme-theophile/",
         "button" : "SIGN UP",
         "src" : "https://assets3.keepeek.com/pm_58_89_89779-s78lx6lofa-whr.jpg",
       },
@@ -964,10 +964,10 @@
                                       <td class="py10">
                                         {% if data['customer']['name']['first'] %}
                                         {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']}}{% if data['customer']['name']['last'] %} {{ data['customer']['name']['last']}}
-                                        {% endif %},<br /><br />
+                                        {% endif %}<br /><br />
                                         {% else %}
                                         {{ language['greeting']['dear']}}{{
-                                        language['greeting']['customer']}},<br /><br />
+                                        language['greeting']['customer']}}<br /><br />
                                         {% endif %}
 
                                         {% if receipt.temporary_type != "gift" %}
@@ -1613,7 +1613,7 @@
 
                                 {% for link in language['social'] %}
                                 <a target="_blank" href="{{ link['href'] }}">
-                                  <img width="{% if loop.first %}13{% elif loop.index is even %}18{% else %}16{% endif %}" src="{{ link['src'] }}" alt="{{ link['alt'] }}" />
+                                  <img width="{% if loop.first %}10{% elif loop.index is even %}18{% else %}16{% endif %}" src="{{ link['src'] }}" alt="{{ link['alt'] }}" />
                                 </a>
                                 {% if loop.last %}
                                 <!--[if mso | IE]></td></tr></table><![endif]-->
@@ -1649,7 +1649,7 @@
                           <tr>
                             <td valign="middle" align="center" style="padding:1em;">
                               <a class="active alignCenter" href="{{ menu['href'] }}" target="_blank"
-                                style="font-family: futura, century-gothic, gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; color: #333333;">
+                                style="font-family: century-gothic, gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; color: #333333;">
                                 {{ menu['text'] }}
                               </a>
                             </td>

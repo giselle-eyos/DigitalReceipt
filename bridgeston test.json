@@ -3,16 +3,49 @@ mobile='+data['customer']['telephone']['daytime']['text']+'&
 name='+data['customer']['name']['first']+''+data['customer']['name']['last']+'&
 registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&
 email='+data['customer']['email_address']+'&
-// invoice_number='+data['receipt']['transaction_number']['text']+'&
-// salesperson='+data['receipt']['salesperson']['id']+'&
-// transaction_date='+data['receipt']['datetime']['local']+'&
-// customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&
+invoice_number='+data['receipt']['transaction_number']['text']+'&
+salesperson='+data['receipt']['salesperson']['id']+'&
+transaction_date='+data['receipt']['datetime']['local']+'&
+customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&
 customer_number='+data['customer']['party_id']+'
 
 
+{% set mobile =  data['customer']['telephone']['daytime']['text'] if  data['customer']['telephone']['daytime'] or '' %}
+{% set firstName = data['customer']['name']['first'] if data['customer']['name'] or '' %}
+{% set lastName = data['customer']['name']['last'] if data['customer']['name']or '' %}
+{% set registration = data['receipt']['additional_attribute']['vehicle']['registration'] if data['receipt']['additional_attribute']['vehicle'] or '' %}
+{% set email =data['customer']['email_address'] if data['customer']['email_address'] or '' %}
+{% set invoice_number = data['receipt']['transaction_number']['text'] if data['receipt']['transaction_number']['text'] or '' %}
+{% set salesperson =data['receipt']['salesperson']['id'] if data['receipt']['salesperson']['id'] or '' %}
+{% set transaction_date = data['receipt']['datetime']['local'] if data['receipt']['datetime']['local'] or '' %}
+{% set customer_creation_date = data['customer']['meta']['creation']['datetime']['local'] if data['customer']['meta']['creation']['datetime']['local'] or '' %}
+
+{% set feedback = feedbacklink+'source=invoice&mobile='+mobile+'&name='+firstName+lastName+'&registration='+registration+'&email='+email+'&invoice_number='+invoice_number+'&salesperson='+salesperson+'&transaction_date='+transaction_date+'&customer_creation_date='+customer_creation_date+'&customer_number='+customer_number %}
+  
+
+{% set mobile = receipt.get_transaction_dict().get("customer", {}).get("telephone", {}).get("daytime", {}).get("text") %}
+{% set first_name = receipt.get_transaction_dict().get("customer", {}).get("name", {}).get("first") %}
+{% set last_name = receipt.get_transaction_dict().get("customer", {}).get("name", {}).get("last") %}
+{% set registration = receipt.get_transaction_dict().get("receipt", {}).get("additional_attribute", {}).get("vehicle", {}).get("registration") %}
+{% set email =  receipt.get_transaction_dict().get("customer", {}).get("email_address") %}
+{% set invoice_number = receipt.get_transaction_dict().get("receipt", {}).get("transaction_number", {}).get("text") %}
+{% set salesperson = receipt.get_transaction_dict().get("receipt", {}).get("salesperson", {}).get("id") %}
+{% set transaction_date = receipt.get_transaction_dict().get("receipt", {}).get("datetime", {}).get("local") %}
+{% set customer_creation_date = receipt.get_transaction_dict().get("customer", {}).get("meta", {}).get("creation", {}).get("datetime", {}).get("local") %}
+{% set customer_number = receipt.get_transaction_dict().get("customer", {}).get("party_id") %}
+
+{% set list = [mobile, first_name, last_name, registration, email, invoice_number, salesperson, transaction_date, customer_creation_date, customer_number] %}
+
+{% set new_list = [] %}
+ {% for value in list %}
+  {% if value %}
+    {{ new_list.append(list.value) }}
+  {% endif %}
+ {% endfor%}
+ {{  new_list|join('') }}
 
 
-
+{% set feedback = new_list %}
 
 {% if not data['customer']['telephone']['daytime']['text'] %}
 {% set feedback = feedbacklink+ 'source=invoice&mobile=none&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
@@ -33,8 +66,6 @@ customer_number='+data['customer']['party_id']+'
 {% else %}
 {% set feedback = feedbacklink+'source=invoice&mobile='+data['customer']['telephone']['daytime']['text']+'&name='+data['customer']['name']['first']+data['customer']['name']['last']+'&registration='+data['receipt']['additional_attribute']['vehicle']['registration']+'&email='+data['customer']['email_address']+'&invoice_number='+data['receipt']['transaction_number']['text']+'&salesperson='+data['receipt']['salesperson']['id']+'&transaction_date='+data['receipt']['datetime']['local']+'&customer_creation_date='+data['customer']['meta']['creation']['datetime']['local']+'&customer_number='+data['customer']['party_id'] %}
 {% endif %}
-
-
 
 {% set valueList = {
     "mobile" : data['customer']['telephone']['daytime']['text'],
