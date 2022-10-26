@@ -1,0 +1,851 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Untitled Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+            min-width: 100% !important;
+            font-family: Helvetica, Arial, sans-serif !important;
+            font-size: 12px;
+            color: #111111;
+        }
+
+
+        html {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            text-size-adjust: none;
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica, Arial, sans-serif !important;
+            font-size: 12px;
+            color: #111111;
+        }
+
+
+        table {
+            font-family: Helvetica, Arial, sans-serif !important;
+            font-size: 12px;
+            color: #111111;
+        }
+
+        img {
+            display: block
+        }
+
+        *[class].content {
+            width: 700px !important;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        *[class].saleSizes {
+            width: 640px !important;
+            color: #222222;
+        }
+
+        /* Random Email Support */
+        .ExternalClass {
+            width: 100% !important;
+        }
+
+        .ExternalClass,
+        .ExternalClass *,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100% !important;
+        }
+
+
+        table,
+        td,
+        tr {
+            font-size: 12px;
+        }
+
+        *[class].content {
+            max-width: 700px;
+        }
+
+        *[class].showMobile {
+            display: none !important;
+            max-height: 0 !important;
+            /* Gmail*/
+            mso-hide: all !important;
+            /* Outlook clients*/
+            overflow: hidden !important;
+            /* Generic */
+            height: 1px !important;
+            font-size: 1 !important;
+            /* Be careful with this one, only use if absolutely required */
+            visibility: hidden !important;
+            line-height: 1px !important;
+        }
+
+        *[class].H1 {}
+
+        *[class].heroCopy {}
+
+
+        *[class].prodSpace {
+            display: none;
+        }
+
+        /* MOBILE RULES */
+        @media only screen and (max-width:650px) {
+            *[class].content {
+                width: 350px !important;
+                color: #222222;
+            }
+
+            *[class].viewOnline {
+                font-size: 11px !important;
+                text-align: center !important;
+                line-height: 15px !important;
+            }
+
+            *[class].contWidth {
+                width: 350px !important;
+                text-align: center !important;
+            }
+
+
+            /* Headings + Copy */
+            *[class].Copy {
+                font-size: 12px !important;
+            }
+
+            *[class].smallCopy {
+                font-size: 9px !important;
+                padding: 30px 15px 20px 15px !important;
+            }
+
+            *[class].H1 {
+                font-size: 40px !important
+            }
+
+            *[class].H2 {
+                font-size: 30px !important
+            }
+
+            *[class].H3 {
+                font-size: 20px !important
+            }
+
+            *[class].heroCTA {
+                font-size: 20px !important
+            }
+
+            *[class].TransCopy {
+                text-align: left !important;
+                font-size: 10px !important;
+                padding: 10px 20px !important
+            }
+
+            *[class].TransBill {
+                font-size: 9px !important;
+            }
+
+            *[class].TransTotal {
+                font-size: 12px !important;
+            }
+
+
+            /* Mob Image */
+            *[class].w350 {
+                width: 350px !important;
+                height: auto !important;
+            }
+
+            *[class].w340 {
+                width: 340px !important;
+                height: auto !important;
+            }
+
+            *[class].w300 {
+                width: 300px !important;
+                height: auto !important;
+            }
+
+            *[class].secFloat {
+                display: block !important;
+            }
+
+            /* Hide */
+            *[class].hideMobile {
+                display: none !important;
+                width: 0 !important;
+                height: 0 !important
+            }
+
+
+            /* Show Hidden Hero */
+            *[class].showMobile {
+                display: block !important;
+                mso-hide: all !important;
+                /* Outlook clients*/
+                overflow: visible !important;
+                /* Generic */
+                visibility: visible !important;
+                line-height: normal !important;
+                max-height: none !important;
+                width: auto !important;
+                height: auto !important;
+            }
+
+
+            /* Position of Stacked Table */
+            *[class].mainCol {
+                display: table-header-group !important;
+                width: 100% !important;
+            }
+
+            *[class].subCol {
+                display: table-footer-group !important;
+                width: 100% !important;
+            }
+
+            *[class].mobSplit {
+                width: 350px !important;
+                height: 10px !important;
+                display: block !important;
+            }
+
+            *[class].mobSplit2 {
+                width: 350px !important;
+                height: 20px !important;
+                display: block !important;
+            }
+
+            *[class].mobSplit3 {
+                width: 350px !important;
+                height: 30px !important;
+                display: block !important;
+            }
+
+            *[class].mobSplit_5 {
+                width: 350px !important;
+                height: 5px !important;
+                display: block !important;
+            }
+
+            *[class].pad_0 {
+                padding: 0 !important;
+            }
+
+            /* Trend Hero */
+            *[class].mobHeader {
+                display: table-caption !important;
+                width: 100% !important;
+            }
+
+            *[class].mobTop {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            *[class].mobCopy {
+                display: table-header-group !important;
+                width: 100% !important;
+            }
+
+            *[class].mobFooter {
+                display: table-footer-group !important;
+                width: 100% !important;
+            }
+
+            *[class].prodSpace {
+                display: table !important;
+                width: 20px !important;
+            }
+
+            /* Sales */
+            *[class].saleSizes {
+                width: 300px !important;
+                color: #222222;
+            }
+
+            /* CTA */
+            *[class].splitCTA {
+                width: 350px !important;
+                text-align: center !important;
+            }
+
+            *[class].CTAsmall {
+                width: 140px !important;
+                text-align: center !important;
+                font-size: 14px !important;
+            }
+
+            *[class].CTAwrap {
+                width: 320px !important;
+                text-align: center !important;
+                padding: 0 0 0 10px
+            }
+
+            /* Copy */
+            *[class].BannerCopy {
+                font-size: 28px !important
+            }
+
+            *[class].secTitle {
+                font-size: 15px !important
+            }
+
+            *[class].BigPromo {
+                font-size: 18px !important;
+                display: block !important
+            }
+
+
+            /* Nav */
+            *[class].navLinks {
+                font-size: 17px !important
+            }
+        }
+    </style>
+
+</head>
+
+<body yahoo="yahoo" outlook="outlook" bgcolor="#FFFFFF" style="font-family: Helvetica, Arial, sans-serif !important;">
+
+
+    <!-- Main Wrapper -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr valign="top">
+            <td valign="top" align="center">
+
+
+
+                <!--700 Container -->
+
+                <table class="content" align="center" cellpadding="0" cellspacing="0" border="0" width="700"
+                    bgcolor="#FFFFFF">
+                    <tr>
+                        <td valign="top" align="center">
+
+
+                            <!-- Logo -->
+                            <table width="100%" border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+                                <tr>
+                                    <td width="250"></td>
+                                    <td align="center"><a href="http://www.office.co.uk/"><img
+                                                src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images/_office-logo.png"
+                                                width="300" height="60" border="0" style="display:block;"></a></td>
+                                    <td width="250"></td>
+                                </tr>
+                            </table>
+
+
+                            <!-- NavBar -->
+                            <table width="100%" border="0" height="30" cellpadding="10" cellspacing="0" bgcolor="FFFFFF"
+                                style="text-transform:uppercase;text-align:center;">
+                                <tr>
+                                    <td width="100"></td>
+
+                                    <td width="100"><a
+                                            href="http://www.office.co.uk/view/search?search=Hers&SHOP+BY=Hers"
+                                            style="text-decoration:none;font-size:14px;color:#222222;font-family: 'Open Sans', sans-serif;"
+                                            class="navLinks">Hers</a></td>
+                                    <td width="100"><a href="http://www.office.co.uk/view/search?search=his"
+                                            style="text-decoration:none;color:#222222;font-size:14px;font-family: 'Open Sans', sans-serif;"
+                                            class="navLinks">His</a></td>
+
+
+
+                                    <td width="100" class="hideMobile"><a href="http://www.office.co.uk/kids"
+                                            style="text-decoration:none;color:#222222;font-size:14px;font-family: 'Open Sans', sans-serif;"
+                                            class="navLinks">KIDS</a></td>
+                                    <td width="100" class="hideMobile"><a
+                                            href="https://www.office.co.uk/trainers?pageSize=30&SHOP+BY=hers"
+                                            style="text-decoration:none;color:#222222;font-size:14px;font-family: 'Open Sans', sans-serif;"
+                                            class="navLinks">Trainers</a></td>
+
+                                    <td width="100"><a
+                                            href="https://www.office.co.uk/view/search?search=sale?ca1&SHOP+BY=hers+sale"
+                                            style="text-decoration:none;color:#ec0606;font-size:14px;font-family: 'Open Sans', sans-serif;;"
+                                            class="navLinks">Sale</a></td>
+
+
+
+                                    <td width="100"></td>
+                                </tr>
+                            </table>
+
+
+
+
+                            <!--Title-->
+                            <table class="w350" width="700" border="0" cellpadding="0" cellspacing="0" align="center"
+                                background="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images//bckgnd.jpg">
+                                <tr>
+                                    <td align="center" class="H1"
+                                        style="text-align:center; color:#004076 ;font-family:'Open Sans', sans-serif; font-size:60px; letter-spacing:0pt; padding:40px 0 0 0;">
+                                        <strong> THANK YOU </strong> </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" class="H3"
+                                        style="text-align:center; font-family:'Open Sans', sans-serif; font-weight:300; font-size:25px; letter-spacing:0pt; padding:0px 0 0 0; color:#004076 ">
+                                        <span> for shopping at {{receipt['store']['name']}} </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" class="heroTitle3"
+                                        style="text-align:center; font-family:'Open Sans', sans-serif; font-size:16px; letter-spacing:0pt; padding:10px 0 40px 0;">
+
+                                        <strong style="font-size:16px; color:#004076 "> here's your sales receipt
+                                        </strong>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                            <!--Divider -->
+                            <table class="content" align="center" width="700" height="30" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images//_spacer.jpg"
+                                            class="content" height="30" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+                            <table class="w350" width="50%" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                    <td align="center" class="secFloat" valign="middle">
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="320" height="80">
+
+                                            <tr>
+                                                <td width="40%" style="color: #044474; font-weight: bold">Date, time:
+                                                </td>
+                                                <td width="50%">{{receipt.formatted_datetime}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="40%" style="color: #044474; font-weight: bold">Sales Person:
+                                                </td>
+                                                <td width="50%">{{ receipt['receipt']['associate']['id'] }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="40%" style="color: #044474; font-weight: bold">Cashier:</td>
+                                                <td width="50%">{{ receipt['receipt']['associate']['name'] }}</td>
+                                            </tr>
+
+
+
+                                        </table>
+
+                                    </td>
+                                    <td align="center" class="secFloat" valign="middle">
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="320" height="80">
+                                            <tr>
+                                                <td width="40%" style="color: #044474; font-weight: bold">Transaction:
+                                                </td>
+                                                <td width="50%">{{receipt.transaction_number}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="40%" style="color: #044474; font-weight: bold">Till Number:
+                                                </td>
+                                                <td width="50%">{{receipt['device']['name']}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+
+
+                            <!--Divider -->
+                            <table class="content" align="center" width="700" height="30" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images/_spacer.jpg"
+                                            class="content" height="30" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- Product Listing  -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                <tr bgcolor="#044474">
+                                    <td width="20%" align="left" class="TransBill"
+                                        style="padding:5px; font-weight:bold; color:#FFFFFF">STYLE CODE</td>
+                                    <td width="25%" align="left" class="TransBill"
+                                        style="padding:5px 5px 5px 8px; font-weight:bold; color:#FFFFFF">PRODUCT DETAILS
+                                    </td>
+                                    <td width="6%" align="left" class="TransBill"
+                                        style="padding:5px 5px 5px 8px; font-weight:bold; color:#FFFFFF">QTY</td>
+                                    <td width="10%" align="left" class="TransBill"
+                                        style="padding:5px 5px 5px 8px; font-weight:bold; color:#FFFFFF">UNIT PRICE</td>
+                                    <td width="10%" align="right" class="TransBill"
+                                        style="padding:5px 5px 5px 8px; font-weight:bold; color:#FFFFFF">TOTAL</td>
+                                </tr>
+
+                                {% for item in receipt['sale_item'] %}
+                                <tr>
+                                    <td valign="top" height="10" width="20%" align="left" class="TransBill"
+                                        style="padding:10px 8px;">{{item['pos_item_id']}}</td>
+                                    <td valign="top" height="10" width="25%" align="left" class="TransBill"
+                                        style="padding:10px 8px;">{{item['text']}}
+                                        {% for discount in item['discount'] %}
+                                        <br />Discount: {{ discount['reduction_percent']['value'] }}% Amount: {{
+                                        receipt.format_currency(discount['amount']) }} <br />
+                                        Original Price: {{ receipt.format_currency(item['regular_price']) }} <br />
+                                        {{ discount['text'].split('\n')[-1] }}
+                                        {% endfor %}
+                                    </td>
+                                    <td valign="top" height="10" width="6%" align="left" class="TransBill"
+                                        style="padding:10px 8px; ">{{item['quantity']['number']}}</td>
+                                    <td valign="top" height="10" width="10%" align="left" class="TransBill"
+                                        style="padding:10px 8px;">{{receipt.format_currency(item['total']['value'])}}
+                                    </td>
+                                    <td valign="top" height="10" width="10%" align="right" class="TransBill"
+                                        style="padding:10px 8px;">{{receipt.format_currency(item['total']['value'] *
+                                        item['quantity']['number'])}}</td>
+                                </tr>
+                                {% endfor %}
+                                {% if receipt['receipt']['subtotal']['amount']['value'] > 0 %}
+                                <tr>
+                                    <td colspan="4" valign="top" height="10" align="left" class="TransBill"
+                                        style="padding:20px 8px 10px 8px;  color:#004076;font-weight: bold">Sub Total
+                                    </td>
+
+
+                                    <td colspan="1" valign="top" height="10" align="right" class="TransBill"
+                                        style="padding:20px 8px 8px;">{{
+                                        receipt.format_currency(receipt['receipt']['subtotal']['amount']['value']) }}
+                                    </td>
+
+                                </tr>
+                                {% endif %}
+
+                                {% for discount in receipt['discount'] %}
+
+                                <tr>
+                                    <td colspan="1" valign="top" height="10" align="left" class="TransBill"
+                                        style="padding:10px 8px 8px;color:#004076; font-weight: bold">Discount</td>
+
+                                    <td colspan="4" valign="top" height="10" align="right" class="TransBill"
+                                        style="padding:10px 8px 20px 8px;">Amount: {{
+                                        receipt.format_currency(discount['amount']) }} Rate: {{
+                                        discount['reduction_percent']['value'] }}% </td>
+
+                                </tr>
+                                {% endfor %}
+
+                            </table>
+
+                            <!--Divider -->
+                            <table class="content" align="center" width="700" height="10" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images/_spacer.jpg"
+                                            class="content" height="10" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+                            <!-- Product Listing  -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                <tr>
+                                    <td colspan="5" height="1" bgcolor="#9C9C9C"></td>
+                                </tr>
+
+                                <tr>
+                                    <td width="20%" align="left" class="TransTotal"
+                                        style="padding:10px 5px; font-weight:bold; #CDCDCD044474; font-size: 16px">Total
+                                    </td>
+                                    <td width="25%" align="left" class="TransBill"
+                                        style="padding:10px 5px; font-weight:bold; color:#FFFFFF"></td>
+                                    <td width="6%" align="left" class="TransBill"
+                                        style="padding:10px 5px; font-weight:bold; color:#FFFFFF"></td>
+                                    <td width="10%" align="left" class="TransBill"
+                                        style="padding:10px 5px; font-weight:bold; color:#FFFFFF"></td>
+                                    <td width="10%" align="right" class="TransTotal"
+                                        style="padding:10px 5px; font-weight:bold; color:#044474; font-size: 16px">{{
+                                        receipt.format_currency(receipt['receipt']['total']['amount']['value']) }}</td>
+                                </tr>
+                                {% for tender in receipt['tender'] %}
+                                <tr>
+                                    <td valign="top" height="10" width="22%" align="left" class="TransBill"
+                                        style="padding:10px 8px;"></td>
+                                    <td valign="top" height="10" width="14%" align="left" class="TransBill"
+                                        style="padding:10px 8px;"></td>
+
+
+                                    <td width="18%" align="right" class="TransBill"
+                                        style="padding:10px 5px; color:#044474; font-weight: bold">Type</td>
+                                    {% if 'CARD' in tender['text'] %}
+                                    <td valign="top" height="10" width="23%" align="left" class="TransBill"
+                                        style="padding:10px 8px;">{{ tender['text'].split('\n')[0] }}<br />{{
+                                        tender['text'].split('\n')[1] }}</td>
+                                    {% else %}
+                                    <td valign="top" height="10" width="23%" align="left" class="TransBill"
+                                        style="padding:10px 8px;">{{ tender['text'] }}</td>
+                                    {% endif %}
+
+
+                                    <td valign="bottom" height="10" width="10%" align="right" class="TransBill"
+                                        style="padding:10px 8px;">{{ receipt.format_currency(tender['amount']) }}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+
+
+
+
+                            <!--Title-->
+                            <table class="w350" width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                    <td align="center" class="H2"
+                                        style="text-align:center;  color:#004076 ; font-family:'Open Sans', sans-serif; font-size:30px; letter-spacing:0pt; padding:30px 0 30px 0;">
+                                        <span> SEE YOU </span> <strong> AGAIN SOON! </strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="H2"
+                                        style="text-align:center;  color:#004076 ; font-family:'Open Sans', sans-serif; font-size:20px; letter-spacing:0pt; padding-bottom: 20px;">
+                                        <img style="display: inline-block;" src="{{ barcode_url }}?attribute=barcode">
+                                        <br />{{ receipt['store']['external_id'] }}{{ receipt['device']['external_id']
+                                        }}{{ receipt['receipt']['transaction_number']['text'] }}
+
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Banner -1  -->
+                            <table class="content" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="hideMobile" align="center"></td>
+                                    <td align="center">
+                                        <a href="https://www.office.co.uk/black-friday">
+                                            <img
+                                                src="https://i8.amplience.net/i/office/970x200_BF_Email"
+                                                alt="SALE" width="700" height="" style="display:block;"
+                                                title="SALE" border="0" />
+                                        </a>
+                                    </td>
+                                    <td class="hideMobile" align="center"></td>
+                                </tr>
+                            </table>
+
+                            <!-- Banner -2  -->
+                            
+                            <table class="content" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="hideMobile" align="center"></td>
+                                    <td align="center" style="padding:16px 0;">
+                                        <a href="https://www.office.co.uk/storefeedback">
+                                            <img
+                                                src="https://i8.amplience.net/i/office/surveybanner"
+                                                alt="SALE" width="700" height="" style="display:block;"
+                                                title="SALE" border="0" />
+                                        </a>
+                                    </td>
+                                    <td class="hideMobile" align="center"></td>
+                                </tr>
+                            </table>
+
+
+
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Wrapper -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr valign="top">
+            <td valign="top" align="center" bgcolor="#fafafa">
+
+
+                <!-- Main Content 700px -->
+                <table class="content" align="center" cellpadding="0" cellspacing="0" border="0" width="700">
+                    <tr>
+                        <td valign="top" align="center">
+
+                            <!-- Copy  -->
+                            <table class="w350" width="700" border="0" cellpadding="0" cellspacing="0"
+                                bgcolor="#fafafa">
+                                <tr>
+                                    <td align="center" class="smallCopy"
+                                        style="font-size:13px; color:#3c3c3b;font-family:'Open Sans', sans-serif; padding:25px 15px 30px 15px">
+                                        If for any reason you’re unsure about your full price item and looking to
+                                        return, we’re happy to offer a refund, exchange or gift card on unworn items.
+                                        You will have 28 days from the purchase date to return your item to any of our
+                                        stores, excluding concessions. If you’ve purchased a sale item, we’ll be happy
+                                        to offer an exchange or gift card. You will have 14 days from the purchase date
+                                        to return your item to any of our stores, excluding concessions. Please note, we
+                                        can only accept items back in the country they were originally purchased in,
+                                        along with proof of purchase and footwear must be in its original selling
+                                        condition. <br /> <br />
+                                        This is in addition to and does not affect your statutory rights. Please retain
+                                        this receipt as proof of purchase.
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!--END Container -->
+            </td>
+        </tr>
+    </table>
+    <!--END Main Wrapper -->
+
+
+    <!-- Main Wrapper -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr valign="top">
+            <td valign="top" align="center" bgcolor="#ffffff">
+
+                <!-- Main Content 700px -->
+                <table class="content" align="center" cellpadding="0" cellspacing="0" border="0" width="700">
+                    <tr>
+                        <td valign="top" align="center">
+
+                            <!--Divider -->
+                            <table class="content" align="center" width="700" height="20" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images//_spacer.jpg"
+                                            class="content" height="20" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+                            <!--Divider  -->
+                            <table class="content" align="center" width="700" height="10" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images/_spacer.jpg"
+                                            class="content" height="20" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+                            <!--Title-->
+                            <table class="w350" width="700" border="0" cellpadding="0" cellspacing="0" align="CENTER"
+                                bgcolor="f8f9fb">
+                                <tr>
+                                    <td align="left" class="footerTitle"
+                                        style="text-align:center; font-family:'Open Sans', sans-serif; font-size:14px; letter-spacing:0pt; padding:8px 0 8px 20px;">
+
+                                        <strong
+                                            style="display: block; text-align: left; color:#004076; letter-spacing: 1px">
+                                            For any help please email help@office.co.uk or visit our website for further
+                                            details: https://www.office.co.uk/view/content/contactus-info-page </strong>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!--Divider  -->
+                            <table class="content" align="center" width="700" height="3" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images/_spacer.jpg"
+                                            class="content" height="3" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+
+
+
+
+                            <!--Divider  -->
+                            <table class="content" align="center" width="700" height="70" border="0" cellpadding="0"
+                                cellspacing="0">
+                                <tr>
+                                    <td align="center" style=" "><img
+                                            src="https://www.office.co.uk/assets//Office_responsive/Content/E-Reciepts/images/_spacer.jpg"
+                                            class="content" height="70" alt="" /></td>
+                                </tr>
+                            </table>
+
+
+
+
+
+
+
+                            <!--END Container -->
+                        </td>
+                    </tr>
+                </table>
+                <!--END Main Wrapper -->
+
+
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
