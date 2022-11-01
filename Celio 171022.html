@@ -35,7 +35,7 @@
             "payment_method" : "Mode de Paiement",
             "till" : "Caisse:",
             "salesperson" : "Vendeur:",
-            "transaction_id" : "numéro de transaction:",
+            "transaction_id" : "Numéro de transaction:",
             "time" : "Date et l'heure:",
             },
             "refund" : {
@@ -47,7 +47,7 @@
                 "cta1_loyalty" : {
                     "title" : "Qu'avez vous pensé de votre expérience en magasin ?",
                     "body" : "Donnez-nous votre avis : bon ou mauvais, il nous aidera à mieux vous accueillir la prochaine fois !",
-                    "href" : "http://celio.wizville.fr/survey/campaign/1271?t=",
+                    "href" : "http://celio.wizville.fr/survey/campaign/814?t=",
                     "button" : "Je donne mon avis",
                     "src" : "https://www.celio.com/medias/newsletters/2022_TRIGGERS/10_TICKET_DEMAT/ticket_demat_bas.png",
                 },
@@ -425,7 +425,7 @@
             "payment_method" : "Mode de Paiement",
             "till" : "Caisse:",
             "salesperson" : "Vendeur:",
-            "transaction_id" : "numéro de transaction:",
+            "transaction_id" : "Numéro de transaction:",
             "time" : "Date et l'heure:",
             },
             "refund" : {
@@ -1914,7 +1914,7 @@
                                                                 <a class="alignCenter"
                                                                     href="
                                                                     {% if locale == 'fr_FR' and data['loyalty']['external_id'] %}
-                                                                        {{ language['cta']['cta1_loyalty']['href'] }}{{ b64encode(['?token=', data['loyalty']['external_id'], data['store']['external_id'], data['receipt']['datetime']['text'], data['receipt']['transaction_id'], '&place_id=', data['store']['external_id']] | join('')) }}
+                                                                        {{ language['cta']['cta1_loyalty']['href'] }}{{ b64encode(['?token=', data['loyalty']['external_id'], data['store']['external_id'], (data['receipt']['datetime']['text']).replace(' ',''), data['receipt']['transaction_id'], '&place_id=', data['store']['external_id']] | join('')) }}
                                                                     {% else %}
                                                                         {{ language['cta']['cta1']['href'] }}
                                                                     {% endif %}
