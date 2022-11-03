@@ -1,0 +1,48 @@
+{% if (data['store']['external_id']) < 1000 %}
+{% set placeid = str(data['store']['external_id']).zfill(4) %}
+{% else %}
+{% set placeid = data['store']['external_id'] %}
+{% endif %}
+
+{% if data['receipt']['datetime']['text'] %}
+  {% set date_purchase = (data['receipt']['datetime']['text']).replace(' ','') %}
+ {% else %}
+  {% set date_purchase = '' %}
+ {% endif %}
+
+ {% if data['customer']['name']['first'] %}
+  {% set first_name = data['customer']['name']['first'] %}
+ {% else %}
+  {% set first_name = '' %}
+ {% endif %}
+ 
+ {% if data['customer']['name']['last'] %}
+ {% set last_name = data['customer']['name']['last'] %}
+{% else %}
+ {% set last_name = '' %}
+{% endif %}
+
+{% if data[‘customer’][‘external_id’] %}
+{% set customer_id = data[‘customer’][‘external_id’] %}
+{% else %}
+{% set customer_id = '' %}
+{% endif %}
+
+{% if data[‘customer’]['telephone']['daytime']['text'] %}
+{% set telephone = data[‘customer’]['telephone']['daytime']['text'] %}
+{% else %}
+{% set telephone = '' %}
+{% endif %}
+
+{% if data[‘customer’][email_address] %}
+{% set email = data[‘customer’][email_address] %}
+{% else %}
+{% set email = '' %}
+{% endif %}
+
+b64encode(['?token=token&placeid=', placeid , '&date_purchase=', date_purchase, '&firstname=', first_name, '&lastname=', last_name, '&customer_id', customer_id, '&telephone=', telephone, '&email=', email ] | join(''))
+
+
+token=token&placeid=placeid&date_purchase=JJMMAAAA&firstname=Marina&lastname=Legrand&customer_id=123&telephone=&email=email@email.com>
+
+userdata1 : ?token=10484892115407/1/2022 12:00:00AM10825421437612&placeid=1540&date_purchase=7/1/2022 12:00:00AM &firstname=Michael&lastname=Mathieux&customer_id=104848921&email=m_mathieux@orange.fr&telephone=+33610101665

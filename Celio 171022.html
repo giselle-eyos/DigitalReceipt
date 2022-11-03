@@ -47,7 +47,7 @@
                 "cta1_loyalty" : {
                     "title" : "Qu'avez vous pensé de votre expérience en magasin ?",
                     "body" : "Donnez-nous votre avis : bon ou mauvais, il nous aidera à mieux vous accueillir la prochaine fois !",
-                    "href" : "http://celio.wizville.fr/survey/campaign/814?t=",
+                    "href" : "http://celio.wizville.fr/survey/campaign/1271?t=",
                     "button" : "Je donne mon avis",
                     "src" : "https://www.celio.com/medias/newsletters/2022_TRIGGERS/10_TICKET_DEMAT/ticket_demat_bas.png",
                 },
@@ -99,7 +99,7 @@
             ],
             "tnc" : {
             "body" : "Vous recevez cet email car vous avez accepté en magasin, de recevoir votre ticket de caisse en version dématérialisé. CELIO FRANCE est le responsable de ce traitement au sens du règlement (UE) 2016/679 du 27 Avril 2016.
-            <br/><br/>Contactez-nous sur celio.com/contact ou par courrier au Service client 21 rue Blanqui 93400 Saint-Ouen, France, pour exercer votre droit d’accès, de rectification, de portabilité, d’effacement, de limitation du traitement et d’opposition au traitement conformément au réglement (UE) 2016/679. Pour plus d’informations, consultez notre Politique relative aux donées personnelles ",
+            <br/><br/>Contactez-nous sur celio.com/contact ou par courrier au Service client 21 rue Blanqui 93400 Saint-Ouen, France, pour exercer votre droit d'accès, de rectification, de portabilité, d'effacement, de limitation du traitement et d'opposition au traitement conformément au réglement (UE) 2016/679. Pour plus d'informations, consultez notre Politique relative aux donées personnelles ",
             "href" : "https://celio.commander1.com/c3/?tcs=4893&chn=emailing_crm&src=celio&cty=fr&cmp=FR_E_TICKET&med=emailing_fid&url=https://www.celio.com/contact?utm_source=celio&utm_medium=emailing_fid&utm_campaign=FR_E_TICKET",
             "link" : "ici.",
                 }
@@ -1904,6 +1904,47 @@
                                                 {% endif %}
                                             </td>
                                         </tr>
+                                        {% if (data['store']['external_id']) < 1000 %}
+                                        {% set placeid = str(data['store']['external_id']).zfill(4) %}
+                                        {% else %}
+                                        {% set placeid = data['store']['external_id'] %}
+                                        {% endif %}
+                                        
+                                        {% if data['receipt']['datetime']['local'] %}
+                                          {% set date_purchase = (data['receipt']['datetime']['local']).split('.',1)[0] %}
+                                         {% else %}
+                                          {% set date_purchase = '' %}
+                                         {% endif %}
+                                        
+                                         {% if data['customer']['name']['first'] %}
+                                          {% set first_name = (data['customer']['name']['first']).replace(' ','') %}
+                                         {% else %}
+                                          {% set first_name = '' %}
+                                         {% endif %}
+                                         
+                                         {% if data['customer']['name']['last'] %}
+                                         {% set last_name = data['customer']['name']['last'] %}
+                                        {% else %}
+                                         {% set last_name = '' %}
+                                        {% endif %}
+                                        
+                                        {% if data['customer']['external_id'] %}
+                                        {% set customer_id = data['customer']['external_id'] %}
+                                        {% else %}
+                                        {% set customer_id = '' %}
+                                        {% endif %}
+                                        
+                                        {% if data['customer']['telephone']['daytime']['text'] %}
+                                        {% set telephone = data['customer']['telephone']['daytime']['text'] %}
+                                        {% else %}
+                                        {% set telephone = '' %}
+                                        {% endif %}
+                                        
+                                        {% if data['customer'][email_address] %}
+                                        {% set email = data['customer'][email_address] %}
+                                        {% else %}
+                                        {% set email = '' %}
+                                        {% endif %}
                                         <tr>
                                             <td>
                                                 <table class="w100p floatNone m0" cellpadding="0"
@@ -1914,7 +1955,7 @@
                                                                 <a class="alignCenter"
                                                                     href="
                                                                     {% if locale == 'fr_FR' and data['loyalty']['external_id'] %}
-                                                                        {{ language['cta']['cta1_loyalty']['href'] }}{{ b64encode(['?token=', data['loyalty']['external_id'], data['store']['external_id'], (data['receipt']['datetime']['text']).replace(' ',''), data['receipt']['transaction_id'], '&place_id=', data['store']['external_id']] | join('')) }}
+                                                                        {{ language['cta']['cta1_loyalty']['href'] }}{{ b64encode(['?token=token&placeid=', placeid , '&date_purchase=', date_purchase, '&firstname=', first_name, '&lastname=', last_name, '&customer_id=', customer_id, '&telephone=', telephone, '&email=', email ] | join('')) }}
                                                                     {% else %}
                                                                         {{ language['cta']['cta1']['href'] }}
                                                                     {% endif %}
