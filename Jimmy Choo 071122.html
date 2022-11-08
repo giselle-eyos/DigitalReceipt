@@ -1543,20 +1543,21 @@ Company Number: 03185783<br/><br/>
   "greeting": {
   "dear": "Jimmy Choo ",
   "customer": "お客様",
-  "body": "ブティックをご利用いただき、誠にありがとうございました。お買い物をお楽しみいただ
-  けましたら幸いです。領収書を添付いたしますので、ご確認ください。なにか不明点や、お気づきの
-  点がございましたら、お気軽にお問い合わせください。またのご来店を心よりお待ちしております。<br/><br/>
+  "body": "この度はJIMMY CHOOにご来店頂き、誠にありがとうございました。
+お買い物はお楽しみ頂けましたでしょうか。
+本日ご購入分のレシートをお送り致しますので、下記にてご確認下さい。
+ご不明点やお気づきの点などがございましたら、お気軽に店舗へお問い合わせ下さい。<br/><br/>
   
   JIMMY CHOO ","body_gift": "ギフトの領収書はこちら",
   "href": "https://www.jimmychoo.jp/ja/home?utm_source=yReceipts&utm_medium=Email&utm_campaign=DigitalReceipts&utm_content=DigitalReceipts&cm_mmc=Email-_-yReceipts-_-DigitalReceipts-_-DigitalReceipts",
   "button": "Explore more",
   },
   "receipt": {
-  "title": "最近購入した電子レシートはこちら",
+  "title": "デジタルレシート",
   "gift": "Hギフトの領収書はこちら",
   "discount": "割引",
   "subtotal": "小計",
-  "tax": "課税対象額",
+  "tax": "消費税",
   "total": "合計",
   "payment_method": "Tender Type",
   "till": "Till:",
@@ -1567,7 +1568,7 @@ Company Number: 03185783<br/><br/>
   "cta": {
   "cta1_1": {
   "body": "本日のお買い物はいかがでしたでしょうか。<br/>
-今後のサービス向上のために、ぜひお客様の貴重なご意見をお聞かせください。","href": "https: //jimmychoo.typeform.com/to/mALDXz/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
+今後のサービス向上の為、お客様の貴重なご意見をお聞かせ下さい。<br/>またのご来店を心よりお待ち申し上げております。","href": "https: //jimmychoo.typeform.com/to/mALDXz/?utm_source=JPreceipt&utm_medium=WomenTopNav&utm_campaign=DigitalReceipts&utm_content=EReceipts&cm_mmc=WomenTopNav-_-UKreceipt-_-DigitalReceipts-_-EReceipts",
   "button": "アンケートに回答",
   },
   "cta1_2": {
@@ -2874,7 +2875,7 @@ th {
   background-position: center !important;
 }
 .cta2 {
-  background: #faf8f7;
+  background: #ffffff;
 }
 .lineContainer {
     word-break:break-word;
@@ -3008,6 +3009,8 @@ th {
 .refund td,
 .footer {
   text-align: center;
+  font-size:10px;
+
 }
 .footer {
   font-size:11px;
@@ -3218,7 +3221,10 @@ mso-padding-right-alt: 1rem !important;
   <tbody>
 <tr>
   <td class="py10">
-{% if data['customer']['name']['first'] %}
+ {% if receipt['company']['external_id'] =="JP" and data['customer']['name']['first']  %}
+{{ language['greeting']['dear'] }}{{ data['customer']['name']['first']
+}} 様,<br /><br />
+{% elif data['customer']['name']['first'] %}
 {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']
 }},<br /><br />
 {% else %}
@@ -3645,7 +3651,7 @@ alt="{{ receipt.barcode_transaction_number }}" />
   <!-- END REFUND POLICY -->
 
   <!-- START QR -->
-  {% if data['company']['external_id'] == "DE" %}
+  {% if data['company']['external_id'] == "DE" and data['receipt']['footer']['info'] %}
    <tr>
 <td align="center">
   <table width="100%" cellpadding="0" cellspacing="0">
@@ -3730,7 +3736,7 @@ alt="{{ receipt.barcode_transaction_number }}" />
   </tr>
   <!-- END CTA1_1 -->
 
-  {% if data['loyalty']['external_id'] %}
+ {% if data['customer']['subscription']['subscribed'] %}
   <!-- START CTA1_2 -->
   <tr>
     <td class="cta tflex cta2">

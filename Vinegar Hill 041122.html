@@ -1,17 +1,17 @@
 {% set managers = {
-  "30": "<br/><br/>Jaz",
-  "50": "<br/><br/>Rhys",
-  "120": "<br/><br/>Ellie",
-  "40": "<br/><br/>Corinna",
-  "100": "<br/><br/>Jo",
-  "90": "<br/><br/>Marta",
-  "70": "<br/><br/>Lyn",
-  "10": "<br/><br/>Miles",
-  "60": "<br/><br/>Gaynor",
-  "20": "<br/><br/>Sharon",
-  "80": "<br/><br/>Sarah",
-  "130": "<br/><br/>Catherine",
-  "33": "<br/><br/>TEST Manager",
+  "30": "Jaz",
+  "50": "Rhys",
+  "120": "Ellie",
+  "40": "Corinna",
+  "100": "Jo",
+  "90": "Marta",
+  "70": "Lyn",
+  "10": "Miles",
+  "60": "Gaynor",
+  "20": "Sharon",
+  "80": "Sarah",
+  "130": "Catherine",
+  "33": "TEST Manager",
 } %}
 {% set manager = managers.get(receipt["store"]["external_id"]) %}
 
@@ -38,19 +38,18 @@
       "button" : "SHOP NOW"
     },
     "greeting" : {
-      "dear" : "Dear ",
-      "customer" : "Customer",
       "thankyou" : "Thank you for shopping at ",
       "gift" : "Here is your gift receipt at ",
       "body" : " Welcome to the Vinegar Hill family.<br/> 
       To hear more from us, sign up below.<br/><br/>
       We hope you enjoyed your time with us and we look forward to welcoming you again soon.",
+      "footer" : "Click below to hear more from us.",
       "href" : "https://vinegarhill.co.uk/",
       "button" : "Sign Up",
     },
     "receipt" : {
-      "title" : "Here Is Your eReceipt For Your Recent Purchase",
-      "gift" : "Here Is Your Gift Receipt",
+      "title" : "Your Receipt",
+      "gift" : "Your Receipt",
       "discount" : "Discount",
       "subtotal" : "Subtotal",
       "tax" : "Tax (20%)",
@@ -64,6 +63,7 @@
     "refund" : {
       "title" : "Refund Policy:",
       "body" : "Our returns policy can be found online at ",
+      "href" : "https://vinegarhill.co.uk/pages/delivery-returns-policy",
     },
     "cta" : {
       "cta3" : {
@@ -999,22 +999,14 @@
                                   <tbody>
                                     <tr>
                                       <td class="py10">
-                                        {% if data['customer']['name']['first'] %}
-                                        {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']
-                                        }},<br /><br />
-                                        {% else %}
-                                        {{ language['greeting']['dear']}}{{
-                                        language['greeting']['customer']}},<br /><br />
-                                        {% endif %}
-
                                         {% if receipt.temporary_type != "gift" %}
                                         {{ language['greeting']['thankyou'] }}
                                         {% else %}
                                         {{ language['greeting']['gift'] }}
                                         {% endif %}
-                                        {{ receipt['store']['name'] }}.<br /><br />{{ language['greeting']['body'] }}
+                                        {{ receipt['store']['name'] }}.<br /><br />{{ language['greeting']['body'] }}<br/><br/>
                                         {{ manager}}
-                                        
+                                        <br/><br/> {{ language['greeting']['footer'] }}
                                       </td>
                                     </tr>
                                     <tr>
@@ -1477,8 +1469,8 @@
                     <td class="description">
                       {{ language['refund']['body'] }}
 
-              <a target="_blank" href="{{ language['store']['href'] }}">
-                {{ language['store']['href'] }}
+              <a target="_blank" href="{{ language['refund']['href'] }}">
+                {{ language['refund']['href'] }}
               </a>
                       
                     </td>
