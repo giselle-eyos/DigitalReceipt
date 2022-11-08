@@ -1,46 +1,52 @@
+{% set managers = {
+  "30": "<br/><br/>Jaz",
+  "50": "<br/><br/>Rhys",
+  "120": "<br/><br/>Ellie",
+  "40": "<br/><br/>Corinna",
+  "100": "<br/><br/>Jo",
+  "90": "<br/><br/>Marta",
+  "70": "<br/><br/>Lyn",
+  "10": "<br/><br/>Miles",
+  "60": "<br/><br/>Gaynor",
+  "20": "<br/><br/>Sharon",
+  "80": "<br/><br/>Sarah",
+  "130": "<br/><br/>Catherine",
+  "33": "<br/><br/>TEST Manager",
+} %}
+{% set manager = managers.get(receipt["store"]["external_id"]) %}
+
 {% set translations = {
   "en_GB": {
     "store" : {
       "show" : True,
-      "name" : "Khaadi",
-      "href" : "https://khaadi.com/",
+      "name" : "Vinegar Hill",
+      "href" : "https://vinegarhill.co.uk/",
       "logo" : {
-      "href" : "https://khaadi.com/",
-      "src" : "https://uk.khaadi.com/media/logo/stores/29/201x53-logo.png",
+      "href" : "https://vinegarhill.co.uk/",
+      "src" : "https://cdn.shopify.com/s/files/1/0030/2835/3136/files/VH_160X40PX_LOGO.jpg?v=1667490296",
     },
-    "banner" : "'https://i.postimg.cc/gJ9pqptn/500x200.jpg'",
-    "banner_src" : "https://i.postimg.cc/gJ9pqptn/500x200.jpg",
+    "banner" : "'https://cdn.shopify.com/s/files/1/0030/2835/3136/files/VH_BANNER_500_x_200_px.png?v=1667488690'",
+    "banner_src" : "https://cdn.shopify.com/s/files/1/0030/2835/3136/files/VH_BANNER_500_x_200_px.png?v=1667488690",
     "detail" : "Store Details",
     "address" : "Address:",
     "telephone" : "Telephone:",
     "phone_number" : "",
     },
-    "gnb" : [
-      {
-        "href" : "https://uk.khaadi.com/new-in.html",
-        "text" : "New In",
-      },
-      {
-        "href" : "https://uk.khaadi.com/unstitched.html",
-        "text" : "Fabrics",
-      },
-      {
-        "href" : "https://uk.khaadi.com/ready-to-wear.html",
-        "text" : "Read To Wear",
-      },
-      {
-        "href" : "https://uk.khaadi.com/western.html",
-        "text" : "Western",
-      }
-    ],
+    "headline" : {
+      "href" : "https://vinegarhill.co.uk/",
+      "text": "Discover Vinegar Hill online",
+      "button" : "SHOP NOW"
+    },
     "greeting" : {
       "dear" : "Dear ",
       "customer" : "Customer",
       "thankyou" : "Thank you for shopping at ",
       "gift" : "Here is your gift receipt at ",
-      "body" : "<br/>We hope you enjoyed your time with us!<br/><br/>",
-      "href" : "https://khaadi.com/",
-      "button" : "Explore more",
+      "body" : " Welcome to the Vinegar Hill family.<br/> 
+      To hear more from us, sign up below.<br/><br/>
+      We hope you enjoyed your time with us and we look forward to welcoming you again soon.",
+      "href" : "https://vinegarhill.co.uk/",
+      "button" : "Sign Up",
     },
     "receipt" : {
       "title" : "Here Is Your eReceipt For Your Recent Purchase",
@@ -55,29 +61,41 @@
       "transaction_id" : "Transaction ID:",
       "time" : "Date and Time:",
     },
+    "refund" : {
+      "title" : "Refund Policy:",
+      "body" : "Our returns policy can be found online at ",
+    },
     "cta" : {
       "cta3" : {
-      "href" : "https://khaadi.com/",
-      "src" : "https://i.postimg.cc/YSLkW035/600x300-pop-up-01-01.jpg",
+      "href" : "https://vinegarhill.co.uk/",
+      "src" : "https://cdn.shopify.com/s/files/1/0030/2835/3136/files/VH__LOWERCTAOPTION3_600_x_300_px.png?v=1667488690",
       }
     },
     "social" : [
       {
-        "href": "https://www.facebook.com/KhaadiUK",
-        "src": "https://uk.khaadi.com/media/wysiwyg/khaadi/03-10-2021-intl/facebook_social_media_icon.png",
-        "alt" : "facebook"
-      },
-      {
-        "href": "https://twitter.com/Khaadi",
-        "src": "https://uk.khaadi.com/media/wysiwyg/khaadi/03-10-2021-intl/twitter.png",
-        "alt" : "twitter"
-      },
-      {
-        "href": "https://www.instagram.com/khaadi/",
-        "src": "https://uk.khaadi.com/media/wysiwyg/khaadi/03-10-2021-intl/instagram_icon.png",
+        "href": "https://www.instagram.com/vinegarhill/",
+        "src": "https://cdn.shopify.com/s/files/1/0030/2835/3136/files/VH__INSTAGRAMLOGO_50_x_50_px.png?v=1667488690",
         "alt" : "instagram"
       },
     ],
+    "lnb" : [
+      {
+        "href" : "mailto:info@vinegarhill.co.uk",
+        "text" : "CONTACT US",
+      },
+      {
+        "href" :
+        "https://vinegarhill.co.uk/pages/vinegar-hill-stores",
+        "text" : "STORE FINDER",
+      }
+    ],
+    "tnc" : {
+      "href" : "https://vinegarhill.co.uk/pages/privacy-cookies-gdpr",
+      "link" : "please see our Privacy Policy",
+      "body" : "For further details on how we manage your data, cookies and privacy, ",
+      "body_2" : ".<br /><br />
+      Vinegar Hill Ltd, <br />14 TheWaterways, Stratford Upon Avon CV37 0EW",
+      }
     }
   }
 %}
@@ -268,7 +286,7 @@
     }
 
     .pb0 {
-      padding-bottom: 0 !important;
+      padding-bottom: 0;
       mso-padding-bottom-alt: 0 !important;
     }
 
@@ -365,13 +383,13 @@
     }
 
     .btn01 {
-      background: #1c1e23;
+      background: #a36e61;
       padding: 0.8em 0.6em;
       mso-padding-alt: 0.8em 0.6em !important;
     }
 
     .btn02 {
-      background: #1c1e23;
+      background: #a36e61;
       padding: 0.5em 0;
       mso-padding-alt: 0.5em 0 !important;
     }
@@ -428,7 +446,7 @@
     }
 
     .headline {
-      background: #1c1e23;
+      background: #a36e61;
       padding: 0 0.9em;
       mso-padding-alt: 0 0.9em !important;
     }
@@ -499,7 +517,6 @@
     }
 
     .storeDetailDescription {
-      font-size: 0.9em;
       padding-bottom: 1em;
       mso-padding-bottom-alt: 1em !important;
       font-weight: bold;
@@ -657,7 +674,7 @@
 
     .couponCard {
       font-size: 0.8em;
-      border: 4px solid #1c1e23;
+      border: 4px solid #375e76;
       border-radius: 8px;
       padding: 1em;
       mso-padding-alt: 1em !important;
@@ -703,8 +720,8 @@
     .social {
       padding: 1em 0;
       mso-padding-alt: 1em 0 !important;
-      border-top: 2px solid #1c1e23;
-      border-bottom: 2px solid #1c1e23;
+      border-top: 2px solid #375e76;
+      border-bottom: 2px solid #375e76;
     }
 
     .social a {
@@ -894,7 +911,7 @@
                   <!-- START LOGO -->
                   <tbody>
                     <tr>
-                      <td align="center">
+                      <td align="center" style="background-color: #375e76;">
                         <a class="logo" href="{{ language['store']['logo']['href'] }}">
                           <img width="30%" src="{{ language['store']['logo']['src'] }}" />
                         </a>
@@ -934,6 +951,32 @@
                       </td>
                     </tr>
                     <!-- END GLOBAL NAVIGATION BAR -->
+                    <!-- START HEADLINE -->
+                    <tr>
+                      <td class="headline">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <th width="80%" align="left" class="headlineText tflex">
+                                {{ language['headline']['text'] }}
+                              </th>
+                              <th width="20%" align="right"
+                                class="headlineButton active text-decoration-hover btn02 tflex">
+                                <a href="{{ language['headline']['href'] }}"
+                                  style="color: #ffffff;font-size:0.7em;text-decoration:none;">
+                                  {{ language['headline']['button'] }}
+                                  <span>
+                                    <img width="5"
+                                      src="https://storage.googleapis.com/yreceipts-prod-public-assets/eyos_sample_receipt/ico-arrow-wh.png"
+                                      alt="{{ language['headline']['button'] }}" /></span>
+                                </a>
+                              </th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END HEADLINE -->
                     <!-- START BANNER -->
                     <tr>
                       <td class="py10 alignCenter">
@@ -956,12 +999,22 @@
                                   <tbody>
                                     <tr>
                                       <td class="py10">
+                                        {% if data['customer']['name']['first'] %}
+                                        {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']
+                                        }},<br /><br />
+                                        {% else %}
+                                        {{ language['greeting']['dear']}}{{
+                                        language['greeting']['customer']}},<br /><br />
+                                        {% endif %}
+
                                         {% if receipt.temporary_type != "gift" %}
                                         {{ language['greeting']['thankyou'] }}
                                         {% else %}
                                         {{ language['greeting']['gift'] }}
                                         {% endif %}
                                         {{ receipt['store']['name'] }}.<br /><br />{{ language['greeting']['body'] }}
+                                        {{ manager}}
+                                        
                                       </td>
                                     </tr>
                                     <tr>
@@ -969,7 +1022,7 @@
                                         <table width="100%" class="buttonContainer" cellpadding="0" cellspacing="0">
                                           <tbody>
                                             <tr>
-                                              <td align="center" class="btn01 active" bgcolor="#1c1e23">
+                                              <td align="center" class="btn01 active" bgcolor="#a36e61">
                                                 <a href="{{ language['greeting']['href'] }}" style="display: block; text-decoration: none; color: #ffffff;
   ">{{
                                                   language['greeting']['button']
@@ -1007,12 +1060,12 @@
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td class="storeDetailTitle pb0">
+                                      <td class="storeDetailTitle">
                                         {{ language['store']['telephone'] }}
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td class="storeDetailDescription pb0">
+                                      <td class="storeDetailDescription">
                                         <a href="tel: {{receipt.business_location.phone_number}}" style="
   color: #1c1e23;
   text-decoration: none;">{{receipt.business_location.phone_number}}
@@ -1410,6 +1463,30 @@
             </td>
           </tr>
           <!-- END RECEIPT -->
+          <!-- START REFUND POLICY -->
+          <tr>
+            <td class="refund py5 mobilePadding">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['title'] }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['body'] }}
+
+              <a target="_blank" href="{{ language['store']['href'] }}">
+                {{ language['store']['href'] }}
+              </a>
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
           <!-- START CTA3 -->
           <tr>
             <td class="cta pb20">
@@ -1457,6 +1534,52 @@
             </td>
           </tr>
           <!-- END SOCIAL -->
+
+          <!-- START LOCAL NAVIGATION BAR -->
+          <tr>
+            <td>
+              <div width="60%" class="lnbContainer m100p" style="margin:0px auto;max-width:500px;">
+                <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <!--[if mso | IE]><td><table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" ><tr><![endif]-->
+                      {% for menu in language['lnb'] %}
+                      <td align="center" class="lnb text-decoration-hover">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                          style="border-collapse: separate; line-height: 100%;">
+                          <tr>
+                            <td valign="middle" align="center" style="padding:1em;">
+                              <a class="active alignCenter" href="{{ menu['href'] }}" target="_blank"
+                                style="font-family: century-gothic, gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; color: #333333; text-decoration: underline;">
+                                {{ menu['text'] }}
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      {% if loop.last %}
+                      <!--[if mso | IE]></tr></table></td><![endif]-->
+                      {% endif %}
+                      {% endfor %}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <!-- END LOCAL NAVIGATION BAR -->
+          <!-- START FOOTER -->
+          <!-- START TERMS AND CONDITIONS -->
+          <tr>
+            <td class="footer">
+              {{ language['tnc']['body'] }}
+              <a target="_blank" href="{{ language['tnc']['href'] }}"
+                style="color:#9c9d9e; font-family: century-gothic, gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;">
+              {{ language['tnc']['link'] }}</a>{{ language['tnc']['body_2'] }}
+            </td>
+          </tr>
+          <!-- END TERMS AND CONDITIONS -->
+          <!-- END FOOTER -->
         </tbody>
       </table>
     </div>
