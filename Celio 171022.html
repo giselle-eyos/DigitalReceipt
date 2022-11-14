@@ -1940,8 +1940,8 @@
                                         {% set telephone = '' %}
                                         {% endif %}
                                         
-                                        {% if data['customer'][email_address] %}
-                                        {% set email = data['customer'][email_address] %}
+                                        {% if data['customer']['email_address'] %}
+                                        {% set email = data['customer']['email_address'] %}
                                         {% else %}
                                         {% set email = '' %}
                                         {% endif %}
