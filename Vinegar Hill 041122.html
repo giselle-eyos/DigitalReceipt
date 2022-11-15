@@ -1146,7 +1146,7 @@
                           </tr>
                           {% endif %}
                           {% if receipt.temporary_type != "gift" %}
-                          {% for discount in sale_item['discount'] %}
+                          {% for discount in sale_item['discount'] if discount['amount']['text'] %}
                           <tr>
                             <td class="description">
                               {{ format_currency(discount['amount']['value']) }}

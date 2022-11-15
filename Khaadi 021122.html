@@ -6,7 +6,7 @@
       "href" : "https://khaadi.com/",
       "logo" : {
       "href" : "https://khaadi.com/",
-      "src" : "https://uk.khaadi.com/media/logo/stores/29/201x53-logo.png",
+      "src" : "https://i.postimg.cc/nrjwL1rK/Khaadi-logo-new-text.jpg",
     },
     "banner" : "'https://i.postimg.cc/LXtD1t32/Artboard-1-500x200.jpg'",
     "banner_src" : "https://i.postimg.cc/LXtD1t32/Artboard-1-500x200.jpg",
@@ -47,13 +47,26 @@
       "gift" : "Here Is Your Gift Receipt",
       "discount" : "Discount",
       "subtotal" : "Subtotal",
-      "tax" : "Tax (20%)",
+      "tax" : "VAT (20%)",
       "total" : "Total",
-      "payment_method" : "Payment_method",
+      "payment_method" : "Payment method",
       "till" : "Till:",
       "salesperson" : "Salesperson:",
       "transaction_id" : "Transaction ID:",
       "time" : "Date and Time:",
+    }, 
+    "refund" : {
+        "title" : "Refund Policy:",
+        "body" : "• Exchange/Refund within 14 Days of purchase.</br>
+        • Exchange/Refund with original receipt showing the listed items.</br>
+        • Items must be in original packaging with labels attached in a resellable condition.</br>
+        • No Refund/Exchange will be transacted during the first 3 days of promotion.</br>
+        • No refund or exchange on jewellery/accessories.</br>
+        • Exchange only within 7 days for purchases of sales promotional items.</br>
+        • Refund will only be transacted in original country of purchase.</br>
+        • This does not affect your statutory rights. A refund will be given for faulty items.
+        For further information please contact at customerserviceinternational@weavesgroup.com
+        VAT Number: 332 2163 44",
     },
     "cta" : {
       "cta3" : {
@@ -413,7 +426,7 @@
       word-break: break-word;
     }
 
-    .gnb > div {
+    .gnb {
       border: 1px solid #1c1e23;
     }
     .gnb a {
@@ -482,6 +495,7 @@
     .storeDetail {
       text-align: left;
       background: #f5f5f5;
+      border: 1px solid #f5f5f5;
       vertical-align: top;
       padding: 1em;
       mso-padding-alt: 1em !important;
@@ -1081,13 +1095,13 @@
                       <table class="saleItem" width="100%" cellpadding="0" cellspacing="0">
                         <tbody>
                           <tr>
-                            <td class="number">
+                            <td class="number" style="font-weight: bold;">
                               {{ sale_item['pos_item_id'] }}
                             </td>
                           </tr>
                           <tr>
                             <td class="title">
-                              {{ sale_item['text'] }}
+                              {{ sale_item['text'].split('Offer',1)[0]  }}
                             </td>
                           </tr>
                           {% if receipt.temporary_type != "gift" %}
@@ -1414,6 +1428,26 @@
             </td>
           </tr>
           <!-- END RECEIPT -->
+          <!-- START REFUND POLICY -->
+          <tr>
+            <td class="refund py5 mobilePadding">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['title'] }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['body'] }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- END REFUND POLICY -->
           <!-- START CTA3 -->
           <tr>
             <td class="cta pb20">
