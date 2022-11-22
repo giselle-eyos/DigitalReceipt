@@ -39,8 +39,7 @@
         "button" : "Je (re)découvre"
       },
       "greeting" : {
-        "dear" : "Bonjour ",
-        "customer" : "Cliente",
+        "dear" : "Bonjour",
         "thankyou" : "Un grand merci pour votre achat dans notre boutique de ",
         "gift" : "Voici votre reçu cadeau à ",
         "body" : "Voici votre ticket de caisse.<br/><br/>
@@ -1008,13 +1007,10 @@
                                     <tr>
                                       <td class="py10">
                                         {% if data['customer']['name']['first'] %}
-                                        {{ language['greeting']['dear'] }}{{ data['customer']['name']['first']
-                                        }},<br /><br />
+                                        {{ language['greeting']['dear'] }} {{ data['customer']['name']['first']}},<br /><br />
                                         {% else %}
-                                        {{ language['greeting']['dear']}}{{
-                                        language['greeting']['customer']}},<br /><br />
+                                        {{ language['greeting']['dear'] }},<br /><br />
                                         {% endif %}
-
                                         {% if receipt.temporary_type != "gift" %}
                                         {{ language['greeting']['thankyou'] }}
                                         {% else %}
