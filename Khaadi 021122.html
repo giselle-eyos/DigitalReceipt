@@ -91,7 +91,10 @@
         "alt" : "instagram"
       },
     ],
-    }
+    "survey" : {
+      "title" : "How did we do?",
+      }
+    },
   }
 %}
 
@@ -1495,6 +1498,40 @@
             </td>
           </tr>
           <!-- END SOCIAL -->
+
+          <!-- START SURVEY -->
+          <tr>
+            <td class="footer">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td class="receiptTitle">
+                      <p>
+                        {{ language['survey']['title'] }}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" class="alignCenter">
+                                {{feedback_answer_1}}
+                            </td>
+                            <td align="center" class="alignCenter">
+                                {{feedback_answer_2}}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- END SURVEY -->
         </tbody>
       </table>
     </div>
