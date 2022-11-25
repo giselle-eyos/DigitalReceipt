@@ -14,12 +14,14 @@
       "greeting": {
           "dear": "Bonjour ",
           "customer": "Cliente",
-          "thankyou": "Un grand merci pour votre achat dans notre boutique de ",
+          "thankyou": "Merci pour votre visite dans notre boutique Bouchara ",
           "gift": "Voici votre reçu cadeau à ",
-          "body": ", et, parce que chaque geste compte pour préserver la planète, merci d'avoir opté pour le ticket dématarialisé.<br/><br/>
-  Nous espérons que vos achats vous donneront entière satisfaction et nous tenons à disposition pour toute question.<br/><br/>
-  A très bientôt !<br/>
-  L'équipe Bouchara",
+          "body": ", et, parce que chaque geste compte pour préserver la planète, merci aussi d'avoir opté pour le ticket dématérialisé.
+          <br/><br/>
+          Nous espérons que vos achats vous donneront entière satisfaction et restons à disposition pour toute question.
+          <br/><br/>
+          A très bientôt !<br/>
+          L'équipe Bouchara",
       },
       "receipt": {
           "title": "Ceci est votre ticket électronique",
@@ -33,6 +35,11 @@
           "salesperson": "Vendeur:",
           "transaction_id": "Numéro de transaction:",
           "time": "Date et l'heure:",
+      },
+      "refund" : {
+          "title" : "Politique de remboursement:",
+          "body" : "Ticket à conserver pour tout échange ou avoir sous un délai de 15 jours.
+          <br/>Articles soldés ni repris, ni échangés",
       },
       "cta": {
           "cta1": {
@@ -744,7 +751,6 @@
 
     .refund td,
     .footer {
-      color: #9c9d9e;
       font-size: 0.8em;
     }
 
@@ -1361,6 +1367,35 @@
             </td>
           </tr>
           <!-- END RECEIPT -->
+          <!-- START FOOTER -->
+          <!-- START TERMS AND CONDITIONS -->
+          <tr>
+            <td class="footer py20">
+              {{ data['receipt']['footer']['text'].replace('Bonjour','<br/>Bonjour').replace('Client','<br/>Client').replace('Vous','<br/>Vous').replace('Au','<br/>Au').replace('Pas','<br/>Pas') }}
+            </td>
+          </tr>
+          <!-- END TERMS AND CONDITIONS -->
+          <!-- END FOOTER -->
+          <!-- START REFUND POLICY -->
+          <tr>
+            <td class="refund py5 mobilePadding">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['title'] }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['body'] }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- END REFUND POLICY -->
           <!-- START CTA1 -->
           <tr>
             <td class="cta tflex ">
