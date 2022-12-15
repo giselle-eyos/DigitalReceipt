@@ -209,7 +209,6 @@
       outline: none;
       color: inherit !important;
       text-decoration: underline;
-      font-size: 1em;
     }
 
     a:hover {
@@ -385,7 +384,6 @@
       text-decoration: none !important;
       text-transform: none !important;
       font-weight: bold;
-      font-size: 0.9em;
       text-align: center;
     }
 
@@ -416,7 +414,6 @@
     }
 
     .gnb a {
-      font-size: 1em;
       text-align: center !important;
       font-weight: bold;
       display: inline-block;
@@ -489,7 +486,6 @@
 
     .storeDetail>table {
       table-layout: fixed;
-      font-size: 0.9em;
       padding: 1em 1.5em;
       mso-padding-alt: 1em 1.5em !important;
       word-break: break-word;
@@ -498,12 +494,10 @@
     .storeDetailTitle {
       padding-bottom: 0.5em;
       mso-padding-bottom-alt: 0.5em !important;
-      font-size: 0.9em;
       font-weight: normal;
     }
 
     .storeDetailDescription {
-      font-size:0.9em;
       padding-bottom: 1em;
       mso-padding-bottom-alt: 1em !important;
       font-weight: bold;
@@ -531,9 +525,9 @@
     .lineContainer {
         word-break:break-word;
         text-align: center;
-        padding-top: 12px;
+        padding-top: 6px;
         padding-bottom: 12px;
-        mso-padding-top-alt: 12px !important;
+        mso-padding-top-alt: 6px !important;
         mso-padding-bottom-alt: 12px !important;
     }
     .line {
@@ -569,13 +563,11 @@
   } */
     .number {
       text-align: left;
-      font-size: 0.8em;
       padding-top: 1em;
       mso-padding-top-alt: 1em !important;
     }
 
     .title {
-      font-size: 1em;
       text-align: left;
       font-weight: bold;
       letter-spacing: -0.03em;
@@ -583,11 +575,9 @@
 
     .description {
       text-align: left;
-      font-size: 0.9em;
     }
 
     .description2 {
-      font-size: 0.8em;
       font-weight: bold;
       padding-top: 0.2em;
       padding-bottom: 1em;
@@ -620,10 +610,6 @@
       padding-bottom: 2em !important;
       mso-padding-top-alt: 2em !important;
       mso-padding-bottom-alt: 2em !important;
-    }
-
-    .cta .title {
-      font-size: 1em;
     }
 
     .cta .description {
@@ -660,7 +646,6 @@
     }
 
     .couponCard {
-      font-size: 0.8em;
       border: 4px solid #000000;
       border-radius: 8px;
       padding: 1em;
@@ -683,7 +668,6 @@
     }
 
     .productRecommendation p {
-      font-size: 0.8rem !important;
 
       width: 100%;
       white-space: nowrap;
@@ -722,7 +706,7 @@
     }
 
     .lnbContainer {
-      width: 60%;
+      width: 70%;
     }
 
     .lnbContainer>table {
@@ -746,7 +730,6 @@
     }
 
     .lnb a {
-      font-size: 0.8em;
       text-align: center !important;
       display: inline-block;
       padding: 0.5em;
@@ -829,10 +812,6 @@
 
       .ctaImage {
         background-position: center !important;
-      }
-
-      .productRecommendation p {
-        font-size: 0.6rem;
       }
 
       .productRecommendation img {
@@ -926,7 +905,7 @@
                                 <table class="floatNone" width="100%" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td class="py10">
+                                      <td class="py20">
                                         {{ language['greeting']['body_1'] }}
                                         <a href="{{ language['greeting']['href_1'] }}">{{language['greeting']['link_1']}}</a>{{ language['greeting']['body_2'] }}<a href="{{ language['greeting']['href_2'] }}">{{language['greeting']['link_2']}}</a>
                                       </td>
@@ -996,7 +975,7 @@
 
                 <tbody>
                   <tr>
-                    <td class="lineContainer">
+                    <td class="lineContainer pt20">
                         <p class="line"></p>
                         <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="line" role="presentation" width="500px" ><tr><td style="height:0;line-height:0;"> &nbsp;
 </td></tr></table><![endif]-->
@@ -1261,7 +1240,7 @@
                                     <col width="50%">
                                   </colgroup>
                                   <tr>
-                                    <td class="m50p" valign="top" width="50%">
+                                    <td valign="top" width="35%" style="width:35% !important">
                                       <table width="100%" cellpadding="0" cellspacing="0">
                                         <tbody>
                                           <tr>
@@ -1295,7 +1274,7 @@
                                         </tbody>
                                       </table>
                                     </td>
-                                    <td class="m50p" valign="top" width="50%">
+                                    <td valign="top" width="65%" style="width:65% !important">
                                       <table width="100%" cellpadding="0" cellspacing="0">
                                         <tbody>
                                           <tr>
@@ -1362,26 +1341,6 @@
             </td>
           </tr>
           <!-- END RECEIPT -->
-          <!-- START REFUND POLICY -->
-          <tr>
-            <td class="refund py5 mobilePadding">
-              <table width="100%" cellpadding="0" cellspacing="0">
-                <tbody>
-                  <tr>
-                    <td class="description">
-                      {{ language['refund']['title'] }}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="description">
-                      {{ language['refund']['body'] }}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-          <!-- END REFUND POLICY -->
           <!-- START CTA2 -->
           <tr>
             <td class="cta">
@@ -1423,6 +1382,26 @@
             </td>
           </tr>
           <!-- END CTA2 -->
+          <!-- START REFUND POLICY -->
+          <tr>
+            <td class="refund pb10 mobilePadding">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td class="description">
+                      {{ language['refund']['title'] }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="description pb20">
+                      {{ language['refund']['body'] }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- END REFUND POLICY -->
           <!-- START SOCIAL -->
           <tr>
             <td class="social">
@@ -1463,7 +1442,7 @@
           <!-- START LOCAL NAVIGATION BAR -->
           <tr>
             <td>
-              <div width="60%" class="lnbContainer m100p" style="margin:0px auto;max-width:500px;">
+              <div width="70%" class="lnbContainer m100p" style="margin:0px auto;max-width:500px;">
                 <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
                   <tbody>
                     <tr>

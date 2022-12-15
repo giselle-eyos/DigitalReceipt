@@ -14,7 +14,7 @@
       "greeting": {
           "dear": "Bonjour ",
           "customer": "Cliente",
-          "thankyou": "Merci pour votre visite dans notre boutique Bouchara ",
+          "thankyou": "Merci pour votre visite dans notre boutique ",
           "gift": "Voici votre reçu cadeau à ",
           "body": ", et, parce que chaque geste compte pour préserver la planète, merci aussi d'avoir opté pour le ticket dématérialisé.
           <br/><br/>
@@ -28,7 +28,7 @@
           "gift": "Voici votre reçu cadeau",
           "discount": "Remise",
           "subtotal": "Sous-total",
-          "tax": "Taux de TVA (20%)",
+          "tax": "TVA (20%)",
           "total": "Total",
           "payment_method": "Mode de Paiement",
           "till": "Caisse:",
@@ -37,13 +37,12 @@
           "time": "Date et l'heure:",
       },
       "refund" : {
-          "title" : "******** Politique de remboursement ********",
+          "title" : "Politique de remboursement:",
           "body" : "Ticket à conserver pour tout échange ou avoir sous un délai de 15 jours.
           <br/>Articles soldés ni repris, ni échangés",
       },
       "cta": {
           "cta1": {
-              "title": "Poursuivez votre expérience shopping sur ",
               "body": "www.bouchara.com",
               "href": "https://www.bouchara.com",
               "src": "https://storage.googleapis.com/yreceipts-prod-uk-public-assets/bouchara/ticket_demat.jpg",
@@ -717,7 +716,7 @@
     }
 
     .lnbContainer {
-      width: 70%;
+      width: 60%;
     }
 
     .lnbContainer>table {
@@ -741,14 +740,17 @@
     }
 
     .lnb a {
+      font-size: 0.8em;
       text-align: center !important;
       display: inline-block;
       padding: 0.5em;
       mso-padding-alt: 0.5em !important;
     }
-    .footer, .refund td {
-      text-align: center;
-      font-size:0.9em;
+
+
+    .refund td,
+    .footer {
+      font-size: 0.8em;
     }
 
     @media only screen and (max-width:617px) {
@@ -854,9 +856,19 @@
     }
   </style>
 </head>
+{% set provider = {
+"name": None,
+"src": None
+}
+%}
 
 <body class="layout m100p">
   <div style="margin:0px auto; width:500px;" width="500">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="display: none; max-height: 0px; overflow: hidden; width:500px;" width="500"><tr><td><![endif]-->
+    <div style="display: none; max-height: 0px; overflow: hidden;max-width:500px;">
+      Merci d'avoir magasiné avec nous
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="display: none; max-height: 0px; overflow: hidden; width:500px;" width="500""><tr><td><![endif]-->
     <div style="display: none; max-height: 0px; overflow: hidden;max-width:500px;">
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
@@ -1356,16 +1368,9 @@
           <!-- END RECEIPT -->
           <!-- START FOOTER -->
           <!-- START TERMS AND CONDITIONS -->
-          {% if data['receipt']['header']['text'] %}
           <tr>
-            <td class="footer py10">
-              {{ data['receipt']['header']['text'] }}
-            </td>
-          </tr>
-          {% endif %}
-          <tr>
-            <td class="footer py10">
-              {{ data['receipt']['footer']['text'].replace('Bonjour','<br/>Bonjour').replace('Client','<br/>Client').replace('Vous','<br/>Vous').replace('Au','<br/>Au').replace('Pas','<br/>Pas') }}
+            <td class="footer py20">
+              {{ nl2br(data['receipt']['footer']['text']) }} <br /> <br />{{ nl2br(data['receipt']['footer']['info']) }}
             </td>
           </tr>
           <!-- END TERMS AND CONDITIONS -->
@@ -1376,12 +1381,12 @@
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tbody>
                   <tr>
-                    <td>
+                    <td class="description">
                       {{ language['refund']['title'] }}
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td class="description">
                       {{ language['refund']['body'] }}
                     </td>
                   </tr>
@@ -1445,7 +1450,7 @@
           <!-- START LOCAL NAVIGATION BAR -->
           <tr>
             <td>
-              <div width="70%" class="lnbContainer m100p" style="margin:0px auto;max-width:500px;">
+              <div width="60%" class="lnbContainer m100p" style="margin:0px auto;max-width:500px;">
                 <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
                   <tbody>
                     <tr>
