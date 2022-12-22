@@ -14,7 +14,7 @@
       "greeting": {
           "dear": "Bonjour ",
           "customer": "Cliente",
-          "thankyou": "Merci pour votre visite dans notre boutique Bouchara ",
+          "thankyou": "Merci pour votre visite dans notre boutique ",
           "gift": "Voici votre reçu cadeau à ",
           "body": ", et, parce que chaque geste compte pour préserver la planète, merci aussi d'avoir opté pour le ticket dématérialisé.
           <br/><br/>
@@ -28,7 +28,7 @@
           "gift": "Voici votre reçu cadeau",
           "discount": "Remise",
           "subtotal": "Sous-total",
-          "tax": "Taux de TVA (20%)",
+          "tax": "TVA (20%)",
           "total": "Total",
           "payment_method": "Mode de Paiement",
           "till": "Caisse:",
@@ -747,7 +747,6 @@
       mso-padding-alt: 0.5em !important;
     }
     .footer, .refund td {
-      text-align: center;
       font-size:0.9em;
     }
 
@@ -1365,7 +1364,7 @@
           {% endif %}
           <tr>
             <td class="footer py10">
-              {{ data['receipt']['footer']['text'].replace('Bonjour','<br/>Bonjour').replace('Client','<br/>Client').replace('Vous','<br/>Vous').replace('Au','<br/>Au').replace('Pas','<br/>Pas') }}
+              {{ data['receipt']['footer']['text'].replace('Bonjour','<br/>Bonjour').replace('Client','<br/>Client').replace('Vous','<br/>Vous').replace('Au','<br/>Au').replace('Pas','<br/>Pas') }}<br /> <br />{{ nl2br(data['receipt']['footer']['info']) }}
             </td>
           </tr>
           <!-- END TERMS AND CONDITIONS -->
