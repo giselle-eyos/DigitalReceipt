@@ -22,7 +22,7 @@
       },
       {
         "href" : "https://www.clarins.fr/maquillage/600/",
-        "text" : "Marquillage",
+        "text" : "MAQUILLAGE",
       },
       {
         "href" : "https://www.clarins.fr/services-clarins/",
@@ -35,11 +35,10 @@
       "button" : '"Réserver votre soin"',
     },
       "greeting" : {
-      "dear" : "Cher ",
+      "dear" : "Cher(e) ",
       "customer" : "Client",
       "body" : "Nous vous remercions pour votre visite et nous espérons que votre expérience en boutique fut agréable.
-      Nous serions ravies de vous revoir très prochainement.<br/><br/>
-      Votre conseillère beauté Clarins.",
+      Nous serions ravies de vous revoir très prochainement.<br/><br/>",
       "href" : "https://www.clarins.fr/club-clarins",
       "button" : "Votre fidélité récompensée",
       },
@@ -57,14 +56,13 @@
       "time" : "Date et l'heure:",
       },
       "cta" : {
-        "cta1" : {
-          "title" : "Club Clarins",
-          "body" : "(Février)<br/><br/>",
-          "button_href" : "https://www.clarins.fr/offrez-une-ecarte-cadeau",
-          "button" : "Carte Cardeau",
-          "image_href" : "https://www.clarins.fr/nos-engagements/",
-          "src" : "https://www.clarins.fr/on/demandware.static/-/Library-Sites-clarins-v3/default/dwf97cb0dd/content/Holidays-2022/Megamenu/img/HomePage_Megamenu_HOLIDAYS2022_GiftCard.jpg",
-        },
+        "cta2" : {
+          "src" : "https://www.clarins.fr/on/demandware.static/-/Library-Sites-clarins-v3/fr_FR/dwa5dd6ee9/content/Brand-Section-2020/nos-services/images/brcbs-img6.jpg",
+          "button1" : {
+            "href" : "https://www.clarins.fr/offrez-une-ecarte-cadeau",
+            "text" : "Carte Cadeau",
+          },
+        }
       },
       "social" : [
         {
@@ -471,6 +469,9 @@
       background: #b10227;
       padding: 0 0.9em;
       mso-padding-alt: 0 0.9em !important;
+    }
+    .headline * {
+        font-weight: bold;
     }
 
     .headlineText {
@@ -1028,6 +1029,7 @@
                                         {{ language['greeting']['dear']}}{{language['greeting']['customer']}}
                                         {% endif %}
                                         ,<br /><br />{{ language['greeting']['body'] }}
+                                        {{ data['receipt']['associate']['name'] }}
                                       </td>
                                     </tr>
                                     <tr>
@@ -1476,69 +1478,41 @@
             </td>
           </tr>
           <!-- END RECEIPT -->
-          <!-- START CTA1 -->
+          <!-- START CTA2 -->
           <tr>
-            <td class="cta tflex ">
+            <td class="cta">
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tbody>
                   <tr class="thold">
-                    <th class="ctaText tfoot">
-                      <table cellpadding="0" cellspacing="0">
-                        <tbody>
-                          <tr>
-                            <td align="center" class="title tflex pt10">
-                              {{ language['cta']['cta1']['title'] }}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="center" class="description tflex">
-                              {{ language['cta']['cta1']['body'] }}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0px auto;width:100%;" role="presentation" width="100%" ><tr><td style="height:1em;"> &nbsp;</td></tr></table><![endif]-->
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="center" class="pb10">
-                              <table class="w100p" cellpadding="0" cellspacing="0">
-                                <tbody>
-                                  <tr>
-                                    <td align="center" class="btn01 active" bgcolor="#b10227">
-                                      <a href="{{ language['cta']['cta1']['button_href'] }}" style="display: block; color:#ffffff; text-decoration: none;
-  ">
-                                        {{ language['cta']['cta1']['button'] }}
-                                      </a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </th>
-                    <th class="ctaImage thead">
+                    <td align="center" class="ctaImage">
+                      <a target="_blank" href="{{ language['store']['href'] }}">
+                        <img width="500" src="{{ language['cta']['cta2']['src'] }}"
+                          alt=" {{ language['store']['name'] }}">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py10">
                       <table width="100%" cellpadding="0" cellspacing="0">
                         <tbody>
                           <tr>
-                            <td>
-                              <a target="_blank" href="{{ language['cta']['cta1']['image_href'] }}">
-                                <img width="200" class="m100p" src="{{ language['cta']['cta1']['src'] }}"
-                                  alt=" {{ language['store']['name'] }}">
+                            <td align="center" class="btn01 active">
+                              <a class="alignCenter" href="{{ language['cta']['cta2']['button1']['href'] }}"
+                                style=" display: block;
+  color: #fff; font-family: century-gothic, gill-sans-nova, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;">
+                                {{ language['cta']['cta2']['button1']['text'] }}
                               </a>
                             </td>
                           </tr>
                         </tbody>
                       </table>
-                    </th>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </td>
           </tr>
-          <!-- END CTA1 -->
+          <!-- END CTA2 -->
 
           <!-- START SOCIAL -->
           <tr>

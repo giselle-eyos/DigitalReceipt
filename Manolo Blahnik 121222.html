@@ -36,12 +36,13 @@
     },
     "receipt" : {
       "title" : "Here Is Your eReceipt For Your Recent Purchase",
+      "refund" : "Here Is Your eReceipt For Your Recent Refund",
       "gift" : "Here Is Your Gift Receipt",
       "discount" : "Discount",
       "subtotal" : "Subtotal",
       "tax" : "Tax (20%)",
       "total" : "Total",
-      "payment_method" : "Payment_method",
+      "payment_method" : "Payment method",
       "till" : "Till:",
       "salesperson" : "Salesperson:",
       "transaction_id" : "Transaction ID:",
@@ -150,6 +151,7 @@
     },
     "receipt" : {
       "title" : "Here Is Your eReceipt For Your Recent Purchase",
+      "refund" : "Here Is Your eReceipt For Your Recent Refund",
       "gift" : "Here Is Your Gift Receipt",
       "discount" : "Discount",
       "subtotal" : "Subtotal",
@@ -265,6 +267,7 @@
       },
       "receipt" : {
       "title" : "Ceci est votre ticket électronique",
+      "refund" : "Voici votre reçu pour votre remboursement récent",
       "gift" : "Voici votre reçu cadeau",
       "discount" : "Remise",
       "subtotal" : "Sous-total",
@@ -277,9 +280,9 @@
       "time" : "Date et l'heure:",
       },
       "refund" : {
-          "title" : "Politique de remboursement :",
-          "body" : "Vous pouvez consulter notre politique de retours sur<br/>",
-          "href" : "https://www.manoloblahnik.com/eu/returns-boutiques",
+      "title" : "Politique de remboursement :",
+      "body" : "Vous pouvez consulter notre politique de retours sur<br/>",
+      "href" : "https://www.manoloblahnik.com/eu/returns-boutiques",
       },
       "cta" : {
         "cta2" : {
@@ -1293,13 +1296,22 @@
                     </td>
                 </tr>
                   <!-- START RECEIPT TITLE -->
+
+
                   <tr>
                     <td class="receiptTitle">
                       <p>
-                        {% if receipt.temporary_type != "gift" %}
-                        {{ language['receipt']['title'] }}
-                        {% else %}
+                        {% set quantity = {'total_amount': 0} %}
+                        {% for sale_item in data['sale_item'] %}
+                          {% if quantity.update({'total_amount': quantity.total_amount + sale_item.quantity.number }) %}
+                          {% endif %}
+                        {% endfor %}
+                        {% if receipt.temporary_type == "gift" %}
                         {{ language['receipt']['gift'] }}
+                        {% elif quantity < 1 %}
+                        {{ language['receipt']['refund'] }}
+                        {% else %}
+                        {{ language['receipt']['title'] }}
                         {% endif %}
                       </p>
                     </td>
