@@ -3256,6 +3256,7 @@ p {
 th {
   padding: 0;
 }
+
 .m0 {
   margin: 0 !important;
 }
@@ -3659,6 +3660,7 @@ th {
   padding-top: 0 !important;
   mso-padding-top-alt: 0 !important;
 }
+
 .pt10 {
   padding-top: 1rem !important;
   mso-padding-top-alt: 1rem !important;
@@ -4493,7 +4495,6 @@ alt="{{ data['store']['name'] }}" title="{{ data['store']['name'] }}" />
 <tbody>
   <tr>
 <td align="center" class="tflex py10" style="font-size: 2rem;">
-  
 </td>
   </tr>
 </tbody>
@@ -4509,7 +4510,7 @@ alt="{{ data['store']['name'] }}" title="{{ data['store']['name'] }}" />
   <table width="100%" cellpadding="0" cellspacing="0">
 <tbody>
   <tr class="thold">
-<th class="tfoot">
+<th class="thead">
   <table cellpadding="0" cellspacing="0">
 <tbody>
   <tr>
@@ -4531,8 +4532,10 @@ alt="{{ data['store']['name'] }}" title="{{ data['store']['name'] }}" />
 <tbody>
   <tr>
 <td align="center">
-  <a target="_blank" href="{{ language['cta']['cta1_2']['button1']['href'] }}">
-<img width="220" class="m100p" src="{{ language['cta']['cta1_2']['src1'] }}"
+  <a target="_blank"
+href="{{ language['cta']['cta1_2']['button1']['href'] }}">
+<img width="220" class="m100p"
+  src="{{ language['cta']['cta1_2']['src1'] }}"
   alt=" {{ language['store']['name'] }}">
   </a>
 </td>
@@ -4543,7 +4546,8 @@ alt="{{ data['store']['name'] }}" title="{{ data['store']['name'] }}" />
 <tbody>
   <tr>
 <td align="center" class="btn01 active" style="border:0;">
-  <a href="{{ language['cta']['cta1_2']['button1']['href'] }}" style="color:#000; display: block; text-decoration: none;
+  <a href="{{ language['cta']['cta1_2']['button1']['href'] }}"
+style="color:#000; display: block; text-decoration: none;
 ">
 {{
 language['cta']['cta1_2']['button1']['text']
@@ -4571,6 +4575,24 @@ language['cta']['cta1_2']['button1']['text']
 </tbody>
   </table>
 </td>
+  </tr>
+</tbody>
+  </table>
+</th>
+<th class="tfoot">
+  <table>
+<tbody>
+  <tr>
+
+<td style="vertical-align:top; width:2rem;">
+  <table width="100%" cellpadding="0" cellspacing="0">
+<tbody>
+  <tr>
+<td height="107" class="background-lightgray"></td>
+  </tr>
+</tbody>
+  </table>
+</td>
 <td style="vertical-align:top;">
   <table cellpadding="0" cellspacing="0">
 <tbody>
@@ -4580,8 +4602,10 @@ language['cta']['cta1_2']['button1']['text']
 <tbody>
   <tr>
 <td align="center">
-  <a target="_blank" href="{{ language['cta']['cta1_2']['button2']['href'] }}">
-<img width="220" class="m100p" src="{{ language['cta']['cta1_2']['src2'] }}"
+  <a target="_blank"
+href="{{ language['cta']['cta1_2']['button2']['href'] }}">
+<img width="220" class="m100p"
+  src="{{ language['cta']['cta1_2']['src2'] }}"
   alt=" {{ language['store']['name'] }}">
   </a>
 </td>
@@ -4592,7 +4616,8 @@ language['cta']['cta1_2']['button1']['text']
 <tbody>
   <tr>
 <td align="center" class="btn01 active" style="border:0;">
-  <a href="{{ language['cta']['cta1_2']['button2']['href'] }}" style="color:#000; display: block; text-decoration: none;
+  <a href="{{ language['cta']['cta1_2']['button2']['href'] }}"
+style="color:#000; display: block; text-decoration: none;
 ">
 {{
 language['cta']['cta1_2']['button2']['text']
@@ -4671,7 +4696,7 @@ language['cta']['cta1_2']['button2']['text']
   <table cellpadding="0" cellspacing="0">
 <tbody>
   <tr>
-<td style="vertical-align:top">
+<td style="vertical-align:top; width: 20%;">
   <table width="100%" cellpadding="0" cellspacing="0">
 <tbody>
   <tr>
@@ -4680,7 +4705,11 @@ language['cta']['cta1_2']['button2']['text']
 </tbody>
   </table>
 </td>
-<td>
+<td style="vertical-align:top;">
+  <table width="100%" cellpadding="0" cellspacing="0">
+<tbody>
+  <tr>
+    <td>
   <a target="_blank" href="{{ language['cta']['cta1_3']['href'] }}">
 <img width="300" class="m100p" src="
   {% if receipt.customer.gender == 'Male' %}
@@ -4693,7 +4722,11 @@ language['cta']['cta1_2']['button2']['text']
   " alt=" {{ language['store']['name'] }}">
   </a>
 </td>
-<td style="vertical-align:top">
+</tr>
+</tbody>
+</table>
+</td>
+<td style="vertical-align:top; width: 20%;">
   <table width="100%" cellpadding="0" cellspacing="0">
 <tbody>
   <tr>
