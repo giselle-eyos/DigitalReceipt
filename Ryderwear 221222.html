@@ -496,14 +496,14 @@
     }
 
     .banner {
-      background:url(`
+      background:url(
       {% if receipt.customer.gender == 'Male' %}
         {{ language['store']['banner_male'] }}
       {% elif receipt.customer.gender == 'Female' %} 
         {{ language['store']['banner_female'] }}
       {% else %}
         {{ language['store']['banner_male'] }}
-      {% endif %}`) 0 0/cover no-repeat;
+      {% endif %}) 0 0/cover no-repeat;
       width: 100% !important;
       /* height: 200px; */
     }
@@ -861,7 +861,15 @@
       }
 
       .banner {
-        background:url({{ language['store']['banner'] }}) 0 0/contain no-repeat !important;
+       
+      background:url(
+      {% if receipt.customer.gender == 'Male' %}
+        {{ language['store']['banner_male'] }}
+      {% elif receipt.customer.gender == 'Female' %} 
+        {{ language['store']['banner_female'] }}
+      {% else %}
+        {{ language['store']['banner_male'] }}
+      {% endif %}) 0 0/contain no-repeat;
       }
 
       .ctaText {
